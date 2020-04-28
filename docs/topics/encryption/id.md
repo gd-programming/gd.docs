@@ -1,8 +1,6 @@
 # RS, UUID and UDID
 
-These are the parameters you might frequently notice when doing a request.
-
-Firstly, let's talk about what do they actually mean.
+These are the parameters that can be frequently noticed when sending a request.
 
 ## RS
 

@@ -2,8 +2,8 @@
 
 [XOR](https://en.wikipedia.org/wiki/Bitwise_operation#XOR) is a *bit-wise* binary operation that is commonly written as `^` in programming languages.
 
-So, how does *XOR* apply in our case of encoding strings?
-Well, each character in a string is essentially represented by a number, so-called *codepoint*.
+Each character in a string is essentially represented by a number,
+so-called *codepoint*, to which XOR operation can be applied.
 
 <!-- tabs:start -->
 
@@ -26,21 +26,19 @@ and `chr()` to convert the codepoint to a character.
 **XOR-Cipher** elaborates on the idea of applying *XOR* to each to characters,
 one in the string and one in the key.
 
-Let us define our simple **XOR-Cipher** function:
+Here is our **XOR-Cipher** stub (empty) function:
 
 <!-- tabs:start -->
 
 ### **python**
 
 ```py
-def xor_cipher(string: str, key: str) -> str:
-    ...  # we will add actual code soon
+def xor_cipher(string: str, key: str) -> str: ...
 ```
 
 <!-- tabs:end -->
 
-Here is an example of how this function will work.
-Let's take a string `"GD"` (how original), and key `"42069"` (rather original as well).
+Suppose we have a string `"GD"` (how original), and key `"42069"` (rather original as well).
 
 Here is what will happen to our string if we apply **XOR-Cipher**:
 
@@ -57,7 +55,7 @@ Here is what will happen to our string if we apply **XOR-Cipher**:
 
 **XOR-Cipher** connects each character in given string with character in key (key is cycled), then applies *XOR* operation on each pair.
 
-Returning back to our function:
+Returning back to the function:
 
 <!-- tabs:start -->
 

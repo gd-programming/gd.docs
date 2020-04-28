@@ -11,7 +11,7 @@ CHK is generated like so:
 4. Apply [XOR-Cipher](topics/encryption/xor.md) to the hexdigest with desired key.
 5. [Base64](topics/encryption/base64.md) encode the result.
 
-Let's see some CHK generator implementations:
+CHK generator can be implemented like this:
 
 <!-- tabs:start -->
 
