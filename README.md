@@ -1,5 +1,6 @@
 # GDDocs
 Some documentation for Geometry Dash's servers, and the game itself. 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9badf0ef98b242a7883c6dbd4e6c9443)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gd-programming/gddocs&amp;utm_campaign=Badge_Grade)
 ---
 
 **GDDocs** is a project built to openly give advanced information and readable information for aspiring developers looking to interface with Geometry Dash. Primarily, we aim to create this as a website for people to learn more about the inner workings of geometry dash, along with it's data.
