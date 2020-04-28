@@ -22,7 +22,7 @@ Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22
 | 9   | Difficulty      | **number**                                   | The difficulty of the level. 0 = unrated, 10 = easy, 20 = normal, 30 = hard, 40 = harder, 50 = insane. Demon difficulty is not included                                        
 | 10  | Downloads       | **number**                                   | The amount of times the level has been downloaded                          
 | 12  | Official Song   | **number** | The official song number used by the level, if applicable         
-| 13  | Game Version    | **number** 			                   	   | The GD version the level was uploaded in. Version 10 is 1.7 and Version 11 is 1.8. Otherwise, divide the version number by ten to get the correct number. Note that version numbers are not availible for pre-1.7 levels
+| 13  | Game Version    | **number** 			                   	   | The GD version the level was uploaded in. Versions 1.0 to 1.6 use version numbers 1 to 7 respectively. Version 10 is 1.7. Otherwise, divide the version number by ten to get the correct number. 
 | 14  | Likes           | **number** 			                   	   | The amount of likes the level received
 | 15  | Length          | **number** 			                   	   | A number from 0-4, where 0 is tiny and 4 is XL     
 | 17  | Demon           | **boolean** 				                   | If the level's difficulty is demon    
