@@ -1,7 +1,47 @@
 # Client Object Resource
 
 ## Level Object
-A level object is an object within a Geometry Dash level, containing data about its behavior. It is contained within the
+A level object is an object within a Geometry Dash level, containing data about its behavior.
+
+### Object String
+The object string is contained within the [inner level string](). It is formatted as follows:
+
+`{object};{object};{object};...`, where
+
+`object` is formatted as:
+
+`{propertyKey},{propertyValue},{propertyKey},{propertyValue},...`.
+
+E.g.:
+
+`1,1,2,15,3,15,21,3,24,7;1,1,2,15,3,15,20,5,25,-1;` represents the following objects:
+
+- Standard Block
+  - ID: 1 (`1,1`)
+  - X: 15 (`2,15`)
+  - Y: 15 (`3,15`)
+  - Main Color ID: 3 (`21,3`)
+  - Z Layer: 7 (`24,7`)
+- Standard Block
+  - ID: 1 (`1,1`)
+  - X: 15 (`2,15`)
+  - Y: 15 (`3,15`)
+  - Editor Layer 1: 5 (`20,5`)
+  - Z Order: -1 (B3) (`25,-1`)
+
+Notice that every single objects contains at least 3 properties, `1`, `2`, `3`, which represent the object ID, X position and Y position respectively. Even in the case that the objects' X and Y positions are 0, the keys are not omitted.
+
+Property keys reflect the keys found in the following table, whereas property values are formatted as follows
+
+| Type                | Formatting                                                                                  |
+|:--------------------|:--------------------------------------------------------------------------------------------|
+| **integer**         | decimal numerical value string (e.g. `421`)                                                 |
+| **bool**            | `1` if true, `0` if false                                                                   |
+| **float**           | decimal numerical value string, using `.` as the decimal point separator (e.g. `12.41`)     |
+| **any enumeration** | same as **integer**                                                                         |
+| **integer array**   | all values are separated by `.` (e.g. `1.42.51.23` for `{ 1, 42, 51, 23 }`)                 |
+| **[HSV]()**         | `{h}a{s}a{v}a{s_checked}a{v_checked}`, where each name reflects the respective HSV property |
+| **string**          | raw string without quotation marks (e.g. `ExampleString`)                                   |
 
 ### Level Object Data
 **Level Object Structure**
