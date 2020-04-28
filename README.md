@@ -1,4 +1,4 @@
-<div style="text-align: center">
+<div align="center">
     <img src="https://github.com/gd-programming/gddocs/blob/master/assets/gddocs-icon.png?raw=true" height="128" width="128">
 </div>
 
