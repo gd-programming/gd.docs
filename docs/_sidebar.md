@@ -13,9 +13,11 @@
   - [Level](/resources/client/level.md)
 
 **Endpoints**
+
 - *None documented yet*
 
 **Topics**
+
 - [Level Passwords](/topics/level_passwords.md)
 - **[Encryption](/topics/encryption/main.md)**
   - [Base64 Encoding](topics/encryption/base64.md)

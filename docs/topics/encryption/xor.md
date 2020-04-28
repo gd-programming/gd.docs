@@ -12,7 +12,8 @@ It takes to integers and applies the following rule to each *bit* (hence, *bit-w
 | 1    | 1     | 0   |
 
 Let's see an example of how XOR works for two numbers:
-```
+
+```plain
 10 ^ 5 = 15
 
   1010
@@ -23,7 +24,8 @@ Let's see an example of how XOR works for two numbers:
 We can see an interesting and very useful property of XOR.
 That is, if we apply it twice, the result will be the same as the start.
 For example:
-```
+
+```plain
 15 ^ 5 = 10
 
   1111
@@ -50,6 +52,7 @@ and `chr()` to convert the codepoint to a character.
 one in the string and one in the key.
 
 Let us define our simple XOR-Cipher function:
+
 ```py
 def xor_cipher(string: str, key: str) -> str:
     ...  # we will add actual code soon
@@ -59,6 +62,7 @@ Here is an example of how this function will work.
 Let's take a string `"GD"` (how original), and key `"42069"` (rather original as well).
 
 Here is what will happen to our string if we apply XOR-Cipher:
+
 ```py
 >>> chr(ord("G") ^ ord("4")) + chr(ord("D") ^ ord("2"))
 "sv"
@@ -67,6 +71,7 @@ Here is what will happen to our string if we apply XOR-Cipher:
 XOR-Cipher connects each character in given string with character in key (key is cycled), then applies XOR operation on each pair.
 
 Returning back to our function:
+
 ```py
 import itertools
 
@@ -82,6 +87,7 @@ def xor_cipher(string: str, key: str) -> str:
 
 This function is quite good, but adding new characters to strings in python is quite slow.
 Here is a better function that implements XOR Cipher (and hey, it is written in one line!):
+
 ```py
 def xor_cipher(string: str, key: str) -> str
     return ("").join(chr(ord(x) ^ ord(y)) for x, y in zip(string, cycle(key)))

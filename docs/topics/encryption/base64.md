@@ -7,6 +7,7 @@ It is used to encode fields like level data, level descriptions, comments, etc.
 GD uses *URL-safe* Base64 encoding, which uses A-Z and a-z letters, along with `_` and `-` as special characters. (Main Base64 uses `+` and `/` special characters)
 
 Here is an example of using Base64 decoding and encoding:
+
 ```py
 import base64
 
@@ -16,7 +17,6 @@ import base64
 
 # encode and decode functions return "bytes" type in python so we might want to use
 # bytes.decode() to convert them to "str" type.
-
 
 def base64_encode(string: str) -> str:
     return base64.urlsafe_b64encode(string.encode()).decode()
