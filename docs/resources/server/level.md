@@ -34,7 +34,7 @@ Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22
 | 28* | Upload date     | **string** 				                   | The approximate date the level was uploaded on 
 | 29* | Update date     | **string** 				                   | The approximate date the level was last updated on 
 | 30  | Copied ID       | **number** 				                   | The ID the of the original level (if the level was copied)   
-| 31  | Two Player         | **unknown** 				                 | Whether the level uses two player mode
+| 31  | Two Player         | **boolean** 				                 | Whether the level uses two player mode
 | 35  | Custom Song ID  | **number** 				                   | The ID of the custom Newgrounds song used in the level    
 | 36  | Extra String    | **string**                           | The extraString passed when uploading the level. Its use is currently unknown
 | 37  | Coins           | **number** 				                   | The number of user coins placed in the level      
