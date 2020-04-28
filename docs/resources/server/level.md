@@ -17,7 +17,7 @@ Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22
 | 2   | Level Name      | **string**                                   | The name of the level                                                    
 | 3   | Description     | **string**                                   | The level description, encoded in [base64](/topics/encryption/base64.md) 
 | 4*  | Level String    | **[level string]()**                         | All the data for the level                               
-| 5   | Version   | **number**                                   | The version of the level published                                       
+| 5   | Version         | **number**                                   | The version of the level published                                       
 | 6   | Player ID       | **number**            | The player ID of the level author
 | 9   | Difficulty      | **number**                                   | The difficulty of the level. 0 = unrated, 10 = easy, 20 = normal, 30 = hard, 40 = harder, 50 = insane. Demon difficulty is not included                                        
 | 10  | Downloads       | **number**                                   | The amount of times the level has been downloaded                          

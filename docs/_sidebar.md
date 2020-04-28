@@ -14,12 +14,16 @@
 
 **Endpoints**
 
+- **Accounts**
+  - [Registration](/endpoints/accounts/register.md)
+
 - [Request](/endpoints/request.md)
 
 **Topics**
 
 - [Level Passwords](/topics/level_passwords.md)
 - [Level Encoding/Decoding](/topics/levelstring_encoding_decoding.md)
+- [Status Codes](/topics/status_codes.md)
 - **Encryption**
   - [Base64 Encoding](topics/encryption/base64.md)
   - [CHK Generation](topics/encryption/chk.md)
