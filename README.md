@@ -1,6 +1,7 @@
-<div style="align: center;">
+<div style="align:center">
     <img src="https://github.com/gd-programming/gddocs/blob/master/assets/gddocs-icon.png?raw=true" height="128" width="128">
 </div>
+
 # GDDocs
 
 Some documentation for Geometry Dash's servers, and the game itself.
