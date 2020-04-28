@@ -1,9 +1,8 @@
 /* eslint no-console: ["error", { allow: ["log", "warn", "error"] }] */
 const childProcess = require("child_process");
-const chalk = require("chalk");
+require(`${__dirname}/scripts/install_packages.js`); // install packages
 
-// package installer
-require(`${__dirname}/scripts/install_packages.js`);
+const chalk = require("chalk");
 
 // serve data
 let command = `node ${__dirname}/node_modules/docsify-cli/bin/docsify serve ./docs --port 9505`;
