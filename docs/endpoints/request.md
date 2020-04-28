@@ -179,20 +179,26 @@ request.post(url, {form: data}, function(error, response, body) {
 ```rust
 use reqwest;
 
+// use the tokio runtime
 #[tokio::main]
 async fn main() -> reqwest::Result<()> {
-    let uri = "http://www.boomlings.com/database/database/[insert target file]";
+    // set the url
+    let uri = "http://www.boomlings.com/database/[insert target file]";
+    
+    // create post values
     let data = [
         ("something", "value"), 
         ("somethingElse", "otherValue")
     ];
     
+    // send the request 
     let req = reqwest::Client::new()
         .post(uri)
         .form(&data)
         .send()
         .await?;
     
+    // read the response
     println!("{}", req.text().await?);
     
     Ok(())
