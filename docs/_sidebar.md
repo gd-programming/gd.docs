@@ -19,6 +19,7 @@
 **Topics**
 
 - [Level Passwords](/topics/level_passwords.md)
+- [Level Encoding/Decoding](/topics/levelstring_encoding_decoding.md)
 - **Encryption**
   - [Base64 Encoding](topics/encryption/base64.md)
   - [CHK Generation](topics/encryption/chk.md)
