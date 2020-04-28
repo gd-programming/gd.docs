@@ -1,6 +1,5 @@
 /* eslint no-console: ["error", { allow: ["log", "warn", "error"] }] */
 const childProcess = require("child_process");
-const app = require("express")();
 const chalk = require("chalk");
 
 // package installer
