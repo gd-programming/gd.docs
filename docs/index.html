@@ -18,7 +18,7 @@
     }
   </style>
 </head>
-<body>
+<body onload="gdpLoader()">
   <div id="app"></div>
   <script>
     window.$docsify = {
@@ -27,6 +27,15 @@
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+
+  <!-- Extra Scripting -->
+  <script>
+    function gdpLoader() {
+      // load logo
+      let appname = document.getElementsByClassName("app-name");
+      appname[0].innerHTML = "<img src=\"https://raw.githubusercontent.com/gd-programming/gddocs/master/assets/gddocs-icon.png\" height=\"128\" width=\"128\"><br>" + appname[0].innerHTML;
+    }
+  </script>
 
   <!-- Additional Languages -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script> <!-- Python -->

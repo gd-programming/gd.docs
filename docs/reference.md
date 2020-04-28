@@ -15,3 +15,31 @@ Most server repsonses are formatted in weird ways, not in more usual ways like *
 ```
 1:61154556:2:Chillin:5:1:6:12901137:8:10:9:20:10:3348:12:0:13:21:14:373:17::43:4:25::18:3:19:24962:42:0:45:29651:3:UmVtYWtlIG9mIG15IG9sZCAyLjAgbGV2ZWwgY2FsbGVkIENoaWxsIHhkIEp1c3QgYSBzaW1wbGUgYW5kIGNoaWxsIGxldmVsLCBlbmpveSA6KQ==:15:3:30:0:31:0:37:0:38:1:39:3:46:1:47:2:35:669275
 ```
+
+### Audio Track
+
+Part of levels and requests for them is a term known as `audio track`, or the id of the track of a song in the game, ranging from `1` to `22`.
+
+| ID | Track Name |
+|----|------------|
+| 1 | Stereo Madness |
+| 2 | Back on Track |
+| 3 | Polargeist |
+| 4 | Dry Out |
+| 5 | Base after Base |
+| 6 | Cant Let Go |
+| 7 | Jumper |
+| 8 | Time Machine |
+| 9 | Cycles |
+| 10 | xStep |
+| 11 | Clutterfunk |
+| 12 | Theory of Everything |
+| 13 | Electroman Adventures |
+| 14 | Clubstep |
+| 15 | Electrodynamix |
+| 16 | Hexagon Force |
+| 17 | Blast Processing |
+| 18 | Theory of Everything 2 |
+| 20 | Geometrical Dominator | 
+| 21 | Deadlocked |
+| 22 | Fingerdash | 
