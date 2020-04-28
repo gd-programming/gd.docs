@@ -2,6 +2,7 @@
 
 - [Intro](/)
 - [Reference](/reference.md)
+- [Credits](/CREDITS.md)
 
 **Resources**
 -----
