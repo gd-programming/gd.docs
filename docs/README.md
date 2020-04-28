@@ -34,6 +34,7 @@ These are generally projects that generally interface over the Geometry Dash ser
 #### C++
 
 * [GDAddon](https://github.com/Keenlos/GDAddonSDK) by the [Keenlos Team](https://github.com/Keenlos/Keenlos/blob/master/ABOUT.md)
+* [GDCrypto](https://github.com/Cos8o/GDCrypto) by [Cos8o](https://github.com/Cos8o)
 
 ## Outside Remarks
 
