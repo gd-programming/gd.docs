@@ -31,6 +31,10 @@ These are generally projects that generally interface over the Geometry Dash ser
 
 * [GDEdit](https://github.com/gd-edit/GDE) by the [GDEdit Team](https://github.com/gd-edit)
 
+#### C++
+
+* [GDCrypto](https://github.com/Cos8o/GDCrypto) by [Cos8o](https://github.com/Cos8o)
+
 ## Outside Remarks
 
 With this documentation, the Geometry Dash Programming staff team would love to see your interesting ideas with this project, and the kinds of things you create with the information provided. Make sure to hit us up on our discord, and show us of such!
