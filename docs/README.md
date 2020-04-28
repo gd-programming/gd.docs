@@ -31,6 +31,10 @@ These are generally projects that generally interface over the Geometry Dash ser
 
 * [GDEdit](https://github.com/gd-edit/GDE) by the [GDEdit Team](https://github.com/gd-edit)
 
+#### C++
+
+* [GDAddon](https://github.com/Keenlos/GDAddonSDK) by the [Keenlos Team](https://github.com/Keenlos/Keenlos/blob/master/ABOUT.md)
+
 ## Outside Remarks
 
 With this documentation, the Geometry Dash Programming staff team would love to see your interesting ideas with this project, and the kinds of things you create with the information provided. Make sure to hit us up on our discord, and show us of such!
