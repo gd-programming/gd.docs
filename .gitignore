@@ -1,3 +1,5 @@
 node_modules
 .idea/
 .vs/
+
+package-lock.json
