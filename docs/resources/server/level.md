@@ -6,8 +6,8 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 ### Level Object
 **Level Structure**
 
-| Key | Name/Value | Type | Description |
-|-----|------------|------|-------------|
+| Key | Key | Name/Value | Type | Description |
+|-----|-----|------------|------|-------------|
 | 1 | Level ID | **number** | the id of the level | 
 | 2 | Level Name | **string** | the name of the level |
 | 3 | Lescription | **string** | the level description, encoded in [base64](/topics/encryption/base64.md) |
