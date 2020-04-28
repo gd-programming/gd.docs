@@ -3,7 +3,9 @@ You're able to use this publicly, just like a sandbox. Please make sure ***not**
 
 <!-- tabs:start -->
 
-### Python
+### **python**
+
+import this
 
 ```py
 import base64
@@ -17,7 +19,7 @@ def decode_level_password(password: str) -> str:
     return decoded
 ```
 
-### Second tab
+### **java**
 
 fuck it
 
