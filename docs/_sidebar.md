@@ -4,12 +4,14 @@
 - [Reference](/reference.md)
 
 **Resources**
+-----
+
 - **Server**
   - [Level](/resources/server/level.md)
   - [User](/resources/server/user.md)
 - **Client**
   - [Level](/resources/client/level.md)
-  
+
 **Endpoints**
 - *None documented yet*
 
