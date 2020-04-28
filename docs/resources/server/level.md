@@ -19,7 +19,8 @@ Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22
 | 4*  | Level String    | **[level string]()**                         | All the data for the level                               
 | 5   | Version         | **number**                                   | The version of the level published                                       
 | 6   | Player ID       | **number**            | The player ID of the level author
-| 9   | Difficulty      | **number**                                   | The difficulty of the level. 0 = unrated, 10 = easy, 20 = normal, 30 = hard, 40 = harder, 50 = insane. Demon difficulty is not included                                        
+| 8   | Difficulty Denominator | **number**            | Returns 0 if the level is N/A, returns 10 if a difficulty is assigned. Historically it used to be the amount of people who have voted on the difficulty.
+| 9   | Difficulty Numerator      | **number**                                   | The nominator used for calculating the level difficulty. Divided by the denominator to get the difficulty icon. Nowadays just 0 = unrated, 10 = easy, 20 = normal, 30 = hard, 40 = harder, 50 = insane. Demon difficulty is not included. Historically used to be the sum of stars from all votes
 | 10  | Downloads       | **number**                                   | The amount of times the level has been downloaded                          
 | 12  | Official Song   | **number** | The official song number used by the level, if applicable         
 | 13  | Game Version    | **number** 			                   	   | The GD version the level was uploaded in. Versions 1.0 to 1.6 use version numbers 1 to 7 respectively. Version 10 is 1.7. Otherwise, divide the version number by ten to get the correct number. 
@@ -33,6 +34,7 @@ Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22
 | 28* | Upload date     | **string** 				                   | The approximate date the level was uploaded on 
 | 29* | Update date     | **string** 				                   | The approximate date the level was last updated on 
 | 30  | Copied ID       | **number** 				                   | The ID the of the original level (if the level was copied)   
+| 31  | Unknown         | **unknown** 				                 | Seems to always return 0 
 | 35  | Custom Song ID  | **number** 				                   | The ID of the custom Newgrounds song used in the level    
 | 36  | Extra String    | **string**                           | The extraString passed when uploading the level. Its use is currently unknown
 | 37  | Coins           | **number** 				                   | The number of user coins placed in the level      
@@ -43,3 +45,5 @@ Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22
 | 42  | Epic            | **boolean** 				                   | If the level has an epic rating    
 | 43  | Demon Difficulty| **number** 				                   | The difficulty of the demon rating. 3 = easy, 4 = medium, 0 = hard, 5 = insane, 6 = extreme. When working with demon difficulties, it's probably better to use key 9 instead of this
 | 45  | Objects         | **number** 				                   | The amount of objects in the level, used to determine if the level is considered "large". It caps at 65535     
+| 46  | Unknown         | **number** 				                   | 
+| 47  | Unknown         | **number** 				                   | 
