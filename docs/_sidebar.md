@@ -19,7 +19,7 @@
 **Topics**
 
 - [Level Passwords](/topics/level_passwords.md)
-- **[Encryption](/topics/encryption/main.md)**
+- **Encryption**
   - [Base64 Encoding](topics/encryption/base64.md)
   - [CHK Generation](topics/encryption/chk.md)
   - [RS, UDID and UUID](topics/encryption/id.md)
