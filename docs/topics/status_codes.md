@@ -18,4 +18,7 @@ These are Status Codes that are used in more than one place.
 
 | Code |       Name      |        Endpoint       |                                     Description                                                                 |
 |------|-----------------|-----------------------|-----------------------------------------------------------------------------------------------------------------|
-| -2   | Taken Username  | registerGJAccount.php | The username provided has been taken.                                                                           |
+| -2   | Taken Username  | registerGJAccount.php | The username provided has been taken         |
+| -4   | Request is too large | Account saving (69.164.210.48) | Your request to the server was too large |
+| -5   | Bad login info | Account saving (69.164.210.48) | Invalid login info was provided |
+| -6   | Something went wrong | Account saving (69.164.210.48) | Something went wrong on the servers' end |
