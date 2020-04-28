@@ -6,8 +6,11 @@ const chalk = require("chalk");
 require(`${__dirname}/scripts/install_packages.js`);
 
 // serve data
-console.log(chalk.hex("#66d9ff")("Running Command: ") +`node "${__dirname}/node_modules/docsify-cli/bin/docsify" serve ./docs --port 9505`);
-let docsProcess = childProcess.exec(`node "${__dirname}/node_modules/docsify-cli/bin/docsify" serve ./docs --port 9505`);
+let command = `node ${__dirname}/node_modules/docsify-cli/bin/docsify serve ./docs --port 9505`
+if (os.platform() === "win32") command = `node "${__dirname}/node_modules/docsify-cli/bin/docsify" serve ./docs --port 9505`;
+
+console.log(chalk.hex("#66d9ff")("Running Command: ") +command);
+let docsProcess = childProcess.exec(command);
 
 docsProcess.on("exit", () => {
     process.exit(0);
