@@ -12,7 +12,7 @@ The passwords used to copy levels that have such set aren't plain string, and ar
 ```py
 def decode_level_password(password):
   decoded_b64 = base64.b64decode(password) # decode the password from base64
-  decoded = xor_cipher(password, 26364) # put it through the xor cipher with the key 26364)
+  decoded = xor_cipher(decoded_base64, 26364) # put it through the xor cipher with the key 26364)
 
-  return password
+  return decoded
 ```
