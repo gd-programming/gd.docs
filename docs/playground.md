@@ -3,7 +3,7 @@ You're able to use this publicly, just like a sandbox. Please make sure ***not**
 
 <!-- tabs:start -->
 
-### python
+### **python**
 
 import this
 
@@ -12,7 +12,7 @@ def hi():
     return "bye"
 ```
 
-### java
+### **java**
 
 import this
 
