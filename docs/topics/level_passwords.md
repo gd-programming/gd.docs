@@ -4,7 +4,7 @@ Level passwords are byte arrays at a 4 or 6 number length that can be set when a
 The property is also used to determine whether a level is set for free copy, or not; with the values `0` being uncopyable, and `1` being free copy.
 
 ## Decoding
-The passwords used to copy levels that have such set aren't plain string, and are encoded in a method commonly seen for values like these. Like most of the base64, it's done in [URL Encoded Base64]() The method of decryption is as follows: 
+The passwords used to copy levels that have such set aren't plain string, and are encoded in a method commonly seen for values like these. Like most of the base64, it's done in [URL Encoded Base64](/topics/encryption/base64.md) The method of decryption is as follows: 
 
 `Decode Base64` -> `Xor Cipher (key "26364")` -> `Level Password`
 
