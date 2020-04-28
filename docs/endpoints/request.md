@@ -181,7 +181,7 @@ use reqwest;
 
 #[tokio::main]
 async fn main() -> reqwest::Result<()> {
-    let uri = "http://www.boomlings.com/database/accounts/loginGJAccount.php";
+    let uri = "http://www.boomlings.com/database/database/[insert target file]";
     let data = [
         ("something", "value"), 
         ("somethingElse", "otherValue")
