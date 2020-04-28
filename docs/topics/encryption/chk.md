@@ -51,9 +51,9 @@ Here is a list of CHK values and explanations on their generation:
 
 ## Upload level
 
-- Seed
+- seed2
 
-Seed is generated from level data:
+seed2 is generated from level data:
 
 <!-- tabs:start -->
 
