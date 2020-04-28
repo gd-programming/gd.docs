@@ -6,8 +6,18 @@ const chalk = require("chalk");
 require(`${__dirname}/scripts/install_packages.js`);
 
 // serve data
-console.log(chalk.hex("#66d9ff")("Running Command: ") +`node "${__dirname}/node_modules/docsify-cli/bin/docsify" serve ./docs --port 8080`);
-let docsProcess = childProcess.exec(`node "${__dirname}/node_modules/docsify-cli/bin/docsify" serve ./docs --port 8080`);
+let command = `node ${__dirname}/node_modules/docsify-cli/bin/docsify serve ./docs --port 9505`;
+if (require("os").platform() === "win32") command = `node "${__dirname}/node_modules/docsify-cli/bin/docsify" serve ./docs --port 9505`;
+
+console.log(chalk.hex("#66d9ff")("Running Command: ") +command);
+let docsProcess = childProcess.exec(command);
+console.log("");
+
+if (process.argv[2] == "--prod") {
+    console.log(chalk.hex("#66d9ff")("Fetching latest Git changes..."));
+    childProcess.exec("git pull origin master")
+    require(`${__dirname}/scripts/git_pull.js`);
+}
 
 docsProcess.on("exit", () => {
     process.exit(0);
