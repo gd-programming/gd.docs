@@ -20,26 +20,28 @@ Most server repsonses are formatted in weird ways, not in more usual ways like *
 
 Part of levels and requests for them is a term known as `audio track`, or the id of the track of a song in the game, ranging from `1` to `22`.
 
-| ID | Track Name |
-|----|------------|
-| 1 | Stereo Madness |
-| 2 | Back on Track |
-| 3 | Polargeist |
-| 4 | Dry Out |
-| 5 | Base after Base |
-| 6 | Cant Let Go |
-| 7 | Jumper |
-| 8 | Time Machine |
-| 9 | Cycles |
-| 10 | xStep |
-| 11 | Clutterfunk |
-| 12 | Theory of Everything |
-| 13 | Electroman Adventures |
-| 14 | Clubstep |
-| 15 | Electrodynamix |
-| 16 | Hexagon Force |
-| 17 | Blast Processing |
-| 18 | Theory of Everything 2 |
-| 20 | Geometrical Dominator | 
-| 21 | Deadlocked |
-| 22 | Fingerdash | 
+| ID | Server ID | Track Name |
+|----|-----------|------------|
+| 1 | 0 | Stereo Madness |
+| 2 | 1 | Back on Track |
+| 3 | 2 | Polargeist |
+| 4 | 3 | Dry Out |
+| 5 | 4 | Base after Base |
+| 6 | 5 | Cant Let Go |
+| 7 | 6 | Jumper |
+| 8 | 7 | Time Machine |
+| 9 | 8 | Cycles |
+| 10 | 9 | xStep |
+| 11 | 10 | Clutterfunk |
+| 12 | 11 | Theory of Everything |
+| 13 | 12 | Electroman Adventures |
+| 14 | 13 | Clubstep |
+| 15 | 14 | Electrodynamix |
+| 16 | 15 | Hexagon Force |
+| 17 | 16 | Blast Processing |
+| 18 | 17 | Theory of Everything 2 |
+| 19 | 18 | Geometrical Dominator | 
+| 20 | 19 | Deadlocked |
+| 21 | 20 | Fingerdash  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  |
+
+<!-- Don't ask. -->
