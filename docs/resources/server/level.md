@@ -34,9 +34,12 @@ Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22
 | 29* | Update date     | **string** 				                   | The approximate date the level was last updated on 
 | 30  | Copied ID       | **number** 				                   | The ID the of the original level (if the level was copied)   
 | 35  | Custom Song ID  | **number** 				                   | The ID of the custom Newgrounds song used in the level    
+| 36  | Extra String    | **string**                           | The extraString passed when uploading the level. Its use is currently unknown
 | 37  | Coins           | **number** 				                   | The number of user coins placed in the level      
 | 38  | Verified Coins  | **boolean** 				                   | If the level's user coins are verified (silver)
 | 39  | Stars Requested | **number** 				                   | The star value requested for the level     
-| 40* | Low Detail Mode | **boolean** 				                   | If the level has a low detail checkbox     
+| 40* | Low Detail Mode | **boolean** 				                   | If the level has a low detail checkbox    
+| 41*  | Daily Number    | **number** 				                   | Daily/weekly levels only. Returns which daily/weekly the level was (e.g. the 500th daily level). Subtract 100,000 if the level is weekly
 | 42  | Epic            | **boolean** 				                   | If the level has an epic rating    
+| 43  | Demon Difficulty| **number** 				                   | The difficulty of the demon rating. 3 = easy, 4 = medium, 0 = hard, 5 = insane, 6 = extreme. When working with demon difficulties, it's probably better to use key 9 instead of this
 | 45  | Objects         | **number** 				                   | The amount of objects in the level, used to determine if the level is considered "large". It caps at 65535     
