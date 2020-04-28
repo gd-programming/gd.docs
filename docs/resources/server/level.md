@@ -1,4 +1,4 @@
-# Level Resource
+# Server Level Resource
 
 ## Level
 A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a [level string](#).
