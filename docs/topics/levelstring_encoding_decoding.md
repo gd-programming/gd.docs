@@ -1,7 +1,7 @@
 # Level encoding/decoding
 Despite Geometry Dash levels being stored in a plaintext, human-readable format, the game will resort to storing level data in a compressed binary format when storing them in the game's memory or files(albeit for compatibility reasons levels can also be loaded directly in a uncompressed format).
 
-Compressed levels are actually composed out of two things: Base64 encoding and [GZIP](https://zlib.net) compression
+Compressed levels are actually composed out of two things: [Base64 encoding](encryption/base64.md) and [GZIP](https://zlib.net) compression
 
 ## Encoding
 To encode a level you take first the level string and `compress()` it, afterwards you need to encode the resulting byte sequence with Base 64 encoding.
