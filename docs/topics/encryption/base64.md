@@ -8,6 +8,10 @@ GD uses *URL-safe* Base64 encoding, which uses A-Z and a-z letters, along with `
 
 Here is an example of using Base64 decoding and encoding:
 
+<!-- tabs:start -->
+
+### **python**
+
 ```py
 import base64
 
@@ -25,3 +29,5 @@ def base64_encode(string: str) -> str:
 def base64_decode(string: str) -> str:
     return base64.urlsafe_b64decode(string.encode()).decode()
 ```
+
+<!-- tabs:end -->
