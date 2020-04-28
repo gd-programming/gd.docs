@@ -3,11 +3,16 @@ You're able to use this publicly, just like a sandbox. Please make sure ***not**
 
 <!-- tabs:start -->
 
-<!-- tab:Java* -->
+### python
 
 import this
 
-<!-- tab:Poithon -->
+```py
+def hi():
+    return "bye"
+```
+
+### java
 
 import this
 
