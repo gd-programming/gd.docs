@@ -1,0 +1,26 @@
+{
+  "name": "gddocs",
+  "version": "0.0.1",
+  "description": "GD Documentation",
+  "main": "generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gd-programming/gddocs.git"
+  },
+  "keywords": [
+    "gd"
+  ],
+  "author": "GD Programming",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gd-programming/gddocs/issues"
+  },
+  "homepage": "https://github.com/gd-programming/gddocs#readme",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "docsify-cli": "^4.4.0"
+  }
+}
