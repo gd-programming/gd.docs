@@ -8,11 +8,16 @@ The passwords used to copy levels that have such set aren't plain string, and ar
 
 `Decode Base64` -> `Xor Cipher (key "26364")` -> `Level Password`
 
-**The following pseudocode demonstrates this process programmatically:**
+**The following code demonstrates this process programmatically:**
 ```py
-def decode_level_password(password):
-  decoded_b64 = base64.b64decode(password) # decode the password from base64
-  decoded = xor_cipher(decoded_base64, 26364) # put it through the xor cipher with the key 26364)
+import base64
 
-  return decoded
+
+def decode_level_password(password: str) -> str:
+    # decode the password from base64
+    decoded_base64 = base64.b64decode(password.encode()).decode()
+    # put it through the xor cipher with the key "26364")
+    decoded = xor_cipher(decoded_base64, "26364")
+
+    return decoded
 ```
