@@ -177,27 +177,24 @@ request.post(url, {form: data}, function(error, response, body) {
 ### **rust**
 
 ```rust
-use reqwest::Client;
+use reqwest;
 
-// calls main method
-fn main() -> Result<(), Box<dyn std::error::Error>> {
-
-    // sets the target url
-    let url = "http://www.boomlings.com/database/[insert target file]";
-  
-    // makes the post string
-    let post_values = "something=value&somethingElse=otherValue";
-
-    // sends the request
-    let mut req = Client::new().post(url).body(post_values).send()?;
-
-    // reads the output
-    let output = req.text()?;
-
-    // prints the output
-    println!("{}", output);
-
-    // returns Ok
+#[tokio::main]
+async fn main() -> reqwest::Result<()> {
+    let uri = "http://www.boomlings.com/database/accounts/loginGJAccount.php";
+    let data = [
+        ("something", "value"), 
+        ("somethingElse", "otherValue")
+    ];
+    
+    let req = reqwest::Client::new()
+        .post(uri)
+        .form(&data)
+        .send()
+        .await?;
+    
+    println!("{}", req.text().await?);
+    
     Ok(())
 }
 ```
