@@ -8,4 +8,4 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 
 | Key | Name/Value | Type | Description |
 |-----|------------|------|-------------|
-|  1  | Level Name | **string** | This is the name of the level. | 
+| 1 | Level Name | **string** | This is the name of the level. | 
