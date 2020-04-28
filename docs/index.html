@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Geometry Dash Documentation</title>
   <meta property="og:title" content="Geometry Dash Documentation" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://docs.gdprogra.me" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/gd-programming/gddocs/master/assets/gddocs-icon.png" />
-  <meta property="og:description" content="GDDocs is a project built to openly give advanced information and readable information for aspiring developers looking to interface with Geometry Dash. Primarily, we aim to create this as a website for people to learn more about the inner workings of geometry dash, along with it's data." />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/gd-programming/gddocs/master/assets/gddocs-icon.png" />
+  <meta property="og:description"
+    content="GDDocs is a project built to openly give advanced information and readable information for aspiring developers looking to interface with Geometry Dash. Primarily, we aim to create this as a website for people to learn more about the inner workings of geometry dash, along with it's data." />
   <meta property="theme-color" content="#72cf5f">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="GDDocs is a project built to openly give advanced information and readable information for aspiring developers looking to interface with Geometry Dash. Primarily, we aim to create this as a website for people to learn more about the inner workings of geometry dash, along with it's data.">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description"
+    content="GDDocs is a project built to openly give advanced information and readable information for aspiring developers looking to interface with Geometry Dash. Primarily, we aim to create this as a website for people to learn more about the inner workings of geometry dash, along with it's data.">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
   <link rel="icon" href="https://raw.githubusercontent.com/gd-programming/gddocs/master/assets/gddocs-icon.png">
   <style>
     /* Custom colour theme. */
-    :root{
+    :root {
       --mono-hue: 160;
       --theme-hue: 160;
       --theme-saturation: 100%;
+      --table-cell-border-width: 1px;
     }
   </style>
 </head>
+
 <body onload="gdpLoader()">
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'GD Documentation',
       loadSidebar: true,
-      markdown: {
-
+      notFoundPage: true,
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: "material",
+        tabComments: true,
+        tabHeadings: true
       }
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
 
   <!-- Extra Scripting -->
   <script>
@@ -49,4 +62,5 @@
   <!-- Additional Languages -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script> <!-- Python -->
 </body>
+
 </html>
