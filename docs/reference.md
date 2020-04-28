@@ -21,7 +21,7 @@ Most server repsonses are formatted in weird ways, not in more usual ways like *
 Part of levels and requests for them is a term known as `audio track`, or the id of the track of a song in the game, ranging from `1` to `22`.
 
 | ID | Server ID | Track Name |
-|----|-----------|------------|
+|----|-----------|:----------:|
 | 1 | 0 | Stereo Madness |
 | 2 | 1 | Back on Track |
 | 3 | 2 | Polargeist |
@@ -42,6 +42,6 @@ Part of levels and requests for them is a term known as `audio track`, or the id
 | 18 | 17 | Theory of Everything 2 |
 | 19 | 18 | Geometrical Dominator | 
 | 20 | 19 | Deadlocked |
-| 21 | 20 | Fingerdash  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  ឵឵  |
+| 21 | 20 | Fingerdash |
 
 <!-- Don't ask. -->
