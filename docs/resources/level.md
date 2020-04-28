@@ -1,4 +1,4 @@
-# Levels Resource
+# Level Resource
 
 ## Level
 A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a [level string](#).
@@ -13,7 +13,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | 3 | Lescription | **string** | the level description, encoded in [base64](https://en.wikipedia.org/wiki/Base64) |
 | 4 | Level String | **[level string]()** | the level string, or the playable level |
 | 5 | Level Version | **number** | the version of the level published |
-| 6 | User ID | **[user].id** | the id of the level publisher |
+| 6 | User ID | **[user](/resources/user.md).id** | the id of the level publisher |
 | 9 | Stars | **number** | the stars the level is worth |
 | 10 | Downloads | **number** | the amount of times the level's been downloaded |
 | 12 | Audio Track | **[Audio Track](/reference?id=audio-track)** | the audio track the levels used with (if any) |
