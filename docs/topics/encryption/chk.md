@@ -27,7 +27,7 @@ def generate_chk(values: [int, str] = (), key: str, salt: str = "") -> str:
 
     string = ("").join(map(str, values))  # assure "str" type and connect values
 
-    hashed = hashlib.sha1(string).hexdigest()
+    hashed = hashlib.sha1(string.encode()).hexdigest()
     xored = xor_cipher(hashed, key)  # we discuss this one in encryption/xor
     final = base64.urlsafe_b64encode(string.encode()).decode()
 
