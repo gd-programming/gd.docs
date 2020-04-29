@@ -11,7 +11,7 @@ Generating RS is quite simple:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import random
@@ -22,8 +22,19 @@ from string import ascii_letters, digits  # so we don't have to type [A-Za-z0-9]
 possible_letters = ascii_letters + digits
 
 
-def generate_rs(n: int) -> str:
+def generate_rs(n: int = 10) -> str:
     return ("").join(random.choices(possible_letters, k=n))
+```
+
+### **JavaScript**
+```js
+function generateRS(len = 10) {
+  // Join many alphanumeric characters together for any length
+  let out = '';
+  for (; len > 0; len--)
+    out += (Math.random() * 36).toString();
+  return out;
+}
 ```
 
 <!-- tabs:end -->
@@ -37,7 +48,7 @@ It can be randomly generated using our `generate_rs()` function:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 def generate_uuid(parts: [int] = (8, 4, 4, 4, 10)) -> str:
@@ -45,7 +56,16 @@ def generate_uuid(parts: [int] = (8, 4, 4, 4, 10)) -> str:
     return ("-").join(map(generate_rs, parts))
 ```
 
+### **JavaScript**
+```js
+function generateUUID(parts = [8, 4, 4, 4, 10]) {
+  return parts.map(generateRS).join('-');
+}
+```
+
 <!-- tabs:end -->
+
+Note that the Geometry Dash servers don't particularly care about the UUID format; you can send any random string, really.
 
 ## UDID
 
@@ -58,8 +78,7 @@ Generating UDID should be simpler because we can just generate a random integer:
 
 <!-- tabs:start -->
 
-### **python**
-
+### **Python**
 ```py
 import random
 
@@ -68,4 +87,13 @@ def generate_udid(start: int = 100_000, end: int = 100_000_000) -> str:
     return "S" + str(random.randint(start, end))
 ```
 
+### **JavaScript**
+```js
+function generateUDID(min = 100000, max = 100000000) {
+  return 'S' + Math.floor(Math.random() * (max - min) + min);
+}
+```
+
 <!-- tabs:end -->
+
+Note that the Geometry Dash servers don't particularly care about the UDID format either.

@@ -15,7 +15,7 @@ CHK generator can be implemented like this:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64
@@ -32,6 +32,27 @@ def generate_chk(values: [int, str] = (), key: str, salt: str = "") -> str:
     final = base64.urlsafe_b64encode(string.encode()).decode()
 
     return final
+```
+
+### **JavaScript**
+
+```js
+// Could also implement yourself using `crypto` module in Node.js or SubtleCrypto API
+const sha1 = require('sha1');
+
+// See /topics/encryption/base64 for more details
+function decodeBase64(str) {
+  if (typeof atob === 'undefined') {
+    return Buffer.from(str, 'base64').toString();
+  }
+  return atob(str.replace(/_/g, '/').replace(/-/g, '+'));
+}
+
+function generateChk(vals, key, salt) {
+  const str = vals.concat(salt).join('');
+  const hash = sha1(str);
+  const xored = 
+}
 ```
 
 <!-- tabs:end -->
@@ -57,8 +78,8 @@ seed2 is generated from level data:
 
 <!-- tabs:start -->
 
-### **pseudocode** ###
-```
+### **Pseudocode** ###
+```plain
 seed2 = ""
 space = length of levelString / 50
 
@@ -70,7 +91,7 @@ sha1 encode seed2
 xor encrypt seed2 with key 41274
 ```
 
-### **python**
+### **Python**
 
 ```py
 def generate_upload_seed(data: str, chars: int = 50) -> str:
@@ -79,6 +100,19 @@ def generate_upload_seed(data: str, chars: int = 50) -> str:
         return data  # not enough data to generate
     step = len(data) // chars
     return data[::step][:chars]
+```
+
+### **JavaScript**
+```js
+function generateUploadSeed(data, chars = 50) {
+  if (data.length < chars)
+    return data;
+  const interval = Math.floor(data.length / chars);
+  let out = '';
+  for (let i = 0; i < chars; i++)
+    out += data[interval * i];
+  return out;
+}
 ```
 
 <!-- tabs:end -->
@@ -143,11 +177,11 @@ Random number consisting of *5* digits.
 - Attempts
 - Seed
 
-Seed can be generated like this:
+The seed can be generated with the following algorithm:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 def generate_leaderboard_seed(
@@ -159,6 +193,17 @@ def generate_leaderboard_seed(
         + (jumps + 3991) * (percentage + 8354)
         + ((seconds + 4085) ** 2) - 50028039
     )
+```
+
+### **JavaScript**
+```js
+function generateLeaderboardSeed(jumps, percentage, seconds, played = true) {
+  return (
+    1482 * (played + 1)
+      + (jumps * 3991) * (percentage + 8354)
+      + ((seconds + 4085) ** 2) - 50028039
+  );
+}
 ```
 
 <!-- tabs:end -->

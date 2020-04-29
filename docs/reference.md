@@ -1,5 +1,10 @@
 # Geometry Dash References
 
+### Types
+Sometimes in this documentation, we refer to certain, language-agnostic types. Here are some explicit definitions:
+|  Type  |  Meaning |
+|--------|----------|
+
 ### Audio Track
 
 Part of levels and requests for them is a term known as `audio track`, or the id of the track of a song in the game.

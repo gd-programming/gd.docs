@@ -8,24 +8,33 @@ The property is also used to determine whether a level is set for free copy, or 
 
 The passwords used to copy levels that have such set aren't plain string, and are encoded in a method commonly seen for values like these. Like most of the base64, it's done in [URL Encoded Base64](/topics/encryption/base64.md) The method of decryption is as follows:
 
-`Decode Base64` -> `Xor Cipher (key "26364")` -> `Level Password`
+`Decode Base64` -> `XOR Cipher (key "26364")` -> `Level Password`
 
 **The following code demonstrates this process programmatically:**
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64
 
 def decode_level_password(password: str) -> str:
-	# decode the password from base64
+  # Base64 decodes the password
 	decoded_base64 = base64.b64decode(password.encode()).decode()
-	# put it through the xor cipher with the key "26364")
+  # XORs decoded Base64 with the level password key
 	decoded = xor_cipher(decoded_base64, "26364")
-
 	return decoded
+```
+
+### **JavaScript**
+
+```js
+function decodeLevelPassword(password) {
+  const decodedBase64 = decodeBase64(password);
+  const decoded = xor(decodedBase64, '26364');
+  return decoded;
+}
 ```
 
 <!-- tabs:end -->

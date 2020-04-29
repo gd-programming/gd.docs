@@ -16,7 +16,7 @@ Geometry Dash uses *POST* requests. The data is in the body field of the request
 param1=value1&param2=value2&param3...
 ```
 
-Though many modern languages implement constructing data from mappings.
+This format is also known as query parameters; however, they are not added to the end of the URL, but rather send in the POST body. Many modern languages implement constructing data from mappings.
 
 ## Server Responses
 
@@ -32,7 +32,7 @@ Most server response are formatted in weird ways, not in more usual ways like **
 
 <!-- tabs:start -->
 
-### **php**
+### **PHP**
 
 ```php
 <?php
@@ -61,7 +61,7 @@ echo $result
 ?>
 ```
 
-### **python**
+### **Python**
 
 ```py
 import requests
@@ -115,7 +115,7 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
 ```
 
-### **java**
+### **Java**
 
 ```java
 import java.io.*;
@@ -154,7 +154,7 @@ class Main {
 }
 ```
 
-### **javascript**
+### **Node.js**
 
 ```js
 const request = require("request");
@@ -174,7 +174,24 @@ request.post(url, {form: data}, function(error, response, body) {
 });
 ```
 
-### **rust**
+### **JavaScript (Browser)**
+```js
+// sets the target url
+let url = "http://www.boomlings.com/database/[insert target file]";
+
+// creates data to send
+let data = new URLSearchParams({
+    something: "value", somethingElse: "otherValue"
+});
+
+// sends a request
+fetch(url, { method: 'POST', body: data }).then(res => res.text()).then(function(text) {
+    // handles the response, in our case - print response body
+    console.log(text);
+});
+```
+
+### **Rust**
 
 ```rust
 use reqwest;

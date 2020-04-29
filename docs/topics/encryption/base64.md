@@ -10,7 +10,7 @@ Here is an example of using Base64 decoding and encoding:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64
@@ -28,6 +28,30 @@ def base64_encode(string: str) -> str:
 
 def base64_decode(string: str) -> str:
     return base64.urlsafe_b64decode(string.encode()).decode()
+```
+
+### **JavaScript**
+
+```js
+function encodeBase64(str) {
+  // btoa() is native Base64 encode - only works in browser
+  if (typeof btoa === 'undefined') {
+    // Assume Node.js, so Buffer exists
+    return Buffer.from(str).toString('base64');
+  }
+  // btoa() exists - however, does not output dashes and underscores, so must replace them
+  return btoa(str).replace(/\//g, '_').replace(/\+/g, '-');;
+}
+
+function decodeBase64(str) {
+  // atob() is native Base64 decode - only works in browser
+  if (typeof atob === 'undefined') {
+    // Assume Node.js, so Buffer exists
+    return Buffer.from(str, 'base64').toString();
+  }
+  // atob() exists - however, no support for dashes and underscores, so must replace them
+  return atob(str.replace(/_/g, '/').replace(/-/g, '+'));
+}
 ```
 
 <!-- tabs:end -->

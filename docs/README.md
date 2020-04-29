@@ -14,6 +14,9 @@ A few people, or teams have gone out of their way to create proper wrappers and 
 
 * [gd.py](https://github.com/NeKitDS/gd.py) by [NeKitDS](https://github.com/NeKitDS)
 
+#### JavaScript
+* [gd.js](https://github.com/101arrowz/gd.js) by [101arrowz](https://github.com/101arrowz) (WIP)
+
 #### C#
 
 * [GDAPI](https://github.com/gd-edit/GDAPI) by the [GDEdit Team](https://github.com/gd-edit)

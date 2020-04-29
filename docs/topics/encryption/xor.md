@@ -5,81 +5,40 @@
 Each character in a string is essentially represented by a number,
 so-called *codepoint*, to which XOR operation can be applied.
 
-<!-- tabs:start -->
-
-### **python**
-
-In python, you can use `ord()` function to get the codepoint of a character,
-and `chr()` to convert the codepoint to a character.
-
-```py
->>> ord("N")
-78
->>> chr(78)
-"N"
-```
-
-<!-- tabs:end -->
-
 ## XOR Cipher
 
 **XOR-Cipher** elaborates on the idea of applying *XOR* to each to characters,
 one in the string and one in the key.
 
-Here is our **XOR-Cipher** stub (empty) function:
-
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
-def xor_cipher(string: str, key: str) -> str: ...
-```
-
-<!-- tabs:end -->
-
-Suppose we have a string `"GD"` (how original), and key `"42069"` (rather original as well).
-
-Here is what will happen to our string if we apply **XOR-Cipher**:
-
-<!-- tabs:start -->
-
-### **python**
-
-```py
->>> chr(ord("G") ^ ord("4")) + chr(ord("D") ^ ord("2"))
-"sv"
-```
-
-<!-- tabs:end -->
-
-**XOR-Cipher** connects each character in given string with character in key (key is cycled), then applies *XOR* operation on each pair.
-
-Returning back to the function:
-
-<!-- tabs:start -->
-
-### **python**
-
-```py
-import itertools
-
-# we are going to use itertools.cycle() on our key, which will basically
-# repeatedly yield "1234512345..." for key "12345"
-
 def xor_cipher(string: str, key: str) -> str:
-    result = ""
-    for string_char, key_char in zip(string, cycle(key)):
-        result += chr(ord(string_char) ^ ord(key_char))
-    return result
+  # Join together all the XORed characters
+  return ''.join(
+    # Create an XORed character from...
+    chr(
+      # the XOR of the unicode values of the key and string characters
+      ord(string[i]) ^ ord(key_str[i % len(key_str)])
+    # for every character in the string
+    ) for i in range(len(string))
+  )
 ```
 
-This function is quite good, but adding new characters to strings in python is quite slow.
-Here is a better function that implements **XOR-Cipher** (and hey, it is written in one line!):
+### **JavaScript**
 
-```py
-def xor_cipher(string: str, key: str) -> str
-    return ("").join(chr(ord(x) ^ ord(y)) for x, y in zip(string, cycle(key)))
+```js
+function xor(str, key) {
+  let xored = '';
+  // Iterate through every character
+  for (let i = 0; i < str.length; i++) {
+    // Add each xored character to the final string
+    xored += str.charCodeAt(i) ^ key.charCodeAt(i % key.length);
+  }
+  return xored;
+}
 ```
 
 <!-- tabs:end -->
