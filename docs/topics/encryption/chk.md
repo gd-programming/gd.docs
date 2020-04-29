@@ -57,6 +57,19 @@ seed2 is generated from level data:
 
 <!-- tabs:start -->
 
+### **pseudocode** ###
+```
+seed2 = ""
+space = length of levelString / 50
+
+for i in range 50:
+    seed2 += levelString[space * i]
+   
+seed2 += "xI25fpAapCQg"
+sha1 encode seed2
+xor encrypt seed2 with key 41274
+```
+
 ### **python**
 
 ```py
