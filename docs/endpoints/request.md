@@ -154,10 +154,10 @@ class Main {
 }
 ```
 
-### **javascript**
+### **node.js**
 
 ```js
-const request = require("request");
+const fetch = require("node-fetch");
 
 // sets the target url
 let url = "http://www.boomlings.com/database/[insert target file]";
@@ -168,10 +168,9 @@ let data = {
 };
 
 // sends a request
-request.post(url, {form: data}, function(error, response, body) {
-    // handles the response, in our case - print response body
-    console.log(body);
-});
+fetch(url, { method: "POST", body: JSON.stringify(data) })
+  .then(res => res.text())
+  .then(body => console.log(body));
 ```
 
 ### **rust**
