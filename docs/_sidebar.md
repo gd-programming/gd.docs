@@ -24,6 +24,7 @@
 
 - [Level Passwords](/topics/level_passwords.md)
 - [Level Encoding/Decoding](/topics/levelstring_encoding_decoding.md)
+- [Game Save Files Encryption/Decryption](/topics/localfiles_encrypt_decrypt.md)
 - [Status Codes](/topics/status_codes.md)
 - **Encryption**
   - [Base64 Encoding](topics/encryption/base64.md)
