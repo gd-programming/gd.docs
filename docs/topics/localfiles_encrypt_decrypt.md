@@ -8,6 +8,7 @@ Both files share the same process for decryption and encryption
 ## Decryption
 Local game files are decrypted in the following order: Apply [XOR Cipher](topics/encryption/xor) with key `0xB`(decimal 11), then apply [B64 decoding](topics/encryption/base64), the resulting byte sequence will be a [gzip](https://zlib.net) compressed string which needs to be decompressed/inflated.
 Programatically it can be implemented in the following way
+
 ```py
 def xor_eleven(string):
 	result = ""
@@ -24,6 +25,7 @@ def decrypt_level(data) -> str:
 
 ## Encryption
 Encryption is done pretty much the same way but with opposite operations and order. So the sequence for encrypting can be defined as: [gzip](https://zlib.net) compress/deflate -> [B64 encoded](topics/encryption/base64) -> [XOR Cipher](topics/encryption/xor) using `0xb`(decimal 11) as a key
+
 ```py
 def xor_eleven(string):
 	result = ""
