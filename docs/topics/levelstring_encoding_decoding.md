@@ -1,6 +1,8 @@
 # Level encoding/decoding
 Despite Geometry Dash levels being stored in a plaintext, human-readable format, the game will resort to storing level data in a compressed binary format when storing them in the game's memory or files(albeit for compatibility reasons levels can also be loaded directly in a uncompressed format).
 
+Official levels are stored in `<game installation folder>\Resources\LevelData.plist` (filename depends on game, `LevelDataSubzero.plist` for *Geometry Dash Subzero*, etc.)
+
 Compressed levels are actually composed out of two things: [Base64](topics/encryption/base64) encoding and [ZLIB](https://zlib.net) compression.
 
 ## Encoding
