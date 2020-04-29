@@ -1,4 +1,4 @@
-# Client Object Resource
+# Client Level Object Resource
 
 ## Level Object
 A level object is an object within a Geometry Dash level, containing data about its behavior.
@@ -29,7 +29,7 @@ E.g.:
   - Editor Layer 1: 5 (`20,5`)
   - Z Order: -1 (B3) (`25,-1`)
 
-Notice that every single objects contains at least 3 properties, `1`, `2`, `3`, which represent the object ID, X position and Y position respectively. Even in the case that the objects' X and Y positions are 0, the keys are not omitted.
+Notice that every single objects contains at least 3 properties, `1`, `2`, `3`, which represent the object ID, X position and Y position respectively. Even in the case that the objects' X and Y positions are 0, the keys are not omitted. <!-- TODO: Verify -->
 
 Property keys reflect the keys found in the following table, whereas property values are formatted as follows
 
