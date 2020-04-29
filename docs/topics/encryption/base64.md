@@ -39,7 +39,8 @@ function encodeBase64(str) {
     // Assume Node.js, so Buffer exists
     return Buffer.from(str).toString('base64');
   }
-  // btoa() exists - however, does not output dashes and underscores, so must replace them
+  // btoa() exists - however, does not output dashes and underscores
+  // So, we must replace slashes and pluses with them
   return btoa(str).replace(/\//g, '_').replace(/\+/g, '-');;
 }
 
@@ -49,7 +50,8 @@ function decodeBase64(str) {
     // Assume Node.js, so Buffer exists
     return Buffer.from(str, 'base64').toString();
   }
-  // atob() exists - however, no support for dashes and underscores, so must replace them
+  // atob() exists - however, no support for dashes and underscores
+  // So, we must replace them with slashes and pluses
   return atob(str.replace(/_/g, '/').replace(/-/g, '+'));
 }
 ```

@@ -19,7 +19,7 @@ def decode_level(data: str) -> str:
 	return plaintext_level_string.decode()
 ```
 
-### JavaScript
+### **JavaScript**
 ```js
 // Can use any library that is similar to Zlib, e.g. tiny-inflate
 const pako = require('pako');

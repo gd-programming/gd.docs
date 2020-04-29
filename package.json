@@ -4,7 +4,8 @@
   "description": "GD Documentation",
   "main": "generator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "docsify serve ./docs --port 9505",
+    "prod": "npm start && node scripts/git_pull.js"
   },
   "repository": {
     "type": "git",

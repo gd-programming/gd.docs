@@ -37,7 +37,7 @@ def generate_chk(values: [int, str] = (), key: str, salt: str = "") -> str:
 ### **JavaScript**
 
 ```js
-// Could also implement yourself using `crypto` module in Node.js or SubtleCrypto API
+// Could also implement yourself using `crypto` module in Node.js or SubtleCrypto
 const sha1 = require('sha1');
 
 // See /topics/encryption/base64 for more details
@@ -78,7 +78,7 @@ seed2 is generated from level data:
 
 <!-- tabs:start -->
 
-### **Pseudocode** ###
+### **Pseudocode**
 ```plain
 seed2 = ""
 space = length of levelString / 50
