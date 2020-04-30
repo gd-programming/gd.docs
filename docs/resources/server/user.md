@@ -8,9 +8,9 @@
 | 10 | Color1 | **number** | First color of the player use |
 | 11 | Color2 | **number** | Second color of the player use |
 | 3 | Stars | **number** | The count of stars player have |
-| 46 | Diamonds | **number** The count of diamonds player have |
+| 46 | Diamonds | **number** | The count of diamonds player have |
 | 4 | Demons | **number** | The count of demons player have |
-| 8 | Creatorpoints | **number** The count of creatorpoints player have |
+| 8 | Creatorpoints | **number** | The count of creatorpoints player have |
 | 18 | Messagestate | **number** | 0: All, 1: Only friends, 2: None |
 | 19 | FriendsState | **number** | 0: All, 1: None |
 | 50 | Messagestate | **number** | 0: All, 1: Only friends, 2: None |
