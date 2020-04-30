@@ -71,19 +71,6 @@ KEY = (  # python will automatically concatenate two parts
 
 <!-- tabs:end -->
 
-Firstly, we would need function to pad our data with `0xB` bytes until its length is divisible by `16` (`ECB` mode requires it):
-
-<!-- tabs:start -->
-
-### **Python**
-
-```py
-def bytes_pad(data: bytes, pad_with: bytes = "\x0b") -> bytes:
-    return data + pad_with * (16 - (len(data) % 16))
-```
-
-<!-- tabs:end -->
-
 Here is how actual decryption would be implemented:
 
 <!-- tabs:start -->
@@ -94,9 +81,16 @@ Here is how actual decryption would be implemented:
 from Crypto.Cipher import AES
 
 
+def remove_pad(data: bytes) -> bytes:
+    last = data[-1]
+    if last < 16:
+        data = data[:-last]
+    return data
+
+
 def mac_decrypt(data: bytes) -> str:
     cipher = AES.new(KEY, AES.MODE_ECB)
-    return cipher.decrypt(bytes_pad(data)).decode()
+    return remove_pad(cipher.decrypt(data)).decode()
 ```
 
 <!-- tabs:end -->
@@ -132,9 +126,17 @@ Like on Windows, encryption and decrypion are almost the same:
 from Crypto.Cipher import AES
 
 
+def add_pad(data: bytes) -> bytes:
+    len_r = len(data) % 16
+    if len_r:
+        to_add = 16 - len_r
+        data += to_add.to_bytes(1, "little") * to_add
+    return data
+
+
 def mac_encrypt(data: str) -> bytes:
     cipher = AES.new(KEY, AES.MODE_ECB)
-    return cipher.encrypt(bytes_pad(data.encode()))
+    return cipher.encrypt(add_pad(data.encode()))
 ```
 
 <!-- tabs:end -->

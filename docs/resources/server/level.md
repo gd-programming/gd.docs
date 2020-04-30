@@ -1,4 +1,3 @@
-
 # Server Level Resource
 
 ## Level
@@ -7,7 +6,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 
 ### Level Object
 
-Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22 endpoint
+Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel22 endpoint.
 
 #### Level Structure
 
