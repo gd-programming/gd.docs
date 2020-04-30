@@ -154,9 +154,9 @@ class Main {
 }
 ```
 
-### **javascript**
+### **node.js**
 
-```js
+```node.js
 const request = require("request");
 
 // sets the target url
