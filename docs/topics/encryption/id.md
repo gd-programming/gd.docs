@@ -11,7 +11,7 @@ Generating RS is quite simple:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import random
@@ -37,7 +37,7 @@ It can be randomly generated using our `generate_rs()` function:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 def generate_uuid(parts: [int] = (8, 4, 4, 4, 10)) -> str:
@@ -58,7 +58,7 @@ Generating UDID should be simpler because we can just generate a random integer:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import random

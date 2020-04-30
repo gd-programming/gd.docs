@@ -15,7 +15,7 @@ CHK generator can be implemented like this:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64
@@ -57,8 +57,9 @@ seed2 is generated from level data:
 
 <!-- tabs:start -->
 
-### **pseudocode** ###
-```
+### **Pseudocode**
+
+```plain
 seed2 = ""
 space = length of levelString / 50
 
@@ -70,7 +71,7 @@ sha1 encode seed2
 xor encrypt seed2 with key 41274
 ```
 
-### **python**
+### **Python**
 
 ```py
 def generate_upload_seed(data: str, chars: int = 50) -> str:
@@ -147,7 +148,7 @@ Seed can be generated like this:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 def generate_leaderboard_seed(

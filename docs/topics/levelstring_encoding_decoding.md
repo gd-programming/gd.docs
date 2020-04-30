@@ -8,7 +8,7 @@ To encode a level you take first the level string and `compress()` it, afterward
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64
@@ -27,7 +27,7 @@ To decompress the level you'll first need to decode the compressed string in it'
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64

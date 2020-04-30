@@ -10,7 +10,7 @@ Here is an example of using Base64 decoding and encoding:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64

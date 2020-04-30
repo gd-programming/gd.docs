@@ -17,7 +17,7 @@ Simple XOR function differs can be written like this:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 def xor(string: str, key: int) -> str:
@@ -30,7 +30,7 @@ Programmatically decryption can be implemented like so:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64
@@ -54,13 +54,13 @@ On MacOS, decryption is quite simpler. Saves are encrypted with
 
 <!-- tabs:start -->
 
-### **plain**
+### **Plain**
 
 ```plain
 69 70 75 39 54 55 76 35 34 79 76 5d 69 73 46 4d 68 35 40 3b 74 2e 35 77 33 34 45 32 52 79 40 7b
 ```
 
-### **python**
+### **Python**
 
 ```py
 KEY = (  # python will automatically concatenate two parts
@@ -75,7 +75,7 @@ Firstly, we would need function to pad our data with `0xB` bytes until its lengt
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 def bytes_pad(data: bytes, pad_with: bytes = "\x0b") -> bytes:
@@ -88,7 +88,7 @@ Here is how actual decryption would be implemented:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 from Crypto.Cipher import AES
@@ -109,7 +109,7 @@ Encryption is done pretty much the same way but with opposite operations and ord
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 def encrypt_data(data: str) -> str:
@@ -126,7 +126,7 @@ Like on Windows, encryption and decrypion are almost the same:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 from Crypto.Cipher import AES
