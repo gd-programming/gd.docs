@@ -13,7 +13,7 @@
 | 17 | Usercoins | **number** | The count of usercoins player have |
 | 18 | Messagestate | **number** | 0: All, 1: Only friends, 2: None |
 | 19 | FriendsState | **number** | 0: All, 1: None |
-| 20 | Username | **string** | The name of player |
+| 20 | youtube | **string** | The youtubeurl of player |
 | 21 | accIcon | **number** | The icon number of the player use |
 | 22 | accShip | **number** | The ship number of the player use |
 | 23 | accBall | **number** | The ball number of the player use |
@@ -25,8 +25,8 @@
 | 30 | GlobalRank | **number** | The global rank of this player |
 | 31 | Friendstate | **number** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
 | 43 | accSpider | **number** | The spider number of the player use |
-| 44 | Username | **string** | The name of player |
-| 45 | Username | **string** | The name of player |
+| 44 | twitter| **string** | The twitter of player |
+| 45 | twitch | **string** | The twitch of player |
 | 46 | Diamonds | **number** | The count of diamonds player have |
 | 48 | accExplosion | **number** | The explosion number of the player use |
 | 49 | Modlevel | **number** | 0: None, 1: Normal Mod(yellow), 2: Elder Mod(orange) |
