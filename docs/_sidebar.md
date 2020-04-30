@@ -12,10 +12,10 @@
 - **Client**
   - [Gamesave](/resources/client/gamesave.md)
   - [Level](/resources/client/level.md)
-  - [Inner Level String](/resources/client/inner-level-string.md)
-  - [Level Object](/resources/client/level-object.md)
-  - [Color String](/resources/client/color-string.md)
-  - [Guideline String](/resources/client/guideline-string.md)
+    - [Inner Level String](/resources/client/level-components/inner-level-string.md)
+    - [Level Object](/resources/client/level-components/level-object.md)
+    - [Color String](/resources/client/level-components/color-string.md)
+    - [Guideline String](/resources/client/level-components/guideline-string.md)
 
 **Endpoints**
 - *None documented yet*

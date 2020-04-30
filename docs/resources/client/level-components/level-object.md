@@ -6,9 +6,7 @@ A level object is an object within a Geometry Dash level, containing data about 
 ### Object String
 The object string is contained within the [inner level string](). It is formatted as follows:
 
-`{object};{object};{object};...`, where
-
-`object` is formatted as:
+`{object};{object};{object};...`, where `object` is formatted as:
 
 `{propertyKey},{propertyValue},{propertyKey},{propertyValue},...`.
 

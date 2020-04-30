@@ -1,42 +1,42 @@
 # Client Level Resource
 
 ## Level
-A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a [level string](#). It is stored in [XML](https://en.wikipedia.org/wiki/XML) format, and each level entry is a dictionary, containing key/value pairs denoting the level's properties.
+A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a level string. It is stored in [XML](https://en.wikipedia.org/wiki/XML) format, and each level entry is a dictionary, containing key/value pairs denoting the level's properties.
 
 ### Level Data
 **Level Structure**
 
-| Key | Name/Value               | Type                                            | Description                                                                      |
-|:----|:-------------------------|:------------------------------------------------|:---------------------------------------------------------------------------------|
-| k1  | Level ID                 | **integer**                                     | the id of the level                                                              |
-| k2  | Level Name               | **string**                                      | the name of the level                                                            |
-| k3  | Description              | **string**                                      | the level description, encoded in [base64](https://en.wikipedia.org/wiki/Base64) |
-| k4  | Inner Level String       | **[inner level string](inner-level-string.md)** | the inner level string, or the playable level                                    |
-| k5  | Creator                  | **[user](./user.md).name**                      | the name of the level creator                                                    |
-| k8  | Official Song ID         | **[Audio Track](/reference?id=audio-track)**    | the official Song ID (if used)                                                   |
-| k11 | Downloads                | **integer**                                     | the amount of times the level's been downloaded                                  |
-| k14 | Verified                 | **bool**                                        | whether the level is verified or not                                             |
-| k15 | Uploaded                 | **bool**                                        | whether the level is uploaded to the server or not                               |
-| k16 | Level Version            | **integer**                                     | the version of the level                                                         |
-| k18 | Attempts                 | **integer**                                     | the number of attempts that are made to this level                               |
-| k19 | Normal Mode Percentage   | **integer**                                     | the max percentage that has been achieved in normal mode in this level           |
-| k20 | Practice Mode Percentage | **integer**                                     | the max percentage that has been achieved in practice mode in this level         |
-| k22 | Like Rating              | **integer**                                     | the level's like rating (`likes - dislikes`)                                     |
-| k23 | Length                   | **[Length](enumerations.md)**                   | the level's length                                                               |
-| k26 | Stars                    | **integer**                                     | the stars the level is worth                                                     |
-| k41 | Password                 | **integer**                                     | the [password]() <!-- local gamesave password topic link --> set for the level   |
-| k45 | Custom Song ID           | **integer**                                     | the custom Song ID (if used)                                                     |
-| k46 | Level Revision           | **integer**                                     | the revision of the level                                                        |
-| k48 | Object Count             | **integer**                                     | the [object count]() of the level                                                |
-| k61 | First Coin Acquired      | **bool**                                        | whether the first coin is acquired during verification                           |
-| k62 | Second Coin Acquired     | **bool**                                        | whether the second coin is acquired during verification                          |
-| k63 | Third Coin Acquired      | **bool**                                        | whether the third coin is acquired during verification                           |
-| k66 | Requested Stars          | **integer**                                     | the requested stars during publication of the level                              |
-| k71 | Orb Reward Percentage    | **integer**                                     | the percentage up until the orb reward has been granted                          |
-| k79 | Unlisted                 | **bool**                                        | whether the level is to be marked as unlisted or not during publication          |
-| k80 | Seconds Spent Editing    | **integer**                                     | the number of seconds spent editing the level                                    |
-| k83 | Difficulty               | **[Difficulty](enumerations.md)**               | the level difficulty (including Demon ratings)                                   |
-| k84 | Level Folder             | **integer**                                     | the folder in which the level belongs (0 represents no folder)                   |
+| Key | Name/Value               | Type                                                             | Description                                                                      |
+|:----|:-------------------------|:-----------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| k1  | Level ID                 | **integer**                                                      | the id of the level                                                              |
+| k2  | Level Name               | **string**                                                       | the name of the level                                                            |
+| k3  | Description              | **string**                                                       | the level description, encoded in [base64](https://en.wikipedia.org/wiki/Base64) |
+| k4  | Inner Level String       | **[inner level string](level-components/inner-level-string.md)** | the inner level string, or the playable level                                    |
+| k5  | Creator                  | **[user](./user.md).name**                                       | the name of the level creator                                                    |
+| k8  | Official Song ID         | **[Audio Track](/reference?id=audio-track)**                     | the official Song ID (if used)                                                   |
+| k11 | Downloads                | **integer**                                                      | the amount of times the level's been downloaded                                  |
+| k14 | Verified                 | **bool**                                                         | whether the level is verified or not                                             |
+| k15 | Uploaded                 | **bool**                                                         | whether the level is uploaded to the server or not                               |
+| k16 | Level Version            | **integer**                                                      | the version of the level                                                         |
+| k18 | Attempts                 | **integer**                                                      | the number of attempts that are made to this level                               |
+| k19 | Normal Mode Percentage   | **integer**                                                      | the max percentage that has been achieved in normal mode in this level           |
+| k20 | Practice Mode Percentage | **integer**                                                      | the max percentage that has been achieved in practice mode in this level         |
+| k22 | Like Rating              | **integer**                                                      | the level's like rating (`likes - dislikes`)                                     |
+| k23 | Length                   | **[Length](enumerations.md)**                                    | the level's length                                                               |
+| k26 | Stars                    | **integer**                                                      | the stars the level is worth                                                     |
+| k41 | Password                 | **integer**                                                      | the [password]() <!-- local gamesave password topic link --> set for the level   |
+| k45 | Custom Song ID           | **integer**                                                      | the custom Song ID (if used)                                                     |
+| k46 | Level Revision           | **integer**                                                      | the revision of the level                                                        |
+| k48 | Object Count             | **integer**                                                      | the [object count]() of the level                                                |
+| k61 | First Coin Acquired      | **bool**                                                         | whether the first coin is acquired during verification                           |
+| k62 | Second Coin Acquired     | **bool**                                                         | whether the second coin is acquired during verification                          |
+| k63 | Third Coin Acquired      | **bool**                                                         | whether the third coin is acquired during verification                           |
+| k66 | Requested Stars          | **integer**                                                      | the requested stars during publication of the level                              |
+| k71 | Orb Reward Percentage    | **integer**                                                      | the percentage up until the orb reward has been granted                          |
+| k79 | Unlisted                 | **bool**                                                         | whether the level is to be marked as unlisted or not during publication          |
+| k80 | Seconds Spent Editing    | **integer**                                                      | the number of seconds spent editing the level                                    |
+| k83 | Difficulty               | **[Difficulty](enumerations.md)**                                | the level difficulty (including Demon ratings)                                   |
+| k84 | Level Folder             | **integer**                                                      | the folder in which the level belongs (0 represents no folder)                   |
 
 ***Current Unknown Values***
 
