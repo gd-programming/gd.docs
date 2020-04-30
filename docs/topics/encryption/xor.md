@@ -2,37 +2,12 @@
 
 [XOR](https://en.wikipedia.org/wiki/Bitwise_operation#XOR) is a *bit-wise* binary operation that is commonly written as `^` in programming languages.
 
-It takes to integers and applies the following rule to each *bit* (hence, *bit-wise*):
+Each character in a string is essentially represented by a number,
+so-called *codepoint*, to which XOR operation can be applied.
 
-| Left | Right | XOR |
-|------|-------|-----|
-| 0    | 0     | 0   |
-| 1    | 0     | 1   |
-| 0    | 1     | 1   |
-| 1    | 1     | 0   |
+<!-- tabs:start -->
 
-Let's see an example of how XOR works for two numbers:
-```
-10 ^ 5 = 15
-
-  1010
-^ 0101
-= 1111
-```
-
-We can see an interesting and very useful property of XOR.
-That is, if we apply it twice, the result will be the same as the start.
-For example:
-```
-15 ^ 5 = 10
-
-  1111
-^ 0101
-= 1010
-```
-
-So, how does XOR apply in our case of encoding strings?
-Well, each character in a string is essentially represented by a number, so-called *codepoint*.
+### **Python**
 
 In python, you can use `ord()` function to get the codepoint of a character,
 and `chr()` to convert the codepoint to a character.
@@ -44,29 +19,48 @@ and `chr()` to convert the codepoint to a character.
 "N"
 ```
 
+<!-- tabs:end -->
+
 ## XOR Cipher
 
-**XOR-Cipher** elaborates on the idea of applying XOR to each to characters,
+**XOR-Cipher** elaborates on the idea of applying *XOR* to each to characters,
 one in the string and one in the key.
 
-Let us define our simple XOR-Cipher function:
+Here is our **XOR-Cipher** stub (empty) function:
+
+<!-- tabs:start -->
+
+### **Python**
+
 ```py
-def xor_cipher(string: str, key: str) -> str:
-    ...  # we will add actual code soon
+def xor_cipher(string: str, key: str) -> str: ...
 ```
 
-Here is an example of how this function will work.
-Let's take a string `"GD"` (how original), and key `"42069"` (rather original as well).
+<!-- tabs:end -->
 
-Here is what will happen to our string if we apply XOR-Cipher:
+Suppose we have a string `"GD"` (how original), and key `"42069"` (rather original as well).
+
+Here is what will happen to our string if we apply **XOR-Cipher**:
+
+<!-- tabs:start -->
+
+### **Python**
+
 ```py
 >>> chr(ord("G") ^ ord("4")) + chr(ord("D") ^ ord("2"))
 "sv"
 ```
 
-XOR-Cipher connects each character in given string with character in key (key is cycled), then applies XOR operation on each pair.
+<!-- tabs:end -->
 
-Returning back to our function:
+**XOR-Cipher** connects each character in given string with character in key (key is cycled), then applies *XOR* operation on each pair.
+
+Returning back to the function:
+
+<!-- tabs:start -->
+
+### **Python**
+
 ```py
 import itertools
 
@@ -81,13 +75,14 @@ def xor_cipher(string: str, key: str) -> str:
 ```
 
 This function is quite good, but adding new characters to strings in python is quite slow.
-Here is a better function that implements XOR Cipher (and hey, it is written in one line!):
+Here is a better function that implements **XOR-Cipher** (and hey, it is written in one line!):
+
 ```py
 def xor_cipher(string: str, key: str) -> str
     return ("").join(chr(ord(x) ^ ord(y)) for x, y in zip(string, cycle(key)))
 ```
 
-In fact, last function is used by `gd.py` project.
+<!-- tabs:end -->
 
 ## XOR Keys
 

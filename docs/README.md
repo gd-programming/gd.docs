@@ -11,21 +11,31 @@ The provided documentation is available on it's repository, over [here](https://
 A few people, or teams have gone out of their way to create proper wrappers and API's around the **Geometry Dash** servers and it's client. All of the known and endorsed projects will find their way here, as a listing of resources people can use for their own projects.
 
 #### Python
-  * [gd.py](https://github.com/NeKitDS/gd.py) by [NeKitDS](https://github.com/NeKitDS)
+
+* [gd.py](https://github.com/NeKitDS/gd.py) by [NeKitDS](https://github.com/NeKitDS)
 
 #### C#
-  * [GDAPI](https://github.com/gd-edit/GDAPI) by the [GDEdit Team](https://github.com/gd-edit)
-  * [GDNET](https://github.com/GDdotNET/GDNET) by the [GD.NET Team](https://github.com/GDdotNET)
+
+* [GDAPI](https://github.com/gd-edit/GDAPI) by the [GDEdit Team](https://github.com/gd-edit)
+* [GDNET](https://github.com/GDdotNET/GDNET) by the [GD.NET Team](https://github.com/GDdotNET)
 
 ### Geometry Dash Projects
 
 These are generally projects that generally interface over the Geometry Dash servers, and overall have built up their own recognition and traction along the community, and developers alike.
 
 #### Node.js
-  * [GDBrowser](https://github.com/GDColon/GDBrowser) by [GDColon](https://github.com/GDColon)
+
+* [GDBrowser](https://github.com/GDColon/GDBrowser) by [GDColon](https://github.com/GDColon)
+* [GD-NodeJS-API](https://github.com/SMJSGaming/GD-NodeJS-API) by [SMJS](https://github.com/SMJSGaming)
 
 #### C#
-  * [GDEdit](https://github.com/gd-edit/GDE) by the [GDEdit Team](https://github.com/gd-edit)
+
+* [GDEdit](https://github.com/gd-edit/GDE) by the [GDEdit Team](https://github.com/gd-edit)
+
+#### C++
+
+* [GDAddon](https://github.com/Keenlos/GDAddonSDK) by the [Keenlos Team](https://github.com/Keenlos/Keenlos/blob/master/ABOUT.md)
+* [GDCrypto](https://github.com/Cos8o/GDCrypto) by [Cos8o](https://github.com/Cos8o)
 
 ## Outside Remarks
 

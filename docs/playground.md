@@ -1,4 +1,5 @@
 # Miko's Playground
+
 You're able to use this publicly, just like a sandbox. Please make sure ***not*** to commit this ***EVER***.
 
 <!-- tabs:start -->
@@ -26,3 +27,37 @@ fuck it
 <!-- tabs:end -->
 
 \* = do you like disclaimers, i don't
+
+<div class="projects_card">
+    <a href="$" class="project_card_background-container">         
+        <img class="project_card-background" src="https://pbs.twimg.com/media/ESu_msLVAAAT_qn?format=jpg&name=large" alt="background">
+        <div class="project_card-background-overlay"></div>
+    </a>
+    <div class="projects_card-card">
+        <div class="projects_card_content projects_card_content-details">
+            <div class="projects_card_logo">
+                <img class="projects_card_logo-image" src="https://raw.githubusercontent.com/gd-programming/gddocs/master/assets/gddocs-icon.png">
+            </div>
+            <div class="projects_card_details">
+                <div class="projects_card_title">
+                    <div class="u-ellipsis-overflow">
+                       GDDocs
+                    </div>
+                </div>
+                <div class="projects_card_authors">
+                <div class="u-ellipsis-overflow">
+                        Team GDProgramming
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects_card_content projects_card_content-stats">
+            <div class="projects_card_stats">
+                <div class="projects_card_language-icon-container">
+                    <div class="projects_card_language-icon projects_card_language-icon--html"></div>
+                </div>
+                <div class="projects_card_language-message u-ellipsis-overflow">HTML</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -2,6 +2,7 @@
 
 - [Intro](/)
 - [Reference](/reference.md)
+- [Credits](/CREDITS.md)
 
 **Resources**
 -----
@@ -18,11 +19,19 @@
     - [Guideline String](/resources/client/level-components/guideline-string.md)
 
 **Endpoints**
-- *None documented yet*
+
+- **Accounts**
+  - [Registration](/endpoints/accounts/register.md)
+
+- [Request](/endpoints/request.md)
 
 **Topics**
+
 - [Level Passwords](/topics/level_passwords.md)
-- **[Encryption](/topics/encryption/main.md)**
+- [Level Encoding/Decoding](/topics/levelstring_encoding_decoding.md)
+- [Game Save Files Encryption/Decryption](/topics/localfiles_encrypt_decrypt.md)
+- [Status Codes](/topics/status_codes.md)
+- **Encryption**
   - [Base64 Encoding](topics/encryption/base64.md)
   - [CHK Generation](topics/encryption/chk.md)
   - [RS, UDID and UUID](topics/encryption/id.md)
