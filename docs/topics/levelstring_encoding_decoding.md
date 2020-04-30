@@ -8,7 +8,7 @@ Compressed levels are actually composed out of two things: [Base64](topics/encry
 ## Encoding
 To encode a level you take first the level string and `compress()` it, afterwards you need to encode the resulting byte sequence with Base64 encoding.
 
-If you are encoding an official level and want to put it in `LevelData.plist`, you need to compress the string at only level 6, replace the first 10 bytes to `\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\x03` after compressing, then remove `H4sIAAAAAAAAA` in the beginning of the base64 encoded string. (actually the game itself has hardcoded values to verify the string length, so the best way to replace levels is using a hack)
+If you are encoding an official level and want to put it in `LevelData.plist`, you need to remove the first 13 characters in the beginning of the base64 encoded string.
 
 <!-- tabs:start -->
 
@@ -19,14 +19,10 @@ import base64
 import gzip
 
 def encode_level(level_string: str, is_official_level: bool) -> str:
-    gzipped = gzip.compress(level_string.encode(), compresslevel=6)
-    if is_official_level:
-        # gzip header with no modification time and os flag set to unix
-        gzip_header = b'\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\x03'
-        gzipped = gzip_header + gzipped[10:]
+    gzipped = gzip.compress(level_string.encode())
     base64_encoded = base64.urlsafe_b64encode(gzipped)
     if is_official_level:
-        base64_encoded = base64_encoded.lstrip(b'H4sIAAAAAAAAA')
+        base64_encoded = base64_encoded[13:]
     return base64_encoded.decode()
 ```
 
