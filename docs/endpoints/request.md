@@ -84,40 +84,52 @@ print(result)
 ### **Java**
 
 ```java
-import java.io.*;
-import java.net.*;
+/*
+ * Using Reactor Netty HTTP client
+ * https://github.com/reactor/reactor-netty
+ */
 
-// calls the main class and method
-class Main {
-  public static void main(String[] args) throws Exception {
-    
-    // sets the target url
-    URL url = new URL("http://www.boomlings.com/database/[insert target file]");
-    
-    // makes the post string
-    String postData = "something=value&somethingElse=otherValue";
+import static io.netty.buffer.Unpooled.wrappedBuffer;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
-    // turns the post data into a byte array
-    byte[] postDataBytes = postData.getBytes("UTF-8");
+import io.netty.buffer.ByteBuf;
+import io.netty.handler.codec.http.HttpResponseStatus;
+import reactor.core.publisher.Mono;
+import reactor.netty.http.client.HttpClient;
 
-    // makes the request header
-    HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-    conn.setRequestMethod("POST");
-    conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-    conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
-    
-    // requests the output
-    conn.setDoOutput(true);
-    conn.getOutputStream().write(postDataBytes);
+public class Main {
 
-    // reads the output
-    Reader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "UTF-8"));
+    public static void main(String[] args) {
+        // Creates data to send
+        ByteBuf data = wrappedBuffer(UTF_8.encode("something=value&somethingElse=otherValue"));
 
-    // constructs and prints the output
-    for (int c; (c = in.read()) >= 0;)
-        System.out.print((char)c);
+        // Creates HTTP client
+        HttpClient client = HttpClient.create()
+                .baseUrl("www.boomlings.com/database")
+                .headers(h -> {
+                    h.add("Content-Type", "application/x-www-form-urlencoded");
+                    h.add("Content-Length", data.readableBytes());
+                });
+
+        String response = client.post()       // Creates the POST request
+                .uri("/[insert target file]") // Sets the target URL
+                .send(Mono.just(data))        // Sends the data
+                .responseSingle((responseHeader, responseBody) -> {
+                    if (responseHeader.status().equals(HttpResponseStatus.OK)) {
+                        // If 200 OK returns response body as string
+                        return responseBody.asString().defaultIfEmpty("");
+                    } else {
+                        // If not 200 OK throws an exception
+                        return Mono.error(new RuntimeException(responseHeader.status().toString()));
+                    }
+                })
+                .block(); // awaits response
+
+        System.out.println(response); // prints response body
     }
+
 }
+
 ```
 
 ### **NodeJS**
