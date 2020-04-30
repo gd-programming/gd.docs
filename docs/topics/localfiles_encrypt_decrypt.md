@@ -39,7 +39,7 @@ import gzip
 
 def decrypt_data(data: str) -> str:
 	base64_decoded = base64.urlsafe_b64decode(xor(data, key=11).encode())
-	decompressed = gzip.decompress(base64_decoded_string)
+	decompressed = gzip.decompress(base64_decoded)
 	return decompressed.decode()
 ```
 
@@ -114,7 +114,7 @@ Encryption is done pretty much the same way but with opposite operations and ord
 ```py
 def encrypt_data(data: str) -> str:
 	gzipped = gzip.compress(data.encode())
-	base64_encoded = base64.urlsafe_b64encode(gzip_compressed_string)
+	base64_encoded = base64.urlsafe_b64encode(gzipped)
 	return xor(base64_encoded.decode(), key=11)
 ```
 
