@@ -69,7 +69,7 @@ import itertools
 
 def xor_cipher(string: str, key: str) -> str:
     result = ""
-    for string_char, key_char in zip(string, cycle(key)):
+    for string_char, key_char in zip(string, itertools.cycle(key)):
         result += chr(ord(string_char) ^ ord(key_char))
     return result
 ```
@@ -79,7 +79,7 @@ Here is a better function that implements **XOR-Cipher** (and hey, it is written
 
 ```py
 def xor_cipher(string: str, key: str) -> str
-    return ("").join(chr(ord(x) ^ ord(y)) for x, y in zip(string, cycle(key)))
+    return ("").join(chr(ord(x) ^ ord(y)) for x, y in zip(string, itertools.cycle(key)))
 ```
 
 <!-- tabs:end -->
