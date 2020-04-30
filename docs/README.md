@@ -26,6 +26,7 @@ These are generally projects that generally interface over the Geometry Dash ser
 #### Node.js
 
 * [GDBrowser](https://github.com/GDColon/GDBrowser) by [GDColon](https://github.com/GDColon)
+* [GD-NodeJS-API](https://github.com/SMJSGaming/GD-NodeJS-API) by [SMJS](https://github.com/SMJSGaming)
 
 #### C#
 

@@ -32,7 +32,7 @@ Most server response are formatted in weird ways, not in more usual ways like **
 
 <!-- tabs:start -->
 
-### **php**
+### **PHP**
 
 ```php
 <?php
@@ -57,11 +57,11 @@ $result = curl_exec($ch);
 curl_close($ch);
 
 // outputs the site responce
-echo $result
+echo $result;
 ?>
 ```
 
-### **python**
+### **Python**
 
 ```py
 import requests
@@ -81,41 +81,7 @@ result = requests.post(url, data).text
 print(result)
 ```
 
-### **python_async**
-
-```py
-import asyncio
-
-import aiohttp  # 3rd party, can be installed from pypi.org
-
-# sets the target url
-url = "http://www.boomlings.com/database/[insert target file]"
-
-# creates data to send
-data = {
-    "something": "value", "somethingElse": "otherValue"
-}
-
-
-# creates a coroutine to handle request
-async def main() -> None:
-    # creates session to send request with
-    async with aiohttp.ClientSession() as session:
-        # sends a request and returns the response
-        async with session.post(url, data=data) as response:
-            # reads response
-            result = await response.text()
-            # outputs result
-            print(result)
-
-
-# creates EventLoop to run coroutine with
-loop = asyncio.get_event_loop()
-# runs main() coroutine
-loop.run_until_complete(main())
-```
-
-### **java**
+### **Java**
 
 ```java
 import java.io.*;
@@ -154,27 +120,41 @@ class Main {
 }
 ```
 
-### **javascript**
+### **NodeJS**
 
 ```js
-const request = require("request");
+const http = require("http");
+const queryString = require("query-string");
 
 // sets the target url
-let url = "http://www.boomlings.com/database/[insert target file]";
+const target = "/database/[insert target file]";
 
 // creates data to send
-let data = {
-    something: "value", somethingElse: "otherValue"
-};
+const data = queryString.stringify({
+    something: "value",
+    somethingElse: "otherValue"
+});
 
 // sends a request
-request.post(url, {form: data}, function(error, response, body) {
-    // handles the response, in our case - print response body
-    console.log(body);
-});
+http.request({
+    host: "boomlings.com",
+    path: target,
+    port: 80
+    method: "POST"
+    headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Length": Buffer.byteLength(data)
+    }
+}, (res) => {
+    let output = "";
+
+    res.on("data", (chunk) => output += chunk);
+
+    res.on("end", () => console.log(output));
+}).write(data);
 ```
 
-### **rust**
+### **Rust**
 
 ```rust
 use reqwest;

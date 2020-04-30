@@ -7,7 +7,7 @@ so-called *codepoint*, to which XOR operation can be applied.
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 In python, you can use `ord()` function to get the codepoint of a character,
 and `chr()` to convert the codepoint to a character.
@@ -30,7 +30,7 @@ Here is our **XOR-Cipher** stub (empty) function:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 def xor_cipher(string: str, key: str) -> str: ...
@@ -44,7 +44,7 @@ Here is what will happen to our string if we apply **XOR-Cipher**:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 >>> chr(ord("G") ^ ord("4")) + chr(ord("D") ^ ord("2"))
@@ -59,7 +59,7 @@ Returning back to the function:
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import itertools

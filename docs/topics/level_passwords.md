@@ -14,7 +14,7 @@ The passwords used to copy levels that have such set aren't plain string, and ar
 
 <!-- tabs:start -->
 
-### **python**
+### **Python**
 
 ```py
 import base64
