@@ -17,10 +17,4 @@ const docsProcess = childProcess.exec(command);
 
 console.log("");
 
-if (process.argv[2] == "--prod") {
-    console.log(chalk.hex("#66d9ff")("Fetching latest Git changes..."));
-    childProcess.exec("git pull origin master");
-    require(`${__dirname}/scripts/git_pull.js`);
-}
-
 docsProcess.on("exit", () => process.exit(0));

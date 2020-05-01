@@ -4,7 +4,7 @@
   "description": "GD Documentation",
   "main": "generator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "node generator.js"
   },
   "repository": {
     "type": "git",
