@@ -139,8 +139,8 @@ const data = queryString.stringify({
 http.request({
     host: "boomlings.com",
     path: target,
-    port: 80
-    method: "POST"
+    port: 80,
+    method: "POST",
     headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         "Content-Length": Buffer.byteLength(data)
@@ -167,11 +167,11 @@ async fn main() -> reqwest::Result<()> {
     
     // create post values
     let data = [
-        ("something", "value"), 
+        ("something", "value"),
         ("somethingElse", "otherValue")
     ];
     
-    // send the request 
+    // send the request
     let req = reqwest::Client::new()
         .post(uri)
         .form(&data)
