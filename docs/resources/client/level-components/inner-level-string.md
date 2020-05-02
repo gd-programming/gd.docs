@@ -49,6 +49,17 @@ The following keys were valid prior to 2.0 and are deprecated, since they are in
 | kS36 | Color 4      | 4                |
 | kS37 | 3DL Color    | 1003             |
 
+***Pre-1.9 Keys***
+
+The following keys were valid prior to 1.9 and were deprecated as of 1.9, since they were included in the keys ks29-33. Each color, instead of using one key, used 3 keys to represent Red, Green, and Blue values.
+| Key       | Name         | Key in 1.9 |
+|:----------|:-------------|:-----------|
+| kS1-kS3   | BG Color     | kS29       |
+| kS4-kS6   | Ground Color | kS30       |
+| kS7-kS9   | Line Color   | kS31       |
+| kS10-kS12 | Object Color | kS32       |
+| kS13-kS15 | Obj-2 Color  | kS33       |
+
 ### Start Pos Object
 The Start Pos object has the same special properties the level start object has, with a few not working. `kA9` must be set to `1` in the case that the object is indeed a Start Pos.
 
