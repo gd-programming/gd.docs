@@ -60,7 +60,33 @@ Uploads a created level to the servers.
 
 **extraString** - A list of underscore seperated numbers. Unknown usage, but can be left out entirely without problems
 
-**levelInfo** - A random gzip compressed string
+**levelInfo** - Mouse Click Data
+
+PHP:  
+```
+<?php
+$levelInfo = "LevelInfo";
+//decode
+$levelInfo = str_replace("-", "+", $levelInfo);
+$levelInfo = str_replace("_", "/", $levelInfo");
+$levelInfo = base64_decode($levelInfo);
+$levelInfo = gzdecode($levelInfo);
+//processing...
+$levelInfo = explode(";;", $levelInfo);
+$c = count($levelInfo);
+for ($i=0;$i<$c;$i++) {
+    $levelInfo[$i] = explode(";", $levelInfo[$i]);
+}
+print_r($levelInfo);
+/*
+    note:
+      0: Click Time
+      1: Is Mousedown, 0 or empty is Mousedown, else is Mouseup
+      2: Unknown 
+      3: Unknown
+*/
+?>
+```
 
 **gameVersion** - 21
 
