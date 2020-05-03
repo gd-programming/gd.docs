@@ -66,7 +66,7 @@ The following keys were valid prior to 1.9 and were deprecated as of 1.9, since 
 | kS19      | Object Player Color | kS32       |
 | kS20      | Obj-2 Player Color  | kS33       |
 
-Keys `kS16`-`kS20` always used 1 of 3 values to determine if a player color was used, and if so, which one.
+Keys `kS16`-`kS20` used to determine the player color that was being used and their values were interpreted according to the following table:
 
 | Value | Color          |
 |:------|:---------------|
