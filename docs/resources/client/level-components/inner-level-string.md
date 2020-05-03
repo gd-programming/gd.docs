@@ -51,22 +51,28 @@ The following keys were valid prior to 2.0 and are deprecated, since they are in
 
 ***Pre-1.9 Keys***
 
-The following keys were valid prior to 1.9 and were deprecated as of 1.9, since they were included in the keys kS29, kS30, kS31, kS32, and kS33. Each color, instead of using one key, used 3 keys to represent Red, Green, and Blue values, respectively. In 1.7 and 1.8, the game used a fourth key to determine if a color channel used a player color, and which player color it would use.
+The following keys were valid prior to 1.9 and were deprecated as of 1.9, since they were included in the keys `kS29`-`kS33`. Each color, instead of using one key, used 3 keys to represent Red, Green, and Blue values, respectively. In 1.7 and 1.8, the game used a fourth key to determine if a color channel used a player color, and which player color it would use.
 
-| Key(s)    | Name           | Key in 1.9 |
-|:----------|:---------------|:-----------|
-| kS1-kS3   | BG Color       | kS29       |
-| kS4-kS6   | Ground Color   | kS30       |
-| kS7-kS9   | Line Color     | kS31       |
-| kS10-kS12 | Object Color   | kS32       |
-| kS13-kS15 | Obj-2 Color    | kS33       |
-| kS16      | BG p-col       | kS29       |
-| kS17      | Ground p-col   | kS30       |
-| kS18      | Line p-col     | kS31       |
-| kS19      | Object p-col   | kS32       |
-| kS20      | Obj-2 p-col    | kS33       |
+| Key(s)    | Name                | Key in 1.9 |
+|:----------|:--------------------|:-----------|
+| kS1-kS3   | BG Color            | kS29       |
+| kS4-kS6   | Ground Color        | kS30       |
+| kS7-kS9   | Line Color          | kS31       |
+| kS10-kS12 | Object Color        | kS32       |
+| kS13-kS15 | Obj-2 Color         | kS33       |
+| kS16      | BG Player Color     | kS29       |
+| kS17      | Ground Player Color | kS30       |
+| kS18      | Line Player Color   | kS31       |
+| kS19      | Object Player Color | kS32       |
+| kS20      | Obj-2 Player Color  | kS33       |
 
-*For keys kS16-kS20, if the key value is 0, neither player colors are used and the color that was selected in the color picker is used for that channel. If the value is 1, the color channel uses player color 1. If the value is 2, player color 2 is used.*
+Keys `kS16`-`kS20` always used 1 of 3 values to determine if a player color was used, and if so, which one.
+
+| Value | Color          |
+|:------|:---------------|
+| 0     | Neither        |
+| 1     | Player Color 1 |
+| 2     | Player Color 2 |
 
 ### Start Pos Object
 The Start Pos object has the same special properties the level start object has, with a few not working. `kA9` must be set to `1` in the case that the object is indeed a Start Pos.
