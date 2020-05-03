@@ -183,3 +183,13 @@ For example, `0%` - `13%` - `100%` -> `(13 - 0), (100 - 13)` -> `13,87`
 | ysg6pUrtjn0J | Like or Rate      |
 | xI35fsAapCRg | User Profile      |
 | yPg6pUrtWn0J | Level Leaderboard |
+
+## XOR Keys
+
+| Value        | Type              |
+|--------------|-------------------|
+| 41274        | Level             |
+| 29481        | Comment           |
+| 58281        | Like or Rate      |
+| 85271        | User Profile      |
+| 39673        | Level Leaderboard |
