@@ -8,9 +8,9 @@
 
 **gdw** -- is geometry dash world
 
-**accountID** -The encoded password for the account
+**accountID** - The ID of the account
 
-**gjp** - The password encoded of the account
+**gjp** - The encoded password for the account
 
 **levelID** - The ID of the level
 
