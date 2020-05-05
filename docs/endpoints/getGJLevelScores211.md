@@ -26,7 +26,7 @@
 
 **s3** - seconds + 4085
 
-**s4** - 1482 * 2 + (jumps + 3991) * (percentage + 8354) + ((seconds + 4085) ^ 2) - 50028039
+**s4** - 1482 * (has_played + 1) + (jumps + 3991) * (percentage + 8354) + ((seconds + 4085) ^ 2) - 50028039
 
 **s4** - is 1482 if jumps, percentage and seconds are 0
 
@@ -42,4 +42,4 @@
 
 **s10** - timely ID
 
-[**chk**](https://github.com/gd-programming/gddocs/blob/master/docs/topics/encryption/chk.md) - AccountID + LevelID + Percentage + Jumps + Attempts + Seed + Best Differences + 1 + Coins + TimelyID + rs + yPg6pUrtWn0J
+[**chk**](https://github.com/gd-programming/gddocs/blob/master/docs/topics/encryption/chk.md?id=level-leaderboard) - AccountID + LevelID + Percentage + Jumps + Attempts + Seed + Best Differences + 1 + Coins + TimelyID + rs + yPg6pUrtWn0J
