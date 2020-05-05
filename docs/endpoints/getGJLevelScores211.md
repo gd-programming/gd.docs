@@ -1,7 +1,6 @@
 # getGJLevelScores211.php
 
 Upload user level record.
-Query levelBoard record.
 
 ## Parameters
 
