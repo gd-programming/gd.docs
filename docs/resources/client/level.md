@@ -13,6 +13,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k3  | Description              | **string**                                                       | the level description, encoded in [base64](https://en.wikipedia.org/wiki/Base64) |
 | k4  | Inner Level String       | **[inner level string](level-components/inner-level-string.md)** | the inner level string, or the playable level                                    |
 | k5  | Creator                  | **[user](./user.md).name**                                       | the name of the level creator                                                    |
+| k6  | Creator's User ID        | **integer**                                                      | the user id of the level creator                                                 |
 | k8  | Official Song ID         | **[Audio Track](/reference?id=audio-track)**                     | the official Song ID (if used)                                                   |
 | k11 | Downloads                | **integer**                                                      | the amount of times the level's been downloaded                                  |
 | k14 | Verified                 | **bool**                                                         | whether the level is verified or not                                             |
@@ -37,6 +38,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k80 | Seconds Spent Editing    | **integer**                                                      | the number of seconds spent editing the level                                    |
 | k10 | Difficulty               | **[Difficulty](enumerations.md)**                                | the level difficulty (including Demon ratings)                                   |
 | k84 | Level Folder             | **integer**                                                      | the folder in which the level belongs (0 represents no folder)                   |
+| k88 | Percentage Added Per "New Best" | **string**                                                | how many percentages added each time a "new best" got, joined with `,`           |
 
 ***Current Unknown Values***
 
