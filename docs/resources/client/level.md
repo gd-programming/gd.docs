@@ -35,7 +35,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k71 | Orb Reward Percentage    | **integer**                                                      | the percentage up until the orb reward has been granted                          |
 | k79 | Unlisted                 | **bool**                                                         | whether the level is to be marked as unlisted or not during publication          |
 | k80 | Seconds Spent Editing    | **integer**                                                      | the number of seconds spent editing the level                                    |
-| k83 | Difficulty               | **[Difficulty](enumerations.md)**                                | the level difficulty (including Demon ratings)                                   |
+| k10 | Difficulty               | **[Difficulty](enumerations.md)**                                | the level difficulty (including Demon ratings)                                   |
 | k84 | Level Folder             | **integer**                                                      | the folder in which the level belongs (0 represents no folder)                   |
 
 ***Current Unknown Values***
