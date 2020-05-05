@@ -1,7 +1,5 @@
 # getGJLevelScores211.php
 
-Upload and query user levelBoard record.
-
 ## Parameters
 
 **gameVersion** - The version of the game
@@ -10,13 +8,13 @@ Upload and query user levelBoard record.
 
 **gdw** -- is geometry dash world
 
-**accountID** - The ID of the account
+**accountID** -The encoded password for the account
 
 **gjp** - The password encoded of the account
 
 **levelID** - The ID of the level
 
-**percent** - Percent of the player best
+**percent** - Current highscore
 
 **secret** - Wmfd2893gb7
 
@@ -28,7 +26,7 @@ Upload and query user levelBoard record.
 
 **s3** - seconds + 4085
 
-**s4** - 1482 * 2 + (jumps + 3991) * (percentage + 8354) + ((seconds + 4085) ** 2) - 50028039
+**s4** - 1482 * 2 + (jumps + 3991) * (percentage + 8354) + ((seconds + 4085) ^ 2) - 50028039
 
 **s4** - is 1482 if jumps, percentage and seconds are 0
 
@@ -44,6 +42,4 @@ Upload and query user levelBoard record.
 
 **s10** - timely ID
 
-Thanks [@NeKitDS](https://github.com/NeKitDS), [#33](https://github.com/gd-programming/gddocs/issues/33)
-
-[**chk**](https://github.com/gd-programming/gddocs/blob/master/docs/topics/encryption/chk.md) - AccountID - LevelID - Percentage - Jumps - Attempts - Seed - yPg6pUrtWn0J
+[**chk**](https://github.com/gd-programming/gddocs/blob/master/docs/topics/encryption/chk.md) - AccountID + LevelID + Percentage + Jumps + Attempts + Seed + Best Differences + 1 + Coins + TimelyID + rs + yPg6pUrtWn0J
