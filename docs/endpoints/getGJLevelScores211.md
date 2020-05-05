@@ -30,6 +30,8 @@ Upload user level record.
 
 **s4** - 1482 * (has_played + 1) + (jumps + 3991) * (percentage + 8354) + ((seconds + 4085) ^ 2) - 50028039
 
+**Warning: ** ^ in here isn't XOR, in code is pow()
+
 **s4** - is 1482 if jumps, percentage and seconds are 0
 
 **s5** - random number (somewhere in range [1000, 10000])
