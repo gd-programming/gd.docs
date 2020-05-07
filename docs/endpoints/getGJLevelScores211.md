@@ -28,7 +28,8 @@ Upload user level record.
 
 **s3** - seconds + 4085
 
-**s4** - 1482 * (has_played + 1) + (jumps + 3991) * (percentage + 8354) + ((seconds + 4085) ^ 2) - 50028039
+**s4** - 1482 * (has_played + 1) + (jumps + 3991) * (percentage + 8354) + ((seconds + 4085) ^ 2) - 50028039  
+**Warning: ** ```^``` isn't XOR, it's pow.
 
 **Warning: ** ^ in here isn't XOR, in code is pow()
 
@@ -36,7 +37,7 @@ Upload user level record.
 
 **s5** - random number (somewhere in range [1000, 10000])
 
-**s6** - unknown
+**s6** - Best Differences encode by xor cipher (key "41274") and base64 encode
 
 **s7** - random seed (rs)
 
