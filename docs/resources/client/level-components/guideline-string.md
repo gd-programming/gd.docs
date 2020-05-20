@@ -30,9 +30,11 @@ The valid supported color values are the following:
 | 0.9   | yellow |
 | 1.0   | green  |
 
-***Undisclosed Information***
+***Unexpected Behavior Information***
 
-Values less than 1, that do not match any of the aforementioned values, will result in a transparent guideline, whereas values greater than 1 will result in a green guideline.
+- A color value of 0 will result in an orange guideline.
+- Color values less than 0.8 will result in a transparent guideline.
+- Color values above 0.8 that do not match the yellow or the green guideline color values will result in an orange guideline.
 
 ### Trivia
 - A number of guidelines with color value 0.7 were found in Blast Processing, which are all transparent.
