@@ -78,7 +78,7 @@ This function is quite good, but adding new characters to strings in python is q
 Here is a better function that implements **XOR-Cipher** (and hey, it is written in one line!):
 
 ```py
-def xor_cipher(string: str, key: str) -> str
+def xor_cipher(string: str, key: str) -> str:
     return ("").join(chr(ord(x) ^ ord(y)) for x, y in zip(string, itertools.cycle(key)))
 ```
 
