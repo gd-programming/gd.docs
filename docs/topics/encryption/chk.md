@@ -22,14 +22,14 @@ import base64
 import hashlib  # sha1() lives there
 
 
-def generate_chk(values: [int, str] = (), key: str, salt: str = "") -> str:
+def generate_chk(values: [int, str] = [], key: str = "", salt: str = "") -> str:
     values.append(salt)
 
     string = ("").join(map(str, values))  # assure "str" type and connect values
 
     hashed = hashlib.sha1(string.encode()).hexdigest()
     xored = xor_cipher(hashed, key)  # we discuss this one in encryption/xor
-    final = base64.urlsafe_b64encode(string.encode()).decode()
+    final = base64.urlsafe_b64encode(xored.encode()).decode()
 
     return final
 ```

@@ -95,7 +95,7 @@ Here is a list of XOR keys currently used in GD:
 | 37526 | Account Password  |
 | 39673 | Level Leaderboard |
 | 41274 | Level Seed        |
-| 29841 | Comment CHK       |
+| 29481 | Comment CHK       |
 | 19847 | Challenges        |
 | 59182 | Rewards           |
 | 58281 | Like and Rate     |
