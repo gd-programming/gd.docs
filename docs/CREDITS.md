@@ -4,7 +4,7 @@ Thanks to the **Geometry Dash Programming** experts, and the **GDDocs** contribu
 
 *-- Team professionally led by [Alten](https://github.com/Altenhh)*
 - [SMJS](https://github.com/SMJSGaming)
-- [Nekit](https://github.com/NeKitDS)
+- [Nekit](https://github.com/nekitdev)
 - [Andre](https://github.com/AndreNIH)
 - [Cvolton](https://github.com/Cvolton)
 - [Blaze](https://github.com/13laze)
