@@ -8,11 +8,11 @@ Uploads a comment to a user level.
 
 **accountID** - The commenter's account ID
 
-**gjp** - The commenter's [GJP](https://github.com/gd-programming/gddocs/blob/master/docs/topics/encryption/gjp.md)
+**gjp** - The commenter's [GJP](/topics/encryption/gjp.md)
 
 **userName** - The commenter's username
 
-**comment** - The comment, converted to [URL-safe base64](https://github.com/gd-programming/gddocs/blob/master/docs/topics/encryption/base64.md)
+**comment** - The comment, converted to [URL-safe base64](/topics/encryption/base64)
 
 **secret** - Wmfd2893gb7
 
@@ -20,7 +20,7 @@ Uploads a comment to a user level.
 
 **percent** - The level percentage shown on the comment
 
-[**chk**](https://github.com/gd-programming/gddocs/blob/master/docs/topics/encryption/chk.md) - `userName` + `comment` + `levelID` + `percent` + "0xPT6iUrtws0J"
+[**chk**](/topics/encryption/chk) - `userName` + `comment` + `levelID` + `percent`
 
 ### Optional Parameters
 
@@ -33,3 +33,39 @@ Uploads a comment to a user level.
 ## Response
 
 Returns the ID of the posted comment, or `-1` if the request was rejected.
+
+## Example
+
+<!-- tabs:start -->
+
+### **Python**
+
+```py
+import requests
+
+# With this code, DevExit is posting the comment "Hello from the GDDocs!" to 62687277
+
+chk = generate_chk(key="29481", values=["devexit", "SGVsbG8gZnJvbSB0aGUgR0REb2NzIQ==", 62687277, 69], salt="0xPT6iUrtws0J")
+# These values can be found in the XOR and CHK pages
+
+data = {
+    "accountID": 173831, # DevExit's account ID
+    "gjp": "********", # This would be DevExit's password encoded with GJP encryption
+    "userName": "devexit",
+    "comment": "SGVsbG8gZnJvbSB0aGUgR0REb2NzIQ==", # "Hello from the GDDocs!"
+    "levelID": 62687277,
+    "percent": 69,
+    "chk": chk,
+    "secret": "Wmfd2893gb7"
+}
+
+req = requests.post("http://boomlings.com/database/uploadGJLevel21.php", data=data)
+print(req.text)
+```
+
+**Response**
+```py
+31444784
+```
+
+<!-- tabs:end -->

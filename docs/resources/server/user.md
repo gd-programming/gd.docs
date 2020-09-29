@@ -1,4 +1,5 @@
-# User Resource
+# Server User Resource
+
 | Key | Name/Value | Type | Description |
 | --- | ---------- | ---- | ----------- |
 | 1 | Username | **string** | The name of player |
@@ -37,4 +38,7 @@
 | 49 | Modlevel | **number** | 0: None, 1: Normal Mod(yellow), 2: Elder Mod(orange) |
 | 50 | CommentHistoryState | **number** | 0: All, 1: Only friends, 2: None |
 
-Example: 1:WOSHIZHAZHA120:2:10086790:13:0:17:0:10:0:11:3:3:0:46:0:4:0:8:0:18:0:19:0:50:0:20:WOSHIZHAZHA120:21:1:22:1:23:1:24:1:25:1:26:1:28:0:43:1:48:1:30:355655:16:1889402:31:0:44:WOSHIZHAZHA120:45:WOSHIZHAZHA120:49:0:29:1
+Example:
+```
+1:WOSHIZHAZHA120:2:10086790:13:0:17:0:10:0:11:3:3:0:46:0:4:0:8:0:18:0:19:0:50:0:20:WOSHIZHAZHA120:21:1:22:1:23:1:24:1:25:1:26:1:28:0:43:1:48:1:30:355655:16:1889402:31:0:44:WOSHIZHAZHA120:45:WOSHIZHAZHA120:49:0:29:1
+```
