@@ -18,7 +18,7 @@
 | 16 | accountID | **number** | The accountid of this player |
 | 17 | Usercoins | **number** | The count of usercoins player have |
 | 18 | Messagestate | **number** | 0: All, 1: Only friends, 2: None |
-| 19 | FriendsState | **number** | 0: All, 1: None |
+| 19 | FriendRequestState | **number** | 0: All, 1: None |
 | 20 | youtube | **string** | The youtubeurl of player |
 | 21 | accIcon | **number** | The icon number of the player use |
 | 22 | accShip | **number** | The ship number of the player use |
@@ -30,6 +30,9 @@
 | 29 | unknown | **number** | unknown but always 1 |
 | 30 | GlobalRank | **number** | The global rank of this player |
 | 31 | Friendstate | **number** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
+| 38 | New messages count | **number** | The number of new messages count
+| 39 | New friendRequests count | **number** | The number of new friendRequests count
+| 40 | New friends count | **number** | The number of new friends count
 | 43 | accSpider | **number** | The spider number of the player use |
 | 44 | twitter| **string** | The twitter of player |
 | 45 | twitch | **string** | The twitch of player |
