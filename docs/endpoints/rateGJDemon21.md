@@ -28,7 +28,11 @@ Rates the demon difficulty of a demon level - only works for Geometry Dash moder
 
 For normal Players: Internal Server Error or -1
 
-for moderators: LevelID
+if mode=1
+
+mod: levelID
+
+normal user: -2
 
 ## Example
 

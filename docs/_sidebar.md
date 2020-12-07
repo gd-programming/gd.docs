@@ -46,6 +46,7 @@
   - [rateGJDemon21](/endpoints/rateGJDemon21.md)
   - [rateGJStars211](/endpoints/rateGJStars211.md)
   - [reportGJLevel](/endpoints/reportGJLevel.md)
+  - [suggestGJStars](/endpoints/suggestGJStars.md)
   - [updateGJDesc20](/endpoints/updateGJDesc20.md)
   - [uploadGJLevel21](/endpoints/uploadGJLevel21.md)
 - Messages
