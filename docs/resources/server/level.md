@@ -45,6 +45,6 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 | 42  | Epic                      | **boolean** 				                 | If the level has an epic rating    
 | 43  | Demon Difficulty          | **number** 				                     | The difficulty of the demon rating. 3 = easy, 4 = medium, 0 = hard, 5 = insane, 6 = extreme. Can also be used to determine the level difficulty non-demons had before rating as a side-effect of the voting system.
 | 45  | Objects                   | **number** 				                     | The amount of objects in the level, used to determine if the level is considered "large". It caps at 65535     
-| 46  | Unknown                   | **number** 				                     | 
-| 47  | Unknown                   | **number** 				                     | 
+| 46  | Editor Time               | **number** 				                     | the amount of time spent in the editor of a level in seconds (local Copy)
+| 47  | Editor Time copies        | **number** 				                     | The amount of time spent in the editor of a level in seconds (previous copies)
 | 48  | Unknown                   | **unknown**                                  | Added in 2.1, seems to have been removed shortly after

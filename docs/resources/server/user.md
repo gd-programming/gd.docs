@@ -27,9 +27,12 @@
 | 25 | accDart(wave) | **number** | The dart(wave) number of the player use |
 | 26 | accRobot | **number** | The robot number of the player use |
 | 28 | accGlow | **number** | The glow number of the player use |
-| 29 | unknown | **number** | unknown but always 1 |
+| 29 | unknown | **number** | unknown but always 1 - If set to 0, five things happen: all your icons revert to the default icons (colours aren't affected), the leaderboard rank vanishes from your profile, Mod Badges vanish, friend requests/messages/new friends don't have any notifications and twitch/twitter/youtube buttons are removed|
 | 30 | GlobalRank | **number** | The global rank of this player |
 | 31 | Friendstate | **number** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
+| 38 | Messages | **number** | How many new messages the user has (shown in-game as a notificaiton) |
+| 39 | FriendRequests | **number** | How many new friend requests the user has (shown in-game as a notificaiton) |
+| 40 | NewFriends | **number** | How many new Friends the user has (shown in-game as a notificaiton) |
 | 43 | accSpider | **number** | The spider number of the player use |
 | 44 | twitter| **string** | The twitter of player |
 | 45 | twitch | **string** | The twitch of player |
