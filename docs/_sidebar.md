@@ -19,6 +19,8 @@
   - [User](/resources/server/user.md)
 - **Client**
   - [Gamesave](/resources/client/gamesave.md)
+    - [Achievements](/resources/client/gamesave/achievement.md)
+    - [quests](/resources/client/gamesave/quests.md)
   - [Level](/resources/client/level.md)
     - [Inner Level String](/resources/client/level-components/inner-level-string.md)
     - [Level Object](/resources/client/level-components/level-object.md)
