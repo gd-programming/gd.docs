@@ -54,13 +54,13 @@ Uploads a created level to the servers.
 
 ### Optional Parameters
 
-**wt** - A random number
+**wt** - ammount of time spent in the editor (local copy)
 
-**wt2** - Another random number
+**wt2** - ammount of time spent in the editor (previous copies)
 
 **seed** - A random string
 
-**extraString** - A list of underscore seperated numbers. Unknown usage, but can be left out entirely without problems
+**extraString** - A list of underscore seperated numbers. apparently used for rendering levels
 
 **levelInfo** - A random gzip compressed string
 
