@@ -36,8 +36,9 @@ text
 | Key     | Type | description |
 | :-------| :--- | :-----------|
 | GLM_01 | [Level](/resources/server/level.md)| All Official Levels you have progress on are stored here |
-| GLM_03 | [Level](/resources/server/level.md)| related to online levels |
-| GLM_04 | unknown| |
+| GLM_02 | [level] | Uploaded levels - before the account System
+| GLM_03 | [Level](/resources/server/level.md)| online levels played|
+| GLM_04 | ratingGiven| | Shows what levels you have rated. was removed after 1.9
 | GLM_06 | AccountIDs| The AccountIDs of all creators you follow    |
 | GLM_07 | unknown| |
 | GLM_08 | | Search Filters States    |
