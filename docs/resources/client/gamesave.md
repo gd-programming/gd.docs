@@ -38,7 +38,7 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GLM_01 | [Level](/resources/server/level.md)| All Official Levels you have progress on are stored here |
 | GLM_02 | [level] | Uploaded levels - before the account System
 | GLM_03 | [Level](/resources/server/level.md)| online levels played|
-| GLM_04 | rating| | Shows what levels you have rated. was removed after 1.9
+| GLM_04 | rating| | Shows what levels you have rated. was removed after 1.9 |
 | GLM_06 | AccountIDs| The AccountIDs of all creators you follow    |
 | GLM_07 | levelID| Levels played in last session |
 | GLM_08 | | Search Filters States    |
