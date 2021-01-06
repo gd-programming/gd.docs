@@ -67,7 +67,7 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GS_3| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
 | GS_4| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
 | GS_5| Completed Mappacks + rewarded stars `<k>pack_{MappackID}</k><s>{Stars rewarded}</s>` |
-| GS_6| Possibly related to shops? |
+| GS_6| Shope items |
 | GS_7| level progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_8| Unknown |
 | GS_9| How many stars downloaded levels give `<k>{levelID}</k><s>{rewardedStars}</s>` |
