@@ -27,6 +27,8 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | playerIconType| [Icon](enumerations.md)| The Index of the player's IconType |
 | playerGlow| Bool| if Glow is enabled or not |
 | secretNumber| Integer| the answer to `cod3breaker` in the vault of secrets |
+| customObjectDict| [levelData](/resources/client/level-components/level-object.md) | contains object data of custom objects saved|
+| reportedAchievements| [Achievements](/resources/client/gamesave/achievement.md) | contains a dictonary of all reported achievements on your account|
 
 ## GLM
 
@@ -47,7 +49,7 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GLM_11 | Integer| Current Daily ID |
 | GLM_12 | likes | Something Related to likes |
 | GLM_13 | levelID | All levels you submitted a rating on |
-| GLM_14 | unknown| |
+| GLM_14 | reportedLevels| A dictionary of all levels you have reported|
 | GLM_15 | levelID | all Demon levels you have submitted a rating for |
 | GLM_16 | [Level](/resources/server/level.md)| All the levels found in the Gauntlets that you have progress on are stored in here |
 | GLM_17 | integer| Current Weekly ID |
@@ -85,6 +87,21 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GS_24| might be related to Dailys/weeklys |
 | GS_25| Unknown |
 
+## GV Values
+
+Game Values for the ingame check boxes
+
+## GV Structure
+
+| Key | Value|
+| :-- |:-----------|
+| gv_0001 | Follow PLayer (editor) |
+| gv_0002 | play Music (editor) |
+| gv_0003 | Swipe (editor) |
+| gv_0004 | Free Move (editor) |
+| gv_0007 | Toggle rotate (editor) |
+| gv_0008 | Toggle snap (editor) |
+| gv_0009 | Ignore Damage (editor) |
 
 ## kCEK key structure
 
@@ -103,3 +120,10 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GJA_001 | Username|
 | GJA_002 | Password (in plaintext)|
 | GJA_003 | AccountID|
+
+## LLM
+
+| Key | Value|
+| :-- |:-----------|
+| LLM_01 | Local Levels |
+| LLM_02 | Binary Version|
