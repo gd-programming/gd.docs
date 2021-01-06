@@ -45,7 +45,7 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GLM_07 | levelID| Levels played in last session |
 | GLM_08 | filters | Search Filters States    |
 | GLM_09 | filters | Search Filters for Online Levels    |
-| GLM_10 | [Level](/resources/server/level.md)| Related to online levels |
+| GLM_10 | [Level](/resources/server/level.md)| daily? |
 | GLM_11 | Integer| Current Daily ID |
 | GLM_12 | likes | Something Related to likes |
 | GLM_13 | levelID | All levels you submitted a rating on |
