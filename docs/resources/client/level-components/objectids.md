@@ -20,3 +20,7 @@
 | 15 | ![15](https://github.com/Wyliemaster/gddocs/blob/objectIDs/assets/objectIDs/rod_01_001.png?raw=true) |
 | 16 | ![16](https://github.com/Wyliemaster/gddocs/blob/objectIDs/assets/objectIDs/rod_02_001.png?raw=true) |
 | 17 | ![17](https://github.com/Wyliemaster/gddocs/blob/objectIDs/assets/objectIDs/rod_03_001.png?raw=true) |
+| 18 | ![18](https://github.com/Wyliemaster/gddocs/blob/objectIDs/assets/objectIDs/d_spikes_01_001.png?raw=true) |
+| 19 | ![19](https://github.com/Wyliemaster/gddocs/blob/objectIDs/assets/objectIDs/d_spikes_02_001.png?raw=true) |
+| 20 | ![20](https://github.com/Wyliemaster/gddocs/blob/objectIDs/assets/objectIDs/d_spikes_03_001.png?raw=true) |
+| 21 | ![21](https://github.com/Wyliemaster/gddocs/blob/objectIDs/assets/objectIDs/d_spikes_04_001.png?raw=true) |
