@@ -1,5 +1,12 @@
 # Object IDs
 
+# DISCLAIMER: THIS IS NOWHERE NEAR DONE YET
+
+there are apparently 1911 objects in the editor so yikes! 
+
+![:(](https://cdn.discordapp.com/attachments/679475217990680712/797921924441178132/unknown.png)
+
+
 ## Object ID table
 
 | ID | Object  |
