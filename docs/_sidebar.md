@@ -20,6 +20,7 @@
 - **Client**
   - [Gamesave](/resources/client/gamesave.md)
   - [Level](/resources/client/level.md)
+    - [Object IDs](/resources/client/level-components/objectids.md)
     - [Inner Level String](/resources/client/level-components/inner-level-string.md)
     - [Level Object](/resources/client/level-components/level-object.md)
     - [Color String](/resources/client/level-components/color-string.md)
