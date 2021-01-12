@@ -72,7 +72,7 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GS_8| Unknown |
 | GS_9| How many stars downloaded levels give `<k>{levelID}</k><s>{rewardedStars}</s>` |
 | GS_10| Offical level progress `<k>{ID}</k><s>{percentage}</s>` |
-| GS_11| kCEK 8 and 9 |
+| GS_11| Something related to rewards (investigate) |
 | GS_12| Contains [Quests](resources/client/gamesave/quests.md)|
 | GS_14| Unknown |
 | GS_15| Contains Upcoming [Quests](resources/client/gamesave/quests.md)|
@@ -82,7 +82,7 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GS_19| Unknown |
 | GS_20| a number |
 | GS_21| Unknown |
-| GS_22| Unknown |
+| GS_22| something related to rewards (investigate) |
 | GS_23| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_24| might be related to Dailys/weeklys |
 | GS_25| Unknown |
