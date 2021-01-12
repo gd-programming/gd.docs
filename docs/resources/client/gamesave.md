@@ -107,8 +107,8 @@ Game Values for the ingame check boxes
 
 | Key | Name/Value                     | description |
 | :-- | :----------------------------- | :-----------|
-| 4   | [Levels](resources/client/level.md) | Contains Keys for levels you played in the past |
-| 6   | [Songs](resources/client/gamesave/song.md) | Contains Keys for songs downloaded |
+| 4   | [GJGameLevel](resources/client/level.md) | Contains Keys for levels you played in the past |
+| 6   | [SongInfoObject](resources/client/gamesave/song.md) | Contains Keys for songs downloaded |
 | 7   | [GJChallengeItem](resources/client/gamesave/quests.md) | Contains Keys that the game uses to show quests when offline |
 | 8   | [GJRewardItem](resources/client/gamesave/kCEK.md) | object that holds kCEK 9 |
 | 9   | [GJRewardObject](resources/client/gamesave/kCEK.md) | data |

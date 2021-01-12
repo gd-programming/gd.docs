@@ -4,7 +4,7 @@ kCEK are dictionaries that hold certain information about your game save. Each k
 
 ## kCEK 4 Structure
 
-kCEK 4 is the levels kCEK Value and contains all information from levels you have played
+kCEK 4/GJGameLevel is a dictionary that contains information about every level you have played
 
 ```XML
 <k>kCEK</k><i>4</i> 
@@ -17,7 +17,7 @@ the level structure can be found [here](resources/client/level.md)
 
 ## kCEK 6 Structure
 
-kCEK 6 is the levels kCEK Value and contains all information from songs you have downloaded
+kCEK 6/SongInfoObject is a dictionary that contains song info of all downloaded songs
 
 ```XML
 <k>kCEK</k><i>6</i> 
@@ -29,7 +29,7 @@ the song structure can be found [here](resources/server/song.md)
 
 ## kCEK 7 Structure
 
-kCEK 7 is the levels kCEK Value and contains all information from quests that are currently active
+kCEK 7/GJChallengeItem is a dictionary that contains the status of each active quest
 
 ```XML
 <k>kCEK</k><i>7</i> 
@@ -41,7 +41,7 @@ the song structure can be found [here](resources/client/gamesave/quests.md)
 
 ## kCEK 8 and 9 Structure
 
-Information about these values are unknown. likely related to quests
+`GJRewardItem` is a dictionary which contains `GJRewardObject` which is another dictionary
 
 ```XML
 
