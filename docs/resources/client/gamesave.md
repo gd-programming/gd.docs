@@ -67,7 +67,7 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GS_3| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
 | GS_4| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
 | GS_5| Completed Mappacks + rewarded stars `<k>pack_{MappackID}</k><s>{Stars rewarded}</s>` |
-| GS_6| Shope items |
+| GS_6| Shop items (investigate)|
 | GS_7| level progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_8| Unknown |
 | GS_9| How many stars downloaded levels give `<k>{levelID}</k><s>{rewardedStars}</s>` |
@@ -79,13 +79,13 @@ GLM contains all the information the game needs for all online levels. GLM likel
 | GS_16| Daily/Weekly level progress `<k>{Daily/WeeklyID}</k><s>{percentage}</s>` |
 | GS_17| Daily/Weekly Stars `<k>{Daily/WeeklyID}</k><s>{Stars}</s>` |
 | GS_18| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
-| GS_19| Unknown |
+| GS_19| something related to rewards (investigate) |
 | GS_20| a number |
-| GS_21| Unknown |
+| GS_21| something related to rewards (investigate) |
 | GS_22| something related to rewards (investigate) |
 | GS_23| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_24| might be related to Dailys/weeklys |
-| GS_25| Unknown |
+| GS_25| something related to rewards (investigate) |
 
 ## GV Values
 
