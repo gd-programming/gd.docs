@@ -59,6 +59,8 @@ GLM contains all the information the game needs for all online levels. GLM likel
 
 ## GS Values
 
+unfinished
+
 ## GS Key Structure
 | Key     | description |
 | :-------|:-----------|
