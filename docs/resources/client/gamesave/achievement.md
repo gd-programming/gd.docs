@@ -1,6 +1,8 @@
 # Achievements
 
-Geometry Dash has 266 achievements that you can aquire, 2 of them are exclusive to the Steam version of the game. You can find out how to get all the achievements [here](https://geometry-dash.fandom.com/wiki/Achievements)
+Geometry Dash has 266 achievements that you can aquire, 2 of them are exclusive to the Steam version of the game. You can find out how to get all the achievements [here](https://geometry-dash.fandom.com/wiki/Achievements).
+
+keep in mind that adding the achievements into your save data manually will only show them as completed in game but won't give you the reward for the completion
 
 ## Achievement key structure
 
