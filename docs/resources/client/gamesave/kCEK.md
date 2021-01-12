@@ -41,7 +41,7 @@ the song structure can be found [here](resources/client/gamesave/quests.md)
 
 ## kCEK 8 and 9 Structure
 
-Information about these keys are unknown
+Information about these values are unknown. likely related to quests
 
 ```XML
 
