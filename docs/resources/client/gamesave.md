@@ -29,6 +29,20 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | secretNumber| Integer| the answer to `cod3breaker` in the vault of secrets |
 | customObjectDict| [levelData](/resources/client/level-components/level-object.md) | contains object data of custom objects saved|
 | reportedAchievements| [Achievements](/resources/client/gamesave/achievement.md) | contains a dictonary of all reported achievements on your account|
+| showSongMarkers| Bool | if showSongMarkers is enabled |
+| showProgressBar| Bool | if showProgressBar is enabled |
+| clickedGarage| Bool | if Garage has been clicked |
+| clickedEditor| Bool | if Editor has been clicked |
+| clickedPractice| Bool | if Practice mode button has been clicked |
+| showedEditorGuide| Bool | if EditorGuide has been clicked |
+| showedLowDetailDialog| Bool | if low detail mode has been has been clicked |
+| bootups| integer | The ammount of times you have opened Geometry Dash |
+| hasRatedGame| Bool | if you have rated the game |
+| binaryVersion| integer | The Games Binary Version |
+| resolution| integer | The games resolution?  |
+| texQuality| integer | how high the text quality is  |
+
+
 
 ## GLM
 
@@ -129,3 +143,10 @@ Game Values for the ingame check boxes
 | :-- |:-----------|
 | LLM_01 | Local Levels |
 | LLM_02 | Hardcoded to `35`|
+
+## MDLM
+
+| Key | Value |
+|:----|:------|
+| MDLM_001 | Dictionary of SongInfoObject |
+| MDLM_002 | index 9 of a random song |
