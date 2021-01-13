@@ -141,6 +141,8 @@ Game Values for the ingame check boxes
 | gv_0036 | PreviewMode (editor) |
 | gv_0037| showGround (editor) |
 | gv_0038 | showGrid (editor) |
+| gv_0039 | gridOnTop (editor) |
+| gv_0040 | showPercentage |
 
 
 ## kCEK key structure
