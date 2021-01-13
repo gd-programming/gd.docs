@@ -149,4 +149,4 @@ Game Values for the ingame check boxes
 | Key | Value |
 |:----|:------|
 | MDLM_001 | Dictionary of SongInfoObject |
-| MDLM_002 | index 9 of a random song |
+| MDLM_002 | Song Priority of a song |

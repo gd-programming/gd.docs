@@ -16,5 +16,5 @@ A song is a resource from newgrounds that people can sync their levels to, and i
 | 6   | Unknown					  | **unknown**									 | Always empty
 | 7   | Youtube URL				  | **string**									 | The URL of the newgrounds user's youtube channel
 | 8   | Unknown					  | **number**									 | Either 0 or 1. Not sure what it denotes
-| 9   | unknown                   | **number**                                   | MDLM_002 in CCGameManager?
+| 9   | Song Priority             | **number**                                   | Position of the song on the downloaded song list
 | 10  | Link					  | **string**									 | Link to the song's mp3
