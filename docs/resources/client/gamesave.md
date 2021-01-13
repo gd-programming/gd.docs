@@ -128,4 +128,4 @@ Game Values for the ingame check boxes
 | Key | Value|
 | :-- |:-----------|
 | LLM_01 | Local Levels |
-| LLM_02 | Binary Version|
+| LLM_02 | Hardcoded to `35`|
