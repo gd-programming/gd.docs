@@ -83,7 +83,7 @@ unfinished
 | GS_3| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
 | GS_4| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
 | GS_5| Completed Mappacks + rewarded stars `<k>pack_{MappackID}</k><s>{Stars rewarded}</s>` |
-| GS_6| Shop items (investigate)|
+| GS_6| all Purchased Icons/Colours in the shops `<k>{ListingID}</k><s>{Price}</s>` |
 | GS_7| level progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_8| Unknown |
 | GS_9| How many stars downloaded levels give `<k>{levelID}</k><s>{rewardedStars}</s>` |
@@ -118,6 +118,28 @@ Game Values for the ingame check boxes
 | gv_0007 | Toggle rotate (editor) |
 | gv_0008 | Toggle snap (editor) |
 | gv_0009 | Ignore Damage (editor) |
+| gv_0010 | flip2PlayerControls |
+| gv_0011 | alwaysLimitControls |
+| gv_0013 | increaseMaxUndoRedo |
+| gv_0014 | disableExplosionShake |
+| gv_0015 | flipPauseButton |
+| gv_0018 | noSongLimit |
+| gv_0019 | songsInMemory |
+| gv_0022 | higherAudioQuality |
+| gv_0023 | smoothFix |
+| gv_0024 | showCursor In-Game |
+| gv_0025 | fullscreenMode |
+| gv_0026 | autoRetry |
+| gv_0027 | autoCheckpoints |
+| gv_0028 | disableThumbstick |
+| gv_0029 | showedOptionsText |
+| gv_0030 | vsyncEnabled |
+| gv_0031 | `cocos2d::CCEGLView::sharedOpenGLView()`? |
+| gv_0032 | forceTimerEnabled (got no idea how cos got to that??)|
+| gv_0033 | ChangeSongPath |
+| gv_0034 | GameCenterEnabled |
+| gv_0035 | PreviewMode (editor)
+
 
 ## kCEK key structure
 
@@ -126,8 +148,8 @@ Game Values for the ingame check boxes
 | 4   | [GJGameLevel](resources/client/level.md) | Contains Keys for levels you played in the past |
 | 6   | [SongInfoObject](resources/client/gamesave/song.md) | Contains Keys for songs downloaded |
 | 7   | [GJChallengeItem](resources/client/gamesave/quests.md) | Contains Keys that the game uses to show quests when offline |
-| 8   | [GJRewardItem](resources/client/gamesave/kCEK.md) | object that holds kCEK 9 |
-| 9   | [GJRewardObject](resources/client/gamesave/kCEK.md) | data |
+| 8   | [GJRewardItem](resources/client/gamesave/kCEK.md) | object that holds `GJRewardObject` |
+| 9   | [GJRewardObject](resources/client/gamesave/kCEK.md) | contains data for Rewards |
 
 ## GJA
 
