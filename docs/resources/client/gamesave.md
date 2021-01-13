@@ -138,7 +138,8 @@ Game Values for the ingame check boxes
 | gv_0032 | forceTimerEnabled (got no idea how cos got to that??)|
 | gv_0033 | ChangeSongPath |
 | gv_0034 | GameCenterEnabled |
-| gv_0035 | PreviewMode (editor) |
+| gv_0036 | PreviewMode (editor) |
+| gv_0037| showGround (editor) |
 
 
 ## kCEK key structure
