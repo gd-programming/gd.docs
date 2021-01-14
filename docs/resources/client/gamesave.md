@@ -143,6 +143,9 @@ Game Values for the ingame check boxes
 | gv_0038 | showGrid (editor) |
 | gv_0039 | gridOnTop (editor) |
 | gv_0040 | showPercentage |
+| gv_0041 | showObjectInfo (editor) |
+| gv_0042 | increaseMaxLevels |
+| gv_0043 | effectLinesEnabled (editor) |
 
 
 ## kCEK key structure
