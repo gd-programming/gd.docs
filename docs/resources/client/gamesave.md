@@ -164,14 +164,15 @@ Game Values for the ingame check boxes
 | :-- |:-----------|
 | GJA_001 | Username|
 | GJA_002 | Password (in plaintext)|
-| GJA_003 | AccountID|
+| GJA_003 | AccountID |
+| GJA_004 | Most Likely SessionID (not confirmed) |
 
 ## LLM
 
 | Key | Value|
 | :-- |:-----------|
 | LLM_01 | Local Levels |
-| LLM_02 | Hardcoded to `35`|
+| LLM_02 | Hardcoded to `binaryVersion`|
 
 ## MDLM
 
