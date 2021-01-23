@@ -49,9 +49,9 @@ the song structure can be found [here](resources/client/gamesave/quests.md)
 | 2 | 8 | The reward type? (investigate) |
 | 3 | 8 | GJRewardObject |
 | 1 | 9 | item type |
-| 2 | 9 | Unknown |
+| 2 | 9 | Custom Object info? (invesitgate) |
 | 3 | 9 | reward amount |
-| 4 | 9 | Unknown |
+| 4 | 9 | unknown |
 
 ### ItemIDs
 
@@ -65,7 +65,7 @@ the song structure can be found [here](resources/client/gamesave/quests.md)
 | 6 | Demon Key |
 | 7 | Orbs |
 | 8 | Diamonds |
-| 9 | Custom Object? |
+| 9 | Custom Object (shares the same ID for Demon guardian key, icons and colours) |
 
 
 ## Example
