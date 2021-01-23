@@ -182,7 +182,12 @@ Unlock Game Variables for the ingame events
 | ugv_22 | YouTube Chest unlocked |
 | ugv_23 | FaceBook Chest unlocked |
 | ugv_24 | Twitter Chest unlocked |
-| ugv_25 | unknown |
+
+### GDL22 keys
+
+| Key | Value|
+| :-- |:-----------|
+| ugv_25 | FireBird GateKeeper |
 | ugv_26 | Twitch Chest Unlocked |
 
 
