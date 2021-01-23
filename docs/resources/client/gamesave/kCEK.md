@@ -50,28 +50,28 @@ the song structure can be found [here](resources/client/gamesave/quests.md)
     <k>2</k><i>integer</i>
     <k3><d> 
         <k>_isArr</k><true>
-        <k>k_0</k>
+        <k>k_{List Index}</k>
             <d>
                 <k>kCEK</k><i>9</i>
                 <k>1</k><i>integer</i>
                 <k>3</k><i>integer</i>
                 <k>4</k><i>giant integer</i>
             </d>
-        <k>k_1</k>
+        <k>k_{List Index}</k>
             <d>
                 <k>kCEK</k><i>9</i>
                 <k>1</k><i>integer</i>
                 <k>3</k><i>integer</i>
                 <k>4</k><i>integer</i>
             </d>
-        <k>k_2</k>
+        <k>k_{List Index}</k>
             <d>
                 <k>kCEK</k><i>9</i>
                 <k>1</k><i>integer</i>
                 <k>3</k><i>integer</i>
                 <k>4</k><i>integer</i>
             </d>
-        <k>k_3</k>
+        <k>k_{List Index}</k>
             <d>
                 <k>kCEK</k><i>9</i>
                 <k>1</k><i>integer</i>

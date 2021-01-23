@@ -6,7 +6,7 @@ keep in mind that adding the achievements into your save data manually will only
 
 ## Achievement key structure
 
-Inside CCGameManager.dat, every achievement you have progress on can be found in the `<k>reportedAchievements</k>` key. they are all organised like this
+Inside CCGameManager.dat, every achievement you have progress on can be found in the `<k>reportedAchievements</k>` Dictionary. they are all organised like this
  ```xml
  <k>geometry.ach.[internal achievement name]</k><i>[percentage complete]</i><k>geometry.ach.[internal achievement name]</k><i>[percentage complete]</i>
  ```

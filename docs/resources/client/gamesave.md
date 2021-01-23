@@ -27,8 +27,10 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | playerIconType| [Icon](enumerations.md)| The Index of the player's IconType |
 | playerGlow| Bool| if Glow is enabled or not |
 | secretNumber| Integer| the answer to `cod3breaker` in the vault of secrets |
-| customObjectDict| [levelData](/resources/client/level-components/level-object.md) | contains object data of custom objects saved|
-| reportedAchievements| [Achievements](/resources/client/gamesave/achievement.md) | contains a dictonary of all reported achievements on your account|
+| [valueKeeper](/resources/client/gamesave/valueKeeper.md)| Dictionary | Dictionary filled with GV values you have enabled |
+| unlockValueKeeper | Dictionary | Dictionary of Unlockable GV values|
+| customObjectDict| Dictionary | Dictionary of object data of custom objects saved|
+| reportedAchievements| Dictionary | contains a dictonary of all reported achievements on your account|
 | showSongMarkers| Bool | if showSongMarkers is enabled |
 | showProgressBar| Bool | if showProgressBar is enabled |
 | clickedGarage| Bool | if Garage has been clicked |
@@ -105,7 +107,7 @@ unfinished
 
 ## GV Values
 
-Game Values for the ingame check boxes
+Game Variables for the ingame check boxes
 
 ## GV Structure
 
@@ -146,6 +148,42 @@ Game Values for the ingame check boxes
 | gv_0041 | showObjectInfo (editor) |
 | gv_0042 | increaseMaxLevels |
 | gv_0043 | effectLinesEnabled (editor) |
+
+
+## UGV Values
+
+Unlock Game Variables for the ingame events
+
+## UGV Structure
+
+| Key | Value|
+| :-- |:-----------|
+| ugv_1 | Unlocked the challenge |
+| ugv_2 | Gubflub hint |
+| ugv_3 | Gubflub hint 2 |
+| ugv_4 | The Challenge completed |
+| ugv_5 | Treasure Room unlocked |
+| ugv_6 | Chamber of Time unlocked |
+| ugv_7 | Chamber of Time Discovered |
+| ugv_8 | shown Master Emblem |
+| ugv_9 | GateKeeper Dialog |
+| ugv_10 | Scratch Dialog |
+| ugv_11 | Secret Shop unlocked |
+| ugv_12 | Spoken to Demon Guardian |
+| ugv_13 | Demon Freed |
+| ugv_14 | Has Demon Key 1 |
+| ugv_15 | Has Demon Key 2 |
+| ugv_16 | Has Demon Key 3 |
+| ugv_17 | Shop Keeper first dialog (500 orbs) |
+| ugv_18 | online levels unlocked in GDW |
+| ugv_19 | Demon Discovered in Demon Room |
+| ugv_20 | Community shop unlocked |
+| ugv_21 | PotBor dialog |
+| ugv_22 | YouTube Chest unlocked |
+| ugv_23 | FaceBook Chest unlocked |
+| ugv_24 | Twitter Chest unlocked |
+| ugv_25 | unknown |
+| ugv_26 | Twitch Chest Unlocked |
 
 
 ## kCEK key structure
