@@ -41,42 +41,54 @@ the song structure can be found [here](resources/client/gamesave/quests.md)
 
 ## kCEK 8 and 9 Structure
 
-`GJRewardItem` is a dictionary which contains `GJRewardObject` which is another dictionary
+`GJRewardItem` is a dictionary which contains `GJRewardObject` which is another dictionary (WIP)
+
+| key | encoder Key | use/description |
+|:----|:------------|:------------|
+| 1 | 8 | Unknown |
+| 2 | 8 | The reward type (Timely, treasure room, daily chests, etc...) |
+| 3 | 8 | GJRewardObject |
+| 1 | 9 | item type (investigate) |
+| 2 | 9 | Unknown |
+| 3 | 9 | reward amount |
+| 4 | 9 | Unknown |
+
+## Example
 
 ```XML
-
-<k>kCEK</k><i>8</i> 
-    <k>1</k><i>integer</i>
-    <k>2</k><i>integer</i>
-    <k3><d> 
-        <k>_isArr</k><true>
-        <k>k_{List Index}</k>
+    <d>
+        <k>kCEK</k><i>8</i>
+        <k>2</k><i>3</i>
+        <k>3</k>
+        <d>
+            <k>_isArr</k><t />
+    <!--k_{number} are new RewardItems items-->
+            <k>k_0</k>
             <d>
                 <k>kCEK</k><i>9</i>
-                <k>1</k><i>integer</i>
-                <k>3</k><i>integer</i>
-                <k>4</k><i>giant integer</i>
+                <k>1</k><i>8</i>
+                <k>3</k><i>20</i>
+                <k>4</k><i>558814120</i>
             </d>
-        <k>k_{List Index}</k>
+            <k>k_1</k>
             <d>
                 <k>kCEK</k><i>9</i>
-                <k>1</k><i>integer</i>
-                <k>3</k><i>integer</i>
-                <k>4</k><i>integer</i>
+                <k>1</k><i>7</i>
+                <k>3</k><i>500</i>
+                <k>4</k><i>520297600</i>
             </d>
-        <k>k_{List Index}</k>
+            <k>k_2</k>
             <d>
                 <k>kCEK</k><i>9</i>
-                <k>1</k><i>integer</i>
-                <k>3</k><i>integer</i>
-                <k>4</k><i>integer</i>
+                <k>1</k><i>6</i>
+                <k>3</k><i>1</i>
             </d>
-        <k>k_{List Index}</k>
+            <k>k_3</k>
             <d>
                 <k>kCEK</k><i>9</i>
-                <k>1</k><i>integer</i>
-                <k>3</k><i>integer</i>
-                <k>4</k><i>integer</i>
+                <k>1</k><i>3</i>
+                <k>3</k><i>2</i>
+                <k>4</k><i>7667757</i>
             </d>
         </d>
     </d>
