@@ -103,7 +103,7 @@ unfinished
 | GS_22| something related to rewards (investigate) |
 | GS_23| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_24| might be related to Dailys/weeklys |
-| GS_25| Timely Rewards |
+| [GS_25](/resources/client/gamesave/GS_Value)| All the rewards from completed weekly Demons |
 
 ## GV Values
 

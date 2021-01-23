@@ -46,7 +46,7 @@ the song structure can be found [here](resources/client/gamesave/quests.md)
 | key | encoder Key | use/description |
 |:----|:------------|:------------|
 | 1 | 8 | Unknown |
-| 2 | 8 | The reward type (Timely, treasure room, daily chests, etc...) |
+| 2 | 8 | The reward type? (investigate) |
 | 3 | 8 | GJRewardObject |
 | 1 | 9 | item type (investigate) |
 | 2 | 9 | Unknown |
