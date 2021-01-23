@@ -48,10 +48,25 @@ the song structure can be found [here](resources/client/gamesave/quests.md)
 | 1 | 8 | Unknown |
 | 2 | 8 | The reward type? (investigate) |
 | 3 | 8 | GJRewardObject |
-| 1 | 9 | item type (investigate) |
+| 1 | 9 | item type |
 | 2 | 9 | Unknown |
 | 3 | 9 | reward amount |
 | 4 | 9 | Unknown |
+
+### ItemIDs
+
+| key | value |
+|:----|:------|
+| 1 | Fire Shard |
+| 2 | Ice Shard |
+| 3 | Poison Shard |
+| 4 | Shadow Shard |
+| 5 | Lava Shard |
+| 6 | Demon Key |
+| 7 | Orbs |
+| 8 | Diamonds |
+| 9 | Custom Object? |
+
 
 ## Example
 
