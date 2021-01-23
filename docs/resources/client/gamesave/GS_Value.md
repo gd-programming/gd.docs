@@ -31,6 +31,8 @@ GS values contain Information regarding certain aspects of the game
 | Unique_{LevelID}_{Coins Collected} | The Coins Collected on the Official Levels
 
 
+## GS_21
+
 ## GS_25
 
 GS_25 Contains the reward data for every weekly demon you have completed

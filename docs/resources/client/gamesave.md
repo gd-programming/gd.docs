@@ -99,11 +99,11 @@ unfinished
 | GS_18| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_19| something related to rewards (investigate) |
 | GS_20| a number |
-| GS_21| something related to rewards (investigate) |
+| [GS_21](/resources/client/gamesave/GS_Value#GS_21)| All rewards for Completed Gauntlets |
 | GS_22| something related to rewards (investigate) |
 | GS_23| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_24| might be related to Dailys/weeklys |
-| [GS_25](/resources/client/gamesave/GS_Value)| All the rewards from completed weekly Demons |
+| [GS_25](/resources/client/gamesave/GS_Value#GS_25)| All the rewards from completed weekly Demons |
 
 ## GV Values
 
