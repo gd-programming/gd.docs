@@ -80,7 +80,7 @@ unfinished
 ## GS Key Structure
 | Key     | description |
 | :-------|:-----------|
-| GS_value| [Player Stats](resources/client/gamesave/playerStats.md)  |
+| GS_value| [Player Stats](resources/client/gamesave/GS_Value.md)  |
 | GS_completed| Completed Levels  |
 | GS_3| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
 | GS_4| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
