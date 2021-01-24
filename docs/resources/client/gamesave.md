@@ -90,16 +90,16 @@ unfinished
 | GS_8| Unknown |
 | GS_9| How many stars downloaded levels give `<k>{levelID}</k><s>{rewardedStars}</s>` |
 | GS_10| Offical level progress `<k>{ID}</k><s>{percentage}</s>` |
-| GS_11| Something related to rewards (investigate) |
+| [GS_11](/resources/client/gamesave/GS_Value#GS_11)| All rewards gained from Daily Chests |
 | GS_12| Contains [Quests](resources/client/gamesave/quests.md)|
-| GS_14| Unknown |
+| [GS_14](/resources/client/gamesave/GS_Value#GS_14)| Daily/Challenges rewards |
 | GS_15| Contains Upcoming [Quests](resources/client/gamesave/quests.md)|
 | GS_16| Daily/Weekly level progress `<k>{Daily/WeeklyID}</k><s>{percentage}</s>` |
 | GS_17| Daily/Weekly Stars `<k>{Daily/WeeklyID}</k><s>{Stars}</s>` |
 | GS_18| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
-| GS_19| something related to rewards (investigate) |
+| [GS_19](/resources/client/gamesave/GS_Value#GS_19)| All the Rewards from unlocked chests in the treasure room |
 | GS_20| a number |
-| [GS_21](/resources/client/gamesave/GS_Value#GS_21)| All rewards for Completed Gauntlets |
+| [GS_21](/resources/client/gamesave/GS_Value#GS_21)| All rewards for Completed Gauntlets + rewards for Demon quest/social medias   |
 | GS_22| something related to rewards (investigate) |
 | GS_23| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
 | GS_24| might be related to Dailys/weeklys |
