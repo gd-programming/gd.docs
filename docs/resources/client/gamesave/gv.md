@@ -89,12 +89,6 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0101| forceSmoothFix |
 |gv_0102 | smoothFixInEditor |
 
-
-
-
-
-
-
 # Unlocked Game Variables
 
 Unlocked Game Variables (ugv) are used to check if ingame events have been completed
