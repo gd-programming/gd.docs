@@ -43,34 +43,26 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | binaryVersion| integer | The Games Binary Version |
 | resolution| integer | The games resolution?  |
 | texQuality| integer | how high the text quality is  |
+| [GLM_01](/resources/client/gamesave/GLM.md#GLM_01) | [Level](/resources/server/level.md)| All Official Levels you have progress on are stored here |
+| [GLM_02](/resources/client/gamesave/GLM.md#GLM_02) | [level](/resources/server/level.md) | Uploaded levels - before the account System |
+| [GLM_03](/resources/client/gamesave/GLM.md#GLM_03) | [Level](/resources/server/level.md)| online levels played|
+| [GLM_04](/resources/client/gamesave/GLM.md#GLM_04) | rating| Shows what levels you have rated. was removed after 1.9 |
+| [GLM_06](/resources/client/gamesave/GLM.md#GLM_06) | AccountIDs| The AccountIDs of all creators you follow    |
+| [GLM_07](/resources/client/gamesave/GLM.md#GLM_07) | levelID| Levels played in last session |
+| [GLM_08](/resources/client/gamesave/GLM.md#GLM_08) | filters | Search Filters States |
+| [GLM_09](/resources/client/gamesave/GLM.md#GLM_09) | filters | Search Filters for Online Levels    |
+| [GLM_10](/resources/client/gamesave/GLM.md#GLM_10) | [Level](/resources/server/level.md)| Completed dailies |
+| [GLM_11](/resources/client/gamesave/GLM.md#GLM_11) | Integer| Current Daily ID |
+| [GLM_12](/resources/client/gamesave/GLM.md#GLM_12) | likes | Something Related to likes |
+| [GLM_13](/resources/client/gamesave/GLM.md#GLM_13) | levelID | All levels you submitted a rating on |
+| [GLM_14](/resources/client/gamesave/GLM.md#GLM_14) | reportedLevels| A dictionary of all levels you have reported|
+| [GLM_15](/resources/client/gamesave/GLM.md#GLM_15) | levelID | all Demon levels you have submitted a rating for |
+| [GLM_16](/resources/client/gamesave/GLM.md#GLM_16) | [Level](/resources/server/level.md)| All the levels found in the Gauntlets that you have progress on are stored in here |
+| [GLM_17](/resources/client/gamesave/GLM.md#GLM_17) | integer| Current Weekly ID |
+| [GLM_18](/resources/client/gamesave/GLM.md#GLM_18) | Folder | The Folder Names for saved levels |
+| [GLM_19](/resources/client/gamesave/GLM.md#GLM_19) | Folder | The Folder names for Local Levels |
 
 
-
-## GLM
-
-GLM contains all the information the game needs for all online levels. GLM likely stands for `Global Levels Manager` 
-
-## GLM Structure
-| Key     | Type | description |
-| :-------| :--- | :-----------|
-| GLM_01 | [Level](/resources/server/level.md)| All Official Levels you have progress on are stored here |
-| GLM_02 | [level](/resources/server/level.md) | Uploaded levels - before the account System |
-| GLM_03 | [Level](/resources/server/level.md)| online levels played|
-| GLM_04 | rating| Shows what levels you have rated. was removed after 1.9 |
-| GLM_06 | AccountIDs| The AccountIDs of all creators you follow    |
-| GLM_07 | levelID| Levels played in last session |
-| GLM_08 | filters | Search Filters States |
-| GLM_09 | filters | Search Filters for Online Levels    |
-| GLM_10 | [Level](/resources/server/level.md)| Completed dailies |
-| GLM_11 | Integer| Current Daily ID |
-| GLM_12 | likes | Something Related to likes |
-| GLM_13 | levelID | All levels you submitted a rating on |
-| GLM_14 | reportedLevels| A dictionary of all levels you have reported|
-| GLM_15 | levelID | all Demon levels you have submitted a rating for |
-| GLM_16 | [Level](/resources/server/level.md)| All the levels found in the Gauntlets that you have progress on are stored in here |
-| GLM_17 | integer| Current Weekly ID |
-| GLM_18 | Folder | The Folder Names for saved levels |
-| GLM_19 | Folder | The Folder names for Local Levels |
 
 
 ## GS Values
@@ -80,7 +72,7 @@ unfinished
 ## GS Key Structure
 | Key     | description |
 | :-------|:-----------|
-| GS_value| [Player Stats](resources/client/gamesave/GS_Value.md)  |
+| [GS_value](/resources/client/gamesave/GS_Value?id=gs-value-structure)| Player Stats  |
 | GS_completed| Completed Levels  |
 | GS_3| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
 | GS_4| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
