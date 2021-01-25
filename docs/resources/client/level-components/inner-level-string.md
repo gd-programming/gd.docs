@@ -30,6 +30,7 @@ The level start object is still an object and formated exactly like a normal [le
 | kA16 | Fade Out               | **bool**                                    | determines whether the song will fade in as soon as the level ends                                             |
 | kA17 | Ground Line            | **integer**                                 | the ID of the ground line that is being used in the level                                                      |
 | kA18 | Font                   | **integer**                                 | the ID of the font that is being used in the level                                                             |
+| kA22 | Platformer Mode        | **Bool**                                    | If platformer Mode is toggled on or off (currently only available in the December 2019 2.2 leaks)              |
 | kS38 | Colors                 | **[Color String](color-string.md)**         | the color channels that are being used in this level                                                           |
 | kS39 | Color Page             | **integer**                                 | the color page which was last displayed in the color channel display window                                    |
 
