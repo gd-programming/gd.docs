@@ -19,6 +19,11 @@
   - [User](/resources/server/user.md)
 - **Client**
   - [Gamesave](/resources/client/gamesave.md)
+    - [Encoder Keys](resources/client/gamesave/kCEK.md)
+    - [GS Values](/resources/client/gamesave/GS_Value.md)
+    - [GLM](/resources/client/gamesave/GLM.md)
+    - [value Keeper](/resources/client/gamesave/valueKeeper.md)
+    - [Game Variables](/resources/client/gamesave/gv.md)
     - [Achievements](/resources/client/gamesave/achievement.md)
     - [quests](/resources/client/gamesave/quests.md)
   - [Level](/resources/client/level.md)
