@@ -60,7 +60,7 @@ Updates a user's data
 
 **color2** - Color 2 of the player. Defaults to the default secondary color when left out
 
-**special** - Unsure
+**special** - Glow (2 if enabled)
 
 **seed** - A random set of 10 numbers and letters in A-Za-z0-9
 

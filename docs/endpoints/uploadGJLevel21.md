@@ -60,7 +60,7 @@ Uploads a created level to the servers.
 
 **seed** - A random string
 
-**extraString** - A list of underscore seperated numbers. Unknown usage, but can be left out entirely without problems
+**extraString** - A list of underscore seperated numbers. apparently used for rendering levels
 
 **levelInfo** - A random gzip compressed string
 
