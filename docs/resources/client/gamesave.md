@@ -69,8 +69,8 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 
 ### GS
 
-| Key     | Type | description |
-| :-------| :--- | :-----------|
+| Key     | Type |
+| :-------| :--- |
 | [GS_value](/resources/client/gamesave/GS_Value?id=gs-value-structure)| Player Stats  |
 | [GS_completed](/resources/client/gamesave/GS_Value?id=gs_completed)| Completed Levels  |
 | [GS_3](/resources/client/gamesave/GS_Value?id=gs_3)| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
