@@ -32,6 +32,7 @@
     - [Level Object](/resources/client/level-components/level-object.md)
     - [Color String](/resources/client/level-components/color-string.md)
     - [Guideline String](/resources/client/level-components/guideline-string.md)
+    - [ObjectIDs](/resources/client/level-components/objectIDs.md)
 
 **Endpoints**
 
