@@ -1,33 +1,12 @@
-# kCEK
+# kCEK Encoder Keys
 
-kCEK are dictionaries that hold certain information about your game save. Each kCEK Type is identified by its integer Value `[4, 6, 7, 8, 9]`
-
-## kCEK 4 Structure
-
-`GJGameLevel` is a dictionary that contains information about every level you have played
-
-| key | Value |
-|:----|:------|
-| kCEK 4 | [level data](resources/client/level.md) |
-
-
-## kCEK 6 Structure
-
-`SongInfoObject` is a dictionary that contains song info of all downloaded songs
-
-| key | Value |
-|:----|:------|
-| kCEK 6 | [Song Data](resources/server/song.md) |
-
-
-## kCEK 7 Structure
-
-`GJChallengeItem` is a dictionary that contains the status of each active quest
-
-| key | Value |
-|:----|:------|
-| kCEK 7 | [Challenge Data](resources/client/gamesave/quests.md)
-
+| Key | Name/Value                     | description |
+| :-- | :----------------------------- | :-----------|
+| 4   | [GJGameLevel](resources/client/level.md) | Contains Keys for levels you played in the past |
+| 6   | [SongInfoObject](resources/client/gamesave/song.md) | Contains Keys for songs downloaded |
+| 7   | [GJChallengeItem](resources/client/gamesave/quests.md) | Contains Keys that the game uses to show quests when offline |
+| 8   | [GJRewardItem](resources/client/gamesave/kCEK.md) | object that holds `GJRewardObject` |
+| 9   | [GJRewardObject](resources/client/gamesave/kCEK.md) | contains data for Rewards |
 
 ## kCEK 8 and 9 Structure
 

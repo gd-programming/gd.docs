@@ -41,6 +41,59 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0041 | showObjectInfo (editor) |
 | gv_0042 | increaseMaxLevels |
 | gv_0043 | effectLinesEnabled (editor) |
+| gv_0044 | drawTriggerBoxes (editor) |
+| gv_0045 | debugDraw (editor) |
+| gv_0046 | hideUIOnTest (editor) |
+| gv_0047 | showedProfileText |
+| gv_0049 | buttonsPerRow (editor) |
+| gv_0050 | buttonRows (editor) |
+| gv_0051 | showedNGMessage (editor) |
+| gv_0052 | fastPracticeReset|
+| gv_0056 | disableObjectAlert |
+| gv_0057 | editorHoldToSwipe|
+| gv_0058 | durationLines (editor) |
+| gv_0059 | swipeCycleMode |
+| gv_0060 | defaultMiniIcon|
+| gv_0061 | switchSpiderTeleportColor |
+| gv_0062 | switchDashFireColor |
+| gv_0063 | showedUnverifiedCoinsMessage |
+| gv_0064 | selectFilter (editor) |
+| gv_0065 | enableMoveOptimization |
+| gv_0066 | highCapacityMode |
+| gv_0067 | highStartPosAccuracy |
+| gv_0068 | quickCheckpointMode |
+| gv_0070 | showedUnlistedLevelMessage |
+| gv_0072 | disableGravityEffect |
+| gv_0073| newCompletedFilter|
+| gv_0074| showRestartButton|
+| gv_0075| disableComments|
+| gv_0076| disableAccountComments|
+| gv_0077| featuredLevelsOnly |
+| gv_0078| hideBackground (editor) |
+| gv_0079| hideGridOnPlay (editor) |
+| gv_0081| disableShakeEffects |
+| gv_0082| disableHighObjectAlert|
+| gv_0083 | disableSongAlert|
+| gv_0084| manualOrder|
+| gv_0088| smallCommentsMode|
+| gv_0089| extendedInfoMode |
+| gv_0090| autoloadComments |
+| gv_0093| increaseLocalLevelsPerPage |
+| gv_0094| moreCommentsMode |
+| gv_0095| flippyUselessMode|
+| gv_0096| switchWaveTrailColor|
+| gv_0097| enableLinkControls (editor) |
+| gv_0098| levelLeaderboardType |
+| gv_0099| showLeaderboardPercent |
+| gv_0100| practiceDeathEffect|
+| gv_0101| forceSmoothFix |
+|gv_0102 | smoothFixInEditor |
+
+
+
+
+
+
 
 # Unlocked Game Variables
 

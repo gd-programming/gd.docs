@@ -43,6 +43,11 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | binaryVersion| integer | The Games Binary Version |
 | resolution| integer | The games resolution?  |
 | texQuality| integer | how high the text quality is  |
+
+### GLM 
+
+| Key     | Type | description |
+| :-------| :--- | :-----------|
 | [GLM_01](/resources/client/gamesave/GLM.md#GLM_01) | [Level](/resources/server/level.md)| All Official Levels you have progress on are stored here |
 | [GLM_02](/resources/client/gamesave/GLM.md#GLM_02) | [level](/resources/server/level.md) | Uploaded levels - before the account System |
 | [GLM_03](/resources/client/gamesave/GLM.md#GLM_03) | [Level](/resources/server/level.md)| online levels played|
@@ -62,52 +67,36 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | [GLM_18](/resources/client/gamesave/GLM.md#GLM_18) | Folder | The Folder Names for saved levels |
 | [GLM_19](/resources/client/gamesave/GLM.md#GLM_19) | Folder | The Folder names for Local Levels |
 
+### GS
 
-
-
-## GS Values
-
-unfinished
-
-## GS Key Structure
-| Key     | description |
-| :-------|:-----------|
+| Key     | Type | description |
+| :-------| :--- | :-----------|
 | [GS_value](/resources/client/gamesave/GS_Value?id=gs-value-structure)| Player Stats  |
-| GS_completed| Completed Levels  |
-| GS_3| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
-| GS_4| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
-| GS_5| Completed Mappacks + rewarded stars `<k>pack_{MappackID}</k><s>{Stars rewarded}</s>` |
-| GS_6| all Purchased Icons/Colours in the shops `<k>{ListingID}</k><s>{Price}</s>` |
-| GS_7| level progress `<k>{levelID}</k><s>{percentage}</s>` |
-| GS_8| Unknown |
-| GS_9| How many stars downloaded levels give `<k>{levelID}</k><s>{rewardedStars}</s>` |
-| GS_10| Offical level progress `<k>{ID}</k><s>{percentage}</s>` |
-| [GS_11](/resources/client/gamesave/GS_Value#GS_11)| All rewards gained from Daily Chests |
-| GS_12| Contains [Quests](resources/client/gamesave/quests.md)|
+| [GS_completed](/resources/client/gamesave/GS_Value?id=gs_completed)| Completed Levels  |
+| [GS_3](/resources/client/gamesave/GS_Value?id=gs_3)| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
+| [GS_4](/resources/client/gamesave/GS_Value?id=gs_4)| Completed levels with coins `{levelID}_{number of coins aquired from level}` |
+| [GS_5](/resources/client/gamesave/GS_Value?id=gs_5)| Completed Mappacks + rewarded stars `<k>pack_{MappackID}</k><s>{Stars rewarded}</s>` |
+| [GS_6](/resources/client/gamesave/GS_Value?id=gs_6)| all Purchased Icons/Colours in the shops `<k>{ListingID}</k><s>{Price}</s>` |
+| [GS_7](/resources/client/gamesave/GS_Value?id=gs_7)| level progress `<k>{levelID}</k><s>{percentage}</s>` |
+| [GS_8](/resources/client/gamesave/GS_Value?id=gs_8)| Unused |
+| [GS_9](/resources/client/gamesave/GS_Value?id=gs_9)| How many stars downloaded levels give `<k>{levelID}</k><s>{rewardedStars}</s>` |
+| [GS_10](/resources/client/gamesave/GS_Value?id=gs_10)| Offical level progress `<k>{ID}</k><s>{percentage}</s>` |
+| [GS_11](/resources/client/gamesave/GS_Value?id=gs_11)| All rewards gained from Daily Chests |
+| [GS_12](/resources/client/gamesave/GS_Value?id=gs_12)| Contains [Quests](resources/client/gamesave/quests.md)|
 | [GS_14](/resources/client/gamesave/GS_Value#GS_14)| Daily/Challenges rewards |
-| GS_15| Contains Upcoming [Quests](resources/client/gamesave/quests.md)|
-| GS_16| Daily/Weekly level progress `<k>{Daily/WeeklyID}</k><s>{percentage}</s>` |
-| GS_17| Daily/Weekly Stars `<k>{Daily/WeeklyID}</k><s>{Stars}</s>` |
-| GS_18| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
+| [GS_15](/resources/client/gamesave/GS_Value?id=gs_15)| Contains Upcoming [Quests](resources/client/gamesave/quests.md)|
+| [GS_16](/resources/client/gamesave/GS_Value?id=gs_16)| Daily/Weekly level progress `<k>{Daily/WeeklyID}</k><s>{percentage}</s>` |
+| [GS_17](/resources/client/gamesave/GS_Value?id=gs_17)| Daily/Weekly Stars `<k>{Daily/WeeklyID}</k><s>{Stars}</s>` |
+| [GS_18](/resources/client/gamesave/GS_Value?id=gs_18)| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
 | [GS_19](/resources/client/gamesave/GS_Value#GS_19)| All the Rewards from unlocked chests in the treasure room |
-| GS_20| a number |
+| [GS_20](/resources/client/gamesave/GS_Value?id=gs_20)| Demon Keys |
 | [GS_21](/resources/client/gamesave/GS_Value#GS_21)| All rewards for Completed Gauntlets + rewards for Demon quest/social medias   |
-| GS_22| something related to rewards (investigate) |
-| GS_23| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
-| GS_24| might be related to Dailys/weeklys |
+| [GS_22](/resources/client/gamesave/GS_Value?id=gs_22)| Rewards from Geometry Dash world |
+| [GS_23](/resources/client/gamesave/GS_Value?id=gs_23)| Gauntlet Level Progress `<k>{levelID}</k><s>{percentage}</s>` |
+| [GS_24](/resources/client/gamesave/GS_Value?id=gs_24)| Daily/Weekly Percentage |
 | [GS_25](/resources/client/gamesave/GS_Value#GS_25)| All the rewards from completed weekly Demons |
 
-## kCEK key structure
-
-| Key | Name/Value                     | description |
-| :-- | :----------------------------- | :-----------|
-| 4   | [GJGameLevel](resources/client/level.md) | Contains Keys for levels you played in the past |
-| 6   | [SongInfoObject](resources/client/gamesave/song.md) | Contains Keys for songs downloaded |
-| 7   | [GJChallengeItem](resources/client/gamesave/quests.md) | Contains Keys that the game uses to show quests when offline |
-| 8   | [GJRewardItem](resources/client/gamesave/kCEK.md) | object that holds `GJRewardObject` |
-| 9   | [GJRewardObject](resources/client/gamesave/kCEK.md) | contains data for Rewards |
-
-## GJA
+### GJA
 
 | Key | Value|
 | :-- |:-----------|
@@ -115,21 +104,28 @@ unfinished
 | GJA_002 | Password (in plaintext)|
 | GJA_003 | AccountID |
 
-### GDL22 GJA
+#### GDL22 GJA
 | Key | Value|
 | :-- |:-----------|
 | GJA_004 | Most Likely SessionID (not confirmed) |
 
-## LLM
+### LLM
 
 | Key | Value|
 | :-- |:-----------|
 | LLM_01 | Local Levels |
 | LLM_02 | Hardcoded to `binaryVersion`|
 
-## MDLM
+### MDLM
 
 | Key | Value |
 |:----|:------|
 | MDLM_001 | Dictionary of SongInfoObject |
 | MDLM_002 | Song Priority of a song |
+
+### KBM
+
+| Key | Value |
+|:----|:------|
+| KBM_001 | Keybindings |
+| KBM_002 | Keybindings |
