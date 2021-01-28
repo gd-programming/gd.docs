@@ -28,4 +28,3 @@ To debug it, you will need to properly clone or pull this repository.
 ## Contributing
 
 Contributions are preferably made to the documentation, rather than the simple `generator.js` file; unless need be. Contributions to all aspects of this project are preferred to be made over pull requests and issues. Ideas on what to contribute or read over can be read in the [issues](https://github.com/gd-programming/gddocs/issues) section of this repository.
-
