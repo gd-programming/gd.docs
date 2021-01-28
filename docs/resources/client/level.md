@@ -51,7 +51,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k83 | Difficulty                     | **[Difficulty](enumerations.md)**                                | the level difficulty (including Demon ratings)                                   |
 | k84 | Level Folder                   | **integer**                                                      | the folder in which the level belongs (0 represents no folder)                   |
 | k85 | Clicks                         | **integer**                                                      | clicks done on a level                                                           |
-| k86 | level Length                   | **integer**                                                      | the length of the level in seconds                                               |
+| k86 | Player Time                    | **integer**                                                      | the amount of time on a players best attempt                                     |
 | k87 | levelScore Seed                | **[LevelScoreSeed](/topics/encryption/seeds/levelScore.md)**     | Contains info to verify the integrity of levelScores                             |
 | k88 | Level Progess                  | **integer**                                                      | Contains a list of high score differences seperated by a `,`                     |
 | k90 | Verify percentage              | **integer**                                                      | Contains the percentage for levels you are trying to verify                      |
