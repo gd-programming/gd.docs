@@ -33,7 +33,7 @@ GLM_04 contains all the difficulty ratings you have given levels, currently unus
 
 | key | description |
 |:----|:------------|
-|     | i need to collect a sample i forgot xd            | 
+| `{levelID}`| `{diffID}` | 
 
 ## GLM_06
 
