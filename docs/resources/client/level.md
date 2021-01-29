@@ -78,8 +78,6 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | Key | Type        | Info                                                     |
 | :-- | :---------- | :------------------------------------------------------- |
 | k83 |             |                                                          |
-| k69 | **Bool**    | clicked play?                                            |
-| k89 | **Bool**    | always true                                              |
 
 
 **Last Editor State Key/Value Pairs**
