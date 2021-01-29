@@ -78,8 +78,8 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 
 | Key | Type        | Info                                                     |
 | :-- | :---------- | :------------------------------------------------------- |
+| k40 | **integer**     | Hardcoded to 14? ![GD1.8](https://media.discordapp.net/attachments/787081465867010079/804689815115137064/unknown.png) |
 | k83 |             |                                                          |
-
 
 **Last Editor State Key/Value Pairs**
 The last editor state key/value pairs contain a few values that indicate the last state of the editor before exiting the editor on that level.
