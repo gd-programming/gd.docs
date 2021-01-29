@@ -13,13 +13,13 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k3  | Description                    | **string**                                                       | the level description, encoded in [base64](https://en.wikipedia.org/wiki/Base64) |
 | k4  | Inner Level String             | **[inner level string](level-components/inner-level-string.md)** | the inner level string, or the playable level                                    |
 | k5  | Creator                        | **[user](./user.md)Name**                                        | the name of the level creator                                                    |
-| k6  | UserID                         | **integer**                                                      | The UserID of the level Creator
+| k6  | UserID                         | **integer**                                                      | The UserID of the level Creator                                                  |
 | k7  | level difficulty               | **integer**                                                      | the difficulty the level has                                                     |
 | k8  | Official Song ID               | **[Audio Track](/reference?id=audio-track)**                     | the official Song ID (if used)                                                   |
 | k9  | Rating                         | **integer**                                                      | The rating a level has                                                           |
 | k10 | RatingSum                      | **integer**                                                      | the sum of all the ratings a level has                                           |
 | k11 | Downloads                      | **integer**                                                      | the amount of times the level's been downloaded                                  |
-| k12 | setCompletes                   | **integer**                                                      | level completions for that particular level
+| k12 | setCompletes                   | **integer**                                                      | level completions for that particular level                                      |
 | k13 | isEditable                     | **Bool**                                                         | used to stop people editing online and Official levels                           |
 | k14 | Verified                       | **bool**                                                         | whether the level is verified or not                                             |
 | k15 | Uploaded                       | **bool**                                                         | whether the level is uploaded to the server or not                               |
@@ -51,6 +51,10 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k47 | hasBeenModified                | **Bool**                                                         | if the level has been modified from outside the GD editor                        |
 | k48 | Object Count                   | **integer**                                                      | the [object count]() of the level                                                |
 | k50 | Binary Version                 | **integer**                                                      | hardcoded to binary Version                                                      |
+| k51 | setCapacity001                 | **integer**                                                      | likely used in Extra String                                                      |
+| k52 | setCapacity002                 | **integer**                                                      | likely used in Extra String                                                      |
+| k53 | setCapacity003                 | **integer**                                                      | likely used in Extra String                                                      |
+| k54 | setCapacity004                 | **integer**                                                      | likely used in Extra String                                                      |
 | k60 | AccountID                      | **integer**                                                      | the Creators AccountID                                                           |
 | k61 | First Coin Acquired            | **bool**                                                         | whether the first coin is acquired during verification                           |
 | k62 | Second Coin Acquired           | **bool**                                                         | whether the second coin is acquired during verification                          |
@@ -63,6 +67,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k72 | hasLowDetailMode               | **Bool**                                                         | If a level has LDM                                                               |
 | k73 | toggleLDM                      | **Bool**                                                         | If a LDM is Enabled                                                              |
 | k75 | isEpic                         | **Bool**                                                         | if a level has been awarded an epic rating                                       |
+| k76 | demon type                     | **integer**                                                      | Demon Type Enum                                                                  |
 | k77 | isGauntlet                     | **Bool**                                                         | is the level in a gauntlet                                                       |
 | k79 | Unlisted                       | **bool**                                                         | whether the level is to be marked as unlisted or not during publication          |
 | k80 | Seconds Spent Editing          | **integer**                                                      | the number of seconds spent editing the level                                    |
@@ -73,14 +78,20 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k86 | Player Time                    | **integer**                                                      | the amount of time on a players best attempt                                     |
 | k87 | levelScore Seed                | **[LevelScoreSeed](/topics/encryption/seeds/levelScore.md)**     | Contains info to verify the integrity of levelScores                             |
 | k88 | Level Progress                 | **integer**                                                      | Contains a list of high score differences seperated by a `,`                     |
-| k89 | IsLevelCompleted               | **Bool**                                                         | if a level is completed or not                                                   |
+| k89 | IsLegit                        | **Bool**                                                         | used to check for level completion                                               |
 | k90 | Verify percentage              | **integer**                                                      | Contains the percentage for levels you are trying to verify                      |
 
 ***Current Unknown Values***
 
 | Key | Type        | Info                                                     |
 | :-- | :---------- | :------------------------------------------------------- |
-| k83 |             |                                                          |
+| k65 | **Bool**    |   |
+| k68 | **Bool**    |   |
+| k74 | **integer** |   |
+| k78 | **Bool** | gauntlet level that isnt level 1?? |
+| k83 | **integer** |   |
+
+
 
 **Last Editor State Key/Value Pairs**
 The last editor state key/value pairs contain a few values that indicate the last state of the editor before exiting the editor on that level.
