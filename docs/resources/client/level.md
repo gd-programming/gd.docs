@@ -36,8 +36,8 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k26 | Stars                          | **integer**                                                      | the stars the level is worth                                                     |
 | k27 | FeatureScore                   | **integer**                                                      | A featured levels Feature Score                                                  |
 | k33 | Auto                           | **Bool**                                                         | If the level is auto                                                             |
-| k34 | Replay Data                    | **[Gziped String]()**                                            | Contains a Gzipped String which contains replay data for levels                  |
-| k35 | Demon                          | **[Demon](#)**                                                   | Contains the value for what type of demon the level is                           |
+| k34 | Replay Data                    | **[Gziped String](/topics/encryption/zip.md)**                   | Contains a Gzipped String which contains replay data for levels                  |
+| k35 | Demon                          | **[Demon](enumerations.md)**                                     | Contains the value for what type of demon the level is                           |
 | k36 | Jumps                          | **integer**                                                      | total Jumps on a level                                                           |
 | k37 | required coins                 | **Integer**                                                      | coins required to unlock an official level                                       |
 | k38 | isUnlocked                     | **Bool**                                                         | is Official level Unlocked                                                       |
@@ -62,7 +62,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k64 | Total Coins                    | **Integer**                                                      | How many Coins the level has                                                     |
 | k65 | isCoinsVerified                | **Bool**                                                         | denotes if the coins are verified or not                                         |
 | k66 | Requested Stars                | **integer**                                                      | the requested stars during publication of the level                              |
-| k67 | Extra String                   | **[Extra String](#)**                                            | Contains batch information about levels                                          |
+| k67 | Extra String                   | **Extra String**                                                 | Contains batch information about levels                                          |
 | k68 | triggeredAntiCheat             | **Bool**                                                         | if you trigger the anticheat when beating demons                                 |
 | k69 | High Object Count              | **Bool**                                                         | If a level has a high object count                                               |
 | k71 | Orb Reward Percentage          | **integer**                                                      | the percentage up until the orb reward has been granted                          |
