@@ -52,7 +52,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k67 | Extra String                   | **[Extra String](#)**                                            | Contains batch information about levels for when `high capacity mode` is enabled   |
 | k71 | Orb Reward Percentage          | **integer**                                                      | the percentage up until the orb reward has been granted                          |
 | k72 | hasLowDetailMode               | **Bool**                                                         | If a level has LDM                                                               |
-| k72 | toggleLDM                      | **Bool**                                                         | If a LDM is Enabled                                                              |
+| k73 | toggleLDM                      | **Bool**                                                         | If a LDM is Enabled                                                              |
 | k79 | Unlisted                       | **bool**                                                         | whether the level is to be marked as unlisted or not during publication          |
 | k80 | Seconds Spent Editing          | **integer**                                                      | the number of seconds spent editing the level                                    |
 | k81 | Seconds spent Editing (copies) | **integer**                                                      | the number of seconds spent editing the level (Previous copies)                  |
