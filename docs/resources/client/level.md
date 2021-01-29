@@ -49,7 +49,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k45 | Custom Song ID                 | **integer**                                                      | the custom Song ID (if used)                                                     |
 | k46 | Level Revision                 | **integer**                                                      | the revision of the level                                                        |
 | k47 | hasBeenModified                | **Bool**                                                         | if the level has been modified from outside the GD editor                        |
-| k48 | Object Count                   | **integer**                                                      | the [object count]() of the level                                                |
+| k48 | Object Count                   | **integer**                                                      | the object count of the level                                                |
 | k50 | Binary Version                 | **integer**                                                      | hardcoded to binary Version                                                      |
 | k51 | setCapacity001                 | **integer**                                                      | likely used in Extra String                                                      |
 | k52 | setCapacity002                 | **integer**                                                      | likely used in Extra String                                                      |
