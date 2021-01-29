@@ -109,3 +109,14 @@ The last editor state key/value pairs contain a few values that indicate the las
 Note that the build tab pages do not depend on the user's button row/column settings. That means, if the settings are changed, the build tab pages will not reflect the correct changes. For example:
 
 The build tab page is 5, and the button settings are 6x2 (default), meaning the currently shown elements range from `5 * 6 * 2` = 60 to `6 * 6 * 2 - 1` = 71 (zero-indexed). If the user changes the button settings to 12x3, the tab page will remain as 5, showing elements ranging from `5 * 12 * 3` = 180 to `6 * 12 * 3 - 1` = 215 (zero-indexed).
+
+### GDL22
+
+***Current Unknown Values***
+
+| Key | Type        | Info                                                     |
+| :-- | :---------- | :------------------------------------------------------- |
+| k91 | **string** | |
+| k92 | **integer** | |
+| k93| **Bool**  | |
+| k94 | **Bool** | |
