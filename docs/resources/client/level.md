@@ -41,8 +41,10 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k36 | Jumps                          | **integer**                                                      | total Jumps on a level                                                           |
 | k37 | required coins                 | **Integer**                                                      | coins required to unlock an official level                                       |
 | k38 | isUnlocked                     | **Bool**                                                         | is Official level Unlocked                                                       |
+| k39 | level Size                     | **integer**                                                      | `this->levelSize = std::floor(this->levelString.length() * 0.152);`              |
+| k40 | Build Version                  | **integer**                                                      | the games build version                                                          |
 | k41 | Password                       | **integer**                                                      | the [password]() <!-- local gamesave password topic link --> set for the level   |
-| k42 | Level ID                       | **integer**                                                      | The ID of the level when its uploaded                                            |
+| k42 | uploadID                       | **integer**                                                      | The ID of the level when its uploaded                                            |
 | k43 | Two-Player Mode                | **Bool**                                                         | If the level is 2 player mode                                                    |
 | k45 | Custom Song ID                 | **integer**                                                      | the custom Song ID (if used)                                                     |
 | k46 | Level Revision                 | **integer**                                                      | the revision of the level                                                        |
@@ -78,7 +80,6 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 
 | Key | Type        | Info                                                     |
 | :-- | :---------- | :------------------------------------------------------- |
-| k40 | **integer**     | Hardcoded to 14? ![GD1.8](https://media.discordapp.net/attachments/787081465867010079/804689815115137064/unknown.png) |
 | k83 |             |                                                          |
 
 **Last Editor State Key/Value Pairs**
