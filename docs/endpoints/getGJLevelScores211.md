@@ -32,15 +32,15 @@ Gets the leaderboard scores for a particular level and submits a user's current 
 
 **s3** - User's time in seconds + 4085
 
-**s4** - Unknown
+**s4** - related to percentage -> Client does math on it (likely used to make the leaderboards accurate)
 
-**s5** - Unknown
+**s5** - Random number goes up to 4 digits
 
 **s6** - List of PB differences (For example from 0 to 50, then 69, it would be `50,19`) [XOR'd](topics/encryption/xor.md) with 41274 and [Base64](topics/encryption/base64.md) encoded
 
-**s7** - Unknown
+**s7** - Randomly Generated 10 character string
 
-**s8** - Unknown
+**s8** - Attempt Count
 
 **s9** - The amount of coins the user got + 5819
 

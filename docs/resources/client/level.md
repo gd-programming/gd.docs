@@ -1,9 +1,11 @@
 # Client Level Resource
 
 ## Level
+
 A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a level string. It is stored in [XML](https://en.wikipedia.org/wiki/XML) format, and each level entry is a dictionary, containing key/value pairs denoting the level's properties.
 
 ### Level Data
+
 **Level Structure**
 
 | Key | Name/Value                     | Type                                                             | Description                                                                      |
@@ -86,11 +88,12 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k89 | [isLevelScorechkValid](/topics/encryption/chk?id=level-leaderboard) | **Bool**                    | used to check for level completion                                               |
 | k90 | Verify percentage              | **integer**                                                      | Contains the percentage for levels you are trying to verify                      |
 
+
 **Last Editor State Key/Value Pairs**
 The last editor state key/value pairs contain a few values that indicate the last state of the editor before exiting the editor on that level.
 
 | Key | Name/Value               | Type           | Description                              |
-|:----|:-------------------------|:---------------|:-----------------------------------------|
+| :-- | :----------------------- | :------------- | :--------------------------------------- |
 | kI1 | Editor Camera X Position | **float**      | the X position of the editor camera      |
 | kI2 | Editor Camera Y Position | **float**      | the Y position of the editor camera      |
 | kI3 | Editor Camera Zoom       | **float**      | the zoom level of the editor camera      |
