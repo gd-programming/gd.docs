@@ -60,38 +60,31 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k62 | Second Coin Acquired           | **bool**                                                         | whether the second coin is acquired during verification                          |
 | k63 | Third Coin Acquired            | **bool**                                                         | whether the third coin is acquired during verification                           |
 | k64 | Total Coins                    | **Integer**                                                      | How many Coins the level has                                                     |
+| k65 | isCoinsVerified                | **Bool**                                                         | denotes if the coins are verified or not                                         |
 | k66 | Requested Stars                | **integer**                                                      | the requested stars during publication of the level                              |
 | k67 | Extra String                   | **[Extra String](#)**                                            | Contains batch information about levels                                          |
+| k68 | triggeredAntiCheat             | **Bool**                                                         | if you trigger the anticheat when beating demons                                 |
 | k69 | High Object Count              | **Bool**                                                         | If a level has a high object count                                               |
 | k71 | Orb Reward Percentage          | **integer**                                                      | the percentage up until the orb reward has been granted                          |
 | k72 | hasLowDetailMode               | **Bool**                                                         | If a level has LDM                                                               |
 | k73 | toggleLDM                      | **Bool**                                                         | If a LDM is Enabled                                                              |
+| k74 | timelyID                       | **integer**                                                      | the timelyID for a level                                                         |
 | k75 | isEpic                         | **Bool**                                                         | if a level has been awarded an epic rating                                       |
 | k76 | demon type                     | **integer**                                                      | Demon Type Enum                                                                  |
 | k77 | isGauntlet                     | **Bool**                                                         | is the level in a gauntlet                                                       |
+| k78 | isGauntlet2                    | **Bool**                                                         | All completed gauntlet levels except level 1                                     |
 | k79 | Unlisted                       | **bool**                                                         | whether the level is to be marked as unlisted or not during publication          |
 | k80 | Seconds Spent Editing          | **integer**                                                      | the number of seconds spent editing the level                                    |
 | k81 | Seconds spent Editing (copies) | **integer**                                                      | the number of seconds spent editing the level (Previous copies)                  |
 | k82 | isLevelFavourited              | **Bool**                                                         | if you put the level in your favourites                                          |
+| k83 | levelOrder                     | **integer**                                                      | ordering for levels                                                              |
 | k84 | Level Folder                   | **integer**                                                      | the folder in which the level belongs (0 represents no folder)                   |
 | k85 | Clicks                         | **integer**                                                      | clicks done on a level                                                           |
 | k86 | Player Time                    | **integer**                                                      | the amount of time on a players best attempt                                     |
 | k87 | levelScore Seed                | **[LevelScoreSeed](/topics/encryption/seeds/levelScore.md)**     | Contains info to verify the integrity of levelScores                             |
 | k88 | Level Progress                 | **integer**                                                      | Contains a list of high score differences seperated by a `,`                     |
-| k89 | IsLegit                        | **Bool**                                                         | used to check for level completion                                               |
+| k89 | [isLevelScorechkValid](#)      | **Bool**                                                         | used to check for level completion                                               |
 | k90 | Verify percentage              | **integer**                                                      | Contains the percentage for levels you are trying to verify                      |
-
-***Current Unknown Values***
-
-| Key | Type        | Info                                                     |
-| :-- | :---------- | :------------------------------------------------------- |
-| k65 | **Bool**    |   |
-| k68 | **Bool**    |   |
-| k74 | **integer** |   |
-| k78 | **Bool** | gauntlet level that isnt level 1?? |
-| k83 | **integer** |   |
-
-
 
 **Last Editor State Key/Value Pairs**
 The last editor state key/value pairs contain a few values that indicate the last state of the editor before exiting the editor on that level.
@@ -112,11 +105,13 @@ The build tab page is 5, and the button settings are 6x2 (default), meaning the 
 
 ### GDL22
 
-***Current Unknown Values***
+<!-- from what i gathered, there doesnt seem to be any code that triggers these yet-->
+
+**Current Unknown Values**
 
 | Key | Type        | Info                                                     |
 | :-- | :---------- | :------------------------------------------------------- |
 | k91 | **string** | |
 | k92 | **integer** | |
-| k93| **Bool**  | |
-| k94 | **Bool** | |
+| k93 | **Bool** | unlimited Objects? |
+| k94 | **Bool** | Platformer? |
