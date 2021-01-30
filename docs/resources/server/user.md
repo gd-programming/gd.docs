@@ -32,6 +32,7 @@
 | 30 | GlobalRank | **number** | The global rank of this player |
 | 31 | Friendstate | **number** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
 | 41 | hasBlocked | **Bool** | appears on userlist endpoint to show if the user is blocked |
+| 42 | levelScore Time | **String** | the time since you submitted a levelScore |
 | 43 | accSpider | **number** | The spider number of the player use |
 | 44 | twitter| **string** | The twitter of player |
 | 45 | twitch | **string** | The twitch of player |
@@ -39,13 +40,6 @@
 | 48 | accExplosion | **number** | The explosion number of the player use |
 | 49 | Modlevel | **number** | 0: None, 1: Normal Mod(yellow), 2: Elder Mod(orange) |
 | 50 | CommentHistoryState | **number** | 0: All, 1: Only friends, 2: None |
-
-## Unused Keys
-
-
-| Key | Type | Description|
-|:----|:-----|:-----------|
-| 42  | **String** | it is the only key in the parsing algorithm that doesnt have a value to key function called. it is likely an unused facebook socials link since its close to the other socials links and because its the same tyep |
 
 
 Example:
