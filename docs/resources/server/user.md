@@ -26,10 +26,12 @@
 | 24 | accBird | **number** | The bird number of the player use |
 | 25 | accDart(wave) | **number** | The dart(wave) number of the player use |
 | 26 | accRobot | **number** | The robot number of the player use |
+| 27 | AccStreak | **number** | The Streak of the user |
 | 28 | accGlow | **number** | The glow number of the player use |
-| 29 | unknown | **number** | unknown but always 1 |
+| 29 | isRegistered | **number** | if an account is registered or not |
 | 30 | GlobalRank | **number** | The global rank of this player |
 | 31 | Friendstate | **number** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
+| 41 | hasBlocked | **Bool** | appears on userlist endpoint to show if the user is blocked |
 | 43 | accSpider | **number** | The spider number of the player use |
 | 44 | twitter| **string** | The twitter of player |
 | 45 | twitch | **string** | The twitch of player |
@@ -40,13 +42,10 @@
 
 ## Unused Keys
 
-these keys were found after reversing the parsing algorithm for the user endpoints
 
-| Key | Type |
-|:----|:-----|
-| 27  | **Integer** |
-| 41  | **Bool** |
-| 42  | **String** |
+| Key | Type | Description|
+|:----|:-----|:-----------|
+| 42  | **String** | it is the only key in the parsing algorithm that doesnt have a value to key function called. it is likely an unused facebook socials link since its close to the other socials links and because its the same tyep |
 
 
 Example:
