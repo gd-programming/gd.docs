@@ -38,6 +38,17 @@
 | 49 | Modlevel | **number** | 0: None, 1: Normal Mod(yellow), 2: Elder Mod(orange) |
 | 50 | CommentHistoryState | **number** | 0: All, 1: Only friends, 2: None |
 
+## Unused Keys
+
+these keys were found after reversing the parsing algorithm for the user endpoints
+
+| Key | Type |
+|:----|:-----|
+| 27  | **Integer** |
+| 41  | **Bool** |
+| 42  | **String** |
+
+
 Example:
 ```
 1:WOSHIZHAZHA120:2:10086790:13:0:17:0:10:0:11:3:3:0:46:0:4:0:8:0:18:0:19:0:50:0:20:WOSHIZHAZHA120:21:1:22:1:23:1:24:1:25:1:26:1:28:0:43:1:48:1:30:355655:16:1889402:31:0:44:WOSHIZHAZHA120:45:WOSHIZHAZHA120:49:0:29:1
