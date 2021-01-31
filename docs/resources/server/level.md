@@ -24,8 +24,9 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 | 11  | Unknown                   | **unknown**                                  | Unknown purpose, the only observed returned values were either 0, an empty string or 1. Removed in the 2.1 update
 | 12  | Official Song             | **number**                                   | The official song number used by the level, if applicable         
 | 13  | Game Version              | **number** 			                   	     | The GD version the level was uploaded in. Versions 1.0 to 1.6 use version numbers 1 to 7 respectively. Version 10 is 1.7. Otherwise, divide the version number by ten to get the correct number. 
-| 14  | Likes                     | **number** 			                   	     | The amount of likes the level received
-| 15  | Length                    | **number** 			                   	     | A number from 0-4, where 0 is tiny and 4 is XL     
+| 14  | Likes                     | **number** 			                   	     | likes - dislikes |
+| 15  | Length                    | **number** 			                   	     | A number from 0-4, where 0 is tiny and 4 is XL   |  
+| 16  | Dislikes                  | **number**                                   | dislikes - likes |
 | 17  | Demon                     | **boolean** 				                 | If the level's difficulty is demon    
 | 18  | Stars                     | **number** 				                     | The amount of stars rewarded for completing the level
 | 19  | Featured Score            | **number** 	                                 | 0 if the level is not featured, otherwise a positive number. The higher it is, the higher the level appears on the featured levels list. 
@@ -42,9 +43,10 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 | 39  | Stars Requested           | **number** 				                     | The star value requested for the level     
 | 40* | Low Detail Mode           | **boolean** 				                 | If the level has a low detail checkbox    
 | 41* | Daily Number              | **number** 				                     | Daily/weekly levels only. Returns which daily/weekly the level was (e.g. the 500th daily level). Subtract 100,000 if the level is weekly
-| 42  | Epic                      | **boolean** 				                 | If the level has an epic rating    
+| 42  | Epic                      | **integer** 				                 | If the level has an epic rating    
 | 43  | Demon Difficulty          | **number** 				                     | The difficulty of the demon rating. 3 = easy, 4 = medium, 0 = hard, 5 = insane, 6 = extreme. Can also be used to determine the level difficulty non-demons had before rating as a side-effect of the voting system.
+| 44  | isGauntlet                | **Bool**                                     | if the level is in a gauntlet |
 | 45  | Objects                   | **number** 				                     | The amount of objects in the level, used to determine if the level is considered "large". It caps at 65535     
-| 46  | Unknown                   | **number** 				                     | 
-| 47  | Unknown                   | **number** 				                     | 
-| 48  | Unknown                   | **unknown**                                  | Added in 2.1, seems to have been removed shortly after
+| 46  | editorTime                | **number** 				                     | 
+| 47  | editorTime(Copies)        | **number** 				                     | 
+| 48  | Unknown                   | **String**                                   | Added in 2.1, seems to have been removed shortly after
