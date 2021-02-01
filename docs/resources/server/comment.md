@@ -18,8 +18,10 @@ A comment is split into two sections, separated by a colon. The first part is th
 | 3   | Author*					  | **number**									 | The player ID of the author. **This is different than the account ID**
 | 4   | Likes					  | **number**									 | The amount of likes the comment has
 | 6   | Message ID				  | **number**									 | The message ID. Account comments have different IDs than level comments
+| 7   | isSpam                    | **Bool**                                     | if a comment has been flagged as spam
 | 9   | Age						  | **string**									 | How long ago the comment was posted (e.g. "2 months")
 | 10  | Percent*				  | **number**									 | The percent the player put in their comment
+| 11  | ModBadge                  | **number**                                   | The Mod Badge of a moderator commenting
 | 12  | Moderator Chat Color      | **string**									 | Comma separated list of the RGB values of the moderator's chat color
 
 #### Player Structure
