@@ -18,9 +18,9 @@
 | 2 | 8 | Depends on the [GS_Value](/resources/client/gamesave/GS_Value) it is inside of |
 | 3 | 8 | GJRewardObject |
 | 1 | 9 | item type |
-| 2 | 9 | likely Custom Item ID |
+| 2 | 9 | customItemID |
 | 3 | 9 | reward amount |
-| 4 | 9 | unknown |
+| 4 | 9 | itemUnlockValue -> presumedly contains data that unlocks an item in the garage |
 
 ### ItemIDs
 
