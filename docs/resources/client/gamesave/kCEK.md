@@ -20,7 +20,7 @@
 | 1 | 9 | item type |
 | 2 | 9 | customItemID |
 | 3 | 9 | reward amount |
-| 4 | 9 | itemUnlockValue -> presumedly contains data that unlocks an item in the garage |
+| 4 | 9 | itemUnlockValue -> [presumedly contains data that unlocks an item in the garage?](https://media.discordapp.net/attachments/801840133355470888/806137688905875496/unknown.png) |
 
 ### ItemIDs
 
