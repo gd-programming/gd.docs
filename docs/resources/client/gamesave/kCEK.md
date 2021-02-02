@@ -35,3 +35,19 @@
 | 7 | Orbs |
 | 8 | Diamonds |
 | 9 | Custom Object (shares the same ID for Demon guardian key, icons and colours) |
+
+### GJRewardItem GS Keys
+
+#### GS_11
+
+| key | value |
+|:----|:------------|
+| 1 | ChestID | 
+| 2 | ChestType | 
+
+##### Chest Types
+
+| ID | type |
+|:---|:-----|
+| 1 | 4 hour chest |
+| 2 | 24 hour chest |
