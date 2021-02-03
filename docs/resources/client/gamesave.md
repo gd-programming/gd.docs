@@ -108,7 +108,7 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 #### GDL22 GJA
 | Key | Value|
 | :-- |:-----------|
-| GJA_004 | Most Likely SessionID (not confirmed) |
+| GJA_004 | SessionID |
 
 ### LLM
 
