@@ -8,7 +8,7 @@ Gets the URL for the data server. Official domain name is [http://geometrydash.c
 
 **accountID** - Anyone's account ID
 
-**type** - Unknown use; 2 by default
+**type** - used to decide which endpoint is used after the data server is found - 1 = backup data/ 2 = sync data
 
 **secret** - Wmfd2893gb7
 

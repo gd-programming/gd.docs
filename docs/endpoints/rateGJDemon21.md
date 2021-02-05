@@ -1,20 +1,14 @@
 # rateGJDemon21.php
 
-Rates the demon difficulty of a demon level
+Rates the demon difficulty of a demon level - only works for Geometry Dash moderators
 
 ## Parameters
 
 ### Required Parameters
 
-N/A
-
-### Optional Parameters
-
 **gameVersion** - 21
 
 **binaryVersion** - 35
-
-**gdw** - 0
 
 **secret** - Wmfp3897gc3
 
@@ -26,15 +20,25 @@ N/A
 
 **rating** - 1 for Easy Demon, 2 for Medium Demon, 3 for Hard Demon, 4 for Insane Demon and 5 for Extreme Demon
 
+### Optional Parameters
+
+**gdw** - 0 
+
 ## Response
 
-Always -1. Returns a 500 error code when sent by GD
+For normal Players: Internal Server Error or -1
+
+if mode=1
+
+mod: levelID
+
+normal user: -2
 
 ## Example
 
 <!-- tabs:start -->
 
-### **Python**
+### **Python - normal Players**
 
 ```py
 import requests
@@ -55,6 +59,33 @@ print(req.text)
 **Response**
 ```py
 -1
+```
+
+### **Python - Moderators**
+
+```py
+import requests
+
+headers = {
+}
+
+data = {
+    "gameVersion": 21,
+    "binaryVersion": 35
+    "accountID": 71,
+    "gjp": *********, #the GJP of the moderator
+    "secret": "Wmfp3897gc3",
+    "levelID": 4284013,
+    "rating": 3
+}
+
+req = requests.post('http://www.boomlings.com/database/rateGJDemon21.php', headers=headers, data=data)
+print(req.text)
+```
+
+**Response**
+```py
+4284013
 ```
 
 <!-- tabs:end -->
