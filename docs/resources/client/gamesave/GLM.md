@@ -31,9 +31,10 @@ GLM_03 is used to store progress the player has done on all online levels
 
 GLM_04 contains all the difficulty ratings you have given levels, currently unused
 
-| key | description |
+| key | value |
 |:----|:------------|
 | `{levelID}`| `{diffID}` | 
+
 
 ## GLM_06
 
