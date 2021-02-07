@@ -87,7 +87,7 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0099| showLeaderboardPercent |
 | gv_0100| practiceDeathEffect|
 | gv_0101| forceSmoothFix |
-|gv_0102 | smoothFixInEditor |
+| gv_0102 | smoothFixInEditor |
 
 # Unlocked Game Variables
 
