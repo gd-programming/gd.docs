@@ -19,11 +19,10 @@ A comment is split into two sections, separated by a colon. The first part is th
 | 4   | Likes					  | **number**									 | The amount of likes the comment has
 | 6   | Message ID				  | **number**									 | The message ID. Account comments have different IDs than level comments
 | 7   | isSpam                    | **Bool**                                     | if a comment has been flagged as spam
-| 8   | accountID                 | **integer**                                  | GJA_003
 | 9   | Age						  | **string**									 | How long ago the comment was posted (e.g. "2 months")
 | 10  | Percent*				  | **number**									 | The percent the player put in their comment
 | 11  | ModBadge                  | **number**                                   | The Mod Badge of a moderator commenting
-| 12  | Moderator Chat Color      | **string**									 | Comma separated list of the RGB values of the moderator's chat color
+| 12  | Moderator Chat Color      | **string**									 | Comma separated list of the RGB values of the moderator's chat color. only appears if `modBadgeID != 0`
 
 #### Player Structure
 
@@ -36,5 +35,5 @@ A comment is split into two sections, separated by a colon. The first part is th
 | 10  | Player Color 1			  | **number**									 | Author's primary player color, presumably ordered cronologically from left to right per update
 | 11  | Player Color 2			  | **number**									 | Author's secondary player color, presumably ordered cronologically from left to right per update
 | 14  | Icon Type				  | **number**									 | Author's icon type indexing an array of `icon, ship, ball, ufo, wave, robot, spider`
-| 15  | Unknown					  | **number**									 | Either 0 or 2, might be related to glow
+| 15  | glow					  | **number**									 | 0 = no glow, 2 = glow
 | 16  | Account ID				  | **number**									 | Author's account ID. **This is different than the player ID**
