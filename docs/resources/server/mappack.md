@@ -16,22 +16,3 @@ A map pack is a series of 3 levels, although it can go higher, handpicked by Rob
 | 6   | Difficulty | **number** | Difficulty from 1-6, denoting Easy-Demon respectively
 | 7   | Text Color | **string** | RGB color for the title text separated by ,
 | 8   | Bar Color  | **string** | RGB color for the completion bar separated by ,
-
-#### difficulty values
-
-these are the values for index `6`
-
-| Key | Difficulty | 
-| --- | ---------- |
-| Key | Name/Value |
-| 0 | Auto |
-| 1 | Easy |
-| 2 | Normal |
-| 3 | Hard |
-| 4 | Harder |  
-| 5 | Insane |
-| 6 | Hard Demon |
-| 7 | Easy Demon |
-| 8 | Medium Demon |
-| 9 | Insane Demon |
-| 10 | Extreme Demon |
