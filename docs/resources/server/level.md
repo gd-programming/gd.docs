@@ -31,6 +31,7 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 | 18  | Stars                     | **number** 				                     | The amount of stars rewarded for completing the level
 | 19  | Featured Score            | **number** 	                                 | 0 if the level is not featured, otherwise a positive number. The higher it is, the higher the level appears on the featured levels list. 
 | 25  | Auto                      | **boolean** 				                 | If the level's difficulty is auto
+| 26  | recordString              | **String**                                   | appears in the [GJGameLevel parser](https://media.discordapp.net/attachments/801840133355470888/809495354880950272/unknown.png) but is unused
 | 27* | Password                  | **encrypted string** 	                     | The password required to copy the level. It is XOR encrypted with a key of 26364
 | 28* | Upload date               | **string** 				                     | The approximate date the level was uploaded on 
 | 29* | Update date               | **string** 				                     | The approximate date the level was last updated on 
