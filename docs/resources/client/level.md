@@ -39,7 +39,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k27 | FeatureScore                   | **integer**                                                      | A featured levels Feature Score                                                  |
 | k33 | Auto                           | **Bool**                                                         | If the level is auto                                                             |
 | k34 | Replay Data                    | **[Gziped String](/topics/encryption/zip.md)**                   | Contains a Gzipped String which contains replay data for levels                  |
-| k35 | Demon                          | **[Demon](enumerations.md)**                                     | Contains the value for what type of demon the level is                           |
+| k35 | Demon                          | **[Demon](enumerations.md)**                                     | if the level is demon                                                            |
 | k36 | Jumps                          | **integer**                                                      | total Jumps on a level                                                           |
 | k37 | required coins                 | **Integer**                                                      | coins required to unlock an official level                                       |
 | k38 | isUnlocked                     | **Bool**                                                         | is Official level Unlocked                                                       |
