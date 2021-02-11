@@ -19,6 +19,6 @@ A leaderboard score is any score that is shown on a leaderboard, for example Vip
 | 11  | Player Color 2			  | **number**									 | The user's secondary player color, presumably ordered cronologically from left to right per update
 | 13  | Coins        	          | **number**									 | Secret coins/number of usercoins you get on a level*
 | 14  | Icon Type				  | **number**									 | The user's icon type indexing an array of `icon, ship, ball, ufo, wave, robot, spider`
-| 15  | Glow   					  | **number**									 | 0 or 2
+| 15  | Special					  | **number**									 | functions the same as glow however it returns a 2 rather than a 1
 | 16  | Account ID				  | **number**									 | The user's account ID. **This is different than the player ID**
 | 42  | Age						  | **string** 									 | How long ago the score was set (e.g. "2 months")
