@@ -17,6 +17,7 @@ A map pack is a series of 3 levels, although it can go higher, handpicked by Rob
 | 7   | Text Color | **string** | RGB color for the title text separated by ,
 | 8   | Bar Color  | **string** | RGB color for the completion bar separated by ,
 
+
 ### Difficulty structure
 
 | Value | Difficulty |
@@ -32,3 +33,4 @@ A map pack is a series of 3 levels, although it can go higher, handpicked by Rob
 | 8 |  Medium Demon | 
 | 9 |  Insane Demon | 
 | 10 |  Extreme Demon | 
+
