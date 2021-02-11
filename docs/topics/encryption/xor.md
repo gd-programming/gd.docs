@@ -1,9 +1,9 @@
 # XOR
 
-[XOR](https://en.wikipedia.org/wiki/Bitwise_operation#XOR) is a *bit-wise* binary operation that is commonly written as `^` in programming languages.
+[XOR](https://en.wikipedia.org/wiki/Bitwise_operation#XOR) is a _bit-wise_ binary operation that is commonly written as `^` in programming languages.
 
 Each character in a string is essentially represented by a number,
-so-called *codepoint*, to which XOR operation can be applied.
+so-called _codepoint_, to which XOR operation can be applied.
 
 <!-- tabs:start -->
 
@@ -23,7 +23,7 @@ and `chr()` to convert the codepoint to a character.
 
 ## XOR Cipher
 
-**XOR-Cipher** elaborates on the idea of applying *XOR* to each to characters,
+**XOR-Cipher** elaborates on the idea of applying _XOR_ to each to characters,
 one in the string and one in the key.
 
 Here is our **XOR-Cipher** stub (empty) function:
@@ -53,7 +53,7 @@ Here is what will happen to our string if we apply **XOR-Cipher**:
 
 <!-- tabs:end -->
 
-**XOR-Cipher** connects each character in given string with character in key (key is cycled), then applies *XOR* operation on each pair.
+**XOR-Cipher** connects each character in given string with character in key (key is cycled), then applies _XOR_ operation on each pair.
 
 Returning back to the function:
 
@@ -89,7 +89,7 @@ def xor_cipher(string: str, key: str) -> str:
 Here is a list of XOR keys currently used in GD:
 
 | Key   | Usage             |
-|-------|-------------------|
+| ----- | ----------------- |
 | 14251 | Messages          |
 | 26364 | Level Password    |
 | 37526 | Account Password  |
@@ -100,3 +100,4 @@ Here is a list of XOR keys currently used in GD:
 | 59182 | Rewards           |
 | 58281 | Like and Rate     |
 | 85271 | User Profile      |
+| 19283 | Vault Codes       |

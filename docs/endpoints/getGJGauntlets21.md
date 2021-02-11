@@ -16,6 +16,8 @@ Gets the gauntlet levels.
 
 **gdw** - 0
 
+**special** - 1 (fetches the 2.2 gauntlets)
+
 ## Response
 
 A list of [gauntlet objects](/resources/server/gauntlet.md), separated by a pipe `|`.

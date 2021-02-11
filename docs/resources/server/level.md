@@ -51,3 +51,4 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 | 46  | editorTime                | **number** 				                     | 
 | 47  | editorTime(Copies)        | **number** 				                     | 
 | 48  | Unknown                   | **String**                                   | not found it GD 2.1's parser however it is in 2.2's parser suggesting that it was a 2.2 key that rob accidentally sent from the servers seems to be unused after testing it |
+
