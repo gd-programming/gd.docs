@@ -39,7 +39,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k27 | FeatureScore                   | **integer**                                                      | A featured levels Feature Score                                                  |
 | k33 | Auto                           | **Bool**                                                         | If the level is auto                                                             |
 | k34 | Replay Data                    | **[Gziped String](/topics/encryption/zip.md)**                   | Contains a Gzipped String which contains replay data for levels                  |
-| k35 | Demon                          | **[Demon](enumerations.md)**                                     | Contains the value for what type of demon the level is                           |
+| k35 | Demon                          | **[Demon](enumerations.md)**                                     | if the level is demon                                                            |
 | k36 | Jumps                          | **integer**                                                      | total Jumps on a level                                                           |
 | k37 | required coins                 | **Integer**                                                      | coins required to unlock an official level                                       |
 | k38 | isUnlocked                     | **Bool**                                                         | is Official level Unlocked                                                       |
@@ -82,7 +82,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k83 | levelOrder                     | **integer**                                                      | ordering for levels                                                              |
 | k84 | Level Folder                   | **integer**                                                      | the folder in which the level belongs (0 represents no folder)                   |
 | k85 | Clicks                         | **integer**                                                      | clicks done on a level                                                           |
-| k86 | Player Time                    | **integer**                                                      | the amount of time on a players best attempt                                     |
+| k86 | Player Time                    | **integer**                                                      | the amount of time on a players best attempt (even detects speedhacks)           |
 | k87 | levelScore Seed                | **[LevelScoreSeed](/topics/encryption/chk?id=level-leaderboard)**| Contains info to verify the integrity of levelScores                             |
 | k88 | Level Progress                 | **integer**                                                      | Contains a list of high score differences seperated by a `,`                     |
 | k89 | [isLevelScorechkValid](/topics/encryption/chk?id=level-leaderboard) | **Bool**                    | used to check for level completion                                               |

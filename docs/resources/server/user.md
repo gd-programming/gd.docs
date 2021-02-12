@@ -26,13 +26,16 @@
 | 24 | accBird | **number** | The bird number of the player use |
 | 25 | accDart(wave) | **number** | The dart(wave) number of the player use |
 | 26 | accRobot | **number** | The robot number of the player use |
+| 27 | AccStreak | **number** | The Streak of the user |
 | 28 | accGlow | **number** | The glow number of the player use |
-| 29 | unknown | **number** | unknown but always 1 - If set to 0, five things happen: all your icons revert to the default icons (colours aren't affected), the leaderboard rank vanishes from your profile, Mod Badges vanish, friend requests/messages/new friends don't have any notifications and twitch/twitter/youtube buttons are removed|
+| 29 | isRegistered | **number** | if an account is registered or not |
 | 30 | GlobalRank | **number** | The global rank of this player |
 | 31 | Friendstate | **number** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
 | 38 | Messages | **number** | How many new messages the user has (shown in-game as a notificaiton) |
 | 39 | FriendRequests | **number** | How many new friend requests the user has (shown in-game as a notificaiton) |
 | 40 | NewFriends | **number** | How many new Friends the user has (shown in-game as a notificaiton) |
+| 41 | hasBlocked | **Bool** | appears on userlist endpoint to show if the user is blocked |
+| 42 | levelScore Time | **String** | the time since you submitted a levelScore |
 | 43 | accSpider | **number** | The spider number of the player use |
 | 44 | twitter| **string** | The twitter of player |
 | 45 | twitch | **string** | The twitch of player |
@@ -40,6 +43,7 @@
 | 48 | accExplosion | **number** | The explosion number of the player use |
 | 49 | Modlevel | **number** | 0: None, 1: Normal Mod(yellow), 2: Elder Mod(orange) |
 | 50 | CommentHistoryState | **number** | 0: All, 1: Only friends, 2: None |
+
 
 Example:
 ```

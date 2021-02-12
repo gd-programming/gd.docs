@@ -22,10 +22,11 @@
     - [Encoder Keys](resources/client/gamesave/kCEK.md)
     - [GS Values](/resources/client/gamesave/GS_Value.md)
     - [GLM](/resources/client/gamesave/GLM.md)
-    - [value Keeper](/resources/client/gamesave/valueKeeper.md)
+    - [Value Keeper](/resources/client/gamesave/valueKeeper.md)
     - [Game Variables](/resources/client/gamesave/gv.md)
     - [Achievements](/resources/client/gamesave/achievement.md)
-    - [quests](/resources/client/gamesave/quests.md)
+    - [Quests](/resources/client/gamesave/quests.md)
+
   - [Level](/resources/client/level.md)
     - [Object IDs](/resources/client/level-components/objectids.md)
     - [Inner Level String](/resources/client/level-components/inner-level-string.md)

@@ -21,4 +21,4 @@ A friend request is an invite with a message that you can send to someone to inv
 | 32  | Friend Request ID		  | **number**									 | An ID unique to each friend request. (I'm not 100% certain on this)
 | 35  | Message					  | **string**									 | The friend requests's message, encoded in [base64](/topics/encryption/base64.md)
 | 37  | Age						  | **string** 									 | How long ago the friend request was sent (e.g. "2 months")
-| 41  | Unknown					  | **integer**									 | Either 0 or 1, not sure what this does
+| 41  | isBlocked			      | **Bool**									 | if you have blocked the user

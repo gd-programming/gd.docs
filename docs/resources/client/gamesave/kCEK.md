@@ -18,9 +18,9 @@
 | 2 | 8 | Depends on the [GS_Value](/resources/client/gamesave/GS_Value) it is inside of |
 | 3 | 8 | GJRewardObject |
 | 1 | 9 | item type |
-| 2 | 9 | likely Custom Item ID |
+| 2 | 9 | customItemID |
 | 3 | 9 | reward amount |
-| 4 | 9 | unknown |
+| 4 | 9 | itemUnlockValue -> [presumedly contains data that unlocks an item in the garage?](https://media.discordapp.net/attachments/801840133355470888/806137688905875496/unknown.png) |
 
 ### ItemIDs
 
@@ -35,3 +35,19 @@
 | 7 | Orbs |
 | 8 | Diamonds |
 | 9 | Custom Object (shares the same ID for Demon guardian key, icons and colours) |
+
+### GJRewardItem GS Keys
+
+#### GS_11
+
+| key | value |
+|:----|:------------|
+| 1 | ChestID | 
+| 2 | ChestType | 
+
+##### Chest Types
+
+| ID | type |
+|:---|:-----|
+| 1 | 4 hour chest |
+| 2 | 24 hour chest |
