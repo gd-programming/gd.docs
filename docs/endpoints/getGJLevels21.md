@@ -54,6 +54,7 @@ and if this is left out it's most liked
 
 **len** - Length Filter.
 | len | desc |
+| --- | ---- |
 | 0 | Tiny |
 | 1 | Short |
 | 2 | Medium |
