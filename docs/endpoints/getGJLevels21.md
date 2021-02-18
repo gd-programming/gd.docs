@@ -16,13 +16,52 @@ Gets a list of levels.
 
 **gdw** - 0
 
-**type** - Controls the fetch priority. 0 are most liked, 1 are most downloaded, 2 is the default for the search button (also most liked), 3 is trending, 4 is recent, 5 is a user's levels (uses the player ID, **not the account ID,** in the `str` parameter to get which user), 6 is featured, 7 is magic, 8 is moderator sent levels (also requires the `accountID` and the `gjp` of a GD moderator), 10 is to get a list of specific levels (this uses the `str` parameter as a comma separated list of level IDs), used in map packs, 11 is recently awarded, 12 is levels from people you follow, 13 is friends, 15 is most liked in GD World, 16 is hall of fame, 17 is also featured, and 18 is unknown because it's always empty (maybe mod or robtop only?), and if this is left out it's most liked
+**type** - Controls the fetch priority.   
+and if this is left out it's most liked
+
+| type | desc |
+| ---- | ---- |
+| 0 | most liked |
+| 1 | most downloaded |
+| 2 | default for the search button (also most liked) |
+| 3 | trending |
+| 4 | recent |
+| 5 | user's levels (uses the player ID, **not the account ID,** in the `str` parameter to get which user) |
+| 6 | featured |
+| 7 | magic |
+| 8 | moderator sent levels (also requires the `accountID` and the `gjp` of a GD moderator) |
+| 10 | list of specific levels (this uses the `str` parameter as a comma separated list of level IDs), used in map packs |
+| 11 | recently awarded |
+| 12 | levels from people you follow |
+| 13 | friends |
+| 15 | most liked in GD World |
+| 16 | hall of fame |
+| 17 | also featured |
+| 18 | unknown because it's always empty (maybe mod or robtop only?) |
 
 **str** - Search string, required when `type` is 5 or 10
 
-**diff** - Difficulty filter. A list of integers denoting the different difficulties. -1 is N/A (doesn't work), and 1, 2, 3, 4, and 5 are Easy-Insane, respectively. Demons are -2 and use the **demonFilter** parameter to denote which demon type to search
+**diff** - Difficulty filter. A list of integers denoting the different difficulties. 
 
-**len** - Length Filter. 1-4 for Tiny-XL, respectively
+| diff | desc |
+| ---- | ---- |
+| -1 | N/A (doesn't work) |
+| -2 | Demons (use the **demonFilter** parameter to denote which demon type to search) |
+| 1 | Easy |
+| 2 | Normal |
+| 3 | Hard |
+| 4 | Harder |
+| 5 | Insane |
+
+**len** - Length Filter.
+
+| len | desc |
+| --- | ---- |
+| 0 | Tiny |
+| 1 | Short |
+| 2 | Medium |
+| 3 | Long |
+| 4 | XL |
 
 **page** - Which page of levels you want to see
 
