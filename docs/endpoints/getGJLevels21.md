@@ -42,6 +42,7 @@ and if this is left out it's most liked
 **str** - Search string, required when `type` is 5 or 10
 
 **diff** - Difficulty filter. A list of integers denoting the different difficulties. 
+
 | diff | desc |
 | ---- | ---- |
 | -1 | N/A (doesn't work) |
@@ -53,6 +54,7 @@ and if this is left out it's most liked
 | 5 | Insane |
 
 **len** - Length Filter.
+
 | len | desc |
 | --- | ---- |
 | 0 | Tiny |
