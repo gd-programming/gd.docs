@@ -2,9 +2,9 @@
 
 ## Users
 
-Each player of Geometry Dash have their own profile which includes various different elements such as in-game stats, icons and even socials.
+Each player of Geometry Dash has their own profile which includes various different elements such as in-game stats, icons and even socials.
 
-A typical User Server response is structured with a `key:value:key:value` pairing and is then split with a `|`
+A typical user server response is structured with a `key:value:key:value` pairing and is then split with a `|`
 
 <!-- tabs:start -->
 
@@ -43,12 +43,12 @@ A list of all known keys can be found in the table below
 | 24 | accBird | **Integer** | The bird number of the player use |
 | 25 | accDart(wave) | **Integer** | The dart(wave) number of the player use |
 | 26 | accRobot | **Integer** | The robot number of the player use |
-| 27 | accStreak | **Integer** | The Streak of the user |
+| 27 | accStreak | **Integer** | The streak of the user |
 | 28 | accGlow | **Integer** | The glow number of the player use |
 | 29 | isRegistered | **Integer** | if an account is registered or not |
 | 30 | globalRank | **Integer** | The global rank of this player |
 | 31 | friendstate | **Integer** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
-| 38 | messages | **Integer** | How many new messages the user has (shown in-game as a notificaiton) | <!-- there are a bunch of keys before here but they are exclusive to friend requests so i didnt add them here -->
+| 38 | messages | **Integer** | How many new messages the user has (shown in-game as a notification) | <!-- there are a bunch of keys before here but they are exclusive to friend requests so i didnt add them here -->
 | 39 | friendRequests | **Integer** | How many new friend requests the user has (shown in-game as a notificaiton) |
 | 40 | newFriends | **Integer** | How many new Friends the user has (shown in-game as a notificaiton) |
 | 41 | hasBlocked | **Bool** | appears on userlist endpoint to show if the user is blocked |
@@ -65,5 +65,5 @@ A list of all known keys can be found in the table below
 
 - Setting Key `29` to `0` stops most aspects of your profile from loading
 
-- key `27` is impossible to recieve from the server as there is no way for the server to know what the player's `streak` is
+- Key `27` is impossible to recieve from the server as there is no way for the server to know what the player's `streak` is
 

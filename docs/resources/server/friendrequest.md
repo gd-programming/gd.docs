@@ -2,9 +2,9 @@
 
 ## Friend Request
 
-One of the features in Geometry Dash is the friend system which allows players to add each other as a friend. It is part of a poorly developped social System in which players can send messages to each other.
+One of the features in Geometry Dash is the friend system which allows players to add each other as a friend. It is part of a poorly developed social System in which players can send messages to each other.
 
-The Server Response returns a [User String](/resources/server/user) in a response which is structured with a `key:value:key:value` pairing. Each Friend Request String is then split with a `|`
+The server response returns a [User String](/resources/server/user) in a response which is structured with a `key:value:key:value` pairing. Each friend request string is then split with a `|`
 
 <!-- tabs:start -->
 

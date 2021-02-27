@@ -11,7 +11,7 @@ Songs in Geometry Dash are supplied through a partnership with a website called 
 The songs can be downloaded and used via a private API that only RobTop has access to
 
 
-A typical Song Server response is structured with a `key~|~value~|~key~|~value` pairing and is then split with a `:`
+A typical song server response is structured with a `key~|~value~|~key~|~value` pairing and is then split with a `:`
 
 <!-- tabs:start -->
 

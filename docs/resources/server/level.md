@@ -5,7 +5,7 @@
 A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a [level string](/topics/levelstring_encoding_decoding).
 
 
-A typical Gauntlet Server response is structured with a `key:value:key:value` pairing and is then split with a `|`
+A typical level server response is structured with a `key:value:key:value` pairing and is then split with a `|`
 
 *keep in mind that the value for key `4` will be replaced with `{levelString}` as it is too big to show*
 <!-- tabs:start -->
@@ -71,7 +71,7 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 
 - The getGJLevels endpoint returns the keys `46` and `47` however they aren't actually correct
 
-- key `45` caps at the 16-bit Integer Limit so any level with more objects won't be accurate
+- key `45` caps at the 16-bit integer limit so any level with more objects won't be accurate
 
 - Surprisingly, key `42` is classified as an `Integer` rather than a `Bool` 
 

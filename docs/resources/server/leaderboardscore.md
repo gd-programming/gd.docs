@@ -2,16 +2,16 @@
 
 ## Leaderboard Score
 
-Leadboards are the in-game ranking system for Geometry Dash. There are `7` Types of Leaderboards that are used as of version `2.11` 
-> - `Star Top 100` - The Top 100 best Star Grinders
-> - `Star Friends` - The Relative Leaderboards betweem the user and his Friends
-> - `Relative Star` - The PLayers position on the global leaderboards along with 100 other players that have a rank relative to the player
-> - `Creator Top 100` - The top 100 Creator Point Grinders
+Leaderboards are the in-game ranking system for Geometry Dash. There are `7` types of leaderboards that are used as of version `2.11` 
+> - `Star Top 100` - The top 100 best star grinders
+> - `Star Friends` - The relative leaderboards between the user and his friends
+> - `Relative Star` - The players position on the global leaderboards along with 100 other players that have a rank relative to the player
+> - `Creator Top 100` - The top 100 creator point grinders
 > - `Global Level Scores` - The fastest victors to a specific level since the level was uploaded to the servers
 > - `Global Weekly Level Scores` - The fastest victors to a specific level since the last `604800` seconds
 > - `Friend Level Scores` - The fastest victors to a specific level between the user and his friends since the level was uploaded to the servers
 
-A typical Leaderboard Server response is structured with a `key:value:key:value` pairing and is then split with a `|`
+A typical leaderboard server response is structured with a `key:value:key:value` pairing and is then split with a `|`
 
 <!-- tabs:start -->
 
@@ -35,7 +35,7 @@ A list of all known keys can be found in the table below
 
 ### Leaderboard Score Structure
 
-**Note:** keys marked by a `*` are only used for Level Leaderboards
+**Note:** keys marked by a `*` are only used for level leaderboards
 
 | Key | Name/Value                | Type                                         | Description                                                              
 |-----|---------------------------|----------------------------------------------|--------------------------------------------------------------------------
@@ -54,4 +54,4 @@ A list of all known keys can be found in the table below
 
 ### Trivia
 
-- The key structure that Leaderboards follow are exactly the same as the structure used for [Player Profiles](/resources/server/user.md)  
+- The key structure that leaderboards follow are exactly the same as the structure used for [Player Profiles](/resources/server/user.md)  

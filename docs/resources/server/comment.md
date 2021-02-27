@@ -9,7 +9,7 @@ A Comment is a message that the player can create inside of Geometry Dash. There
 
 ### Comment Object
 
-A Comment Object is split into two sections: a `Comment String` and an `Author String`. these two strings are divided by a `:`
+A comment object is split into two sections: a `Comment String` and an `Author String`. these two strings are divided by a `:`
 
 > - The `Comment String` contains all the data regarding the comment itself<br/><br/>
 > - The `User String` contains all the data regarding the user who is commenting
@@ -67,10 +67,10 @@ A list of all known keys can be found in the table below
 
 ### Comment Bans
 
-If a user Violates [the commenting rules](https://imgur.com/a/US0Biaj), they can be banned from posting comments.
-> As of Geometry Dash Version 2.11, there are 2 different types of bans<br/>  
+If a user violates [the commenting rules](https://imgur.com/a/US0Biaj), they can be banned from posting comments.
+> As of Geometry Dash version 2.11, there are 2 different types of bans<br/>  
 > - Permanent Bans - Only way to recieve one is by RobTop directly. The server response to trigger this is `-10`  
-> - Temporary Bans - Elder Moderators and robtop are able to enforce these onto people. The server response to trigger Temporary bans is split into 3 components `temp_{length}_{reason}`
+> - Temporary Bans - Elder Moderators and RobTop are able to enforce these onto people. The server response to trigger temporary bans is split into 3 components `temp_{length}_{reason}`
 
 #### Temporary Ban Structure
 
@@ -82,9 +82,9 @@ If a user Violates [the commenting rules](https://imgur.com/a/US0Biaj), they can
 
 ### Trivia
 
-- The User String uses the same response parser that [Player Profiles use](/resources/server/user)
+- The `User String` uses the same response parser that [player profiles](/resources/server/user) use
 
-- The only example of `Account Comments` where it was able to display a colour is with [RobTop's](https://gdbrowser.com/u/71) profile, this is because Robtop hardcoded the account colour into the accountID of `71`
+- The only example of `Account Comments` where it was able to display a colour is with [RobTop's](https://gdbrowser.com/u/71) profile, this is because RobTop hardcoded the account colour into the accountID of `71`
 
 - In the [December 2019 2.2 leaks](https://www.reddit.com/r/geometrydash/comments/e9b0y6/update_22_leaks_megathread/), a key wih the ID of `8` can be found hardcoded into a string for the `Versus Mode` feature - it seems to be linked to accountID as you can see from [this piece of pseudocode](https://imgur.com/a/Rjvzshb)
  

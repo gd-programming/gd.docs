@@ -9,7 +9,7 @@ Gauntlets are a collection of themed levels created by the users of Geometry Das
   - According to the [December 2019 2.2 leaks](https://www.reddit.com/r/geometrydash/comments/e9b0y6/update_22_leaks_megathread/), 2.2 will include `44 Gauntlets`
     - **A list of the Gauntlet Names can be found [here](/resources/server/gauntlet?id=gauntlet-names)**<br/>*Keep in mind that these are subject to change*
 
-A typical Gauntlet Server response is structured with a `key:value:key:value` pairing and is then split with a `|`
+A typical gauntlet server response is structured with a `key:value:key:value` pairing and is then split with a `|`
 <!-- tabs:start -->
 
 #### **Gauntlet Example Response**

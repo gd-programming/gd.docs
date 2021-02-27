@@ -4,7 +4,7 @@
 
 A map pack is a series of 3 levels handpicked by Robtop. They preceded Gauntlets and can be seen as the predecessor to them. Upon completion, Map Packs can reward up to `10` stars and `2` secret coins.
 
-A typical Map Pack Server response is structured with a `key:value:key:value` pairing and is then split with a `|`
+A typical map pack server response is structured with a `key:value:key:value` pairing and is then split with a `|`
 
 <!-- tabs:start -->
 
@@ -33,7 +33,7 @@ A list of all known keys can be found in the table below
 
 ### Trivia
 
-- Map Packs use the same response parser as Gauntlets
+- Map packs use the same response parser as gauntlets
 
 - Although Map Packs only show a hard demon in-game, they can actually display each demon difficulty by using a specific value in key `6`
 
@@ -47,9 +47,9 @@ A list of all known keys can be found in the table below
 | 3 |  hard | 
 | 4 |  harder | 
 | 5 |  insane | 
-| 6 |  hard Demon | 
-| 7 |  easy Demon | 
-| 8 |  medium Demon | 
-| 9 |  insane Demon | 
-| 10 |  extreme Demon | 
+| 6 |  hard demon | 
+| 7 |  easy demon | 
+| 8 |  medium demon | 
+| 9 |  insane demon | 
+| 10 |  extreme demon | 
 
