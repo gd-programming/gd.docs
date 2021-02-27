@@ -1,51 +1,69 @@
 # Server User Resource
 
+## Users
+
+Each player of Geometry Dash have their own profile which includes various different elements such as in-game stats, icons and even socials.
+
+A typical User Server response is structured with a `key:value:key:value` pairing and is then split with a `|`
+
+<!-- tabs:start -->
+
+#### **User Example Response**
+```md
+1:TheWylieMaster:2:84696119:13:67:17:176:10:4:11:16:3:1725:46:2991:4:33:8:0:18:0:19:0:50:0:20:../watch?v=dQw4w9WgXcQ:21:31:22:10:23:30:24:1:25:35:26:23:28:1:43:11:48:1:30:0:16:9276649:31:0:44:TheWylieMaster:45::49:0:38:0:39:0:40:0:41:1:29:1
+```
+<!-- tabs:end -->
+
+Each `key` is tied to a component within the client and the `value` sets data for the specific component.  
+A list of all known keys can be found in the table below
+
 | Key | Name/Value | Type | Description |
 | --- | ---------- | ---- | ----------- |
-| 1 | Username | **string** | The name of player |
-| 2 | Userid | **number** | The ID of player |
-| 3 | Stars | **number** | The count of stars player have |
-| 4 | Demons | **number** | The count of demons player have |
-| 6 | global leaderboard position | **number** | the global leaderboard position of the player |
-| 7 | accountID | **number** | maybe accountID or else? [link](https://github.com/gd-programming/gddocs/pull/16/files#r417947540) |
-| 8 | Creatorpoints | **number** | The count of creatorpoints player have |
-| 9 | iconID | **number** | maybe... [link](https://github.com/gd-programming/gddocs/pull/16/files#r417926661) |
-| 10 | Color1 | **number** | First color of the player use |
-| 11 | Color2 | **number** | Second color of the player use |
-| 13 | Coins | **number** | The count of coins player have |
-| 14 | iconType | **number** | The iconType of the player use |
-| 15 | special | **number** | The special number of the player use |
-| 16 | accountID | **number** | The accountid of this player |
-| 17 | Usercoins | **number** | The count of usercoins player have |
-| 18 | Messagestate | **number** | 0: All, 1: Only friends, 2: None |
-| 19 | FriendsState | **number** | 0: All, 1: None |
-| 20 | youtube | **string** | The youtubeurl of player |
-| 21 | accIcon | **number** | The icon number of the player use |
-| 22 | accShip | **number** | The ship number of the player use |
-| 23 | accBall | **number** | The ball number of the player use |
-| 24 | accBird | **number** | The bird number of the player use |
-| 25 | accDart(wave) | **number** | The dart(wave) number of the player use |
-| 26 | accRobot | **number** | The robot number of the player use |
-| 27 | AccStreak | **number** | The Streak of the user |
-| 28 | accGlow | **number** | The glow number of the player use |
-| 29 | isRegistered | **number** | if an account is registered or not |
-| 30 | GlobalRank | **number** | The global rank of this player |
-| 31 | Friendstate | **number** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
-| 38 | Messages | **number** | How many new messages the user has (shown in-game as a notificaiton) |
-| 39 | FriendRequests | **number** | How many new friend requests the user has (shown in-game as a notificaiton) |
-| 40 | NewFriends | **number** | How many new Friends the user has (shown in-game as a notificaiton) |
+| 1 | userName | **String** | The name of player |
+| 2 | userID | **Integer** | The ID of player |
+| 3 | stars | **Integer** | The count of stars player have |
+| 4 | demons | **Integer** | The count of demons player have |
+| 6 | ranking | **Integer** | the global leaderboard position of the player |
+| 7 | accountID | **Integer** | maybe accountID or else? [link](https://github.com/gd-programming/gddocs/pull/16/files#r417947540) |
+| 8 | creatorpoints | **Integer** | The count of creatorpoints player have |
+| 9 | iconID | **Integer** | maybe... [link](https://github.com/gd-programming/gddocs/pull/16/files#r417926661) |
+| 10 | playerColor | **Integer** | First color of the player use |
+| 11 | playerColor2 | **Integer** | Second color of the player use |
+| 13 | secretCoins | **Integer** | The count of coins player have |
+| 14 | iconType | **Integer** | The iconType of the player use |
+| 15 | special | **Integer** | The special number of the player use |
+| 16 | accountID | **Integer** | The accountid of this player |
+| 17 | usercoins | **Integer** | The count of usercoins player have |
+| 18 | messageState | **Integer** | 0: All, 1: Only friends, 2: None |
+| 19 | friendsState | **Integer** | 0: All, 1: None |
+| 20 | youTube | **String** | The youtubeurl of player |
+| 21 | accIcon | **Integer** | The icon number of the player use |
+| 22 | accShip | **Integer** | The ship number of the player use |
+| 23 | accBall | **Integer** | The ball number of the player use |
+| 24 | accBird | **Integer** | The bird number of the player use |
+| 25 | accDart(wave) | **Integer** | The dart(wave) number of the player use |
+| 26 | accRobot | **Integer** | The robot number of the player use |
+| 27 | accStreak | **Integer** | The Streak of the user |
+| 28 | accGlow | **Integer** | The glow number of the player use |
+| 29 | isRegistered | **Integer** | if an account is registered or not |
+| 30 | globalRank | **Integer** | The global rank of this player |
+| 31 | friendstate | **Integer** | 0: None, 1: already is friend, 3: send request to target, but target haven't accept, 4: target send request, but haven't accept 
+| 38 | messages | **Integer** | How many new messages the user has (shown in-game as a notificaiton) | <!-- there are a bunch of keys before here but they are exclusive to friend requests so i didnt add them here -->
+| 39 | friendRequests | **Integer** | How many new friend requests the user has (shown in-game as a notificaiton) |
+| 40 | newFriends | **Integer** | How many new Friends the user has (shown in-game as a notificaiton) |
 | 41 | hasBlocked | **Bool** | appears on userlist endpoint to show if the user is blocked |
-| 42 | levelScore Time | **String** | the time since you submitted a levelScore |
-| 43 | accSpider | **number** | The spider number of the player use |
-| 44 | twitter| **string** | The twitter of player |
-| 45 | twitch | **string** | The twitch of player |
-| 46 | Diamonds | **number** | The count of diamonds player have |
-| 48 | accExplosion | **number** | The explosion number of the player use |
-| 49 | Modlevel | **number** | 0: None, 1: Normal Mod(yellow), 2: Elder Mod(orange) |
-| 50 | CommentHistoryState | **number** | 0: All, 1: Only friends, 2: None |
+| 42 | age | **String** | the time since you submitted a levelScore |
+| 43 | accSpider | **Integer** | The spider number of the player use |
+| 44 | twitter| **String** | The twitter of player |
+| 45 | twitch | **String** | The twitch of player |
+| 46 | diamonds | **Integer** | The count of diamonds player have |
+| 48 | accExplosion | **Integer** | The explosion number of the player use |
+| 49 | modlevel | **Integer** | 0: None, 1: Normal Mod(yellow), 2: Elder Mod(orange) |
+| 50 | commentHistoryState | **Integer** | 0: All, 1: Only friends, 2: None |
 
+### Trivia
 
-Example:
-```
-1:WOSHIZHAZHA120:2:10086790:13:0:17:0:10:0:11:3:3:0:46:0:4:0:8:0:18:0:19:0:50:0:20:WOSHIZHAZHA120:21:1:22:1:23:1:24:1:25:1:26:1:28:0:43:1:48:1:30:355655:16:1889402:31:0:44:WOSHIZHAZHA120:45:WOSHIZHAZHA120:49:0:29:1
-```
+- Setting Key `29` to `0` stops most aspects of your profile from loading
+
+- key `27` is impossible to recieve from the server as there is no way for the server to know what the player's `streak` is
+
