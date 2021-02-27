@@ -2,13 +2,13 @@
 
 ## Message
 
-Messages are a feature in Geometry dash where you can send messages to other players online if they have their message's open. There are two fields you can control within a message: `Subject` and `Message`
+Messages are a feature in Geometry dash where you can send messages to other players online if they have their messages open. There are two fields you can control within a message: `Subject` and `Message`
 
-> `Subject` can be viewed in a list in the messages menu - without any external Tools, the `Subject` field only supports 35 characters
+> `Subject` can be viewed in a list in the messages menu - without any external tools, the `Subject` field only supports 35 characters
 
-> `Message` can be viewed only if you download the message by clicking on the `view` button in the messages menu - without any external Tools, the `Messages` field only supports 200 characters
+> `Message` can be viewed only if you download the message by clicking on the `view` button in the messages menu - without any external tools, the `Messages` field only supports 200 characters
 
-A typical Message Server response is structured with a `key:value:key:value` pairing and is then split with a `|`
+A typical message server response is structured with a `key:value:key:value` pairing and is then split with a `|`
 <!-- tabs:start -->
 
 #### **Message Example Response**
@@ -40,4 +40,4 @@ A list of all known keys can be found in the table below
 
 - The current message system has a bug in which replying to a message will fail. This is because the client does not have any checks to see if the other user has their messages open when replying so if you send a reply to a user who has their messages closed, the request will return the error code `-1` resulting in it failing
 
-- due to an oversight, you are able to block yourself if you send yourself a message. [Cvolton](https://github.com/Cvolton) explains this oversight in one of his [videos](https://www.youtube.com/watch?v=R18tKYFrIqE)
+- Due to an oversight, you are able to block yourself if you send yourself a message. [Cvolton](https://github.com/Cvolton) explains this oversight in one of his [videos](https://www.youtube.com/watch?v=R18tKYFrIqE)
