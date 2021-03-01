@@ -12,7 +12,7 @@ GS values contain Information regarding certain aspects of the game
 | 4 | Total Completed Online Levels |
 | 5 | Completed Demons |
 | 6 | Total Stars |
-| 7 | Total Compelted MapPacks |
+| 7 | Total Completed MapPacks |
 | 8 | Secret Coins Collected |
 | 9 | Destroyed Players on the menu |
 | 10 | Total Liked/Disliked levels |
