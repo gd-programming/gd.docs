@@ -2,18 +2,38 @@
 
 ## Song
 
-A song is a resource from newgrounds that people can sync their levels to, and information about them is sent to the client upon request.
+Songs in Geometry Dash are supplied through a partnership with a website called [Newgrounds](https://www.newgrounds.com/audio). To be used in community made levels, a song must pass **3** requirements
+
+> - The Song must be scouted by another artist from newgrounds
+> - The Song must be whitelisted either by Robtop or an [Elder Moderator](/topics/moderators.md)
+> - The artist must enable external API use in their song settings
+
+The songs can be downloaded and used via a private API that only RobTop has access to
+
+
+A typical song server response is structured with a `key~|~value~|~key~|~value` pairing and is then split with a `:`
+
+<!-- tabs:start -->
+
+#### **Song Example**
+```md
+1~|~803223~|~2~|~Xtrullor - Arcana~|~3~|~2159~|~4~|~Xtrullor~|~5~|~8.81~|~6~|~~|~10~|~https%3A%2F%2Faudio.ngfiles.com%2F803000%2F803223_Xtrullor---Arcana.mp3%3Ff1524940372~|~7~|~UCejLri1RVC7kj8ZVNX2a53g      
+```
+<!-- tabs:end -->
+
+Each `key` is tied to a component within the client and the `value` sets data for the specific component.  
+A list of all known keys can be found in the table below
 
 #### Song Structure
 
 | Key | Name/Value                | Type                                         | Description                                                              
 |-----|---------------------------|----------------------------------------------|--------------------------------------------------------------------------
-| 1   | ID						  | **number**									 | The ID of the song on Newgrounds
-| 2   | Name					  | **string**									 | The name of the song
-| 3   | ArtistID				  | **number**									 | Newgrounds ArtistID  
-| 4   | Artist Name				  | **string**									 | The name of the artist who made the song
-| 5   | Size					  | **number**									 | Size of the song in MB, rounded to two decimal places
-| 6   | Video YT ID 			  | **string**									 | the Video ID for the songs YouTube Video
-| 7   | Youtube URL				  | **string**									 | The URL of the newgrounds user's youtube channel
-| 8   | [unused]				  | **bool**									 | Either 0 or 1 -> the game does not have any checks for this internally so this is likely unused
-| 10  | Link					  | **string**									 | Link to the song's mp3
+| 1   | ID						  | **Integer**									 | The ID of the song on Newgrounds
+| 2   | name					  | **String**									 | The name of the song
+| 3   | artistID				  | **Integer**									 | Newgrounds ArtistID  
+| 4   | artistName				  | **String**									 | The name of the artist who made the song
+| 5   | size					  | **Integer**									 | Size of the song in MB, rounded to two decimal places
+| 6   | videoID 			      | **String**									 | the Video ID for the songs YouTube Video
+| 7   | youtubeURL				  | **String**									 | The URL of the newgrounds user's youtube channel
+| 8   | [unused]				  | **Bool**									 | only recorded values are `0` or `1` -> the game does not have any checks for this internally so this is likely unused
+| 10  | link					  | **String**									 | Link to the song's mp3
