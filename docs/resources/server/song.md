@@ -35,5 +35,6 @@ A list of all known keys can be found in the table below
 | 5   | size					  | **Integer**									 | Size of the song in MB, rounded to two decimal places
 | 6   | videoID 			      | **String**									 | the Video ID for the songs YouTube Video
 | 7   | youtubeURL				  | **String**									 | The URL of the newgrounds user's youtube channel
-| 8   | [unused]				  | **Bool**									 | only recorded values are `0` or `1` -> the game does not have any checks for this internally so this is likely unused
+| 8   | isVerified				  | **Bool**									 | if the song artist is scouted on newgrounds
+| 9   | songPriority              | **Integer**                                  | priority over the song list
 | 10  | link					  | **String**									 | Link to the song's mp3
