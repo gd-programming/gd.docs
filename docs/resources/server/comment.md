@@ -44,6 +44,7 @@ A list of all known keys can be found in the table below
 | 2	  | comment					  | **String**									 | The comment left by the user, encoded in [base64](/topics/encryption/base64.md)
 | 3   | author*					  | **Integer**									 | The player ID of the author. **This is different than the account ID**
 | 4   | likes					  | **Integer**									 | The amount of likes the comment has
+| 5   | dislikes                  | **Integer**                                  | The amount of dislikes the comment has -> unused
 | 6   | messageID				  | **Integer**									 | The message ID. Account comments have different IDs than level comments
 | 7   | spam                      | **Bool**                                     | If a comment has been flagged as spam
 | 9   | age						  | **String**									 | How long ago the comment was posted (e.g. "2 months")
