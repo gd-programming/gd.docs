@@ -38,3 +38,4 @@ A list of all known keys can be found in the table below
 | 8   | isVerified				  | **Bool**									 | if the song artist is scouted on newgrounds
 | 9   | songPriority              | **Integer**                                  | priority over the song list
 | 10  | link					  | **String**									 | Link to the song's mp3
+
