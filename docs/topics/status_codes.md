@@ -46,6 +46,7 @@ Events over the Geometry Dash servers usually send an error code denoting that t
 | `-4`   | Request is too large | Your request to the server was too large |
 | `-5`   | Bad login info | Invalid login info was provided  |
 | `-6`   | Something went wrong | Something went wrong on the servers' end |
+| `-11`  | Bad login info | Invalid login info was provided  |
 
 #### suggestGJStars/rateGJDemon
 
