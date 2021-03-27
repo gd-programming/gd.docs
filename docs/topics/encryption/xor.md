@@ -101,3 +101,4 @@ Here is a list of XOR keys currently used in GD:
 | 58281 | Like and Rate     |
 | 85271 | User Profile      |
 | 19283 | Vault Codes       |
+| 48291 | Load data         |
