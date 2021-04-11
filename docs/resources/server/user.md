@@ -24,7 +24,7 @@ A list of all known keys can be found in the table below
 | 3 | stars | **Integer** | The count of stars player have |
 | 4 | demons | **Integer** | The count of demons player have |
 | 6 | ranking | **Integer** | the global leaderboard position of the player |
-| 7 | accountID | **Integer** | maybe accountID or else? [link](https://github.com/gd-programming/gddocs/pull/16/files#r417947540) |
+| 7 | accountHighlight | **Integer** | The accountID of the player. Is used for highlighting the player on the leaderboards |
 | 8 | creatorpoints | **Integer** | The count of creatorpoints player have |
 | 9 | iconID | **Integer** | maybe... [link](https://github.com/gd-programming/gddocs/pull/16/files#r417926661) |
 | 10 | playerColor | **Integer** | First color of the player use |
