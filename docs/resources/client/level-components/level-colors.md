@@ -62,16 +62,16 @@ Here are all of the different color id's:
 
 | Interval  | Name              | Description           |
 |:----------|:------------------|:----------------------|
-| `1 - 999` | **Custom colors** | These are the colors that are avalible to the creator to use |
+| `1 - 999` | **Custom colors** | These are the colors that are avalible for the creator to use |
 | `1000`    | **BG**            | This is the color of the background |
 | `1001`    | **G1**            | This is the primary color of the ground |
-| `1002`    | **LINE**          | This is the primary color of the ground |
+| `1002`    | **LINE**          | This is the color of the ground line |
 | `1003`    | **3DL**           | This is the color of the 3D line objects |
-| `1004`    | **OBJ**           | This is the color of alot of the white lines and boundaries of objects |
+| `1004`    | **OBJ**           | This is the OBJ color |
 | `1005`    | **P1**            | This is the static color channel refering to the primary color of the player's icon |
 | `1006`    | **P2**            | This is the static color channel refering to the secondary color of the player's icon |
 | `1007`    | **LBG**           | This is the static color channel that is a lighter version of `BG`. How it exactly works it yet to be found |
-| `1009`    | **G2**            | This is the primary color of the ground |
+| `1009`    | **G2**            | This is the secondary color of the ground |
 | `1010`    | **BLACK**         | This is the static color channel which is always `r: 0, g: 0, b: 0`. Used in saws that are black by default |
 
 ### Undiscovered color channel id's
