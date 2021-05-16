@@ -17,7 +17,7 @@ These are the properties that are important for a BaseColor:
 | Opacity  | **float**   | The alpha component of the BaseColor. Goes from `0` to `1` |
 | Blending | **bool**    | The blending property of the BaseColor |
 
-**Note**: Blending causes the color to add its color properties by basically using the OpenGL blend mode `glBlendFunc(GL_SRC_ALPHA, GL_SRC_ALPHA)`
+**Note**: Blending causes the color to add its color properties by basically using the OpenGL blend mode `glBlendFunc(GL_SRC_ALPHA, GL_ONE)`
 
 ### PlayerColor
 This class contains a static color refering to one of the player's icon color along with opacity and blending.
@@ -35,7 +35,6 @@ This class contains a dynamic color copied from another color channel. This colo
 
 | Name            | Type        | Description           |
 |:----------------|:------------|:----------------------|
-| Copy Color      | **bool**    | A way to determine whenever this color class is used. More info below about determining |
 | Copy Channel ID | **integer** | The color channel ID that the CopyColor is copying the color from |
 | Copy Opacity    | **bool**    | This determines whenever CopyColor should also copy the opacity belonging to the color channel in `Copy Color ID` |
 | Opacity         | **float**   | The alpha component of the Copy Color. If `Copy Opacity` is true. This property is ignored. |
@@ -47,7 +46,7 @@ Here is a simple JavaScript function that determines what color class the color 
 
 ```javascript
 function getColorClass(color) {
-    if (color.copy_color)
+    if (color.copy_channel_id != 0)
         return COPY_COLOR;
     
     if (color.player_color != PLAYER_COLOR_NONE)
@@ -70,10 +69,23 @@ Here are all of the different color id's:
 | `1004`    | **OBJ**           | This is the OBJ color |
 | `1005`    | **P1**            | This is the static color channel refering to the primary color of the player's icon |
 | `1006`    | **P2**            | This is the static color channel refering to the secondary color of the player's icon |
-| `1007`    | **LBG**           | This is the static color channel that is a lighter version of `BG`. How it exactly works it yet to be found |
+| `1007`    | **LBG**           | This is the static color channel that is a lighter version of `BG` |
 | `1009`    | **G2**            | This is the secondary color of the ground |
 | `1010`    | **BLACK**         | This is the static color channel which is always `r: 0, g: 0, b: 0`. Used in saws that are black by default |
 
 ### Undiscovered color channel id's
 `WHITE`: Static color that is always `r: 255, g: 255, b: 255`  
 `LIGHTER`: A lighter version of the primary color in objects. Used in the white small blocks found in `build tab 2 on page 6`.
+
+### Light Background (LBG) calculation
+The LBG takes the HSV of background. Subtracts `20` from its saturation, then interpolates from `P1` to the last HSV by a factor of the last HSV's value devided by `100`.
+
+Here is a JavaScript example:
+```javascript
+function lightBG(bg, p1) {
+    let hsv = RGBtoHSV(bg);
+    hsv.s -= 20;
+
+    return blendColor( p1, HSVtoRGB(hsv), hsv.v / 100 );
+}
+```
