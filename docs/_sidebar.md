@@ -64,6 +64,7 @@
   - [uploadGJMessage20](/endpoints/uploadGJMessage20.md)
 - Miscellaneous
   - [getAccountURL](/endpoints/getAccountURL.md)
+  - [getTop1000](/endpoints/getTop1000.md)
   - [getGJSongInfo](/endpoints/getGJSongInfo.md)
   - [getGJTopArtists](/endpoints/getGJTopArtists.md)
   - [getSaveData](/endpoints/getSaveData.md)
