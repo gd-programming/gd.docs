@@ -30,6 +30,6 @@ Below is a small snippet of the response
 
 The Values for each segment are:
 
-| |
-|:|
+| Structure |
+|:----------|
 |`<Leaderboard Position>: <Player UserName>, <Player Star Count>, <Player AccountID>`|
