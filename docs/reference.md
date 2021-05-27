@@ -48,7 +48,7 @@ Part of levels and requests for them is a term known as `audio track`, or the id
 
 ### Secrets
 
-To interact with the Geometry Dash API you need a 11 character long string called `secret`. As of 2.1 there are `${x}` secrets that are currently known of.
+To interact with the Geometry Dash API you need a 11 character long string called `secret`. As of 2.1 there are `4` secrets that are currently known of.
 
 | Secret | type | Usage |
 |:-------|:-----|:------|
