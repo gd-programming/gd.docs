@@ -109,6 +109,8 @@
 - [Game Save Files Encryption/Decryption](/topics/localfiles_encrypt_decrypt.md)
 - [Status Codes](/topics/status_codes.md)
 - [Vault Codes](/topics/vault_codes.md)
+- [Shop](/topics/shop)
+- [Tags](/topics/tags)
 - **Encryption**
   - [Base64 Encoding](topics/encryption/base64.md)
   - [CHK Generation](topics/encryption/chk.md)
