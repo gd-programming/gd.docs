@@ -45,3 +45,14 @@ Part of levels and requests for them is a term known as `audio track`, or the id
 | 4001 | 35        | Press Start              | MDK          |
 | 4002 | 36        | Nock Em                  | Bossfight    |
 | 4003 | 37        | Power Trip               | Boom Kitty   |
+
+### Secrets
+
+To interact with the Geometry Dash API you need a 11 character long string called `secret`. As of 2.1 there are `${x}` secrets that are currently known of.
+
+| Secret | type | Usage |
+|:-------|:-----|:------|
+| `Wmfd2893gb7` | **Common Secret** | Used in the majority of requests |
+| `Wmfv3899gc9` | **Account Secret** | Used for all account related requests | 
+| `Wmfv2898gc9` | **Level Secret** | Used in level deletion |
+| `Wmfp3879gc3` | **Mod Secret** | Used in moderator only requests |
