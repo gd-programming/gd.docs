@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the Geometry Dash Programming **[Discord](https://discord.gg/bV6NBs)** server's online iteration of documentation for Geometry Dash. Here, you'll find all sorts of information, documents, and resources for interacting with **[Geometry Dash](http://robtopgames.com)**. We aim to make **[GDDocs](https://github.com/gd-programming/gddocs)** the most comprehensive and open source of information for the game, created by many people who have interacted with the game and wish to share such with others.
+Welcome to the Geometry Dash Programming **[Discord](https://discord.gg/gNnAE2mTs9)** server's online iteration of documentation for Geometry Dash. Here, you'll find all sorts of information, documents, and resources for interacting with **[Geometry Dash](http://robtopgames.com)**. We aim to make **[GDDocs](https://github.com/gd-programming/gddocs)** the most comprehensive and open source of information for the game, created by many people who have interacted with the game and wish to share such with others.
 
 The provided documentation is available on it's repository, over [here](https://github.com/gd-programming/gddocs). For all issues regarding information found here, please consult us by creating an issue.
 
