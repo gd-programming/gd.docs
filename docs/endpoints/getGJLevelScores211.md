@@ -1,6 +1,6 @@
 # getGJLevelScores211.php
 
-Gets the leaderboard scores for a particular level and submits a user's current score to the leaderboard.
+Fetches the leaderboard for a level and submits your level stats to the server
 
 ## Parameters
 
@@ -28,15 +28,28 @@ Gets the leaderboard scores for a particular level and submits a user's current 
 
 **s1** - User's attempts + 8354
 
-**s2** - User's jumps + 3991
+**s2** - User's clicks + 3991
 
-**s3** - User's time in seconds + 4085
+**s3** - User's attempt time in seconds + 4085
 
-**s4** - related to percentage -> Client does math on it (likely used to make the leaderboards accurate)
+**s4** - levelSeed
 
-**s5** - Random number goes up to 4 digits
+ - it can be generated like this
+```py
+def generate_leaderboard_seed(
+    clicks: int, percentage: int, seconds: int, has_played: bool = True
+) -> int:
 
-**s6** - List of PB differences (For example from 0 to 50, then 69, it would be `50,19`) [XOR'd](topics/encryption/xor.md) with 41274 and [Base64](topics/encryption/base64.md) encoded
+    return (
+        1482 * (has_played + 1)
+        + (clicks + 3991) * (percentage + 8354)
+        + ((seconds + 4085) ** 2) - 50028039
+    )
+```
+
+**s5** - Random number -> `(((GJGameLevel->0x1B8 ? 2000.0 : 0) + rand()) * 4.6566e-10) * 1999.0`
+
+**s6** - List of PB differences (For example from 0 to 50, then 69, it would be `50,19`) [XOR'd](topics/encryption/xor.md) with `41274` and [Base64](topics/encryption/base64.md) encoded
 
 **s7** - Randomly Generated 10 character string
 
@@ -44,7 +57,7 @@ Gets the leaderboard scores for a particular level and submits a user's current 
 
 **s9** - The amount of coins the user got + 5819
 
-**s10** - Timely ID
+**s10** - Timely ID -> for dailies and weeklies
 
 **chk** - [See here](/topics/encryption/chk?id=level-leaderboard)
 
