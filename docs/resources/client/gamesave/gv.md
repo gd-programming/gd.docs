@@ -10,14 +10,18 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0002 | play Music (editor) |
 | gv_0003 | Swipe (editor) |
 | gv_0004 | Free Move (editor) |
+| gv_0005 | Delete filter (editor) |
+| gv_0006 | Delete custom objectID (editor) |
 | gv_0007 | Toggle rotate (editor) |
 | gv_0008 | Toggle snap (editor) |
 | gv_0009 | Ignore Damage (editor) |
 | gv_0010 | flip2PlayerControls |
 | gv_0011 | alwaysLimitControls |
+| gv_0012 | showedCommentingRules |
 | gv_0013 | increaseMaxUndoRedo |
 | gv_0014 | disableExplosionShake |
 | gv_0015 | flipPauseButton |
+| gv_0016 | showedSongTOS |
 | gv_0018 | noSongLimit |
 | gv_0019 | songsInMemory |
 | gv_0022 | higherAudioQuality |
@@ -29,8 +33,8 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0028 | disableThumbstick |
 | gv_0029 | showedOptionsText |
 | gv_0030 | vsyncEnabled |
-| gv_0031 | `cocos2d::CCEGLView::sharedOpenGLView()`? |
-| gv_0032 | forceTimerEnabled (got no idea how cos got to that??)|
+| gv_0031 | callGLFinish -> seems to be unused |
+| gv_0032 | forceTimerEnabled -> seems to be unused |
 | gv_0033 | ChangeSongPath |
 | gv_0034 | GameCenterEnabled |
 | gv_0036 | PreviewMode (editor) |
@@ -45,11 +49,13 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0045 | debugDraw (editor) |
 | gv_0046 | hideUIOnTest (editor) |
 | gv_0047 | showedProfileText |
+| gv_0048 | viewedOwnProfile |
 | gv_0049 | buttonsPerRow (editor) |
 | gv_0050 | buttonRows (editor) |
 | gv_0051 | showedNGMessage (editor) |
 | gv_0052 | fastPracticeReset|
-| gv_0055 | CheckIfServerOnline |
+| gv_0053 | Free Games Popup |
+| gv_0055 | checkIfServerOnline.php |
 | gv_0056 | disableObjectAlert |
 | gv_0057 | editorHoldToSwipe|
 | gv_0058 | durationLines (editor) |
@@ -63,6 +69,7 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0066 | highCapacityMode |
 | gv_0067 | highStartPosAccuracy |
 | gv_0068 | quickCheckpointMode |
+| gv_0069 | commentMode |
 | gv_0070 | showedUnlistedLevelMessage |
 | gv_0072 | disableGravityEffect |
 | gv_0073| newCompletedFilter|
@@ -79,9 +86,11 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0088| smallCommentsMode|
 | gv_0089| extendedInfoMode |
 | gv_0090| autoloadComments |
+| gv_0091| myLevels folder number |
+| gv_0092| onlineLevels folder number |
 | gv_0093| increaseLocalLevelsPerPage |
 | gv_0094| moreCommentsMode |
-| gv_0095| flippyUselessMode|
+| gv_0095| flippyUselessMode (Just Dont)|
 | gv_0096| switchWaveTrailColor|
 | gv_0097| enableLinkControls (editor) |
 | gv_0098| levelLeaderboardType |
@@ -129,3 +138,21 @@ Unlocked Game Variables (ugv) are used to check if ingame events have been compl
 | :-- |:-----------|
 | ugv_25 | FireBird GateKeeper |
 | ugv_26 | Twitch Chest Unlocked |
+| ugv_27 | Discord Chest Unlocked |
+
+### Undiscovered/unknown GV's
+
+| GV_ID | Existance Proven | notes |
+|:------|:-------|:------|
+| 0017  | **False** | |
+| 0020  | **False** | |
+| 0021  | **False** | |
+| 0035  | **False** | |
+| 0054  | **False** ||
+| 0071  | **False** ||
+| 0080  | **False** ||
+| 0085  | **False** ||
+| 0086  | **False** ||
+| 0087  | **False** ||
+
+
