@@ -28,7 +28,7 @@
     - [Quests](/resources/client/gamesave/quests.md)
 
   - [Level](/resources/client/level.md)
-    - [Object IDs](/resources/client/level-components/objectids.md)
+    - [Capacity String](/resources/client/level-components/capacity-string.md)
     - [Level Colors](/resources/client/level-components/level-colors.md)
     - [Inner Level String](/resources/client/level-components/inner-level-string.md)
     - [Level Object](/resources/client/level-components/level-object.md)
