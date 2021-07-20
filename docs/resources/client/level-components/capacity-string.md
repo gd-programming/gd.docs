@@ -29,63 +29,62 @@ Each of these BatchNodeTypes are then divided into sub-categories based on certa
 **Note: Index refers to order that the BatchNode can be found on the capacity string**  
 The names for each BatchNode were provided by [RobTop himself](https://twitter.com/RobTopGames/status/1415783982621413376?s=20)
 
-| Index | BatchNode | Properties |
-|:------|:----------|:-----------|
-| 0 | BatchNodeAddTop2 | Blending, zLayer T2 |
-| 1 | BatchNode | zLayer T1 |
-| 2 | BatchNodeAdd | Blending, zLayer T1 |
-| 3 | BatchNodePlayer | unknown -> something about the player |
-| 4 | BatchNodeAddPlayer | unknown -> something about the player |
-| 5 | BatchNodeAddMid | Blending, zLayer B1 (zLayer = 4)|
-| 6 | BatchNodeBottom | zLayer B1 |
-| 7 | BatchNodeAddBottom | Blending, zLayer B1 |
-| 8 | EffectBatchNode | Animated, zLayer B1 |
-| 9 | EffectBatchNodeAdd | Blending, Animated, zLayer B1 |
-| 10 | BatchNodeBottom2 | zLayer B2 |
-| 11 | BatchNodeAddBottom2 | Blending, zLayer B2 |
-| 12 | BatchNodeAddGlow | Blending, Glow, zLayer T1 |
-| 13 | BatchNodeAddBottomGlow | Blending, Glow, zLayer B1 | 
-| 14 | BatchNodeAddBottom2Glow | Blending, Glow, zLayer B2 | 
-| 15 | BatchNodeBottomGlow2 | Glow, zLayer B1 | 
-| 16 | BatchNodeAddBottom4 | Blending, zLayer B4 |
-| 17 | BatchNodeAddBottom4Glow | Blending, Glow, zLayer B4 |
-| 18 | BatchNodeBottom3 | zLayer B3 |
-| 19 | BatchNodeAddBottom3 | Blending, zLayer B3 |
-| 20 | BatchNodeAddBottom3Glow | Blending, Glow, zLayer B3 |
-| 21 | BatchNodeTop2 | zLayer T2 |
-| 22 | BatchNodeAddGlowTop2 | Blending, Glow, zLayer T2 |
-| 23 | BatchNodeTop3 | zLayer T3 |
-| 24 | BatchNodeAddTop3 | Blending, zLayer T3 |
-| 25 | BatchNodeAddGlowTop3 | Blending, Glow zLayer T3 |
-| 26 | BatchNodeAddTop4 | Blending, zLayer T4 |
-| 27 | EffectBatchNodeTop3 | Animated, zLayer T3 |
-| 28 | EffectBatchNodeAddTop3 | Animated, Blending, zLayer T3 |
-| 29 | EffectBatchNodeTop2 | Animated, zLayer T2 |
-| 30 | EffectBatchNodeAddTop2 | Animated, Blending, zLayer T2 |
-| 31 | EffectBatchNodeTop1 | Animated, zLayer T1 |
-| 32 | EffectBatchNodeAddTop1 | Animated, Blending, zLayer T1 |
-| 33 | EffectBatchNodeBot2 | Animated, zLayer B2 |
-| 34 | EffectBatchNodeAddBot2 | Animated, Blending, zLayer B2 |
-| 35 | EffectBatchNodeBot3 | Animated, zLayer B3 |
-| 36 | EffectBatchNodeAddBot3 | Animated, Blending, zLayer B3 |
-| 37 | EffectBatchNodeBot4 | Animated, zLayer B4 |
-| 38 | EffectBatchNodeAddBot4 | Animated, Blending, zLayer B4 |
-| 39 | BatchNodeTextTop3 | Text, zLayer T3 |
-| 40 | BatchNodeTextAddTop3 | Text, Blending, zLayer T3 |
-| 41 | BatchNodeTextTop2 | Text, zLayer T2 |
-| 42 | BatchNodeTextAddTop2 | Text, Blending, zLayer T2 |
-| 43 | BatchNodeTextTop1 | Text, zLayer T1 |
-| 44 | BatchNodeTextAddTop1 | Text, Blending, zLayer T1 |
-| 45 | BatchNodeText | Text, zLayer B1 |
-| 46 | BatchNodeAddText | Text, Blending, zLayer B1 |
-| 47 | BatchNodeTextBot2 | Text, zLayer B2 |
-| 48 | BatchNodeAddTextBot2 | Text, Blending, zLayer B2 |
-| 49 | BatchNodeTextBot3 | Text, zLayer B3 |
-| 50 | BatchNodeAddTextBot3 | Text, Blending, zLayer B3 |
-| 51 | BatchNodeTextBot4 | Text, zLayer B4 |
-| 52 | BatchNodeAddTextBot5 | Text, Blending, zLayer B4 |
-| 53 | EffectBatchNodeAddTop4 | Animated, Blending, zLayer T4 |
-
+| Index | BatchNode | Properties | zOrder |
+|:------|:----------|:-----------|:-------|
+| 0 | BatchNodeAddTop2 | Blending, zLayer T2 | 16 |
+| 1 | BatchNode | zLayer T1 | 10 |
+| 2 | BatchNodeAdd | Blending, zLayer T1 | 9 |
+| 3 | BatchNodePlayer | unknown -> something about the player | 3 |
+| 4 | BatchNodeAddPlayer | unknown -> something about the player | 2 |
+| 5 | BatchNodeAddMid | Blending, zLayer B1 (zLayer = 4)| 1 | 
+| 6 | BatchNodeBottom | zLayer B1 | -1 |
+| 7 | BatchNodeAddBottom | Blending, zLayer B1 | -2 |
+| 8 | EffectBatchNode | Animated, zLayer B1 | -6 |
+| 9 | EffectBatchNodeAdd | Blending, Animated, zLayer B1 | -7 |
+| 10 | BatchNodeBottom2 | zLayer B2 | -8 |
+| 11 | BatchNodeAddBottom2 | Blending, zLayer B2 | -9 |
+| 12 | BatchNodeAddGlow | Blending, Glow, zLayer T1 | 9 |
+| 13 | BatchNodeAddBottomGlow | Blending, Glow, zLayer B1 | -2 |
+| 14 | BatchNodeAddBottom2Glow | Blending, Glow, zLayer B2 | -9 |
+| 15 | BatchNodeBottomGlow2 | Glow, zLayer B1 | -22 | 
+| 16 | BatchNodeAddBottom4 | Blending, zLayer B4 | -23 |
+| 17 | BatchNodeAddBottom4Glow | Blending, Glow, zLayer B4 | -23 |
+| 18 | BatchNodeBottom3 | zLayer B3 | -15 |
+| 19 | BatchNodeAddBottom3 | Blending, zLayer B3 | -16 |
+| 20 | BatchNodeAddBottom3Glow | Blending, Glow, zLayer B3 | -16 |
+| 21 | BatchNodeTop2 | zLayer T2 | 17 |
+| 22 | BatchNodeAddGlowTop2 | Blending, Glow, zLayer T2 | 16 |
+| 23 | BatchNodeTop3 | zLayer T3 | 25 |
+| 24 | BatchNodeAddTop3 | Blending, zLayer T3 | 24 |
+| 25 | BatchNodeAddGlowTop3 | Blending, Glow zLayer T3 | 24 |
+| 26 | BatchNodeAddTop4 | Blending, zLayer T4 | 26 |
+| 27 | EffectBatchNodeTop3 | Animated, zLayer T3 | 19 |
+| 28 | EffectBatchNodeAddTop3 | Animated, Blending, zLayer T3 | 18 |
+| 29 | EffectBatchNodeTop2 | Animated, zLayer T2 | 12 |
+| 30 | EffectBatchNodeAddTop2 | Animated, Blending, zLayer T2 | 11|
+| 31 | EffectBatchNodeTop1 | Animated, zLayer T1 | 5 |
+| 32 | EffectBatchNodeAddTop1 | Animated, Blending, zLayer T1 | 4 |
+| 33 | EffectBatchNodeBot2 | Animated, zLayer B2 | -13 |
+| 34 | EffectBatchNodeAddBot2 | Animated, Blending, zLayer B2 | -14 |
+| 35 | EffectBatchNodeBot3 | Animated, zLayer B3 | -20 |
+| 36 | EffectBatchNodeAddBot3 | Animated, Blending, zLayer B3 | -21 |
+| 37 | EffectBatchNodeBot4 | Animated, zLayer B4 | -27 |
+| 38 | EffectBatchNodeAddBot4 | Animated, Blending, zLayer B4 | -28 |
+| 39 | BatchNodeTextTop3 | Text, zLayer T3 | 21 |
+| 40 | BatchNodeTextAddTop3 | Text, Blending, zLayer T3 | 22 |
+| 41 | BatchNodeTextTop2 | Text, zLayer T2 | 13 |
+| 42 | BatchNodeTextAddTop2 | Text, Blending, zLayer T2 | 14 |
+| 43 | BatchNodeTextTop1 | Text, zLayer T1 | 6 |
+| 44 | BatchNodeTextAddTop1 | Text, Blending, zLayer T1 | 7 |
+| 45 | BatchNodeText | Text, zLayer B1 | -5 |
+| 46 | BatchNodeAddText | Text, Blending, zLayer B1 | -4 |
+| 47 | BatchNodeTextBot2 | Text, zLayer B2 | -12 |
+| 48 | BatchNodeAddTextBot2 | Text, Blending, zLayer B2 | -11 |
+| 49 | BatchNodeTextBot3 | Text, zLayer B3 | -19 |
+| 50 | BatchNodeAddTextBot3 | Text, Blending, zLayer B3 | -18 |
+| 51 | BatchNodeTextBot4 | Text, zLayer B4 | -26 |
+| 52 | BatchNodeAddTextBot5 | Text, Blending, zLayer B4 | -25 |
+| 53 | EffectBatchNodeAddTop4 | Animated, Blending, zLayer T4 | 20 |
 
 ## Legacy String
 
