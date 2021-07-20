@@ -2,56 +2,128 @@
 
 > The Capacity String (commonly known as the `extra string`) is a long string split up into 54 components each having an Integer assigned to them. The role of the Capacity String is to save the cost of memory re-allocation when rendering levels
 
+## Example
+
 Below is the Capacity String for the level `Bloodlust` by Knobbelboy
 
     0_2044_1248_57_0_70_1988_963_0_0_4526_6982_465_0_623_995_0_0_0_0_0_0_53_0_0_0_0_0_0_0_0_0_35_105_38_0_0_0_0_0_0_0_0_0_294_1173_38_0_0_0_0_0_0_0_0  
 
-Each component of the Capacity String are tied to their own `CCSpriteBatchNode` field based on the settings of certain objects.
+## Structure
 
-There are `3` different types of batchNodes:
+Each component of the Capacity String are tied to their own `CCSpriteBatchNode` field based on the properties of certain objects.
 
-| Type | Description |
-|:-----|:------------|
-| BatchNode | Most GameObjects |
-| EffectBatchNode | All animated GameObjects |
-| BatchNodeText | All text GameObjects |
+There are `5` different types of batchNodes. `4` of which the Capacity string uses
 
-These 3 BatchNode types are all divided into different variations based on the objects properties Below is a table showing all 54:
+**Note: BatchID 4 isn't used in the Capacity String**
+
+| BatchID | Type | Description |
+|:--------|:-----|:------------|
+| 1 | BatchNodePlayer | |
+| 2 | BatchNodeText | All text GameObjects |
+| 3 | EffectBatchNode | All animated GameObjects |
+| 4 | DefaultBatchNode | All GameObjects that don't fit into other BatchNodes, usually objects that only render in the editor exclusively |
+| 5 | BatchNode | Most GameObjects |
+
+Each of these BatchNodeTypes are then divided into sub-categories based on certain properties the object has
+
+**Note: Index refers to order that the BatchNode can be found on the capacity string**
+
 
 | Index | BatchNode | Properties |
 |:------|:----------|:-----------|
 | 0 | BatchNodeAddTop2 | Blending, zLayer T2 |
 | 1 | BatchNode | zLayer T1 |
 | 2 | BatchNodeAdd | Blending, zLayer T1 |
-| 3 | BatchNodePlayer | |
-| 4 | BatchNodeAddPlayer | |
-| 5 | BatchNodeAddMid | |
+| 3 | BatchNodePlayer | unknown -> something about the player |
+| 4 | BatchNodeAddPlayer | unknown -> something about the player |
+| 5 | BatchNodeAddMid | Blending, zLayer B1 (zLayer = 4)|
 | 6 | BatchNodeBottom | zLayer B1 |
 | 7 | BatchNodeAddBottom | Blending, zLayer B1 |
 | 8 | EffectBatchNode | Animated, zLayer B1 |
 | 9 | EffectBatchNodeAdd | Blending, Animated, zLayer B1 |
-| 10 | batchNodeBottom2 | zLayer B2 |
-| 11 | batchNodeAddBottom2 | Blending, zLayer B2 |
-| 12 | batchNodeAddGlow | Blending, ToggleGlow, zLayer T1 |
-| 13 | batchNodeAddBottomGlow | Blending, ToggleGlow, zLayer B1 | 
-| 14 | batchNodeAddBottom2Glow | Blending, ToggleGlow, zLayer B2 | 
-| 15 | batchNodeBottomGlow2 | ToggleGlow, zLayer B1 | 
+| 10 | BatchNodeBottom2 | zLayer B2 |
+| 11 | BatchNodeAddBottom2 | Blending, zLayer B2 |
+| 12 | BatchNodeAddGlow | Blending, Glow, zLayer T1 |
+| 13 | BatchNodeAddBottomGlow | Blending, Glow, zLayer B1 | 
+| 14 | BatchNodeAddBottom2Glow | Blending, Glow, zLayer B2 | 
+| 15 | BatchNodeBottomGlow2 | Glow, zLayer B1 | 
+| 16 | BatchNodeAddBottom4 | Blending, zLayer B4 |
+| 17 | BatchNodeAddBottom4Glow | Blending, Glow, zLayer B4 |
+| 18 | BatchNodeBottom3 | zLayer B3 |
+| 19 | BatchNodeAddBottom3 | Blending, zLayer B3 |
+| 20 | BatchNodeAddBottom3Glow | Blending, Glow, zLayer B3 |
+| 21 | BatchNodeTop2 | zLayer T2 |
+| 22 | BatchNodeAddGlowTop2 | Blending, Glow, zLayer T2 |
+| 23 | BatchNodeTop3 | zLayer T3 |
+| 24 | BatchNodeAddTop3 | Blending, zLayer T3 |
+| 25 | BatchNodeAddGlowTop3 | Blending, Glow zLayer T3 |
+| 26 | BatchNodeAddTop4 | Blending, zLayer T4 |
+| 27 | EffectBatchNodeTop3 | Animated, zLayer T3 |
+| 28 | EffectBatchNodeAddTop3 | Animated, Blending, zLayer T3 |
+| 29 | EffectBatchNodeTop2 | Animated, zLayer T2 |
+| 30 | EffectBatchNodeAddTop2 | Animated, Blending, zLayer T2 |
+| 31 | EffectBatchNodeTop1 | Animated, zLayer T1 |
+| 32 | EffectBatchNodeAddTop1 | Animated, Blending, zLayer T1 |
+| 33 | EffectBatchNodeBot2 | Animated, zLayer B2 |
+| 34 | EffectBatchNodeAddBot2 | Animated, Blending, zLayer B2 |
+| 35 | EffectBatchNodeBot3 | Animated, zLayer B3 |
+| 36 | EffectBatchNodeAddBot3 | Animated, Blending, zLayer B3 |
+| 37 | EffectBatchNodeBot4 | Animated, zLayer B4 |
+| 38 | EffectBatchNodeAddBot4 | Animated, Blending, zLayer B4 |
+| 39 | BatchNodeTextTop3 | Text, zLayer T3 |
+| 40 | BatchNodeTextAddTop3 | Text, Blending, zLayer T3 |
+| 41 | BatchNodeTextTop2 | Text, zLayer T2 |
+| 42 | BatchNodeTextAddTop2 | Text, Blending, zLayer T2 |
+| 43 | BatchNodeTextTop1 | Text, zLayer T1 |
+| 44 | BatchNodeTextAddTop1 | Text, Blending, zLayer T1 |
+| 45 | BatchNodeText | Text, zLayer B1 |
+| 46 | BatchNodeAddText | Text, Blending, zLayer B1 |
+| 47 | BatchNodeTextBot2 | Text, zLayer B2 |
+| 48 | BatchNodeAddTextBot2 | Text, Blending, zLayer B2 |
+| 49 | BatchNodeTextBot3 | Text, zLayer B3 |
+| 50 | BatchNodeAddTextBot3 | Text, Blending, zLayer B3 |
+| 51 | BatchNodeTextBot4 | Text, zLayer B4 |
+| 52 | BatchNodeAddTextBot5 | Text, Blending, zLayer B4 |
+| 53 | EffectBatchNodeAddTop4 | Animated, Blending, zLayer T4 |
 
-<!-- BatchNodeAddTop2_
-BatchNode_
-BatchNodeAdd_
-BatchNodePlayer_
-BatchNodeAddPlayer_
-BatchNodeAddMid_
-BatchNodeBottom_
-BatchNodeAddBottom_
-EffectBatchNode_
-EffectBatchNodeAdd_
-BatchNodeBottom2_
-BatchNodeAddBottom2_
-BatchNodeAddGlow_
-BatchNodeAddBottomGlow_
-BatchNodeAddBottom2Glow_
-BatchNodeBottomGlow2_
 
-BatchNodeAddBottom4_BatchNodeAddBottom4Glow_batchNodeBottom3_BatchNodeAddBottom3_BatchNodeAddBottom3Glow_BatchNodeTop2_BatchNodeAddGlowTop2_BatchNodeTop3_BatchNodeAddTop3_BatchNodeAddGlowTop3_BatchNodeAddTop4_EffectBatchNodeTop3_EffectBatchNodeAddTop3_effectBatchNodeTop2_EffectBatchNodeAddTop2_EffectBatchNodeTop1_EffectBatchNodeAddTop1_EffectBatchNodeBot2_EffectBatchNodeAddBot2_EffectBatchNodeBot3_EffectBatchNodeAddBot3_EffectBatchNodeBot4_EffectBatchNodeAddBot4_BatchNodeTextTop3_BatchNodeTextAddTop3_BatchNodeTextTop2_BatchNodeTextAddTop2_BatchNodeTextTop1_BatchNodeTextAddTop1_BatchNodeText_BatchNodeAddText_BatchNodeTextBot2_BatchNodeAddTextBot2_BatchNodeTextBot3_BatchNodeAddTextBot3_BatchNodeTextBot4_BatchNodeAddTextBot4_EffectBatchNodeAddTop4 -->
+## Legacy String
+
+There are other types of Capacity Strings from older versions of the game. The total number of Nodes is used to identify them
+
+| Update | Node count |
+|:-------|:-----------|
+| 1.9 | 4 |
+| 2.0 | 16 |
+
+The Capacity String in 2.0 is quite easy to understand as it is the first 16 BatchNodes of 2.1's Capacity String are exactly the same. 1.9 is quite different with certain index's containing mulitple batchNodes
+ 
+> **Below is a table for 1.9's Capacity String.**  
+> Refer to the [Structure](/resources/client/level-components/Capacity-string?id=structure) section for the properties of the batchNodes
+
+| Index | BatchNode(s) |
+|:------|:-------------|
+| 0 | BatchNode |
+| 1 | BatchNodeAdd</br> BatchNodeAddGlow |
+| 2 | BatchNodeBottom</br> BatchNodeBottom2 |
+| 3 | BatchNodeAddBottom</br> BatchNodeAddBottom2</br> BatchNodeAddBottomGlow</br> BatchNodeAddBottom2Glow |
+
+## Capacity String Generation
+
+The Capacity String is only generated during verification of the level. When playing the level, the game stores the the highest number of GameObjects that the Batch is responsible for inside its textureAtlas as the capacity. After the level is verified, the following function is called
+
+```cpp
+int capacity = BatchNode->getAtlasCapacity();
+if(capacity <= 29) 
+    return 0;
+
+int newCapacity = capacity * 1.1f;
+
+if(newCapacity < 9999) 
+    return newCapacity;
+
+if(newCapacity >= 9999) 
+    return 9999;
+ ```
+
+After the capacity is calculated, it adds the value to the capacity string. Once the entire string is finished, it is then stored in `GJGameLevel->CapacityString_` where it will then be sent to the servers during the upload
