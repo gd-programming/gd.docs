@@ -26,8 +26,8 @@ There are `5` different types of batchNodes. `4` of which the Capacity string us
 
 Each of these BatchNodeTypes are then divided into sub-categories based on certain properties the object has
 
-**Note: Index refers to order that the BatchNode can be found on the capacity string**
-
+**Note: Index refers to order that the BatchNode can be found on the capacity string**  
+The names for each BatchNode were provided by [RobTop himself](https://twitter.com/RobTopGames/status/1415783982621413376?s=20)
 
 | Index | BatchNode | Properties |
 |:------|:----------|:-----------|
@@ -127,3 +127,18 @@ if(newCapacity >= 9999)
  ```
 
 After the capacity is calculated, it adds the value to the capacity string. Once the entire string is finished, it is then stored in `GJGameLevel->CapacityString_` where it will then be sent to the servers during the upload
+
+<!-- 
+
+enum BatchType {
+    BatchNodePlayer = 1, // Stuff regarding player -> investigate
+    BatchNodeText = 2, // text object
+    EffectBatchNode = 3, // animated objects
+    DefaultBatchNode = 4, // stuff that arent in other batchNodes added here: ie. trigger objects
+    BatchNode = 5 // any gameobject that doesnt fit into the other categories
+};
+
+
+
+
+-->
