@@ -108,6 +108,20 @@ The Capacity String in 2.0 is quite easy to understand as it is the first 16 Bat
 | 2 | BatchNodeBottom</br> BatchNodeBottom2 |
 | 3 | BatchNodeAddBottom</br> BatchNodeAddBottom2</br> BatchNodeAddBottomGlow</br> BatchNodeAddBottom2Glow |
 
+## High Capacity Mode
+
+In the game options, there is a option the player can toggle called `High Capacity Mode`. when enabled, the Capacity for each BatchNode is set to a hardcoded value. There are 3 capacity sizes
+
+| size | Batch Type |
+|:-----|:-----------|
+| 999 | BatchNode |
+| 200 | EffectBatchNode |
+| 100 | BatchNodeText |
+
+If enabled, the Capacity string is disregarded and these values are used instead.
+
+
+
 ## Capacity String Generation
 
 The Capacity String is only generated during verification of the level. When playing the level, the game stores the the highest number of GameObjects that the Batch is responsible for inside its textureAtlas as the capacity. After the level is verified, the following function is called
