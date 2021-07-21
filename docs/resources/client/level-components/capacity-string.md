@@ -126,32 +126,19 @@ If enabled, the Capacity string is disregarded and these values are used instead
 The Capacity String is only generated during verification of the level. When playing the level, the game stores the the highest number of GameObjects that the Batch is responsible for inside its textureAtlas as the capacity. After the level is verified, the following function is called
 
 ```cpp
+// This is only a re-creation of the function used and is not an accurate decompilation
+// we have refactored the code to make it easier to understand
+
 int capacity = BatchNode->getAtlasCapacity();
-if(capacity <= 29) 
+
+if(capacity <= 29)
     return 0;
 
-int newCapacity = capacity * 1.1f;
+// Increasing the capacity by a small amount to ensure there is enough memory
+int newCapacity = capacity * 1.1f; 
 
-if(newCapacity < 9999) 
-    return newCapacity;
-
-if(newCapacity >= 9999) 
-    return 9999;
+// returning the new capacity with a  limit of 9999
+return std::min(newCapacty, 9999);
  ```
 
 After the capacity is calculated, it adds the value to the capacity string. Once the entire string is finished, it is then stored in `GJGameLevel->CapacityString_` where it will then be sent to the servers during the upload
-
-<!-- 
-
-enum BatchType {
-    BatchNodePlayer = 1, // Stuff regarding player -> investigate
-    BatchNodeText = 2, // text object
-    EffectBatchNode = 3, // animated objects
-    DefaultBatchNode = 4, // stuff that arent in other batchNodes added here: ie. trigger objects
-    BatchNode = 5 // any gameobject that doesnt fit into the other categories
-};
-
-
-
-
--->
