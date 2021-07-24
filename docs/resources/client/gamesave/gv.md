@@ -99,6 +99,26 @@ Game Variables (gvs) are found inside of the [ValueKeeper](/resources/client/gam
 | gv_0101| forceSmoothFix |
 | gv_0102 | smoothFixInEditor |
 
+
+### 2019 Leak GV's
+
+| Key | Value|
+| :-- |:-----------|
+| gv_0103 | Layer Locking |
+| gv_0104 | Record Order |
+| gv_0105 | StartPos Playback |
+| gv_0106 | Show Meltdown Promo |
+| gv_0108 | Auto Low Detail |
+| gv_0109 | Level Info Label |
+| gv_0110 | Fast Editor Preview |
+| gv_0113 | Flip Platformer Controls |
+| gv_0115 | Show FPS |
+| gv_0116 | Use Custom FPS |
+| gv_0117 | Preview Particle |
+| gv_0118 | Preview Animation |
+| gv_0119 | Dont Save Level Data |
+
+
 # Unlocked Game Variables
 
 Unlocked Game Variables (ugv) are used to check if ingame events have been completed
@@ -154,5 +174,6 @@ Unlocked Game Variables (ugv) are used to check if ingame events have been compl
 | 0085  | **False** ||
 | 0086  | **False** ||
 | 0087  | **False** ||
-
-
+| 0112  | **True** | Used in `EditorUI` (**2019 Leak**) |
+| 0114  | **True** | Used in `PlayerObject` (**2019 Leak**) |
+| 0120  | **True** | Shown in RobTop's 2020 Twitch Streams |
