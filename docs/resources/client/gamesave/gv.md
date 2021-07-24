@@ -152,7 +152,7 @@ Unlocked Game Variables (ugv) are used to check if ingame events have been compl
 | ugv_23 | FaceBook Chest unlocked |
 | ugv_24 | Twitter Chest unlocked |
 
-### 2019 Leak GV's
+### 2019 Leak UGV's
 
 | Key | Value|
 | :-- |:-----------|
