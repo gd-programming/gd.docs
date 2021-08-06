@@ -42,11 +42,12 @@ A list of all known keys can be found in the table below
 |-----|---------------------------|----------------------------------------------|--------------------------------------------------------------------------
 | 1   | levelID                   | **Integer**                                  | The levelID linked to the comment
 | 2	  | comment					  | **String**									 | The comment left by the user, encoded in [base64](/topics/encryption/base64.md)
-| 3   | author*					  | **Integer**									 | The player ID of the author. **This is different than the account ID**
+| 3   | authorPlayerID					  | **Integer**									 | The player ID of the comment author |
 | 4   | likes					  | **Integer**									 | The amount of likes the comment has
 | 5   | dislikes                  | **Integer**                                  | The amount of dislikes the comment has -> unused
 | 6   | messageID				  | **Integer**									 | The message ID. Account comments have different IDs than level comments
 | 7   | spam                      | **Bool**                                     | If a comment has been flagged as spam
+| 8   | authorAccountID | **Integer** | The accountID of the comment author |
 | 9   | age						  | **String**									 | How long ago the comment was posted (e.g. "2 months")
 | 10  | percent*				  | **Integer**									 | The percent the player put in their comment
 | 11  | modBadge*                 | **Integer**                                  | The Mod Badge of a moderator commenting
@@ -86,8 +87,6 @@ If a user violates [the commenting rules](https://imgur.com/a/US0Biaj), they can
 - The `User String` uses the same response parser that [player profiles](/resources/server/user) use
 
 - The only example of `Account Comments` where it was able to display a colour is with [RobTop's](https://gdbrowser.com/u/71) profile, this is because RobTop hardcoded the account colour into the accountID of `71`
-
-- In the [December 2019 2.2 leaks](https://www.reddit.com/r/geometrydash/comments/e9b0y6/update_22_leaks_megathread/), a key wih the ID of `8` can be found hardcoded into a string for the `Versus Mode` feature - it seems to be linked to accountID as you can see from [this piece of pseudocode](https://imgur.com/a/Rjvzshb)
  
 
 
