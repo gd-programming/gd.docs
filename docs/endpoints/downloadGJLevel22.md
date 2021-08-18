@@ -12,15 +12,29 @@ Downloads a user level and info so it can be played.
 
 ### Optional Parameters
 
-**inc** - Unknown function. Set to 1
-
-**extras** - Unknown function. Set to 0
-
 **gameVersion** - 21
 
 **binaryVersion** - 35
 
 **gdw** - 0
+
+**accountID** - The account ID of the user who is downloading the level
+
+**gjp** - The [GJP](/topics/encryption/gjp.md) of the user who is downloading the level
+
+**udid** - A unique identifier for the user's device, can be replaced with anything
+
+**udid** - The [udid](/topics/encryption/id?id=udid) of the user who is downloading the level
+
+**uuid** - The [uuid](/topics/encryption/id?id=uuid) of the user who is downloading the level
+
+**inc** - Unknown function. Set to 1
+
+**extras** - Unknown function. Set to 0
+
+**rs** - [See here](topics/encryption/id?id=rs)
+
+**chk** - [See here](/topics/encryption/chk?id=download-level)
 
 ## Response
 
