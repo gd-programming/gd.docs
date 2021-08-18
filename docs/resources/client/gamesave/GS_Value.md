@@ -38,8 +38,8 @@ all completed levels
 |:----|:------|
 | `n_{levelID}`| beaten in normal Mode |
 | `c_{levelID}` | Completed level|
-| `d_{levelID}` completed daily
-| `g_{levelID}` completed gauntlet
+| `d_{levelID}` | completed daily
+| `g_{levelID}` | completed gauntlet
 | `star_{levelID}` | Collected Stars|
 | `dstar_{levelID}` | Collected Stars for daily|
 | `gstar_{levelID}` | Collected Stars for gauntlet |
