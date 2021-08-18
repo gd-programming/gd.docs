@@ -89,6 +89,8 @@ and if this is left out it's most liked
 
 **noStar** - Unrated filter. Not sent when off, 1 for on.
 
+**star** - Rated filter. Not sent when off, 1 for on.
+
 **song** - Official song filter. Not sent when off.
 
 **completedLevels** - A comma separated list of completed levels enclosed in brackets. Only sent if the uncompleted or completed filter is enabled.
