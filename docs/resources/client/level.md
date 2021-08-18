@@ -74,7 +74,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k75 | isEpic                         | **Bool**                                                         | if a level has been awarded an epic rating                                       |
 | k76 | demon type                     | **integer**                                                      | Demon Type Enum                                                                  |
 | k77 | isGauntlet                     | **Bool**                                                         | is the level in a gauntlet                                                       |
-| k78 | isGauntlet2                    | **Bool**                                                         | All completed gauntlet levels except level 1                                     |
+| k78 | isAltGame                      | **Bool**                                                         | Levels that were completed on the free games                                     |
 | k79 | Unlisted                       | **bool**                                                         | whether the level is to be marked as unlisted or not during publication          |
 | k80 | Seconds Spent Editing          | **integer**                                                      | the number of seconds spent editing the level                                    |
 | k81 | Seconds spent Editing (copies) | **integer**                                                      | the number of seconds spent editing the level (Previous copies)                  |

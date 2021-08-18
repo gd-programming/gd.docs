@@ -12,7 +12,7 @@ Deletes a level from the server.
 
 **levelID** - The ID of the level being deleted
 
-**secret** - Wmfd2893gb7
+**secret** - Wmfv2898gc9
 
 ### Optional Parameters
 
@@ -41,7 +41,7 @@ data = {
         "accountID": 173831, # DevExit's account ID
         "gjp": "********", # This would be DevExit's password encoded with GJP encryption
         "levelID": 62689548,
-        "secret": "Wmfd2893gb7"
+        "secret": "Wmfv2898gc9"
 }
 
 req = requests.post("http://boomlings.com/database/deleteGJLevelUser20.php", data=data)

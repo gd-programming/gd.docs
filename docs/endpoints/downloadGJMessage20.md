@@ -1,6 +1,6 @@
 # downloadGJMessage20.php
 
-Blocks a user.
+Download a message.
 
 ## Parameters
 

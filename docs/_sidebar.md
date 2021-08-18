@@ -28,7 +28,8 @@
     - [Quests](/resources/client/gamesave/quests.md)
 
   - [Level](/resources/client/level.md)
-    - [Object IDs](/resources/client/level-components/objectids.md)
+    - [Capacity String](/resources/client/level-components/capacity-string.md)
+    - [Level Colors](/resources/client/level-components/level-colors.md)
     - [Inner Level String](/resources/client/level-components/inner-level-string.md)
     - [Level Object](/resources/client/level-components/level-object.md)
     - [Color String](/resources/client/level-components/color-string.md)
@@ -64,6 +65,7 @@
   - [uploadGJMessage20](/endpoints/uploadGJMessage20.md)
 - Miscellaneous
   - [getAccountURL](/endpoints/getAccountURL.md)
+  - [getTop1000](/endpoints/getTop1000.md)
   - [getGJSongInfo](/endpoints/getGJSongInfo.md)
   - [getGJTopArtists](/endpoints/getGJTopArtists.md)
   - [getSaveData](/endpoints/getSaveData.md)
@@ -108,6 +110,8 @@
 - [Game Save Files Encryption/Decryption](/topics/localfiles_encrypt_decrypt.md)
 - [Status Codes](/topics/status_codes.md)
 - [Vault Codes](/topics/vault_codes.md)
+- [Shop](/topics/shop)
+- [Tags](/topics/tags)
 - **Encryption**
   - [Base64 Encoding](topics/encryption/base64.md)
   - [CHK Generation](topics/encryption/chk.md)
