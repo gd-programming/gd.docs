@@ -22,8 +22,6 @@ Downloads a user level and info so it can be played.
 
 **gjp** - The [GJP](/topics/encryption/gjp.md) of the user who is downloading the level
 
-**udid** - A unique identifier for the user's device, can be replaced with anything
-
 **udid** - The [udid](/topics/encryption/id?id=udid) of the user who is downloading the level
 
 **uuid** - The [uuid](/topics/encryption/id?id=uuid) of the user who is downloading the level
