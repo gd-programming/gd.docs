@@ -46,7 +46,7 @@ All objects are positioned by their centers. Positive Y is upwards and blocks ar
 
 Visualisation:
 
-![Positioning Visualisation](../../../../assets/object-positioning.png)
+![Positioning Visualisation](/../../../assets/object-positioning.png)
 
 ### Level Object Data
 **Level Object Structure**
