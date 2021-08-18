@@ -16,6 +16,12 @@ Gets a list of levels.
 
 **gdw** - 0
 
+**accountID** - The account ID of the user who is searching the levels. Only sent when **type** is set to 8, 13 or when **type** is set to 5 and you are loading your own levels.
+
+**gjp** - The [GJP](/topics/encryption/gjp.md) of the user who is searching the levels. Only sent when **type** is set to 5, 8 or 13.
+
+**gauntlet** - The ID of the gauntlet that's currently being loaded.
+
 **type** - Controls the fetch priority.   
 and if this is left out it's most liked
 
@@ -80,6 +86,14 @@ and if this is left out it's most liked
 **coins** - Coins filter. 0 for no coins, 1 for any amount of coins.
 
 **epic** - Epic filter. 0 for off, 1 for on.
+
+**noStar** - Unrated filter. Not sent when off, 1 for on.
+
+**star** - Rated filter. Not sent when off, 1 for on.
+
+**song** - Official song filter. Not sent when off.
+
+**completedLevels** - A comma separated list of completed levels enclosed in brackets. Only sent if the uncompleted or completed filter is enabled.
 
 **followed** - Required if `type` is 12. A comma separated list of player IDs, **not account IDs** of the people you follow.
 
