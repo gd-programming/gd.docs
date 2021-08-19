@@ -93,7 +93,7 @@ and if this is left out it's most liked
 
 **song** - Official song filter. Not sent when off.
 
-**customSong** Newgrounds song filter, **song** parameter will be songID, Not sent when off
+**customSong** Enable newgrounds song filter, **song** parameter will be songID, Not sent when off
 
 **completedLevels** - A comma separated list of completed levels enclosed in brackets. Only sent if the uncompleted or completed filter is enabled.
 
