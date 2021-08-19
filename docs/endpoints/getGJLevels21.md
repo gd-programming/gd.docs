@@ -93,6 +93,8 @@ and if this is left out it's most liked
 
 **song** - Official song filter. Not sent when off.
 
+**customSong** Enable newgrounds song filter, **song** parameter will be songID, Not sent when off
+
 **completedLevels** - A comma separated list of completed levels enclosed in brackets. Only sent if the uncompleted or completed filter is enabled.
 
 **followed** - Required if `type` is 12. A comma separated list of player IDs, **not account IDs** of the people you follow.
