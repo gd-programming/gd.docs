@@ -30,7 +30,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k18 | Attempts                       | **integer**                                                      | the number of attempts that are made to this level                               |
 | k19 | Normal Mode Percentage         | **integer**                                                      | the max percentage that has been achieved in normal mode in this level           |
 | k20 | Practice Mode Percentage       | **integer**                                                      | the max percentage that has been achieved in practice mode in this level         |
-| k21 | levelType                      | **Bool**                                                         | The Level Type (1 = Official, 2 = Local, 3 = Saved, 4 = Online)                  |
+| k21 | levelType                      | **Integer**                                                         | The Level Type (1 = Official, 2 = Local, 3 = Saved, 4 = Online)                  |
 | k22 | Like Rating                    | **integer**                                                      | the level's like rating (`likes - dislikes`)                                     |
 | k23 | Length                         | **[Length](enumerations.md)**                                    | the level's length                                                               |
 | k24 | Dislikes                       | **integer**                                                      | how many dislikes a level has (unused)                                           |
@@ -39,35 +39,35 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k27 | FeatureScore                   | **integer**                                                      | A featured levels Feature Score                                                  |
 | k33 | Auto                           | **Bool**                                                         | If the level is auto                                                             |
 | k34 | Replay Data                    | **[Gziped String](/topics/encryption/zip.md)**                   | Contains a Gzipped String which contains replay data for levels                  |
-| k35 | Demon                          | **[Demon](enumerations.md)**                                     | if the level is demon                                                            |
+| k35 | isPlayable?                   | **Bool**                                                        | if the level is downloaded (honestly not much is known about this)                                                           |
 | k36 | Jumps                          | **integer**                                                      | total Jumps on a level                                                           |
 | k37 | required coins                 | **Integer**                                                      | coins required to unlock an official level                                       |
 | k38 | isUnlocked                     | **Bool**                                                         | is Official level Unlocked                                                       |
 | k39 | level Size                     | **integer**                                                      | `this->levelSize = std::floor(this->levelString.length() * 0.152);`              |
 | k40 | Build Version                  | **integer**                                                      | the games build version                                                          |
 | k41 | Password                       | **integer**                                                      | the [password]() <!-- local gamesave password topic link --> set for the level   |
-| k42 | uploadID                       | **integer**                                                      | The ID of the level when its uploaded                                            |
+| k42 | levelID                       | **integer**                                                      | The ID of the level when its uploaded                                            |
 | k43 | Two-Player Mode                | **Bool**                                                         | If the level is 2 player mode                                                    |
 | k45 | Custom Song ID                 | **integer**                                                      | the custom Song ID (if used)                                                     |
 | k46 | Level Revision                 | **integer**                                                      | the revision of the level                                                        |
 | k47 | hasBeenModified                | **Bool**                                                         | if the level has been modified from outside the GD editor                        |
 | k48 | Object Count                   | **integer**                                                      | the object count of the level                                                |
 | k50 | Binary Version                 | **integer**                                                      | hardcoded to binary Version                                                      |
-| k51 | setCapacity001                 | **integer**                                                      | likely used in Extra String                                                      |
-| k52 | setCapacity002                 | **integer**                                                      | likely used in Extra String                                                      |
-| k53 | setCapacity003                 | **integer**                                                      | likely used in Extra String                                                      |
-| k54 | setCapacity004                 | **integer**                                                      | likely used in Extra String                                                      |
+| k51 | capacity001                 | **integer**                                                      | BatchNodes                                                     |
+| k52 | capacity002                 | **integer**                                                      | BatchNodes                                                    |
+| k53 | capacity003                 | **integer**                                                      | BatchNodes                                                     |
+| k54 | capacity004                 | **integer**                                                      | BatchNodes                                                      |
 | k60 | AccountID                      | **integer**                                                      | the Creators AccountID                                                           |
 | k61 | First Coin Acquired            | **bool**                                                         | whether the first coin is acquired during verification                           |
 | k62 | Second Coin Acquired           | **bool**                                                         | whether the second coin is acquired during verification                          |
 | k63 | Third Coin Acquired            | **bool**                                                         | whether the third coin is acquired during verification                           |
 | k64 | Total Coins                    | **Integer**                                                      | How many Coins the level has                                                     |
-| k65 | isCoinsVerified                | **Bool**                                                         | denotes if the coins are verified or not                                         |
+| k65 | areCoinsVerified                | **Bool**                                                         | denotes if the coins are verified or not                                         |
 | k66 | Requested Stars                | **integer**                                                      | the requested stars during publication of the level                              |
-| k67 | Extra String                   | **Extra String**                                                 | Contains batch information about levels                                          |
+| k67 | [Capacity String](/resources/client/level-components/capacity-string.md)                  | **String**                                                 | Contains batch information about levels                                          |
 | k68 | triggeredAntiCheat             | **Bool**                                                         | if you trigger the anticheat when beating demons                                 |
 | k69 | High Object Count              | **Bool**                                                         | If a level has a high object count                                               |
-| k71 | Orb Reward Percentage          | **integer**                                                      | the percentage up until the orb reward has been granted                          |
+| k71 | Mana Orb Percentage          | **integer**                                                      | the percentage up until the orb reward has been granted                          |
 | k72 | hasLowDetailMode               | **Bool**                                                         | If a level has LDM                                                               |
 | k73 | toggleLDM                      | **Bool**                                                         | If a LDM is Enabled                                                              |
 | k74 | timelyID                       | **integer**                                                      | the timelyID for a level                                                         |
@@ -81,12 +81,12 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k82 | isLevelFavourited              | **Bool**                                                         | if you put the level in your favourites                                          |
 | k83 | levelOrder                     | **integer**                                                      | ordering for levels                                                              |
 | k84 | Level Folder                   | **integer**                                                      | the folder in which the level belongs (0 represents no folder)                   |
-| k85 | Clicks                         | **integer**                                                      | clicks done on a level                                                           |
-| k86 | Player Time                    | **integer**                                                      | the amount of time on a players best attempt (even detects speedhacks)           |
-| k87 | levelScore Seed                | **[LevelScoreSeed](/topics/encryption/chk?id=level-leaderboard)**| Contains info to verify the integrity of levelScores                             |
-| k88 | Level Progress                 | **integer**                                                      | Contains a list of high score differences seperated by a `,`                     |
-| k89 | [isLevelScorechkValid](/topics/encryption/chk?id=level-leaderboard) | **Bool**                    | used to check for level completion                                               |
-| k90 | Verify percentage              | **integer**                                                      | Contains the percentage for levels you are trying to verify                      |
+| k85 | Clicks                         | **integer**                                                      | Clicks done on the best attempt                                                           |
+| k86 | Player Time                    | **integer**                                                      | the amount of time on a players best attempt           |
+| k87 | level Seed                | **[LevelScoreSeed](/topics/encryption/chk?id=level-leaderboard)**| Contains info to verify the integrity of levelScores                             |
+| k88 | Level Progress                 | **String**                                                      | Contains a list of high score differences seperated by a `,`                     |
+| k89 | vfDChk | **Bool**                    | used to check for level completion                                               |
+| k90 | Leaderboard percentage         | **integer**                                                      | Contains the percentage for level Leaderboards                      |
 
 
 **Last Editor State Key/Value Pairs**
