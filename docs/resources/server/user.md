@@ -51,7 +51,7 @@ A list of all known keys can be found in the table below
 | 38 | messages | **Integer** | How many new messages the user has (shown in-game as a notification) | <!-- there are a bunch of keys before here but they are exclusive to friend requests so i didnt add them here -->
 | 39 | friendRequests | **Integer** | How many new friend requests the user has (shown in-game as a notificaiton) |
 | 40 | newFriends | **Integer** | How many new Friends the user has (shown in-game as a notificaiton) |
-| 41 | hasBlocked | **Bool** | appears on userlist endpoint to show if the user is blocked |
+| 41 | NewFriendRequest | **Bool** | appears on userlist endpoint to show if the friend request is new |
 | 42 | age | **String** | the time since you submitted a levelScore |
 | 43 | accSpider | **Integer** | The spider number of the player use |
 | 44 | twitter| **String** | The twitter of player |
