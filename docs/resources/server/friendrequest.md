@@ -34,7 +34,7 @@ A list of all known keys can be found in the table below
 | 32  | friendRequestID		  | **Integer**					 | An ID unique to each friend request. (I'm not 100% certain on this)
 | 35  | message			  | **String**					 | The friend requests's message, encoded in [base64](/topics/encryption/base64.md)
 | 37  | age			  | **String** 					 | How long ago the friend request was sent (e.g. "2 months")
-| 41  | isBlocked		  | **Bool**					 | if you have blocked the user
+| 41  | NewFriendRequest		  | **Bool**					 | if the friend request is new
 
 ### Trivia
 
