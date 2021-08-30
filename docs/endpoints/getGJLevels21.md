@@ -35,7 +35,7 @@ and if this is left out it's most liked
 | 5 | user's levels (uses the player ID, **not the account ID,** in the `str` parameter to get which user) |
 | 6 | featured |
 | 7 | magic |
-| 8 | moderator sent levels (also requires the `accountID` and the `gjp` of a GD moderator) |
+| 8 | moderator sent levels |
 | 10 | list of specific levels (this uses the `str` parameter as a comma separated list of level IDs), used in map packs |
 | 11 | recently awarded |
 | 12 | levels from people you follow |
