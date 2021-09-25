@@ -6,7 +6,7 @@ Download a message.
 
 ### Required Parameters
 
-**accountID** - The blocking person's account ID
+**accountID** - The person's account ID
 
 **gjp** - The blocking person's [GJP](/topics/encryption/gjp.md)
 
