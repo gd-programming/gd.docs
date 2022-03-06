@@ -130,11 +130,12 @@ Property keys reflect the keys found in the following table, whereas property va
 | 96  | Disable Glow                         | **bool**                                        | the Disable Glow property of the object                                            |
 | 97  | Custom Rotation Speed                | **float**                                       | the Custom Rotation Speed property of the rotating object in degrees per second    |
 | 98  | Disable Rotation                     | **bool**                                        | the Disable Rotation property of the rotating object                               |
-| 99  | Multi Activate                       | **bool**                                        | the Multi Activate property of the Count trigger                                   |
+| 99  | Multi Activate (Orbs)                      | **bool**                                        | the Multi Activate property of Orbs                                   |
 | 100 | Enable Use Target                    | **bool**                                        | the Enable Use Target property of the Move trigger                                 |
 | 101 | Target Pos Coordinates               | **[Target Pos Coordinates](enumerations.md)**   | the Target Pos Coordinates property of the Move trigger                            |
 | 102 | Editor Disable                       | **bool**                                        | the Editor Disable property of the Spawn trigger                                   |
 | 103 | High Detail                          | **bool**                                        | the High Detail property of the object                                             |
+| 104 | Multi Activate (Triggers)                         | **bool**                                        | The Multi Activate Property of Triggers                                          |
 | 105 | Max Speed                            | **float**                                       | the Max Speed property of the Follow Player Y trigger                              |
 | 106 | Randomize Start                      | **bool**                                        | the Randomize Start property of the animated object                                |
 | 107 | Animation Speed                      | **float**                                       | the Animation Speed property of the animated object                                |
@@ -180,8 +181,5 @@ The following key ranges are potentially discarded features, whose appearance in
   </tr>
   <tr>
     <td align="center" colspan="2">83</td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2">104</td>
   </tr>
 </table>
