@@ -89,6 +89,7 @@ Property keys reflect the keys found in the following table, whereas property va
 | 51  | Target Group ID                      | **integer**                                     | the Target Group ID in a trigger                                                   |
 | 52  | Pulse Target Type                    | **[Pulse Target Type](enumerations.md)**        | the Target Type property of the Pulse trigger                                      |
 | 54  | Yellow Teleportation Portal Y Offset | **float**                                       | the Y offset of the yellow from the blue teleportation portal                      |
+| 55  | Teleport Portal Ease                 | **bool**                                                 | The Smooth Ease property within Teleport Portals                          |
 | 56  | Activate Group                       | **bool**                                        | the Activate Group property of the trigger                                         |
 | 57  | Group IDs                            | **integer array**                               | the group IDs of the object                                                        |
 | 58  | Lock To Player X                     | **bool**                                        | the Lock To Player X property of the Move trigger                                  |
@@ -175,9 +176,6 @@ The following key ranges are potentially discarded features, whose appearance in
   </tr>
   <tr>
     <td align="center" colspan="2">53</td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2">55</td>
   </tr>
   <tr>
     <td align="center" colspan="2">83</td>
