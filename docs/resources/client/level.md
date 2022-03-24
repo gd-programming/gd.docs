@@ -46,8 +46,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k39 | level Size                     | **integer**                                                      | `this->levelSize = std::floor(this->levelString.length() * 0.152);`              |
 | k40 | Build Version                  | **integer**                                                      | the games build version                                                          |
 | k41 | Password                       | **integer**                                                      | the [password]() <!-- local gamesave password topic link --> set for the level   |
-| k42 | Original                       | **integer**                                                      | The ID the of the original level (if the level was copied)
-           |
+| k42 | Original                       | **integer**                                                      | The ID the of the original level (if the level was copied)           |
 | k43 | Two-Player Mode                | **Bool**                                                         | If the level is 2 player mode                                                    |
 | k45 | Custom Song ID                 | **integer**                                                      | the custom Song ID (if used)                                                     |
 | k46 | Level Revision                 | **integer**                                                      | the revision of the level                                                        |
