@@ -16,7 +16,7 @@ Logs into an account
 
 ### Optional Parameters
 
-**sID** - Unsure, seems to be another 
+**sID** - The players Steam ID
 
 ## Response
 
