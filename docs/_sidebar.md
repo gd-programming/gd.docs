@@ -60,7 +60,7 @@
   - [uploadGJLevel21](/endpoints/uploadGJLevel21.md)
 - Messages
   - [deleteGJMessages20](/endpoints/deleteGJMessages20.md)
-  - [downloadGJMessage20](/endpoints/downloadGJMessageo20.md)
+  - [downloadGJMessage20](/endpoints/downloadGJMessage20.md)
   - [getGJMessages20](/endpoints/getGJMessages20.md)
   - [uploadGJMessage20](/endpoints/uploadGJMessage20.md)
 - Miscellaneous
