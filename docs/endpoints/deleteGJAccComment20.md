@@ -48,6 +48,48 @@ r = requests.post('http://boomlings.com/database/deleteGJAccComment20.php', data
 print(req.text)
 ```
 
+### **JavaScript**
+```js
+// With this code, DevExit is deleting his account comment with ID 1772717
+
+const data = {
+    accountID: 173831, // DevExit's account ID
+    gjp: "********", // This would be DevExit's password encoded with GJP encryption
+    commentID: 1772717,
+    secret: "Wmfd2893gb7"
+}
+
+// Asynchornous context
+const res = await fetch("http://boomlings.com/database/deleteGJAccComment20.php", {
+    method: "POST",
+    body: new URLSearchParams(data) // Can be FormData(data) as well
+});
+
+const text = await res.text();
+console.log(text);
+```
+
+### **NodeJS**
+```js
+// With this code, DevExit is deleting his account comment with ID 1772717
+
+// import axios from "axios" with ESM
+const axios = require("axios");
+
+
+const data = {
+    accountID: 173831, // DevExit's account ID
+    gjp: "********", // This would be DevExit's password encoded with GJP encryption
+    commentID: 1772717,
+    secret: "Wmfd2893gb7"
+}
+
+const res = await axios.post("http://boomlings.com/database/deleteGJAccComment20.php", new URLSearchParams(data));
+
+console.log(res.data);
+
+```
+
 **Response**
 ```py
 1
