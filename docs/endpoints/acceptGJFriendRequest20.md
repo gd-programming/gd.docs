@@ -52,37 +52,15 @@ req = requests.post('http://boomlings.com/database/acceptGJFriendRequest20.php',
 print(req.text)
 ```
 
-### **JavaScript**
-
-```js
-// With this code, DevExit is accepted a friend request
-// from PasswordFinders, whose account ID is 5317656
-
-const data = {
-    accountID: 173831,
-    gjp: "********", // This would be DevExit's password encoded with GJP encryption
-    targetAccountID: 5317656,
-    requestID: 43248797,
-    secret: "Wmfd2893gb7",
-}
-
-// Asynchornous context
-const res = await fetch("http://boomlings.com/database/acceptGJFriendRequest20.php", { 
-    method: "POST",
-    body: new URLSearchParams(data) // Can be FormData(data) too
-})
-
-const text = await res.text();
-console.log(text);
-```
-
 ### **NodeJS**
 ```js
 // With this code, DevExit is accepted a friend request
 // from PasswordFinders, whose account ID is 5317656
 
 // import axios from "axios" with ESM
-const axios = require("axios")
+const axios = require("axios");
+
+axios.defaults.headers.common["User-Agent"] = "";
 
 const data = {
     accountID: 173831,
