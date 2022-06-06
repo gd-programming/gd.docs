@@ -42,8 +42,10 @@ and if this is left out it's most liked
 | 13 | friends |
 | 15 | most liked in GD World |
 | 16 | hall of fame |
-| 17 | also featured |
+| 17 | most featured in GD World |
 | 18 | unknown because it's always empty (maybe mod or robtop only?) |
+| 21 | Daily History |
+| 22 | Weekly History |
 
 **str** - Search string, required when `type` is 5 or 10
 
