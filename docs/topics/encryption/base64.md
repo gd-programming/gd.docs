@@ -30,4 +30,19 @@ def base64_decode(string: str) -> str:
     return base64.urlsafe_b64decode(string.encode()).decode()
 ```
 
+### **Javascript**
+
+```js
+const base64Encode = string => btoa(string).replace("+", "-").replace("/", "_");
+
+const base64Decode = string => atob(string.replace("-", "+").replace("_", "/"));
+```
+
+### **NodeJS**
+
+```js
+const base64Encode = string => Buffer.from(string).toString("base64").replace("+", "-").replace("/", "_");
+
+const base64Decode = string => Buffer.from(string.replace("-", "+").replace("_", "/"), "base64").toString();
+```
 <!-- tabs:end -->
