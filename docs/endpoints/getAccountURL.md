@@ -35,7 +35,7 @@ req = requests.post("http://boomlings.com/database/getAccountURL.php", data=data
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 const data = {

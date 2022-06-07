@@ -52,7 +52,7 @@ req = requests.post('http://boomlings.com/database/acceptGJFriendRequest20.php',
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 ```js
 // With this code, DevExit is accepted a friend request
 // from PasswordFinders, whose account ID is 5317656

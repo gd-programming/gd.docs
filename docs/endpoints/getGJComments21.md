@@ -49,7 +49,7 @@ req = requests.post("http://boomlings.com/database/getGJComments21.php", data=da
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 // This code returns the comments on VSC by Bo.

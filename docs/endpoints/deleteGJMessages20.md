@@ -53,7 +53,7 @@ print(req.text)
 
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 // With this code, DevExit is deleting a message with the ID 3141592

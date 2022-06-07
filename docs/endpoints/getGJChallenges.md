@@ -67,7 +67,7 @@ req = requests.post("http://boomlings.com/database/getGJChallenges.php", data=da
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 const data = {

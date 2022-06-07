@@ -51,7 +51,7 @@ req = requests.post("http://boomlings.com/database/deleteGJComment20.php", data=
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 ```js
 // With this code, DevExit is deleting the comment with ID 31415926
 

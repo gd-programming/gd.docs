@@ -48,7 +48,7 @@ req = requests.post("http://boomlings.com/database/deleteGJLevelUser20.php", dat
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 // With this code, DevExit is deleting the level with ID 62689548

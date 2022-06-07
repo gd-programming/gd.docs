@@ -58,7 +58,7 @@ req = requests.post("http://boomlings.com/database/downloadGJLevel22.php", data=
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 // With this code we are getting the level info of Test by DevExit

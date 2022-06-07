@@ -47,7 +47,7 @@ req = requests.post("http://boomlings.com/database/getGJAccountComments20.php", 
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 // This code returns DevExit's account comments.

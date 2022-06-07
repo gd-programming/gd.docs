@@ -50,7 +50,7 @@ req = requests.post("http://boomlings.com/database/getGJCommentHistory.php", dat
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 // This code retrieves DevExit's most liked comments

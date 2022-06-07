@@ -48,7 +48,7 @@ req = requests.post("http://boomlings.com/database/downloadGJMessage20.php", dat
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 
 ```js
 // With this code we are getting the message info of the message with ID 54109536

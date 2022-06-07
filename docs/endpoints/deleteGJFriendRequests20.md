@@ -49,7 +49,7 @@ req = requests.post("http://boomlings.com/database/deleteGJFriendRequests20.php"
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 ```js
 // With this code, DevExit is deleting a friend request to the person with ID 314159
 

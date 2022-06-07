@@ -48,7 +48,7 @@ r = requests.post('http://boomlings.com/database/deleteGJAccComment20.php', data
 print(req.text)
 ```
 
-### **NodeJS**
+### **Javascript**
 ```js
 // With this code, DevExit is deleting his account comment with ID 1772717
 
