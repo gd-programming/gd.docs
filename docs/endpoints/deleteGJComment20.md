@@ -51,6 +51,28 @@ req = requests.post("http://boomlings.com/database/deleteGJComment20.php", data=
 print(req.text)
 ```
 
+### **NodeJS**
+```js
+// With this code, DevExit is deleting the comment with ID 31415926
+
+const data = {
+        accountID: 173831, // DevExit's account ID
+        gjp: "********", // This would be DevExit's password encoded with GJP encryption
+        commentID: 31415926,
+        levelID: 54953085,
+        secret: "Wmfd2893gb7",
+}
+
+// Asynchronous context
+const res = await fetch("http://boomlings.com/database/deleteGJComment20.php", {
+        method: "POST",
+        body: new URLSearchParams(data),
+});
+
+const text = await res.text();
+console.log(text);
+```
+
 **Response**
 ```py
 1

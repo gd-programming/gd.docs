@@ -48,6 +48,28 @@ req = requests.post("http://boomlings.com/database/deleteGJLevelUser20.php", dat
 print(req.text)
 ```
 
+### **NodeJS**
+
+```js
+// With this code, DevExit is deleting the level with ID 62689548
+
+const data = {
+        accountID: 173831, // DevExit's account ID
+        gjp: "********", // This would be DevExit's password encoded with GJP encryption
+        levelID: 62689548,
+        secret: "Wmfv2898gc9",
+}
+
+// Asynchronous context
+const res = await fetch("http://boomlings.com/database/deleteGJLevelUser20.php", {
+        method: "POST",
+        body: new URLSearchParams(data),
+});
+
+const text = await res.text();
+console.log(text);
+```
+
 **Response**
 ```py
 1

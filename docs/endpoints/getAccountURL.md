@@ -35,6 +35,25 @@ req = requests.post("http://boomlings.com/database/getAccountURL.php", data=data
 print(req.text)
 ```
 
+### **NodeJS**
+
+```js
+const data = {
+        accountID: 173831,
+        type: 2,
+        secret: "Wmfd2893gb7",
+}
+
+// Asynchronous context
+const res = await fetch("http://boomlings.com/database/getAccountURL.php", {
+        method: "POST",
+        body: new URLSearchParams(data),
+});
+
+const text = await res.text();
+console.log(text);
+```
+
 **Response**
 ```py
 http://69.164.210.48

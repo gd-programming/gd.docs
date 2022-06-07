@@ -67,6 +67,24 @@ req = requests.post("http://boomlings.com/database/getGJChallenges.php", data=da
 print(req.text)
 ```
 
+### **NodeJS**
+
+```js
+const data = {
+	udid: "I can put BS here",
+	secret: "Wmfd2893gb7",
+	chk: "funnyBwAMBgc",
+}
+
+// Asynchronous context
+const res = await fetch("http://boomlings.com/database/getGJChallenges.php", {
+	method: "POST",
+	body: new URLSearchParams(data),
+});
+
+const text = await res.text();
+console.log(text);
+```
 **Response**
 ```py
 uFpntVWhadWMLCAsADwgLCwwCCw8BAAUBA3EUVFBXGERCRRl6ZxdZXEpRDQEDAAYHAgMJGAUdCxQBG3JWUVoXd1BWUFJDAwkYBB0ICBgGARVrQFZDGXtbW11cW0BYQwMJGAYdCAgEBx0IDRh4Q1sYeVZCTV1G|00bb89e2d55fc22fb9b60b9f41f1d6e5663b3036

@@ -48,6 +48,27 @@ req = requests.post("http://boomlings.com/database/downloadGJMessage20.php", dat
 print(req.text)
 ```
 
+### **NodeJS**
+
+```js
+// With this code we are getting the message info of the message with ID 54109536
+
+const data = {
+        accountID: 173831, // DevExit's account ID
+        gjp: "********", // This would be DevExit's password encoded with GJP encryption
+        messageID: 54109536,
+        secret: "Wmfd2893gb7",
+}
+
+// Asynchronous context
+const res = await fetch("http://boomlings.com/database/downloadGJMessage20.php", {
+        method: "POST",
+        body: new URLSearchParams(data),
+});
+
+const text = await res.text();
+console.log(text);
+```
 **Response**
 ```py
 6:DevExit:3:3935672:2:173831:1:54109536:4:WW91J3JlIGR1bWIgbG9s:8:1:9:0:5:TWhtIHllcCB5b3UncmUgcCBkdW1iIGxtYW8=:7:19 minutes

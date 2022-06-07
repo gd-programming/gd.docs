@@ -49,6 +49,28 @@ req = requests.post("http://boomlings.com/database/deleteGJFriendRequests20.php"
 print(req.text)
 ```
 
+### **NodeJS**
+```js
+// With this code, DevExit is deleting a friend request to the person with ID 314159
+
+const data = {
+        accountID: 173831, // DevExit's account ID
+        gjp: "********", // This would be DevExit's password encoded with GJP encryption
+        targetAccountID: 314159,
+        isSender: 1, // DevExit sent the friend request, so this is 1
+        secret: "Wmfd2893gb7"
+}
+
+// Asynchronous context
+const res = await fetch("http://boomlings.com/database/deleteGJFriendRequests20.php", {
+        method: "POST",
+        body: new URLSearchParams(data),
+});
+
+const text = await res.text();
+console.log(text);
+```
+
 **Response**
 ```py
 1

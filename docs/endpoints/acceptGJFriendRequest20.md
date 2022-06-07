@@ -57,11 +57,6 @@ print(req.text)
 // With this code, DevExit is accepted a friend request
 // from PasswordFinders, whose account ID is 5317656
 
-// import axios from "axios" with ESM
-const axios = require("axios");
-
-axios.defaults.headers.common["User-Agent"] = "";
-
 const data = {
     accountID: 173831,
     gjp: "********", // This would be DevExit's password encoded with GJP encryption
@@ -70,10 +65,14 @@ const data = {
     secret: "Wmfd2893gb7",
 }
 
-// Asynchoronous context
-const res = await axios.post("http://boomlings.com/database/acceptGJFriendRequest20.php", new URLSearchParams(data));
-console.log(res.data);
+// Asynchronous context
+const res = await fetch("http://boomlings.com/database/acceptGJFriendRequest20.php", {
+    method: "POST",
+    body: new URLSearchParams(data),
+});
 
+const text = await res.text();
+console.log(text);
 ```
 
 **Response**
