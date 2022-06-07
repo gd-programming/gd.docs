@@ -44,6 +44,23 @@ req = requests.post("http://boomlings.com/database/getGJDailyLevel.php", data=da
 print(req.text)
 ```
 
+### **Javascript**
+```js
+const data = {
+    weekly: 1,
+    secret: "Wmfd2893gb7",
+}
+
+// Asynchronous context
+const res = await fetch("http://boomlings.com/database/getGJDailyLevel.php", {
+    method: "POST",
+    body: new URLSearchParams(data),
+});
+
+const text = await res.text();
+console.log(text);
+```
+
 **Response**
 ```py
 100146|121576

@@ -46,6 +46,16 @@ def generate_leaderboard_seed(
         + ((seconds + 4085) ** 2) - 50028039
     )
 ```
+```js
+function generateLeaderboardSeed(clicks, percentage, seconds, hasPlayed = true) {
+    
+    return (
+        1482 * (hasPlayed + 1) 
+        + (clicks + 3991) * (percentage + 8354) 
+        + ((seconds + 4085) ** 2) - 50028039
+    )
+}
+```
 
 **s5** - Random number -> `(((GJGameLevel->0x1B8 ? 2000.0 : 0) + rand()) * 4.6566e-10) * 1999.0`
 
@@ -84,6 +94,26 @@ data = {
 
 req = requests.post("http://boomlings.com/database/getGJLevelScores211.php", data=data)
 print(req.text)
+```
+
+### **Javascript**
+
+```js
+const data = {
+    accountID: 173831, // DevExit's account ID
+    gjp: "********", // This would be DevExit's password encoded with GJP encryption
+    levelID: 46763581,
+    type: 1, // Leaving this out would only show friends. This shows global.
+    secret: "Wmfd2893gb7",
+};
+
+const res = await fetch("http://boomlings.com/database/getGJLevelScores211.php", {
+    method: "POST",
+    body: new URLSearchParams(data),
+});
+
+const text = await res.text();
+console.log(text);
 ```
 
 **Response**
