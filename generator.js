@@ -16,5 +16,4 @@ console.log(`${chalk.hex("#66d9ff")("Running Command: ")} ${command}\n`);
 
 const docsProcess = childProcess.exec(command);
 
-docsProcess.stdout.pipe(process.stdout)
 docsProcess.on("exit", () => process.exit(0));
