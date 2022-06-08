@@ -34,6 +34,20 @@ def generate_chk(values: [int, str] = [], key: str = "", salt: str = "") -> str:
     return final
 ```
 
+### **NodeJS**
+
+```js
+// import sha1 from "sha1" with ESM
+const sha1 = require("sha1");
+
+function generateChk(str, key, salt) {
+    const hashed = sha1(str + salt);
+    const xored = xorChipher(hashed, key); // we discuess this one in encryption/xor
+    const result = base64Encode(xored); // one-line function discussed in encryption/base64
+
+    return result;
+}
+```
 <!-- tabs:end -->
 
 XOR keys can be found [here](topics/encryption/xor.md?id=xor-keys).

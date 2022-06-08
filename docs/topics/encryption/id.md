@@ -26,6 +26,22 @@ def generate_rs(n: int) -> str:
     return ("").join(random.choices(possible_letters, k=n))
 ```
 
+### **Javascript/NodeJS**
+
+```js
+// define these functions to don't have to type [a-zA-Z0-9]
+const range = (size, startAt = 0) => [...new Array(size).keys()].map(e => e + startAt);
+const characterRange = (start, end) => String.fromCharCode(...range(end.charCodeAt(0) - start.charCodeAt(0) + 1, start.charCodeAt(0)));
+
+const possibleLetters = [
+    ...characterRange("a", "z"), 
+    ...characterRange("A", "Z"), 
+    ...range(9)
+];
+
+const generateRs = n => range(n).map(() => possibleLetters[Math.floor(Math.random() * possibleLetters.length)]).join("");
+```
+
 <!-- tabs:end -->
 
 ## UUID
@@ -43,6 +59,12 @@ It can be randomly generated using our `generate_rs()` function:
 def generate_uuid(parts: [int] = (8, 4, 4, 4, 10)) -> str:
     # apply generate_rs to each number in parts, then join results
     return ("-").join(map(generate_rs, parts))
+```
+
+### **Javascript/NodeJS**
+
+```js
+const generateUuid = (parts = [8, 4, 4, 4, 10]) => parts.map(generateRs).join("-");
 ```
 
 <!-- tabs:end -->
@@ -66,6 +88,12 @@ import random
 
 def generate_udid(start: int = 100_000, end: int = 100_000_000) -> str:
     return "S" + str(random.randint(start, end))
+```
+
+### **Javascript/NodeJS**
+
+```js
+const generateUdid = (start = 100_000, end = 100_000_000) => "S" + Math.floor(Math.random() * end - start)
 ```
 
 <!-- tabs:end -->
