@@ -69,11 +69,12 @@ Property keys reflect the keys found in the following table, whereas property va
 | 23  | Target Color ID                      | **integer**                                     | the Target Color ID property in an interactive object                              |
 | 24  | Z Layer                              | **integer**                                     | the Z Layer of the object                                                          |
 | 25  | Z Order                              | **integer**                                     | the Z Order of the object                                                          |
-| 28  | Offset X                             | **float**                                       | the Offset X property of the Move trigger                                          |
-| 29  | Offset Y                             | **float**                                       | the Offset Y property of the Move trigger                                          |
+| 28  | Offset X                             | **integer**                                     | the Offset X property of the Move trigger                                          |
+| 29  | Offset Y                             | **integer**                                     | the Offset Y property of the Move trigger                                          |
 | 30  | Easing                               | **[Easing](enumerations.md)**                   | the Easing type of the effect of a trigger                                         |
 | 31  | Text                                 | **string**                                      | the text of the text object in [base64]()                                          |
 | 32  | Scaling                              | **float**                                       | the scaling of the object                                                          |
+| 33  | Single Group ID                      | **integer**                                     | a group ID given to the object                                                      |
 | 34  | Group Parent                         | **bool**                                        | the Group Parent property of the object                                            |
 | 35  | Opacity                              | **float**                                       | the opacity value of a trigger                                                     |
 | 41  | Main Color HSV Enabled               | **bool**                                        | whether the HSV mode is enabled for the Main Color of the object                   |
@@ -166,9 +167,6 @@ The following key ranges are potentially discarded features, whose appearance in
   <tr>
     <td align="center">26</td>
     <td align="center">27</td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2">33</td>
   </tr>
   <tr>
     <td align="center">37</td>
