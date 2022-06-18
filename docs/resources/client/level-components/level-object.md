@@ -63,7 +63,7 @@ Property keys reflect the keys found in the following table, whereas property va
 | 15  | Player Color 1                       | **bool**                                        | the Player Color 1 property of any Color trigger                                   |
 | 16  | Player Color 2                       | **bool**                                        | the Player Color 2 property of any Color trigger                                   |
 | 17  | Blending                             | **bool**                                        | the Blending property of any Color trigger                                         |
-| 20  | Editor Layer 1                       | **bool**                                        | the Editor Layer 1 property of the object                                          |
+| 20  | Editor Layer 1                       | **integer**                                     | the Editor Layer 1 property of the object                                          |
 | 21  | Main Color Channel ID                | **integer**                                     | the Main Color Channel ID property of the object                                   |
 | 22  | Secondary Color Channel ID           | **integer**                                     | the Secondary Color Channel ID property of the object                              |
 | 23  | Target Color ID                      | **integer**                                     | the Target Color ID property in an interactive object                              |
