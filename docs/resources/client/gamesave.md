@@ -21,7 +21,7 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | playerRobot| [Icon](enumerations.md)| The ID of the player Robot |
 | playerSpider| [Icon](enumerations.md)| The ID of the player Spider |
 | playerColor| [Icon](enumerations.md)| The ID of the player Color |
-| playerColor| [Icon](enumerations.md)| The ID of the player Color2 |
+| playerColor2| [Icon](enumerations.md)| The ID of the player Color2 |
 | playerStreak| [Icon](enumerations.md)| The ID of the player Trail |
 | playerDeathEffect| [Icon](enumerations.md)| The ID of the player Death Effect |
 | playerIconType| [Icon](enumerations.md)| The Index of the player's IconType |
