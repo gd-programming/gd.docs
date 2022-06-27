@@ -6,7 +6,7 @@ Value Keeper is a giant Dictionary found in CCGameManager.dat that contains the 
 
 | prefix | Description |
 |:-------|:------------|
-| [gv_{ID}](/resources/client/gamesave?id=gv-structure) | enabled Game Variables |
+| [gv_{ID}](/resources/client/gamesave/gv.md) | enabled Game Variables |
 | i_{ID} | The playerCubes you have unlocked |
 | ship_{ID} | The PlayerShips you have unlocked |
 | ball_{ID} | The PlayerBalls you have unlocked |
