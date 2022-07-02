@@ -13,7 +13,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k1  | Level ID                       | **integer**                                                      | the id of the level                                                              |
 | k2  | Level Name                     | **string**                                                       | the name of the level                                                            |
 | k3  | Description                    | **string**                                                       | the level description, encoded in [base64](https://en.wikipedia.org/wiki/Base64) |
-| k4  | Inner Level String             | **[inner level string](level-components/inner-level-string.md)** | the inner level string, or the playable level                                    |
+| k4  | Inner Level String             | **[inner level string](/resources/client/level-components/inner-level-string.md)** | the inner level string, or the playable level                                    |
 | k5  | Creator                        | **[user](./user.md)Name**                                        | the name of the level creator                                                    |
 | k6  | UserID                         | **integer**                                                      | The UserID of the level Creator                                                  |
 | k7  | level difficulty               | **integer**                                                      | the difficulty the level has                                                     |
