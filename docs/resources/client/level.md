@@ -100,7 +100,7 @@ The last editor state key/value pairs contain a few values that indicate the las
 | kI4 | Build Tab Page           | **integer**    | the displayed page within the build tab  |
 | kI5 | Build Tab                | **integer**    | the selected build tab                   |
 | kI6 | Build Tab Pages          | **dictionary** | the last browsed pages of each build tab |
-| kI7 | Editor Layer             | **float**      | the zoom level of the editor camera      |
+| kI7 | Editor Layer             | **float**      | the last selected index of a layer      |
 
 Note that the build tab pages do not depend on the user's button row/column settings. That means, if the settings are changed, the build tab pages will not reflect the correct changes. For example:
 
