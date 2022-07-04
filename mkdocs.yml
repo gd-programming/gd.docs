@@ -1,0 +1,43 @@
+site_name: gd.docs
+site_author: nekitdev
+site_description: Documentation for Geometry Dash.
+
+repo_name: gd-programming/gd.docs
+repo_url: https://github.com/gd-programming/gd.docs
+
+remote_branch: github-pages
+
+watch:
+  - docs
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+
+      primary: deep purple
+      accent: light blue
+
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+
+      primary: deep orange
+      accent: light blue
+
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

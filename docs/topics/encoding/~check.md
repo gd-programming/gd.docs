@@ -1,15 +1,15 @@
-# CHK
+# Check
 
-CHK is a common parameter in requests, which is intended to improve security.
-CHK is sent in request often as `chk`.
+Check is a common parameter in requests, which is intended to "improve security".
+It is often sent in request as `chk`.
 
-CHK is generated like so:
+Check is generated like so:
 
-1. Take arbitrary amount of values.
+1. Take an arbitrary amount of values.
 2. Combine them and add *salt* if there is one.
-3. Apply [SHA-1](https://en.wikipedia.org/wiki/SHA-1) hashing to combined values and get its hexdigest.
-4. Apply [XOR-Cipher](topics/encryption/xor.md) to the hexdigest with desired key.
-5. [Base64](topics/encryption/base64.md) encode the result.
+3. Apply [SHA-1][SHA-1] hashing to combined values and get its hexadecimal digest.
+4. Apply [XOR Cipher][XOR Cipher] to the digest with the desired key.
+5. [Base64][Base64] encode the result.
 
 CHK generator can be implemented like this:
 
@@ -18,17 +18,25 @@ CHK generator can be implemented like this:
 ### **Python**
 
 ```py
-import base64
-import hashlib  # sha1() lives there
+from typing import Iterable
+from hashlib import sha1 as standard_sha1
+
+EMPTY = str()
+
+concat = EMPTY.join
 
 
-def generate_chk(values: [int, str] = [], key: str = "", salt: str = "") -> str:
+def sha1(data: bytes) -> str:
+    return standard_sha1(data).hexdigest()
+
+
+def generate_check(values: Iterable[Any], key: str = "", salt: str = "") -> str:
     values.append(salt)
 
-    string = ("").join(map(str, values))  # assure "str" type and connect values
+    string = concat(map(str, values))  # assure "str" type and connect values
 
     hashed = hashlib.sha1(string.encode()).hexdigest()
-    xored = xor_cipher(hashed, key)  # we discuss this one in encryption/xor
+    xored = xor_string(hashed, key)  # we discuss this one in encryption/xor
     final = base64.urlsafe_b64encode(xored.encode()).decode()
 
     return final
@@ -176,10 +184,14 @@ For example, `0%` - `13%` - `100%` -> `(13 - 0), (100 - 13)` -> `13,87`
 
 ## Salts
 
-| Value        | Type              |
-|--------------|-------------------|
-| xI25fpAapCQg | Level             |
-| xPT6iUrtws0J | Comment           |
-| ysg6pUrtjn0J | Like or Rate      |
-| xI35fsAapCRg | User Profile      |
-| yPg6pUrtWn0J | Level Leaderboard |
+| Salt           | Usage             |
+|----------------|-------------------|
+| `xI25fpAapCQg` | Level             |
+| `xPT6iUrtws0J` | Comment           |
+| `ysg6pUrtjn0J` | Like or Rate      |
+| `xI35fsAapCRg` | User Profile      |
+| `yPg6pUrtWn0J` | Level Leaderboard |
+
+[Base64]: /topics/encoding/base64
+[XOR Cipher]: /topics/encoding/xor#xor-cipher
+[SHA-1]: https://en.wikipedia.org/wiki/SHA-1

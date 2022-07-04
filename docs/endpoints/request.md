@@ -132,7 +132,7 @@ public class Main {
 
 ```
 
-### **NodeJS**
+### **Node JS**
 
 ```js
 const http = require("http");

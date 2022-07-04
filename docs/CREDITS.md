@@ -1,12 +1,28 @@
 # Credits
 
-Thanks to the **Geometry Dash Programming** experts, and the **GDDocs** contributors for making this project a reality. Without you guys, this project wouldn't have even been possible.
+Thanks to the **Geometry Dash Programming** experts, and the **GDDocs** contributors for
+making this project a reality. Without you, this project wouldn't have even been possible.
 
-*-- Team professionally led by [SMJS](https://github.com/SMJSGaming)*
-- [nekit](https://github.com/nekitdev)
-- [Wylie](https://github.com/Wyliemaster)
-- [Andre](https://github.com/AndreNIH)
-- [Cvolton](https://github.com/Cvolton)
-- [Colon](https://github.com/GDColon)
-- [AlFas](https://github.com/AlFasGD)
-- [zmx](https://github.com/kyurime)
+## Staff Team
+
+- [SMJS][SMJS]
+- [nekit][nekit]
+- [zmx][zmx]
+- [Wylie][Wylie]
+
+## Experts
+
+- [Rekkon][Rekkon]
+- [Andre][Andre]
+- [Cvolton][Cvolton]
+- [Colon][Colon]
+
+[SMJS]: https://github.com/SMJSGaming
+[nekit]: https://github.com/nekitdev
+[zmx]: https://github.com/qimiko
+[Wylie]: https://github.com/Wyliemaster
+
+[Rekkon]: https://github.com/AlFasGD
+[Andre]: https://github.com/AndreNIH
+[Cvolton]: https://github.com/Cvolton
+[Colon]: https://github.com/GDColon
