@@ -1,0 +1,2293 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Geometry Dash.">
+      
+      
+        <meta name="author" content="nekitdev">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>getGJLevels21.php - gd.docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getgjlevels21php" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="gd.docs" class="md-header__button md-logo" aria-label="gd.docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            gd.docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              getGJLevels21.php
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gd-programming/gd.docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gd-programming/gd.docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="gd.docs" class="md-nav__button md-logo" aria-label="gd.docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    gd.docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gd-programming/gd.docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gd-programming/gd.docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CREDITS/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Endpoints
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Endpoints" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Endpoints
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accept_friend_request/" class="md-nav__link">
+        Accept Friend Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../block_user/" class="md-nav__link">
+        Block User
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete_account_comment/" class="md-nav__link">
+        Delete Account Comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete_friend_request/" class="md-nav__link">
+        Delete Friend Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete_level/" class="md-nav__link">
+        deleteGJLevelUser20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete_level_comment/" class="md-nav__link">
+        Delete Level Comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../delete_message/" class="md-nav__link">
+        deleteGJMessages20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download_level/" class="md-nav__link">
+        downloadGJLevel22.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download_message/" class="md-nav__link">
+        downloadGJMessage20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_account_comments/" class="md-nav__link">
+        getGJAccountComments20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_account_url/" class="md-nav__link">
+        getAccountURL.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_chests/" class="md-nav__link">
+        getGJRewards.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_comment_history/" class="md-nav__link">
+        getGJCommentHistory.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_friend_requests/" class="md-nav__link">
+        getGJFriendRequests20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_gauntlets/" class="md-nav__link">
+        getGJGauntlets21.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_leaderboard/" class="md-nav__link">
+        getGJScores20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_level_comments/" class="md-nav__link">
+        getGJComments21.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_level_leaderboard/" class="md-nav__link">
+        getGJLevelScores211.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          getGJLevels21.php
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        getGJLevels21.php
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-parameters" class="md-nav__link">
+    Required Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-parameters" class="md-nav__link">
+    Optional Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_map_packs/" class="md-nav__link">
+        getGJMapPacks21.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_messages/" class="md-nav__link">
+        getGJMessages20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_quests/" class="md-nav__link">
+        getGJChallenges.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_song/" class="md-nav__link">
+        getGJSongInfo.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_timely/" class="md-nav__link">
+        getGJDailyLevel.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_top_1000/" class="md-nav__link">
+        getTop1000.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_top_artists/" class="md-nav__link">
+        getGJTopArtists.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_user/" class="md-nav__link">
+        getGJUserInfo20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get_user_list/" class="md-nav__link">
+        getGJUserList20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../like_item/" class="md-nav__link">
+        likeGJItem211.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../load_data/" class="md-nav__link">
+        getSaveData.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../post_comment/" class="md-nav__link">
+        uploadGJAccComment20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rate_demon/" class="md-nav__link">
+        rateGJDemon21.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rate_level/" class="md-nav__link">
+        rateGJStars211.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rate_stars/" class="md-nav__link">
+        suggestGJStars.md
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../read_friend_request/" class="md-nav__link">
+        readGJFriendRequest20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../remove_friend/" class="md-nav__link">
+        removeGJFriend20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../report_level/" class="md-nav__link">
+        reportGJLevel.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../request/" class="md-nav__link">
+        Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../request_access/" class="md-nav__link">
+        requestUserAccess.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../restore_items/" class="md-nav__link">
+        restoreGJItems.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../search_users/" class="md-nav__link">
+        getGJUsers20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../send_friend_request/" class="md-nav__link">
+        uploadFriendRequest20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../send_level_comment/" class="md-nav__link">
+        uploadGJComment21.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../send_message/" class="md-nav__link">
+        uploadGJMessage20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unblock_user/" class="md-nav__link">
+        unblockGJUser20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update_account/" class="md-nav__link">
+        updateGJAccSettings20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update_data/" class="md-nav__link">
+        updateGJUserScore22.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../update_level_description/" class="md-nav__link">
+        updateGJDesc20.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload_level/" class="md-nav__link">
+        uploadGJLevel21.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_50" type="checkbox" id="__nav_3_50" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_50">
+          Accounts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Accounts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_50">
+          <span class="md-nav__icon md-icon"></span>
+          Accounts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accounts/login/" class="md-nav__link">
+        accounts/loginGJAccount.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accounts/register/" class="md-nav__link">
+        accounts/registerGJAccount.php
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accounts/register_web/" class="md-nav__link">
+        accounts/register.php
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Client
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Client" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/gamesave/" class="md-nav__link">
+        Client Gamesave Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/level/" class="md-nav__link">
+        Client Level Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_3" type="checkbox" id="__nav_4_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_3">
+          Gamesave
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Gamesave" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Gamesave
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/gamesave/GLM/" class="md-nav__link">
+        GLM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/gamesave/GS_Value/" class="md-nav__link">
+        GS Value
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/gamesave/achievement/" class="md-nav__link">
+        Achievements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/gamesave/gv/" class="md-nav__link">
+        Game Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/gamesave/kCEK/" class="md-nav__link">
+        kCEK Encoder Keys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/gamesave/quests/" class="md-nav__link">
+        Client Quest Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/gamesave/valueKeeper/" class="md-nav__link">
+        ValueKeeper
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1_4" type="checkbox" id="__nav_4_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_4">
+          Level components
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Level components" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Level components
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/level-components/capacity-string/" class="md-nav__link">
+        Capacity String
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/level-components/color-string/" class="md-nav__link">
+        Client Color String Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/level-components/guideline-string/" class="md-nav__link">
+        Client Guideline String Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/level-components/inner-level-string/" class="md-nav__link">
+        Client Inner Level String Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/level-components/level-colors/" class="md-nav__link">
+        Level Colors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/client/level-components/level-object/" class="md-nav__link">
+        Client Level Object Resource
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Server
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Server" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Server
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/comment/" class="md-nav__link">
+        Server Comment Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/friendrequest/" class="md-nav__link">
+        Server Friend Request Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/gauntlet/" class="md-nav__link">
+        Server Gauntlet Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/leaderboardscore/" class="md-nav__link">
+        Server Leaderboard Score Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/level/" class="md-nav__link">
+        Server Level Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/mappack/" class="md-nav__link">
+        Server Map Pack Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/message/" class="md-nav__link">
+        Server Message Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/restore/" class="md-nav__link">
+        Server Restore Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/secrets/" class="md-nav__link">
+        Secrets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/song/" class="md-nav__link">
+        Server Song Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/server/user/" class="md-nav__link">
+        Server User Resource
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/level_passwords/" class="md-nav__link">
+        Level Passwords
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/levelstring_encoding_decoding/" class="md-nav__link">
+        Level encoding/decoding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/localfiles_encrypt_decrypt/" class="md-nav__link">
+        Game Files - Encryption and Decryption
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/shop/" class="md-nav__link">
+        Shops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/status_codes/" class="md-nav__link">
+        Status Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/vault_codes/" class="md-nav__link">
+        Vault Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_8">
+          Encoding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Encoding" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          Encoding
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/encoding/base64/" class="md-nav__link">
+        Base64
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/encoding/random_string_and_id/" class="md-nav__link">
+        Random String, UUID and UDID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/encoding/xor/" class="md-nav__link">
+        XOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/encoding/zip/" class="md-nav__link">
+        Zip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/encoding/~check/" class="md-nav__link">
+        Check
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-parameters" class="md-nav__link">
+    Required Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-parameters" class="md-nav__link">
+    Optional Parameters
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/endpoints/get_levels.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="getgjlevels21php">getGJLevels21.php</h1>
+<p>Gets a list of levels.</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="required-parameters">Required Parameters</h3>
+<p><strong>secret</strong> - Wmfd2893gb7</p>
+<h3 id="optional-parameters">Optional Parameters</h3>
+<p><strong>gameVersion</strong> - 21</p>
+<p><strong>binaryVersion</strong> - 35</p>
+<p><strong>gdw</strong> - 0</p>
+<p><strong>accountID</strong> - The account ID of the user who is searching the levels. Only sent when <strong>type</strong> is set to 8, 13 or when <strong>type</strong> is set to 5 and you are loading your own levels.</p>
+<p><strong>gjp</strong> - The <a href="/topics/encryption/gjp.md">GJP</a> of the user who is searching the levels. Only sent when <strong>type</strong> is set to 5, 8 or 13.</p>
+<p><strong>gauntlet</strong> - The ID of the gauntlet that's currently being loaded.</p>
+<p><strong>type</strong> - Controls the fetch priority. <br />
+and if this is left out it's most liked</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>most liked</td>
+</tr>
+<tr>
+<td>1</td>
+<td>most downloaded</td>
+</tr>
+<tr>
+<td>2</td>
+<td>default for the search button (also most liked)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>trending</td>
+</tr>
+<tr>
+<td>4</td>
+<td>recent</td>
+</tr>
+<tr>
+<td>5</td>
+<td>user's levels (uses the player ID, <strong>not the account ID,</strong> in the <code>str</code> parameter to get which user)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>featured</td>
+</tr>
+<tr>
+<td>7</td>
+<td>magic</td>
+</tr>
+<tr>
+<td>8</td>
+<td>moderator sent levels</td>
+</tr>
+<tr>
+<td>10</td>
+<td>list of specific levels (this uses the <code>str</code> parameter as a comma separated list of level IDs), used in map packs</td>
+</tr>
+<tr>
+<td>11</td>
+<td>recently awarded</td>
+</tr>
+<tr>
+<td>12</td>
+<td>levels from people you follow</td>
+</tr>
+<tr>
+<td>13</td>
+<td>friends</td>
+</tr>
+<tr>
+<td>15</td>
+<td>most liked in GD World</td>
+</tr>
+<tr>
+<td>16</td>
+<td>hall of fame</td>
+</tr>
+<tr>
+<td>17</td>
+<td>most featured in GD World</td>
+</tr>
+<tr>
+<td>18</td>
+<td>unknown because it's always empty (maybe mod or robtop only?)</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Daily History</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Weekly History</td>
+</tr>
+</tbody>
+</table>
+<p><strong>str</strong> - Search string, required when <code>type</code> is 5 or 10</p>
+<p><strong>diff</strong> - Difficulty filter. A list of integers denoting the different difficulties. </p>
+<table>
+<thead>
+<tr>
+<th>diff</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>N/A (doesn't work)</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>Demons (use the <strong>demonFilter</strong> parameter to denote which demon type to search)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Easy</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hard</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Harder</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Insane</td>
+</tr>
+</tbody>
+</table>
+<p><strong>len</strong> - Length Filter.</p>
+<table>
+<thead>
+<tr>
+<th>len</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Tiny</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>4</td>
+<td>XL</td>
+</tr>
+</tbody>
+</table>
+<p><strong>page</strong> - Which page of levels you want to see</p>
+<p><strong>total</strong> - Current use is unknown, defaults to the amount of levels available, up to 9999, but leaving it out or as 0 works.</p>
+<p><strong>uncompleted</strong> - Uncompleted filter. 0 for off, 1 for on.</p>
+<p><strong>onlyCompleted</strong> - Completed filter. 0 for off, 1 for on.</p>
+<p><strong>featured</strong> - Featured filter. 0 for off, 1 for on.</p>
+<p><strong>original</strong> - Original filter. 0 for off, 1 for on.</p>
+<p><strong>twoPlayer</strong> - Two Player Mode filter. 0 for off, 1 for on.</p>
+<p><strong>coins</strong> - Coins filter. 0 for no coins, 1 for any amount of coins.</p>
+<p><strong>epic</strong> - Epic filter. 0 for off, 1 for on.</p>
+<p><strong>noStar</strong> - Unrated filter. Not sent when off, 1 for on.</p>
+<p><strong>star</strong> - Rated filter. Not sent when off, 1 for on.</p>
+<p><strong>song</strong> - Official song filter. Not sent when off.</p>
+<p><strong>customSong</strong> Enable newgrounds song filter, <strong>song</strong> parameter will be songID, Not sent when off</p>
+<p><strong>completedLevels</strong> - A comma separated list of completed levels enclosed in brackets. Only sent if the uncompleted or completed filter is enabled.</p>
+<p><strong>followed</strong> - Required if <code>type</code> is 12. A comma separated list of player IDs, <strong>not account IDs</strong> of the people you follow.</p>
+<p><strong>demonFilter</strong> - Denotes which difficulty of demon to search for if <code>diff</code> is -2. If left out it will search for all demons, otherwise it's 1-5 for Easy to Extreme, respectively.</p>
+<p><strong>secret</strong> - Wmfd2893gb7</p>
+<h2 id="response">Response</h2>
+<p>Returns a list of <a href="/resources/server/level">level objects</a> separated by pipes <code>|</code> and sorted by the parameters, a list of objects denoting the authors sorted by increasing player ID (format is <code>PLAYERID:USERNAME:ACCOUNTID</code>) which are also separated by pipes <code>|</code>, and a list of <a href="/resources/server/song">song objects</a> sorted by increasing song ID and separated by <code>~:~</code>. The indexers for each are <code>:</code>, <code>:</code> and <code>~|~</code> respectively.</p>
+<h2 id="example">Example</h2>
+<!-- tabs:start -->
+
+<h3 id="python"><strong>Python</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># This code gets the most recent epic-rated Hard Demons</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;secret&quot;</span><span class="p">:</span> <span class="s2">&quot;Wmfd2893gb7&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;diff&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;epic&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;demonFilter&quot;</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">}</span>
+
+<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;http://boomlings.com/database/getGJLevels21.php&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Response</strong>
+<div class="highlight"><pre><span></span><code><span class="mi">1</span><span class="p">:</span><span class="mi">62282482</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">DEAD</span> <span class="n">BEAT</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">28770186</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">94536</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">2990</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24971</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">56373</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">YWZ0ZXIgdGhyZWUgbW9udGhzIG9mIGhhcmQgd29yayBpIGZpbmFsbHkgcHJlc2VudCB0byB5b3UgdGhlIGxvbmcgYXdhaXRlZCBzZXF1ZWwgdG8gbXVyZGVyIG1lbG9keQ</span><span class="o">==</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">60376208</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">541786</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">62028241</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">Eternelle</span> <span class="n">Vehemence</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">4761912</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">89174</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">5187</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24968</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">65535</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">c3VmZmVyLCB1bnRpbCBldGVybml0eSBlbmRzLg</span><span class="o">==</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">896821</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">60927712</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">PERIHELION</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">9456326</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">8864</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">725</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24970</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">65535</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">VG9vayBmb3JldmVyIHRvIG1ha2UsICBidXQgaXQgaXMgZmluYWxseSBoZXJlLiBSZWxsIC0gU21pbnggLSBHYWx6byAtIFdoaXRlaGVhZCAtIFNwdTduaXggLSBXaWsgLSBLbm90cyAtIEh5cGVyZmxhbWU</span><span class="o">=</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">51261866</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">790560</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">59502709</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">Supreme</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">2595697</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">48776</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">2471</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24956</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">65535</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">aW5zZXJ0ICQzNTAgVVNEIHRvIHBsYXkgW0J5IENyZXBlcyAmIEVuWm9yZV0gZml4ZWQgYnVuY2ggb2YgYnVncyBhcm91bmQgOTAlICwgYW5kIGFkZGVkIFVMRE0gd2hlbiB5b3UgYWN0aXZhdGUgTERNICwgdXBkYXRlcyBjb21pbmcgc29vbg</span><span class="o">==</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">58794967</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">754856</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">59413155</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">HASH</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">1424041</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">28010</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">1576</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24953</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">52312</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">YSBsZXZlbCB3aXRoIG1hbnkgY29sb3Vycy4</span><span class="o">=</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">52863418</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">216300</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">59352979</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">RANYER</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">9441630</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">93328</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">3681</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24949</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">65535</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">YW1hemluZyBjb2xsYWJvcmF0aW9uIC4uIEkgaG9wZSB5b3UgbGlrZSBpdCAuLi4gd2l0aCBhIGxvdCBvZiBkZWRpY2F0aW9uIHdlIGJyaW5nIHlvdSByYW55ZXIgOikgZ29vZCBsdWNrIGFuZCBlbmpveSBpdCArOTAwMDAgT0JKIDowIExETT8gOyk</span><span class="o">=</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">59193188</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">658059</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">59315849</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">Double</span> <span class="n">Dash</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">3624826</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">102653</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">11269</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24953</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">65535</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">IkR1YWwgZ2FtZW1vZGUgaXMgdGhlIGJlc3QgZ2FtZW1vZGUiIH4gSm9uYXRoYW5HRCB8IEEgY29sb3JmdWwgMiBtaW51dGVzIG9mIG9ubHkgZHVhbHMgKCsgcGxheWVyIGNvbG9ycykgfCBHTCwgSEYsIGRvbid0IGRpZSBhdCA5OSUgOCk</span><span class="o">=</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">872453</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">59309294</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">Archaic</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">13003836</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">33708</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">1700</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24949</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">65535</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">QW1hemluZyBjb2xsYWIgd2l0aCBWbGFpbmUgYW5kIE1yY3lsZGUsIGdhbWVwbGF5IGJ5IEVuem9yZSBhbmQgR2FycC4gRW5qb3l5ISE</span><span class="o">=</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">59045071</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">791611</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">58994346</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">Agios</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">18682953</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">67315</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">2226</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24940</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">65535</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">N3RoIE5veHR1cm5hbCBUZWFtIE1DLCBXZSB1c2UgYSBsaXR0bGUgbmljZSB0aGVtZSBpbiB0aGlzISEgIEhvcGUgeW91IGVuam95IG91ciB3b3JrLi4gIFtWZXJpZmllZCBieSBTaXJaYWlzc10</span><span class="o">=</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">58581054</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">728233</span><span class="o">|</span><span class="mi">1</span><span class="p">:</span><span class="mi">58932971</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="n">Divine</span> <span class="n">Descendance</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">11876184</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">11239</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">13</span><span class="p">:</span><span class="mi">21</span><span class="p">:</span><span class="mi">14</span><span class="p">:</span><span class="mi">882</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">25</span><span class="p">::</span><span class="mi">18</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">24960</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mi">65535</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="n">VmVyaWZpZWQgYnkgaVRodW5kZXIxMiwgdmlkZW8gb24gaGlzIFlUIGNoYW5uZWw</span><span class="o">=</span><span class="p">:</span><span class="mi">15</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">37</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">35</span><span class="p">:</span><span class="mi">713127</span><span class="c1">#1424041:flash:127035|2595697:CrispyCrepes:117663|3624826:Zoroa:44967|4761912:Vrymer:411964|9441630:CatronixGD:1462499|9456326:Galzo:1463681|11876184:TroxxP1:2638799|13003836:SirZaiss:3749813|18682953:TeamNoX:5594928|28770186:swwft:6434750#1~|~216300~|~2~|~Necromancy (drum n bass)~|~3~|~772~|~4~|~zirconmusic~|~5~|~6.15~|~6~|~~|~10~|~http%3A%2F%2Faudio.ngfiles.com%2F216000%2F216300_04___Necromancy.mp3~|~7~|~~|~8~|~1~:~1~|~541786~|~2~|~NK - Fairydust~|~3~|~1895~|~4~|~Rukkus~|~5~|~7.37~|~6~|~~|~10~|~http%3A%2F%2Faudio.ngfiles.com%2F541000%2F541786_NK---Fairydust.mp3~|~7~|~~|~8~|~1~:~1~|~658059~|~2~|~Pursuit~|~3~|~2787~|~4~|~BoomKitty~|~5~|~7.28~|~6~|~~|~10~|~http%3A%2F%2Faudio.ngfiles.com%2F658000%2F658059_Pursuit.mp3~|~7~|~UCwHQ93ecuoQne93sgY-x8Nw~|~8~|~1~:~1~|~713127~|~2~|~Synergetic Enigma~|~3~|~1861~|~4~|~DanJohansen~|~5~|~10.21~|~6~|~~|~10~|~http%3A%2F%2Faudio.ngfiles.com%2F713000%2F713127_Synergetic-Enigma.mp3~|~7~|~~|~8~|~1~:~1~|~728233~|~2~|~FWLR - Badass Bae~|~3~|~50638~|~4~|~FWLRmusic~|~5~|~7.75~|~6~|~~|~10~|~https%3A%2F%2Faudio.ngfiles.com%2F728000%2F728233_FWLR---Badass-Bae.mp3%3Ff1486917017~|~7~|~~|~8~|~1~:~1~|~754856~|~2~|~[Complextro] Viscerality - Upgrade~|~3~|~48232~|~4~|~VisceralSounds~|~5~|~11.22~|~6~|~~|~10~|~http%3A%2F%2Faudio.ngfiles.com%2F754000%2F754856_Complextro-Viscerality---U.mp3~|~7~|~~|~8~|~1~:~1~|~790560~|~2~|~Forgathering Firefly~|~3~|~47526~|~4~|~Codly~|~5~|~12.79~|~6~|~~|~10~|~https%3A%2F%2Faudio.ngfiles.com%2F790000%2F790560_Forgathering-Firefly.mp3%3Ff1518710297~|~7~|~~|~8~|~1~:~1~|~791611~|~2~|~Viscerality - Bliss [Intervention EP]~|~3~|~48232~|~4~|~VisceralSounds~|~5~|~10.38~|~6~|~~|~10~|~https%3A%2F%2Faudio.ngfiles.com%2F791000%2F791611_Viscerality---Bliss-Interv.mp3%3Ff1519159342~|~7~|~~|~8~|~1~:~1~|~872453~|~2~|~Shining Sprinter~|~3~|~1068~|~4~|~megawolf77~|~5~|~3.51~|~6~|~~|~10~|~https%3A%2F%2Faudio.ngfiles.com%2F872000%2F872453_Shining-Sprinter.mp3%3Ff1562814299~|~7~|~~|~8~|~1~:~1~|~896821~|~2~|~Panda Eyes - Anybody Else~|~3~|~45754~|~4~|~PandaEyesOfficial~|~5~|~13.92~|~6~|~~|~10~|~https%3A%2F%2Faudio.ngfiles.com%2F896000%2F896821_Panda-Eyes---Anybody-Else.mp3%3Ff1575713545~|~7~|~~|~8~|~1#91:0:10#2a84bec46c4d1304c17b4c73252faf92be4dac24</span>
+</code></pre></div></p>
+<!-- tabs:end -->
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../get_level_leaderboard/" class="md-footer__link md-footer__link--prev" aria-label="Previous: getGJLevelScores211.php" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              getGJLevelScores211.php
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../get_map_packs/" class="md-footer__link md-footer__link--next" aria-label="Next: getGJMapPacks21.php" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              getGJMapPacks21.php
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>
