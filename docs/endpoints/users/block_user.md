@@ -4,7 +4,9 @@
 
 ## Endpoint
 
-The current endpoint is `blockGJUser20.php`.
+| method | endpoint            |
+|--------|---------------------|
+| `POST` | `blockGJUser20.php` |
 
 ## Parameters
 

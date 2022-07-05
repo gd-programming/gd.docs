@@ -4,7 +4,9 @@
 
 ## Endpoint
 
-The current endpoint is `deleteGJComment20.php`.
+| method | endpoint                |
+|--------|-------------------------|
+| `POST` | `deleteGJComment20.php` |
 
 ## Parameters
 
@@ -50,3 +52,7 @@ print(response.text)
 ```console
 1
 ```
+
+[passwords]: /resources/server/passwords
+[secrets]: /resources/server/secrets
+[versions]: /resources/server/versions

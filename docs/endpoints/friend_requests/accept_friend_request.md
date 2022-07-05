@@ -4,7 +4,9 @@
 
 ## Endpoint
 
-The current endpoint is `acceptGJFriendRequest20.php`.
+| method | endpoint                      |
+|--------|-------------------------------|
+| `POST` | `acceptGJFriendRequest20.php` |
 
 ## Parameters
 

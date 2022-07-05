@@ -10,6 +10,25 @@ remote_branch: github-pages
 watch:
   - docs
 
+nav:
+  - "Index": "index.md"
+  - "Credits": "credits.md"
+  - "Endpoints":
+    - "Comments":
+      - "Delete Account Comment": "endpoints/comments/delete_account_comment.md"
+      - "Delete Level Comment": "endpoints/comments/delete_level_comment.md"
+    - "Friend Requests":
+      - "Accept Friend Request": "endpoints/friend_requests/accept_friend_request.md"
+      - "Delete Friend Request": "endpoints/friend_requests/delete_friend_request.md"
+    - "Levels":
+      - "Delete Level": "endpoints/levels/delete_level.md"
+    - "Users":
+      - "Block User": "endpoints/users/block_user.md"
+  - "Resources":
+    - "Server":
+      - "Secrets": "resources/server/secrets.md"
+      - "Versions": "resources/server/versions.md"
+
 theme:
   name: material
   palette:
