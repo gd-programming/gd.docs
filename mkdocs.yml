@@ -22,12 +22,23 @@ nav:
       - "Delete Friend Request": "endpoints/friend_requests/delete_friend_request.md"
     - "Levels":
       - "Delete Level": "endpoints/levels/delete_level.md"
+      - "Download Level": "endpoints/levels/download_level.md"
+    - "Messages":
+      - "Delete Message": "endpoints/messages/delete_message.md"
     - "Users":
       - "Block User": "endpoints/users/block_user.md"
   - "Resources":
     - "Server":
       - "Secrets": "resources/server/secrets.md"
       - "Versions": "resources/server/versions.md"
+
+  - "Topics":
+    - "Encoding":
+      - "Base64": "topics/encoding/base64.md"
+      - "Checks": "topics/encoding/checks.md"
+      - "Random String, UUID and UDID": "topics/encoding/ids.md"
+      - "Seeds": "topics/encoding/seeds.md"
+      - "XOR": "topics/encoding/xor.md"
 
 theme:
   name: material

@@ -7,16 +7,16 @@ Each character in a string is essentially represented as bytes, to which *XOR* i
 ## XOR Cipher
 
 *XOR Cipher* elaborates on the idea of applying *XOR* to each to byte,
-one in the string and one in the key.
+one in the data and one in the key.
 
 Here are our *XOR Cipher* empty functions:
 
 ```python
-def xor(data: bytes, key: bytes) -> bytes:
+def cyclic_xor(data: bytes, key: bytes) -> bytes:
     ...
 
 
-def xor_string(string: str, key: str, encoding: str = ..., errors: str = ...) -> str:
+def cyclic_xor_string(string: str, key: str, encoding: str = ..., errors: str = ...) -> str:
     ...
 ```
 
@@ -25,8 +25,6 @@ then applies *XOR* operation for each pair.
 
 Returning back to the function:
 
-<!-- tabs:start -->
-
 ```python
 from itertools import cycle
 
@@ -34,11 +32,11 @@ DEFAULT_ENCODING = "utf-8"
 DEFAULT_ERRORS = "strict"
 
 
-def xor(data: bytes, key: bytes) -> bytes:
+def cyclic_xor(data: bytes, key: bytes) -> bytes:
     return bytes(byte ^ key_byte for byte, key_byte in zip(data, cycle(key)))
 
 
-def xor_string(
+def cyclic_xor_string(
     string: str, key: str, encoding: str = DEFAULT_ENCODING, errors: str = DEFAULT_ERRORS
 ) -> str:
     result = xor(string.encode(encoding, errors), key.encode(encoding, errors))
