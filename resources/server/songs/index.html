@@ -17,7 +17,7 @@
     
     
       
-        <title>Server Message Resource - gd.docs</title>
+        <title>Server Song Resource - gd.docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#server-message-resource" class="md-skip">
+        <a href="#server-song-resource" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Server Message Resource
+              Server Song Resource
             
           </span>
         </div>
@@ -506,6 +506,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../endpoints/messages/read_message/" class="md-nav__link">
+        Read Message
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -825,30 +839,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#message" class="md-nav__link">
-    Message
+  <a href="#song" class="md-nav__link">
+    Song
   </a>
   
-    <nav class="md-nav" aria-label="Message">
+    <nav class="md-nav" aria-label="Song">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-example-response" class="md-nav__link">
-    Message Example Response
+  <a href="#song-example" class="md-nav__link">
+    Song Example
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-structure" class="md-nav__link">
-    Message Structure
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trivia" class="md-nav__link">
-    Trivia
+  <a href="#song-structure" class="md-nav__link">
+    Song Structure
   </a>
   
 </li>
@@ -870,31 +877,34 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/resources/server/message.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/resources/server/songs.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="server-message-resource">Server Message Resource</h1>
-<h2 id="message">Message</h2>
-<p>Messages are a feature in Geometry dash where you can send messages to other players online if they have their messages open. There are two fields you can control within a message: <code>Subject</code> and <code>Message</code></p>
+<h1 id="server-song-resource">Server Song Resource</h1>
+<h2 id="song">Song</h2>
+<p>Songs in Geometry Dash are supplied through a partnership with a website called <a href="https://www.newgrounds.com/audio">Newgrounds</a>. To be used in community made levels, a song must pass <strong>3</strong> requirements</p>
 <blockquote>
-<p><code>Subject</code> can be viewed in a list in the messages menu - without any external tools, the <code>Subject</code> field only supports 35 characters</p>
-<p><code>Message</code> can be viewed only if you download the message by clicking on the <code>view</code> button in the messages menu - without any external tools, the <code>Messages</code> field only supports 200 characters</p>
+<ul>
+<li>The Song must be scouted by another artist from newgrounds</li>
+<li>The Song must be whitelisted either by Robtop or an <a href="/topics/moderators.md">Elder Moderator</a></li>
+<li>The artist must enable external API use in their song settings</li>
+</ul>
 </blockquote>
-<p>A typical message server response is structured with a <code>key:value:key:value</code> pairing and is then split with a <code>|</code></p>
+<p>The songs can be downloaded and used via a private API that only RobTop has access to</p>
+<p>A typical song server response is structured with a <code>key~|~value~|~key~|~value</code> pairing and is then split with a <code>:</code></p>
 <!-- tabs:start -->
 
-<h4 id="message-example-response"><strong>Message Example Response</strong></h4>
-<div class="highlight"><pre><span></span><code>6:DevExit:3:3935672:2:173831:1:54109536:4:WW91J3JlIGR1bWIgbG9s:8:1:9:0:5:TWhtIHllcCB5b3UncmUgcCBkdW1iIGxtYW8=:7:19 minutes
+<h4 id="song-example"><strong>Song Example</strong></h4>
+<div class="highlight"><pre><span></span><code>1~|~803223~|~2~|~Xtrullor - Arcana~|~3~|~2159~|~4~|~Xtrullor~|~5~|~8.81~|~6~|~~|~10~|~https%3A%2F%2Faudio.ngfiles.com%2F803000%2F803223_Xtrullor---Arcana.mp3%3Ff1524940372~|~7~|~UCejLri1RVC7kj8ZVNX2a53g      
 </code></pre></div>
 <!-- tabs:end -->
 
 <p>Each <code>key</code> is tied to a component within the client and the <code>value</code> sets data for the specific component.<br />
 A list of all known keys can be found in the table below</p>
-<h3 id="message-structure">Message Structure</h3>
-<p><strong>Note:</strong> We will use "other user" to describe the user on the other side of the message, be it the receiving end or the sending end.</p>
+<h4 id="song-structure">Song Structure</h4>
 <table>
 <thead>
 <tr>
@@ -907,69 +917,66 @@ A list of all known keys can be found in the table below</p>
 <tbody>
 <tr>
 <td>1</td>
-<td>messageID</td>
+<td>ID</td>
 <td><strong>Integer</strong></td>
-<td>The message ID</td>
+<td>The ID of the song on Newgrounds</td>
 </tr>
 <tr>
 <td>2</td>
-<td>accountID</td>
-<td><strong>Integer</strong></td>
-<td>The other user's account ID</td>
+<td>name</td>
+<td><strong>String</strong></td>
+<td>The name of the song</td>
 </tr>
 <tr>
 <td>3</td>
-<td>playerID</td>
+<td>artistID</td>
 <td><strong>Integer</strong></td>
-<td>The other user's player ID</td>
+<td>Newgrounds ArtistID</td>
 </tr>
 <tr>
 <td>4</td>
-<td>title</td>
+<td>artistName</td>
 <td><strong>String</strong></td>
-<td>The title encoded in <a href="/topics/encryption/base64.md">Base64</a></td>
+<td>The name of the artist who made the song</td>
 </tr>
 <tr>
 <td>5</td>
-<td>messageContent</td>
-<td><strong>String</strong></td>
-<td>The message which has been <a href="/topics/encryption/xor.md">Xor'd</a> with a key of <code>14251</code> and then encoded in <a href="/topics/encryption/base64.md">base64</a></td>
+<td>size</td>
+<td><strong>Integer</strong></td>
+<td>Size of the song in MB, rounded to two decimal places</td>
 </tr>
 <tr>
 <td>6</td>
-<td>userName</td>
+<td>videoID</td>
 <td><strong>String</strong></td>
-<td>The other user's username</td>
+<td>the Video ID for the songs YouTube Video</td>
 </tr>
 <tr>
 <td>7</td>
-<td>age</td>
+<td>youtubeURL</td>
 <td><strong>String</strong></td>
-<td>How long ago the message was sent (e.g. "2 months")</td>
+<td>The URL of the newgrounds user's youtube channel</td>
 </tr>
 <tr>
 <td>8</td>
-<td>read</td>
+<td>isVerified</td>
 <td><strong>Bool</strong></td>
-<td>0 if the message hasn't been read, 1 if it has</td>
+<td>if the song artist is scouted on newgrounds</td>
 </tr>
 <tr>
 <td>9</td>
-<td>sender</td>
-<td><strong>Bool</strong></td>
-<td>0 if the user is receiving the message, 1 if they sent it</td>
+<td>songPriority</td>
+<td><strong>Integer</strong></td>
+<td>priority over the song list</td>
+</tr>
+<tr>
+<td>10</td>
+<td>link</td>
+<td><strong>String</strong></td>
+<td>Link to the song's mp3</td>
 </tr>
 </tbody>
 </table>
-<h3 id="trivia">Trivia</h3>
-<ul>
-<li>
-<p>The current message system has a bug in which replying to a message will fail. This is because the client does not have any checks to see if the other user has their messages open when replying so if you send a reply to a user who has their messages closed, the request will return the error code <code>-1</code> resulting in it failing</p>
-</li>
-<li>
-<p>Due to an oversight, you are able to block yourself if you send yourself a message. <a href="https://github.com/Cvolton">Cvolton</a> explains this oversight in one of his <a href="https://www.youtube.com/watch?v=R18tKYFrIqE">videos</a></p>
-</li>
-</ul>
 
               
             </article>

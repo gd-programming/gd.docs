@@ -17,7 +17,7 @@
     
     
       
-        <title>Server Level Resource - gd.docs</title>
+        <title>Server Comment Resource - gd.docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#server-level-resource" class="md-skip">
+        <a href="#server-comment-resource" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Server Level Resource
+              Server Comment Resource
             
           </span>
         </div>
@@ -506,6 +506,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../endpoints/messages/read_message/" class="md-nav__link">
+        Read Message
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -825,31 +839,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#level" class="md-nav__link">
-    Level
+  <a href="#comment" class="md-nav__link">
+    Comment
   </a>
   
-    <nav class="md-nav" aria-label="Level">
+    <nav class="md-nav" aria-label="Comment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#level-example-response" class="md-nav__link">
-    Level Example Response
+  <a href="#comment-object" class="md-nav__link">
+    Comment Object
+  </a>
+  
+    <nav class="md-nav" aria-label="Comment Object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-comment-example" class="md-nav__link">
+    Level Comment Example
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#level-object" class="md-nav__link">
-    Level Object
+  <a href="#account-comment-example" class="md-nav__link">
+    Account Comment Example
   </a>
   
-    <nav class="md-nav" aria-label="Level Object">
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-structure" class="md-nav__link">
+    Comment Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-structure" class="md-nav__link">
+    User Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-bans" class="md-nav__link">
+    Comment Bans
+  </a>
+  
+    <nav class="md-nav" aria-label="Comment Bans">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#level-structure" class="md-nav__link">
-    Level Structure
+  <a href="#temporary-ban-structure" class="md-nav__link">
+    Temporary Ban Structure
   </a>
   
 </li>
@@ -883,29 +931,44 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/resources/server/level.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/resources/server/comments.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="server-level-resource">Server Level Resource</h1>
-<h2 id="level">Level</h2>
-<p>A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a <a href="/topics/levelstring_encoding_decoding">level string</a>.</p>
-<p>A typical level server response is structured with a <code>key:value:key:value</code> pairing and is then split with a <code>|</code></p>
-<p><em>keep in mind that the value for key <code>4</code> will be replaced with <code>{levelString}</code> as it is too big to show</em></p>
+<h1 id="server-comment-resource">Server Comment Resource</h1>
+<h2 id="comment">Comment</h2>
+<p>A Comment is a message that the player can create inside of Geometry Dash. There are <strong>Two</strong> types of comments: <code>Level Comments</code> and <code>Account Comments</code></p>
+<blockquote>
+<ul>
+<li><code>Level Comments</code> can be found after pressing the <code>i</code> button which is located on the right side of the level menu which then opens the Comment Menu - you can also view comments by clicking on the comment icon on the player Profile. To Post a comment, the player has to click on the speech bubble icon and they can type their comment. Without any external tools, a comment can be up to <strong>100</strong> Characters in length<br/><br/></li>
+<li><code>Account Comments</code> can be found on a user's profile. <code>Account Comments</code> are exactly the same as <code>Level Comments</code> however the following keys will not affect it: <code>10, 11, 12</code><br/>To Upload an Account Comment the player must click the speech bubble icon on their profile and they can type their comment. Without any external tools, a comment can be up to <strong>140</strong> Characters in length</li>
+</ul>
+</blockquote>
+<h3 id="comment-object">Comment Object</h3>
+<p>A comment object is split into two sections: a <code>Comment String</code> and an <code>Author String</code>. these two strings are divided by a <code>:</code></p>
+<blockquote>
+<ul>
+<li>The <code>Comment String</code> contains all the data regarding the comment itself<br/><br/></li>
+<li>The <code>User String</code> contains all the data regarding the user who is commenting</li>
+</ul>
+</blockquote>
+<p>The <code>Comment String</code> and <code>User String</code> are both structured with a <code>key~value~key~value</code> pairing. Here is some examples of raw responses from the server</p>
 <!-- tabs:start -->
 
-<h4 id="level-example-response"><strong>Level Example Response</strong></h4>
-<div class="highlight"><pre><span></span><code>1:6508283:2:ReTraY:3:VGhhbmtzIGZvciBwbGF5aW5nIEdlb21ldHJ5IERhc2g=:4:{levelString}:5:3:6:4993756:8:10:9:10:10:39431612:12:0:13:21:14:4125578:17::43:3:25::18:2:19:7730:42:0:45:20000:15:3:30:0:31:0:28:5 years:29:1 year:35:557117:36:0_733_0_0_0_0_574_716_0_0_352_78_729_0_42_0_833_68_0_347_0_38_240_205_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0:37:3:38:1:39:2:46:7729:47:13773:40:0:27:AwMABAYDBw==#eb541c03f8355c0709f8007a1d9a595ae5bedc5d#291568b26b08d70a198fca10a87c736a2823be0c
+<h4 id="level-comment-example"><strong>Level Comment Example</strong></h4>
+<div class="highlight"><pre><span></span><code>2~R0QgRG9jcyBhcmUgZXBpYw==~3~84696119~4~0~7~0~10~0~9~2 seconds~6~12872819:1~TheWylieMaster~9~1~10~4~11~16~14~3~15~2~16~9276649       
+</code></pre></div>
+<h4 id="account-comment-example"><strong>Account Comment Example</strong></h4>
+<div class="highlight"><pre><span></span><code>2~R0QgRG9jcyBhcmUgZXBpYw==~4~11~9~3 months~6~18083050
 </code></pre></div>
 <!-- tabs:end -->
 
 <p>Each <code>key</code> is tied to a component within the client and the <code>value</code> sets data for the specific component.<br />
 A list of all known keys can be found in the table below</p>
-<h3 id="level-object">Level Object</h3>
-<p>Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22 endpoint.</p>
-<h4 id="level-structure">Level Structure</h4>
+<h3 id="comment-structure">Comment Structure</h3>
+<p><strong>Note:</strong> Keys marked with an asterisk <code>*</code> do not affect <code>Account Comments</code></p>
 <table>
 <thead>
 <tr>
@@ -920,248 +983,169 @@ A list of all known keys can be found in the table below</p>
 <td>1</td>
 <td>levelID</td>
 <td><strong>Integer</strong></td>
-<td>The id of the level</td>
+<td>The levelID linked to the comment</td>
 </tr>
 <tr>
 <td>2</td>
-<td>levelName</td>
+<td>comment</td>
 <td><strong>String</strong></td>
-<td>The name of the level</td>
+<td>The comment left by the user, encoded in <a href="/topics/encryption/base64.md">base64</a></td>
 </tr>
 <tr>
 <td>3</td>
-<td>description</td>
-<td><strong>String</strong></td>
-<td>The level description, encoded in <a href="/topics/encryption/base64.md">base64</a></td>
+<td>authorPlayerID</td>
+<td><strong>Integer</strong></td>
+<td>The player ID of the comment author</td>
 </tr>
 <tr>
-<td>4*</td>
-<td>levelString</td>
-<td><strong><a href="/topics/levelstring_encoding_decoding">Level String</a></strong></td>
-<td>All the data for the level</td>
+<td>4</td>
+<td>likes</td>
+<td><strong>Integer</strong></td>
+<td>The amount of likes the comment has</td>
 </tr>
 <tr>
 <td>5</td>
-<td>version</td>
+<td>dislikes</td>
 <td><strong>Integer</strong></td>
-<td>The version of the level published</td>
+<td>The amount of dislikes the comment has -&gt; unused</td>
 </tr>
 <tr>
 <td>6</td>
-<td>playerID</td>
+<td>messageID</td>
 <td><strong>Integer</strong></td>
-<td>The player ID of the level author</td>
+<td>The message ID. Account comments have different IDs than level comments</td>
+</tr>
+<tr>
+<td>7</td>
+<td>spam</td>
+<td><strong>Bool</strong></td>
+<td>If a comment has been flagged as spam</td>
 </tr>
 <tr>
 <td>8</td>
-<td>difficultyDenominator</td>
+<td>authorAccountID</td>
 <td><strong>Integer</strong></td>
-<td>Returns 0 if the level is N/A, returns 10 if a difficulty is assigned. Historically used to be the amount of people who have voted on the difficulty.</td>
+<td>The accountID of the comment author</td>
 </tr>
 <tr>
 <td>9</td>
-<td>difficultyNumerator</td>
-<td><strong>Integer</strong></td>
-<td>The nominator used for calculating the level difficulty. Divided by the denominator to get the difficulty icon. Nowadays just 0 = unrated, 10 = easy, 20 = normal, 30 = hard, 40 = harder, 50 = insane. Can be also used to determine the demon difficulty as a side-effect of the voting system. Historically used to be the sum of stars from all votes</td>
+<td>age</td>
+<td><strong>String</strong></td>
+<td>How long ago the comment was posted (e.g. "2 months")</td>
 </tr>
 <tr>
 <td>10</td>
-<td>downloads</td>
+<td>percent*</td>
 <td><strong>Integer</strong></td>
-<td>The amount of times the level has been downloaded</td>
+<td>The percent the player put in their comment</td>
 </tr>
 <tr>
 <td>11</td>
-<td>setCompletes</td>
+<td>modBadge*</td>
 <td><strong>Integer</strong></td>
-<td>The Number of people who have completed a specific level removed in update 2.1</td>
+<td>The Mod Badge of a moderator commenting</td>
 </tr>
 <tr>
 <td>12</td>
-<td>officialSong</td>
-<td><strong>Integer</strong></td>
-<td>The official song number used by the level, if applicable</td>
+<td>moderatorChatColor*</td>
+<td><strong>String</strong></td>
+<td>Comma separated list of the RGB values of the moderator's chat color - only appears if the players <code>modBadge &gt; 0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-structure">User Structure</h3>
+<p><strong>Note:</strong> These values are only returned through <code>Level Comments</code></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Name/Value</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>userName</td>
+<td><strong>String</strong></td>
+<td>Author's username</td>
 </tr>
 <tr>
-<td>13</td>
-<td>gameVersion</td>
+<td>9</td>
+<td>icon</td>
 <td><strong>Integer</strong></td>
-<td>The GD version the level was uploaded in. Versions 1.0 to 1.6 use version numbers 1 to 7 respectively. Version 10 is 1.7. Otherwise, divide the version number by ten to get the correct number.</td>
+<td>Which icon the player is using, starting with 1 as the first icon</td>
+</tr>
+<tr>
+<td>10</td>
+<td>playerColor</td>
+<td><strong>Integer</strong></td>
+<td>Author's primary player color, presumably ordered cronologically from left to right per update</td>
+</tr>
+<tr>
+<td>11</td>
+<td>playerColor2</td>
+<td><strong>Integer</strong></td>
+<td>Author's secondary player color, presumably ordered cronologically from left to right per update</td>
 </tr>
 <tr>
 <td>14</td>
-<td>likes</td>
+<td>iconType</td>
 <td><strong>Integer</strong></td>
-<td>likes - dislikes</td>
+<td>Author's icon type indexing an array of <code>icon, ship, ball, ufo, wave, robot, spider</code></td>
 </tr>
 <tr>
 <td>15</td>
-<td>length</td>
+<td>glow</td>
 <td><strong>Integer</strong></td>
-<td>A number from 0-4, where 0 is tiny and 4 is XL</td>
+<td>0 = no glow, 2 = glow</td>
 </tr>
 <tr>
 <td>16</td>
-<td>dislikes</td>
+<td>accountID</td>
 <td><strong>Integer</strong></td>
-<td>dislikes - likes</td>
+<td>Author's account ID. <strong>This is different than the player ID</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="comment-bans">Comment Bans</h3>
+<p>If a user violates <a href="https://imgur.com/a/US0Biaj">the commenting rules</a>, they can be banned from posting comments.</p>
+<blockquote>
+<p>As of Geometry Dash version 2.11, there are 2 different types of bans<br/><br />
+- Permanent Bans - Only way to recieve one is by RobTop directly. The server response to trigger this is <code>-10</code><br />
+- Temporary Bans - Elder Moderators and RobTop are able to enforce these onto people. The server response to trigger temporary bans is split into 3 components <code>temp_{length}_{reason}</code></p>
+</blockquote>
+<h4 id="temporary-ban-structure">Temporary Ban Structure</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>temp</code></td>
+<td align="left">is used for the game to identify if the user is banned</td>
 </tr>
 <tr>
-<td>17</td>
-<td>demon</td>
-<td><strong>Bool</strong></td>
-<td>If the level's difficulty is demon</td>
+<td align="left"><code>length</code></td>
+<td align="left">The duration of the ban in seconds</td>
 </tr>
 <tr>
-<td>18</td>
-<td>stars</td>
-<td><strong>Integer</strong></td>
-<td>The amount of stars rewarded for completing the level</td>
-</tr>
-<tr>
-<td>19</td>
-<td>featureScore</td>
-<td><strong>Integer</strong></td>
-<td>0 if the level is not featured, otherwise a positive number. The higher it is, the higher the level appears on the featured levels list.</td>
-</tr>
-<tr>
-<td>25</td>
-<td>auto</td>
-<td><strong>Bool</strong></td>
-<td>If the level's difficulty is auto</td>
-</tr>
-<tr>
-<td>26</td>
-<td>recordString</td>
-<td><strong>String</strong></td>
-<td>appears in the <a href="https://imgur.com/a/S2bWLCC">GJGameLevel parser</a> but is unused</td>
-</tr>
-<tr>
-<td>27*</td>
-<td>password</td>
-<td><strong>Encrypted String</strong></td>
-<td>The password required to copy the level. It is XOR encrypted with a key of 26364</td>
-</tr>
-<tr>
-<td>28*</td>
-<td>uploadDate</td>
-<td><strong>String</strong></td>
-<td>The approximate date the level was uploaded on</td>
-</tr>
-<tr>
-<td>29*</td>
-<td>updateDate</td>
-<td><strong>String</strong></td>
-<td>The approximate date the level was last updated on</td>
-</tr>
-<tr>
-<td>30</td>
-<td>copiedID</td>
-<td><strong>Integer</strong></td>
-<td>The ID the of the original level (if the level was copied)</td>
-</tr>
-<tr>
-<td>31</td>
-<td>twoPlayer</td>
-<td><strong>Bool</strong></td>
-<td>Whether the level uses two player mode</td>
-</tr>
-<tr>
-<td>35</td>
-<td>customSongID</td>
-<td><strong>Integer</strong></td>
-<td>The ID of the custom Newgrounds song used in the level</td>
-</tr>
-<tr>
-<td>36</td>
-<td>extraString</td>
-<td><strong>String</strong></td>
-<td>The extraString passed when uploading the level. Its use is currently unknown</td>
-</tr>
-<tr>
-<td>37</td>
-<td>coins</td>
-<td><strong>Integer</strong></td>
-<td>The number of user coins placed in the level</td>
-</tr>
-<tr>
-<td>38</td>
-<td>verifiedCoins</td>
-<td><strong>Bool</strong></td>
-<td>If the level's user coins are verified (silver)</td>
-</tr>
-<tr>
-<td>39</td>
-<td>starsRequested</td>
-<td><strong>Integer</strong></td>
-<td>The star value requested for the level</td>
-</tr>
-<tr>
-<td>40*</td>
-<td>lowDetailMode</td>
-<td><strong>Bool</strong></td>
-<td>If the level has a low detail checkbox</td>
-</tr>
-<tr>
-<td>41*</td>
-<td>dailyNumber</td>
-<td><strong>Integer</strong></td>
-<td>Daily/weekly levels only. Returns which daily/weekly the level was (e.g. the 500th daily level). Subtract 100,000 if the level is weekly</td>
-</tr>
-<tr>
-<td>42</td>
-<td>epic</td>
-<td><strong>Integer</strong></td>
-<td>If the level has an epic rating</td>
-</tr>
-<tr>
-<td>43</td>
-<td>demon Difficulty</td>
-<td><strong>Integer</strong></td>
-<td>The difficulty of the demon rating. 3 = easy, 4 = medium, 0 = hard, 5 = insane, 6 = extreme. Can also be used to determine the level difficulty non-demons had before rating as a side-effect of the voting system.</td>
-</tr>
-<tr>
-<td>44</td>
-<td>isGauntlet</td>
-<td><strong>Bool</strong></td>
-<td>if the level is in a gauntlet</td>
-</tr>
-<tr>
-<td>45</td>
-<td>objects</td>
-<td><strong>Integer</strong></td>
-<td>The amount of objects in the level, used to determine if the level is considered "large". It caps at 65535</td>
-</tr>
-<tr>
-<td>46</td>
-<td>editorTime</td>
-<td><strong>Integer</strong></td>
-<td>the total number of seconds spend on the current copy of a level</td>
-</tr>
-<tr>
-<td>47</td>
-<td>editorTime(Copies)</td>
-<td><strong>Integer</strong></td>
-<td>The accumulative total of seconds spend on previous copies of the level</td>
-</tr>
-<tr>
-<td>48</td>
-<td>settingsString [Unused]</td>
-<td><strong>String</strong></td>
-<td>It was found in early 2.1 coming from the servers and was removed shortly after. The <code>December 2019 2.2 Leaks</code> however have information regarding it showing that it is called <code>settingsString</code> but, there is no information regarding its usage</td>
+<td align="left"><code>reason</code></td>
+<td align="left">The reason the user was banned</td>
 </tr>
 </tbody>
 </table>
 <h3 id="trivia">Trivia</h3>
 <ul>
 <li>
-<p>The getGJLevels endpoint returns the keys <code>46</code> and <code>47</code> however they aren't actually correct</p>
+<p>The <code>User String</code> uses the same response parser that <a href="/resources/server/user">player profiles</a> use</p>
 </li>
 <li>
-<p>key <code>45</code> caps at the 16-bit integer limit so any level with more objects won't be accurate</p>
-</li>
-<li>
-<p>Surprisingly, key <code>42</code> is classified as an <code>Integer</code> rather than a <code>Bool</code> </p>
+<p>The only example of <code>Account Comments</code> where it was able to display a colour is with <a href="https://gdbrowser.com/u/71">RobTop's</a> profile, this is because RobTop hardcoded the account colour into the accountID of <code>71</code></p>
 </li>
 </ul>
 

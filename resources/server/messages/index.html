@@ -17,7 +17,7 @@
     
     
       
-        <title>Server Friend Request Resource - gd.docs</title>
+        <title>Server Message Resource - gd.docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#server-friend-request-resource" class="md-skip">
+        <a href="#server-message-resource" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Server Friend Request Resource
+              Server Message Resource
             
           </span>
         </div>
@@ -506,6 +506,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../endpoints/messages/read_message/" class="md-nav__link">
+        Read Message
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -825,23 +839,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#friend-request" class="md-nav__link">
-    Friend Request
+  <a href="#message" class="md-nav__link">
+    Message
   </a>
   
-    <nav class="md-nav" aria-label="Friend Request">
+    <nav class="md-nav" aria-label="Message">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#friend-request-example" class="md-nav__link">
-    Friend Request Example
+  <a href="#message-example-response" class="md-nav__link">
+    Message Example Response
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#friend-request-structure" class="md-nav__link">
-    Friend Request Structure
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
   </a>
   
 </li>
@@ -870,27 +884,31 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/resources/server/friendrequest.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/resources/server/messages.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="server-friend-request-resource">Server Friend Request Resource</h1>
-<h2 id="friend-request">Friend Request</h2>
-<p>One of the features in Geometry Dash is the friend system which allows players to add each other as a friend. It is part of a poorly developed social System in which players can send messages to each other.</p>
-<p>The server response returns a <a href="/resources/server/user">User String</a> in a response which is structured with a <code>key:value:key:value</code> pairing. Each friend request string is then split with a <code>|</code></p>
+<h1 id="server-message-resource">Server Message Resource</h1>
+<h2 id="message">Message</h2>
+<p>Messages are a feature in Geometry dash where you can send messages to other players online if they have their messages open. There are two fields you can control within a message: <code>Subject</code> and <code>Message</code></p>
+<blockquote>
+<p><code>Subject</code> can be viewed in a list in the messages menu - without any external tools, the <code>Subject</code> field only supports 35 characters</p>
+<p><code>Message</code> can be viewed only if you download the message by clicking on the <code>view</code> button in the messages menu - without any external tools, the <code>Messages</code> field only supports 200 characters</p>
+</blockquote>
+<p>A typical message server response is structured with a <code>key:value:key:value</code> pairing and is then split with a <code>|</code></p>
 <!-- tabs:start -->
 
-<h4 id="friend-request-example"><strong>Friend Request Example</strong></h4>
-<div class="highlight"><pre><span></span><code>1:TheWylieMaster:2:84696119:9:9:10:5:11:3:14:1:15:0:16:9276649:32:45272143:35:aGVsbG8=:41:1:37:1 week        
+<h4 id="message-example-response"><strong>Message Example Response</strong></h4>
+<div class="highlight"><pre><span></span><code>6:DevExit:3:3935672:2:173831:1:54109536:4:WW91J3JlIGR1bWIgbG9s:8:1:9:0:5:TWhtIHllcCB5b3UncmUgcCBkdW1iIGxtYW8=:7:19 minutes
 </code></pre></div>
 <!-- tabs:end -->
 
 <p>Each <code>key</code> is tied to a component within the client and the <code>value</code> sets data for the specific component.<br />
 A list of all known keys can be found in the table below</p>
-<h4 id="friend-request-structure">Friend Request Structure</h4>
-<p><strong>Note:</strong> We will use "other user" to describe the user on the other side of the friend request, be it the receiving end or the sending end.</p>
+<h3 id="message-structure">Message Structure</h3>
+<p><strong>Note:</strong> We will use "other user" to describe the user on the other side of the message, be it the receiving end or the sending end.</p>
 <table>
 <thead>
 <tr>
@@ -903,81 +921,68 @@ A list of all known keys can be found in the table below</p>
 <tbody>
 <tr>
 <td>1</td>
-<td>userName</td>
-<td><strong>String</strong></td>
-<td>The username of the other user</td>
+<td>messageID</td>
+<td><strong>Integer</strong></td>
+<td>The message ID</td>
 </tr>
 <tr>
 <td>2</td>
+<td>accountID</td>
+<td><strong>Integer</strong></td>
+<td>The other user's account ID</td>
+</tr>
+<tr>
+<td>3</td>
 <td>playerID</td>
 <td><strong>Integer</strong></td>
-<td>The player ID of the other user. <strong>This is different than the account ID</strong></td>
+<td>The other user's player ID</td>
+</tr>
+<tr>
+<td>4</td>
+<td>title</td>
+<td><strong>String</strong></td>
+<td>The title encoded in <a href="/topics/encryption/base64.md">Base64</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>messageContent</td>
+<td><strong>String</strong></td>
+<td>The message which has been <a href="/topics/encryption/xor.md">Xor'd</a> with a key of <code>14251</code> and then encoded in <a href="/topics/encryption/base64.md">base64</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>userName</td>
+<td><strong>String</strong></td>
+<td>The other user's username</td>
+</tr>
+<tr>
+<td>7</td>
+<td>age</td>
+<td><strong>String</strong></td>
+<td>How long ago the message was sent (e.g. "2 months")</td>
+</tr>
+<tr>
+<td>8</td>
+<td>read</td>
+<td><strong>Bool</strong></td>
+<td>0 if the message hasn't been read, 1 if it has</td>
 </tr>
 <tr>
 <td>9</td>
-<td>icon</td>
-<td><strong>Integer</strong></td>
-<td>Which icon the other user is using, starting with 1 as the first icon</td>
-</tr>
-<tr>
-<td>10</td>
-<td>playerColor</td>
-<td><strong>Integer</strong></td>
-<td>The other user's primary player color, presumably ordered cronologically from left to right per update</td>
-</tr>
-<tr>
-<td>11</td>
-<td>playerColor2</td>
-<td><strong>Integer</strong></td>
-<td>The other user's secondary player color, presumably ordered cronologically from left to right per update</td>
-</tr>
-<tr>
-<td>14</td>
-<td>iconType</td>
-<td><strong>Integer</strong></td>
-<td>The other user's icon type indexing an array of <code>icon, ship, ball, ufo, wave, robot, spider</code></td>
-</tr>
-<tr>
-<td>15</td>
-<td>glow</td>
-<td><strong>Integer</strong></td>
-<td>Either 0 or 2, might be related to glow</td>
-</tr>
-<tr>
-<td>16</td>
-<td>accountID</td>
-<td><strong>Integer</strong></td>
-<td>The other user's account ID. <strong>This is different than the player ID</strong></td>
-</tr>
-<tr>
-<td>32</td>
-<td>friendRequestID</td>
-<td><strong>Integer</strong></td>
-<td>An ID unique to each friend request. (I'm not 100% certain on this)</td>
-</tr>
-<tr>
-<td>35</td>
-<td>message</td>
-<td><strong>String</strong></td>
-<td>The friend requests's message, encoded in <a href="/topics/encryption/base64.md">base64</a></td>
-</tr>
-<tr>
-<td>37</td>
-<td>age</td>
-<td><strong>String</strong></td>
-<td>How long ago the friend request was sent (e.g. "2 months")</td>
-</tr>
-<tr>
-<td>41</td>
-<td>NewFriendRequest</td>
+<td>sender</td>
 <td><strong>Bool</strong></td>
-<td>if the friend request is new</td>
+<td>0 if the user is receiving the message, 1 if they sent it</td>
 </tr>
 </tbody>
 </table>
 <h3 id="trivia">Trivia</h3>
 <ul>
-<li>By sending yourself a friend request through 3rd party tools, you can actually block yourself. Doing so doesn't have any serious consequences as you can see in this <a href="https://www.youtube.com/watch?v=R18tKYFrIqE">video by Cvolton</a></li>
+<li>
+<p>The current message system has a bug in which replying to a message will fail. This is because the client does not have any checks to see if the other user has their messages open when replying so if you send a reply to a user who has their messages closed, the request will return the error code <code>-1</code> resulting in it failing</p>
+</li>
+<li>
+<p>Due to an oversight, you are able to block yourself if you send yourself a message. <a href="https://github.com/Cvolton">Cvolton</a> explains this oversight in one of his <a href="https://www.youtube.com/watch?v=R18tKYFrIqE">videos</a></p>
+</li>
 </ul>
 
               

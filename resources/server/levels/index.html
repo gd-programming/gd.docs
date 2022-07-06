@@ -17,7 +17,7 @@
     
     
       
-        <title>Server Gauntlet Resource - gd.docs</title>
+        <title>Server Level Resource - gd.docs</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#server-gauntlet-resource" class="md-skip">
+        <a href="#server-level-resource" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Server Gauntlet Resource
+              Server Level Resource
             
           </span>
         </div>
@@ -506,6 +506,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../endpoints/messages/read_message/" class="md-nav__link">
+        Read Message
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -825,31 +839,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gauntlet-info" class="md-nav__link">
-    Gauntlet Info
+  <a href="#level" class="md-nav__link">
+    Level
   </a>
   
-    <nav class="md-nav" aria-label="Gauntlet Info">
+    <nav class="md-nav" aria-label="Level">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#gauntlet-example-response" class="md-nav__link">
-    Gauntlet Example Response
+  <a href="#level-example-response" class="md-nav__link">
+    Level Example Response
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gauntlet-structure" class="md-nav__link">
-    Gauntlet Structure
+  <a href="#level-object" class="md-nav__link">
+    Level Object
+  </a>
+  
+    <nav class="md-nav" aria-label="Level Object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#level-structure" class="md-nav__link">
+    Level Structure
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#gauntlet-names" class="md-nav__link">
-    Gauntlet names
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
@@ -877,37 +897,29 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/resources/server/gauntlet.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/resources/server/levels.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="server-gauntlet-resource">Server Gauntlet Resource</h1>
-<h2 id="gauntlet-info">Gauntlet Info</h2>
-<p>Gauntlets are a collection of themed levels created by the users of Geometry Dash which were hand-picked by RobTop.</p>
-<ul>
-<li>
-<p>As of Geometry Dash 2.11, There are <code>15 gauntlets</code></p>
-</li>
-<li>
-<p>According to the <a href="https://www.reddit.com/r/geometrydash/comments/e9b0y6/update_22_leaks_megathread/">December 2019 2.2 leaks</a>, 2.2 will include <code>44 Gauntlets</code></p>
-<ul>
-<li><strong>A list of the Gauntlet Names can be found <a href="/resources/server/gauntlet?id=gauntlet-names">here</a></strong><br/><em>Keep in mind that these are subject to change</em></li>
-</ul>
-</li>
-</ul>
-<p>A typical gauntlet server response is structured with a <code>key:value:key:value</code> pairing and is then split with a <code>|</code></p>
+<h1 id="server-level-resource">Server Level Resource</h1>
+<h2 id="level">Level</h2>
+<p>A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a <a href="/topics/levelstring_encoding_decoding">level string</a>.</p>
+<p>A typical level server response is structured with a <code>key:value:key:value</code> pairing and is then split with a <code>|</code></p>
+<p><em>keep in mind that the value for key <code>4</code> will be replaced with <code>{levelString}</code> as it is too big to show</em></p>
 <!-- tabs:start -->
 
-<h4 id="gauntlet-example-response"><strong>Gauntlet Example Response</strong></h4>
-<div class="highlight"><pre><span></span><code>1:1:3:27732941,28200611,27483789,28225110,27448202|1:2:3:20635816,28151870,25969464,24302376,27399722 
+<h4 id="level-example-response"><strong>Level Example Response</strong></h4>
+<div class="highlight"><pre><span></span><code>1:6508283:2:ReTraY:3:VGhhbmtzIGZvciBwbGF5aW5nIEdlb21ldHJ5IERhc2g=:4:{levelString}:5:3:6:4993756:8:10:9:10:10:39431612:12:0:13:21:14:4125578:17::43:3:25::18:2:19:7730:42:0:45:20000:15:3:30:0:31:0:28:5 years:29:1 year:35:557117:36:0_733_0_0_0_0_574_716_0_0_352_78_729_0_42_0_833_68_0_347_0_38_240_205_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0_0:37:3:38:1:39:2:46:7729:47:13773:40:0:27:AwMABAYDBw==#eb541c03f8355c0709f8007a1d9a595ae5bedc5d#291568b26b08d70a198fca10a87c736a2823be0c
 </code></pre></div>
 <!-- tabs:end -->
 
 <p>Each <code>key</code> is tied to a component within the client and the <code>value</code> sets data for the specific component.<br />
 A list of all known keys can be found in the table below</p>
-<h3 id="gauntlet-structure">Gauntlet Structure</h3>
+<h3 id="level-object">Level Object</h3>
+<p>Keys indicated with an asterisk (*) are only returned from the downloadGJLevel22 endpoint.</p>
+<h4 id="level-structure">Level Structure</h4>
 <table>
 <thead>
 <tr>
@@ -920,211 +932,251 @@ A list of all known keys can be found in the table below</p>
 <tbody>
 <tr>
 <td>1</td>
-<td>gauntletID</td>
+<td>levelID</td>
 <td><strong>Integer</strong></td>
-<td>the Gauntlet ID, starting at 1</td>
+<td>The id of the level</td>
+</tr>
+<tr>
+<td>2</td>
+<td>levelName</td>
+<td><strong>String</strong></td>
+<td>The name of the level</td>
 </tr>
 <tr>
 <td>3</td>
-<td>levels</td>
+<td>description</td>
 <td><strong>String</strong></td>
-<td>List of gauntlet level IDs seperated by <code>,</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="gauntlet-names">Gauntlet names</h3>
-<p>Here is a table which shows which <code>gauntletID</code> corresponds to a specific gauntlet</p>
-<!-- table made with a json to mdtable script so it looks ugky :/-->
-
-<table>
-<thead>
-<tr>
-<th align="left">ID ⠀</th>
-<th align="left">Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">1</td>
-<td align="left">Fire</td>
+<td>The level description, encoded in <a href="/topics/encryption/base64.md">base64</a></td>
 </tr>
 <tr>
-<td align="left">2</td>
-<td align="left">Ice</td>
+<td>4*</td>
+<td>levelString</td>
+<td><strong><a href="/topics/levelstring_encoding_decoding">Level String</a></strong></td>
+<td>All the data for the level</td>
 </tr>
 <tr>
-<td align="left">3</td>
-<td align="left">Poison</td>
+<td>5</td>
+<td>version</td>
+<td><strong>Integer</strong></td>
+<td>The version of the level published</td>
 </tr>
 <tr>
-<td align="left">4</td>
-<td align="left">Shadow</td>
+<td>6</td>
+<td>playerID</td>
+<td><strong>Integer</strong></td>
+<td>The player ID of the level author</td>
 </tr>
 <tr>
-<td align="left">5</td>
-<td align="left">Lava</td>
+<td>8</td>
+<td>difficultyDenominator</td>
+<td><strong>Integer</strong></td>
+<td>Returns 0 if the level is N/A, returns 10 if a difficulty is assigned. Historically used to be the amount of people who have voted on the difficulty.</td>
 </tr>
 <tr>
-<td align="left">6</td>
-<td align="left">Bonus</td>
+<td>9</td>
+<td>difficultyNumerator</td>
+<td><strong>Integer</strong></td>
+<td>The nominator used for calculating the level difficulty. Divided by the denominator to get the difficulty icon. Nowadays just 0 = unrated, 10 = easy, 20 = normal, 30 = hard, 40 = harder, 50 = insane. Can be also used to determine the demon difficulty as a side-effect of the voting system. Historically used to be the sum of stars from all votes</td>
 </tr>
 <tr>
-<td align="left">7</td>
-<td align="left">Chaos</td>
+<td>10</td>
+<td>downloads</td>
+<td><strong>Integer</strong></td>
+<td>The amount of times the level has been downloaded</td>
 </tr>
 <tr>
-<td align="left">8</td>
-<td align="left">Demon</td>
+<td>11</td>
+<td>setCompletes</td>
+<td><strong>Integer</strong></td>
+<td>The Number of people who have completed a specific level removed in update 2.1</td>
 </tr>
 <tr>
-<td align="left">9</td>
-<td align="left">Time</td>
+<td>12</td>
+<td>officialSong</td>
+<td><strong>Integer</strong></td>
+<td>The official song number used by the level, if applicable</td>
 </tr>
 <tr>
-<td align="left">10</td>
-<td align="left">Crystal</td>
+<td>13</td>
+<td>gameVersion</td>
+<td><strong>Integer</strong></td>
+<td>The GD version the level was uploaded in. Versions 1.0 to 1.6 use version numbers 1 to 7 respectively. Version 10 is 1.7. Otherwise, divide the version number by ten to get the correct number.</td>
 </tr>
 <tr>
-<td align="left">11</td>
-<td align="left">Magic</td>
+<td>14</td>
+<td>likes</td>
+<td><strong>Integer</strong></td>
+<td>likes - dislikes</td>
 </tr>
 <tr>
-<td align="left">12</td>
-<td align="left">spike</td>
+<td>15</td>
+<td>length</td>
+<td><strong>Integer</strong></td>
+<td>A number from 0-4, where 0 is tiny and 4 is XL</td>
 </tr>
 <tr>
-<td align="left">13</td>
-<td align="left">Monster</td>
+<td>16</td>
+<td>dislikes</td>
+<td><strong>Integer</strong></td>
+<td>dislikes - likes</td>
 </tr>
 <tr>
-<td align="left">14</td>
-<td align="left">Doom</td>
+<td>17</td>
+<td>demon</td>
+<td><strong>Bool</strong></td>
+<td>If the level's difficulty is demon</td>
 </tr>
 <tr>
-<td align="left">15</td>
-<td align="left">Death</td>
+<td>18</td>
+<td>stars</td>
+<td><strong>Integer</strong></td>
+<td>The amount of stars rewarded for completing the level</td>
 </tr>
 <tr>
-<td align="left">16</td>
-<td align="left">Forest</td>
+<td>19</td>
+<td>featureScore</td>
+<td><strong>Integer</strong></td>
+<td>0 if the level is not featured, otherwise a positive number. The higher it is, the higher the level appears on the featured levels list.</td>
 </tr>
 <tr>
-<td align="left">17</td>
-<td align="left">Rune</td>
+<td>25</td>
+<td>auto</td>
+<td><strong>Bool</strong></td>
+<td>If the level's difficulty is auto</td>
 </tr>
 <tr>
-<td align="left">18</td>
-<td align="left">Force</td>
+<td>26</td>
+<td>recordString</td>
+<td><strong>String</strong></td>
+<td>appears in the <a href="https://imgur.com/a/S2bWLCC">GJGameLevel parser</a> but is unused</td>
 </tr>
 <tr>
-<td align="left">19</td>
-<td align="left">Spooky</td>
+<td>27*</td>
+<td>password</td>
+<td><strong>Encrypted String</strong></td>
+<td>The password required to copy the level. It is XOR encrypted with a key of 26364</td>
 </tr>
 <tr>
-<td align="left">20</td>
-<td align="left">Dragon</td>
+<td>28*</td>
+<td>uploadDate</td>
+<td><strong>String</strong></td>
+<td>The approximate date the level was uploaded on</td>
 </tr>
 <tr>
-<td align="left">21</td>
-<td align="left">Water</td>
+<td>29*</td>
+<td>updateDate</td>
+<td><strong>String</strong></td>
+<td>The approximate date the level was last updated on</td>
 </tr>
 <tr>
-<td align="left">22</td>
-<td align="left">Haunted</td>
+<td>30</td>
+<td>copiedID</td>
+<td><strong>Integer</strong></td>
+<td>The ID the of the original level (if the level was copied)</td>
 </tr>
 <tr>
-<td align="left">23</td>
-<td align="left">Acid</td>
+<td>31</td>
+<td>twoPlayer</td>
+<td><strong>Bool</strong></td>
+<td>Whether the level uses two player mode</td>
 </tr>
 <tr>
-<td align="left">24</td>
-<td align="left">Witch</td>
+<td>35</td>
+<td>customSongID</td>
+<td><strong>Integer</strong></td>
+<td>The ID of the custom Newgrounds song used in the level</td>
 </tr>
 <tr>
-<td align="left">25</td>
-<td align="left">Power</td>
+<td>36</td>
+<td>extraString</td>
+<td><strong>String</strong></td>
+<td>The extraString passed when uploading the level. Its use is currently unknown</td>
 </tr>
 <tr>
-<td align="left">26</td>
-<td align="left">Potion</td>
+<td>37</td>
+<td>coins</td>
+<td><strong>Integer</strong></td>
+<td>The number of user coins placed in the level</td>
 </tr>
 <tr>
-<td align="left">27</td>
-<td align="left">Snake</td>
+<td>38</td>
+<td>verifiedCoins</td>
+<td><strong>Bool</strong></td>
+<td>If the level's user coins are verified (silver)</td>
 </tr>
 <tr>
-<td align="left">28</td>
-<td align="left">Toxic</td>
+<td>39</td>
+<td>starsRequested</td>
+<td><strong>Integer</strong></td>
+<td>The star value requested for the level</td>
 </tr>
 <tr>
-<td align="left">29</td>
-<td align="left">Halloween</td>
+<td>40*</td>
+<td>lowDetailMode</td>
+<td><strong>Bool</strong></td>
+<td>If the level has a low detail checkbox</td>
 </tr>
 <tr>
-<td align="left">30</td>
-<td align="left">Treasure</td>
+<td>41*</td>
+<td>dailyNumber</td>
+<td><strong>Integer</strong></td>
+<td>Daily/weekly levels only. Returns which daily/weekly the level was (e.g. the 500th daily level). Subtract 100,000 if the level is weekly</td>
 </tr>
 <tr>
-<td align="left">31</td>
-<td align="left">Ghost</td>
+<td>42</td>
+<td>epic</td>
+<td><strong>Integer</strong></td>
+<td>If the level has an epic rating</td>
 </tr>
 <tr>
-<td align="left">32</td>
-<td align="left">Gem</td>
+<td>43</td>
+<td>demon Difficulty</td>
+<td><strong>Integer</strong></td>
+<td>The difficulty of the demon rating. 3 = easy, 4 = medium, 0 = hard, 5 = insane, 6 = extreme. Can also be used to determine the level difficulty non-demons had before rating as a side-effect of the voting system.</td>
 </tr>
 <tr>
-<td align="left">33</td>
-<td align="left">Inferno</td>
+<td>44</td>
+<td>isGauntlet</td>
+<td><strong>Bool</strong></td>
+<td>if the level is in a gauntlet</td>
 </tr>
 <tr>
-<td align="left">34</td>
-<td align="left">Portal</td>
+<td>45</td>
+<td>objects</td>
+<td><strong>Integer</strong></td>
+<td>The amount of objects in the level, used to determine if the level is considered "large". It caps at 65535</td>
 </tr>
 <tr>
-<td align="left">35</td>
-<td align="left">Strange</td>
+<td>46</td>
+<td>editorTime</td>
+<td><strong>Integer</strong></td>
+<td>the total number of seconds spend on the current copy of a level</td>
 </tr>
 <tr>
-<td align="left">36</td>
-<td align="left">Fantasy</td>
+<td>47</td>
+<td>editorTime(Copies)</td>
+<td><strong>Integer</strong></td>
+<td>The accumulative total of seconds spend on previous copies of the level</td>
 </tr>
 <tr>
-<td align="left">37</td>
-<td align="left">Christmas</td>
-</tr>
-<tr>
-<td align="left">38</td>
-<td align="left">Surprise</td>
-</tr>
-<tr>
-<td align="left">39</td>
-<td align="left">Mystery</td>
-</tr>
-<tr>
-<td align="left">40</td>
-<td align="left">Cursed</td>
-</tr>
-<tr>
-<td align="left">41</td>
-<td align="left">Cyborg</td>
-</tr>
-<tr>
-<td align="left">42</td>
-<td align="left">Castle</td>
-</tr>
-<tr>
-<td align="left">43</td>
-<td align="left">Grave</td>
-</tr>
-<tr>
-<td align="left">44</td>
-<td align="left">Temple</td>
+<td>48</td>
+<td>settingsString [Unused]</td>
+<td><strong>String</strong></td>
+<td>It was found in early 2.1 coming from the servers and was removed shortly after. The <code>December 2019 2.2 Leaks</code> however have information regarding it showing that it is called <code>settingsString</code> but, there is no information regarding its usage</td>
 </tr>
 </tbody>
 </table>
 <h3 id="trivia">Trivia</h3>
 <ul>
-<li>Gauntlets use the same response parser as <a href="/resources/server/mappack">MapPacks</a> but they do not share the full range of features mappacks have</li>
+<li>
+<p>The getGJLevels endpoint returns the keys <code>46</code> and <code>47</code> however they aren't actually correct</p>
+</li>
+<li>
+<p>key <code>45</code> caps at the 16-bit integer limit so any level with more objects won't be accurate</p>
+</li>
+<li>
+<p>Surprisingly, key <code>42</code> is classified as an <code>Integer</code> rather than a <code>Bool</code> </p>
+</li>
 </ul>
 
               
