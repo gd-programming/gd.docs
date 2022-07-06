@@ -15,8 +15,8 @@
 | `gjp`?           | The [encoded password][passwords] of the user downloading the level.                  |
 | `udid`?          | The [UDID][udid] of the user who is downloading the level.                            |
 | `uuid`?          | The [UUID][uuid] of the downloading the level.                                        |
-| `inc`?           | Unknown functionality. Set to `1`.                                                    |
-| `extras`?        | Unknown functionality. Set to `0`.                                                    |
+| `inc`?           | Whether to count the download towards total downloads. Usually set to `1`.            |
+| `extras`?        | Currently not used. Set to `0`.                                                       |
 | `rs`?            | Random string. See [here][random_string].                                             |
 | `chk`?           | Check. See [here][download_level].                                                    |
 

@@ -13,6 +13,7 @@ watch:
 nav:
   - "Index": "index.md"
   - "Credits": "credits.md"
+
   - "Endpoints":
     - "Comments":
       - "Delete Account Comment": "endpoints/comments/delete_account_comment.md"
@@ -25,8 +26,10 @@ nav:
       - "Download Level": "endpoints/levels/download_level.md"
     - "Messages":
       - "Delete Message": "endpoints/messages/delete_message.md"
+      - "Read Message": "endpoints/messages/read_message.md"
     - "Users":
       - "Block User": "endpoints/users/block_user.md"
+
   - "Resources":
     - "Server":
       - "Secrets": "resources/server/secrets.md"
