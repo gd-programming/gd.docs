@@ -37,11 +37,17 @@ nav:
 
   - "Topics":
     - "Encoding":
+      - "AES": "topics/encoding/aes.md"
       - "Base64": "topics/encoding/base64.md"
       - "Checks": "topics/encoding/checks.md"
       - "Random String, UUID and UDID": "topics/encoding/ids.md"
+      - "RobTop Encoding": "topics/encoding/robtop.md"
       - "Seeds": "topics/encoding/seeds.md"
       - "XOR": "topics/encoding/xor.md"
+      - "ZIP": "topics/encoding/zip.md"
+
+    - "Error Codes": "topics/error_codes.md"
+    - "Vault Codes": "topics/vault_codes.md"
 
 theme:
   name: material
