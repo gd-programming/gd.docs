@@ -681,12 +681,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -728,6 +730,20 @@
           Encoding
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encoding/aes/" class="md-nav__link">
+        AES
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -777,6 +793,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../encoding/robtop/" class="md-nav__link">
+        RobTop Encoding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../encoding/seeds/" class="md-nav__link">
         Seeds
       </a>
@@ -799,8 +829,119 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../encoding/zip/" class="md-nav__link">
+        ZIP
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../error_codes.md" class="md-nav__link">
+        Error Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Vault Codes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Vault Codes
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#encoding" class="md-nav__link">
+    Encoding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-vault" class="md-nav__link">
+    The Vault
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vault-of-secrets" class="md-nav__link">
+    Vault of Secrets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chamber-of-time" class="md-nav__link">
+    Chamber of Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -839,22 +980,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vault-code-encryption" class="md-nav__link">
-    Vault Code Encryption
-  </a>
-  
-    <nav class="md-nav" aria-label="Vault Code Encryption">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#table-of-vault-codes" class="md-nav__link">
-    Table of Vault codes
+  <a href="#encoding" class="md-nav__link">
+    Encoding
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#the-vault" class="md-nav__link">
+    The Vault
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vault-of-secrets" class="md-nav__link">
+    Vault of Secrets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chamber-of-time" class="md-nav__link">
+    Chamber of Time
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
   
 </li>
       
@@ -877,167 +1033,150 @@
 
 
 <h1 id="vault-codes">Vault Codes</h1>
-<p>In Geometry Dash 2.1 there are three different vaults you can access. The Vault, Vault of Secrets and the Chamber of Time. Each vault has a select number of passwords that you can enter to unlock icons and colors.</p>
-<h2 id="vault-code-encryption">Vault Code Encryption</h2>
-<p>The Vault: Codes are in plaintext and arent encrypted</p>
-<p>Vault of Secrets and Chamber of time: [VaultCode] + ask2fpcaqCQ2 -&gt; Xor with a key of 19283 -&gt; base64 encode</p>
-<h3 id="table-of-vault-codes">Table of Vault codes</h3>
+<p>In <em>Geometry Dash</em> there are three different vaults you can access: [The Vault][#the-vault],
+[Vault of Secrets][#vault-of-secrets] and [Chamber of Time][#chamber-of-time].</p>
+<p>Each vault has a number of codes that you can enter to unlock icons and colors.</p>
+<h2 id="encoding">Encoding</h2>
+<p>[The Vault][#the-vault]: Codes are in plain text (not encoded).</p>
+<p>[Vault of Secrets][#vault-of-secrets] and [Chamber of Time][#chamber-of-time]: <code>ask2fpcaqCQ2</code>
+is added to the code, then <a href="/topics/encoding/robtop.md">robtop encoding</a> is applied.</p>
+<h2 id="the-vault">The Vault</h2>
 <table>
 <thead>
 <tr>
-<th>Vault Type</th>
-<th>Code</th>
-<th>Rewards</th>
-<th>notes</th>
+<th>code</th>
+<th>reward</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>The Vault</td>
-<td>spooky</td>
-<td>Cube</td>
-<td></td>
+<td><code>spooky</code></td>
+<td>cube</td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>lenny</td>
-<td>Cube</td>
-<td></td>
+<td><code>lenny</code></td>
+<td>cube</td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>your in-game name</td>
-<td>Cube</td>
-<td></td>
+<td><code>{name}</code>*</td>
+<td>cube</td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>mule</td>
+<td><code>mule</code></td>
 <td>ship</td>
-<td></td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>blockbite</td>
-<td>ufo</td>
-<td></td>
+<td><code>blockbite</code></td>
+<td>UFO</td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>neverending</td>
-<td>ufo</td>
-<td></td>
+<td><code>neverending</code></td>
+<td>UFO</td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>ahead</td>
+<td><code>ahead</code></td>
 <td>wave</td>
-<td></td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>8, 16, 30, 32, 46, 84</td>
+<td><code>8</code>, <code>16</code>, <code>30</code>, <code>32</code>, <code>46</code>, <code>84</code>**</td>
 <td>wave</td>
-<td>(you enter 1 at a time consecutively)</td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>robotop</td>
+<td><code>robotop</code></td>
 <td>robot</td>
-<td></td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>gandalfpotter</td>
+<td><code>gandalfpotter</code></td>
 <td>trail</td>
-<td></td>
 </tr>
 <tr>
-<td>The Vault</td>
-<td>sparky</td>
+<td><code>sparky</code></td>
 <td>coin</td>
-<td></td>
-</tr>
-<tr>
-<td>Vault of Secrets</td>
-<td>your star count</td>
-<td>cube</td>
-<td></td>
-</tr>
-<tr>
-<td>Vault of Secrets</td>
-<td>CodeBreaker</td>
-<td>cube</td>
-<td>you are given a sequence of numbers you have to subtract the numbers from each other and the code is all the numbers subtracted combined if the numbers were 1,2,4,8,16,32 then you would do 2-1, 4-2, 8-4, 16-8, 32-16 and the code would then be 124816</td>
-</tr>
-<tr>
-<td>Vault of Secrets</td>
-<td>brainpower</td>
-<td>cube</td>
-<td></td>
-</tr>
-<tr>
-<td>Vault of Secrets</td>
-<td>octocube</td>
-<td>cube</td>
-<td></td>
-</tr>
-<tr>
-<td>Vault of Secrets</td>
-<td>seven</td>
-<td>cube</td>
-<td></td>
-</tr>
-<tr>
-<td>Vault of Secrets</td>
-<td>thechickenisonfire</td>
-<td>colour2</td>
-<td></td>
-</tr>
-<tr>
-<td>Vault of Secrets</td>
-<td>gimmethecolor</td>
-<td>color1</td>
-<td></td>
-</tr>
-<tr>
-<td>Vault of Secrets</td>
-<td>glubflub</td>
-<td>coin</td>
-<td></td>
-</tr>
-<tr>
-<td>Chamber Of Time</td>
-<td>silence</td>
-<td>cube</td>
-<td></td>
-</tr>
-<tr>
-<td>Chamber Of Time</td>
-<td>hunger</td>
-<td>cube</td>
-<td></td>
-</tr>
-<tr>
-<td>Chamber Of Time</td>
-<td>darkness</td>
-<td>cube</td>
-<td></td>
-</tr>
-<tr>
-<td>Chamber Of Time</td>
-<td>volcano</td>
-<td>wave</td>
-<td>'a volcano' also works</td>
-</tr>
-<tr>
-<td>Chamber Of Time</td>
-<td>river</td>
-<td>color2</td>
-<td>'a river' also works</td>
 </tr>
 </tbody>
 </table>
+<h2 id="vault-of-secrets">Vault of Secrets</h2>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th>reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{stars}</code></td>
+<td>cube</td>
+</tr>
+<tr>
+<td><code>cod3breaker</code></td>
+<td>cube</td>
+</tr>
+<tr>
+<td><code>brainpower</code></td>
+<td>cube</td>
+</tr>
+<tr>
+<td><code>octocube</code></td>
+<td>cube</td>
+</tr>
+<tr>
+<td><code>seven</code></td>
+<td>cube</td>
+</tr>
+<tr>
+<td><code>thechickenisonfire</code></td>
+<td>secondary color</td>
+</tr>
+<tr>
+<td><code>gimmethecolor</code></td>
+<td>primary color</td>
+</tr>
+<tr>
+<td><code>glubflub</code></td>
+<td>coin</td>
+</tr>
+</tbody>
+</table>
+<h2 id="chamber-of-time">Chamber of Time</h2>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th>reward</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>silence</code></td>
+<td>cube</td>
+</tr>
+<tr>
+<td><code>hunger</code></td>
+<td>cube</td>
+</tr>
+<tr>
+<td><code>darkness</code></td>
+<td>cube</td>
+</tr>
+<tr>
+<td><code>volcano</code></td>
+<td>wave</td>
+</tr>
+<tr>
+<td><code>river</code></td>
+<td>secondary color</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notes">Notes</h2>
+<p>* <code>name</code> is the in-game name of the player.</p>
+<p>** Consecutively enter one code at a time.</p>
+<p>*** <code>stars</code> is the in-game count of stars the player has.</p>
+<p>**** You will be given a sequence of numbers. You need to find difference between each
+overlapping pair of numbers, combining the results into the final code.
+For example, for sequence <code>1, 2, 4, 8, 16, 32</code> the differences are <code>1, 2, 4, 8, 16</code>,
+therefore the final code is <code>124816</code>.</p>
 
               
             </article>
@@ -1048,6 +1187,27 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../encoding/zip/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ZIP" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              ZIP
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
