@@ -931,13 +931,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1007,13 +1000,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1033,12 +1019,12 @@
 
 
 <h1 id="vault-codes">Vault Codes</h1>
-<p>In <em>Geometry Dash</em> there are three different vaults you can access: [The Vault][#the-vault],
-[Vault of Secrets][#vault-of-secrets] and [Chamber of Time][#chamber-of-time].</p>
+<p>In <em>Geometry Dash</em> there are three different vaults you can access: <a href="#the-vault">The Vault</a>,
+<a href="#vault-of-secrets">Vault of Secrets</a> and <a href="#chamber-of-time">Chamber of Time</a>.</p>
 <p>Each vault has a number of codes that you can enter to unlock icons and colors.</p>
 <h2 id="encoding">Encoding</h2>
-<p>[The Vault][#the-vault]: Codes are in plain text (not encoded).</p>
-<p>[Vault of Secrets][#vault-of-secrets] and [Chamber of Time][#chamber-of-time]: <code>ask2fpcaqCQ2</code>
+<p><a href="#the-vault">The Vault</a>: Codes are in plain text (not encoded).</p>
+<p><a href="#vault-of-secrets">Vault of Secrets</a> and <a href="#chamber-of-time">Chamber of Time</a>: <code>ask2fpcaqCQ2</code>
 is added to the code, then <a href="/topics/encoding/robtop.md">robtop encoding</a> is applied.</p>
 <h2 id="the-vault">The Vault</h2>
 <table>
@@ -1095,6 +1081,8 @@ is added to the code, then <a href="/topics/encoding/robtop.md">robtop encoding<
 </tr>
 </tbody>
 </table>
+<p>* <code>name</code> is the in-game name of the player.</p>
+<p>** Consecutively enter one code at a time.</p>
 <h2 id="vault-of-secrets">Vault of Secrets</h2>
 <table>
 <thead>
@@ -1105,11 +1093,11 @@ is added to the code, then <a href="/topics/encoding/robtop.md">robtop encoding<
 </thead>
 <tbody>
 <tr>
-<td><code>{stars}</code></td>
+<td><code>{stars}</code>*</td>
 <td>cube</td>
 </tr>
 <tr>
-<td><code>cod3breaker</code></td>
+<td><code>cod3breaker</code>**</td>
 <td>cube</td>
 </tr>
 <tr>
@@ -1138,6 +1126,11 @@ is added to the code, then <a href="/topics/encoding/robtop.md">robtop encoding<
 </tr>
 </tbody>
 </table>
+<p>* <code>stars</code> is the in-game count of stars the player has.
+** You will be given a sequence of numbers. You need to find difference between each
+overlapping pair of numbers, combining the results into the final code.
+For example, for sequence <code>1, 2, 4, 8, 16, 32</code> the differences are <code>1, 2, 4, 8, 16</code>,
+therefore the final code is <code>124816</code>.</p>
 <h2 id="chamber-of-time">Chamber of Time</h2>
 <table>
 <thead>
@@ -1169,14 +1162,6 @@ is added to the code, then <a href="/topics/encoding/robtop.md">robtop encoding<
 </tr>
 </tbody>
 </table>
-<h2 id="notes">Notes</h2>
-<p>* <code>name</code> is the in-game name of the player.</p>
-<p>** Consecutively enter one code at a time.</p>
-<p>*** <code>stars</code> is the in-game count of stars the player has.</p>
-<p>**** You will be given a sequence of numbers. You need to find difference between each
-overlapping pair of numbers, combining the results into the final code.
-For example, for sequence <code>1, 2, 4, 8, 16, 32</code> the differences are <code>1, 2, 4, 8, 16</code>,
-therefore the final code is <code>124816</code>.</p>
 
               
             </article>
