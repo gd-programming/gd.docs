@@ -22,8 +22,7 @@ Gets a list of levels.
 
 **gauntlet** - The ID of the gauntlet that's currently being loaded.
 
-**type** - Controls the fetch priority.   
-and if this is left out it's most liked
+**type** - Controls the fetch priority. By default it's most liked.
 
 | type | desc |
 | ---- | ---- |
@@ -47,19 +46,21 @@ and if this is left out it's most liked
 | 21 | Daily History |
 | 22 | Weekly History |
 
-**str** - Search string, required when `type` is 5 or 10
+**str** - Search string, required when `type` is 5 or 10.
 
-**diff** - Difficulty filter. A list of integers denoting the different difficulties. 
+**diff** - Difficulty filter. A list of integers denoting the different difficulties. Negative difficulties are ignored when any positive one is specified.
 
 | diff | desc |
 | ---- | ---- |
-| -1 | N/A (doesn't work) |
-| -2 | Demons (use the **demonFilter** parameter to denote which demon type to search) |
+| -1 | N/A (doesn't work, always returns no results) |
+| -2 | Demons (use the `demonFilter` parameter to denote which demon type to search) (exclusive from -3) |
+| -3 | Auto (exclusive from -2) |
 | 1 | Easy |
 | 2 | Normal |
 | 3 | Hard |
 | 4 | Harder |
 | 5 | Insane |
+| 6–10 | Easy to Extreme Demon, respectively |
 
 **len** - Length Filter.
 
@@ -71,9 +72,11 @@ and if this is left out it's most liked
 | 3 | Long |
 | 4 | XL |
 
-**page** - Which page of levels you want to see
+**page** - Which page of levels you want to see.
 
-**total** - Current use is unknown, defaults to the amount of levels available, up to 9999, but leaving it out or as 0 works.
+**total** - Current use is unknown, defaults to the amount of levels available, up to 9999. Most likely it's a caching system for avoiding excessive execution of expensive COUNT database queries.
+
+**count** - Size of a single page of levels. Capped at 10.
 
 **uncompleted** - Uncompleted filter. 0 for off, 1 for on.
 
@@ -95,15 +98,13 @@ and if this is left out it's most liked
 
 **song** - Official song filter. Not sent when off.
 
-**customSong** Enable newgrounds song filter, **song** parameter will be songID, Not sent when off
+**customSong** - Enable newgrounds song filter, **song** parameter will be songID. Not sent when off.
 
 **completedLevels** - A comma separated list of completed levels enclosed in brackets. Only sent if the uncompleted or completed filter is enabled.
 
 **followed** - Required if `type` is 12. A comma separated list of player IDs, **not account IDs** of the people you follow.
 
 **demonFilter** - Denotes which difficulty of demon to search for if `diff` is -2. If left out it will search for all demons, otherwise it's 1-5 for Easy to Extreme, respectively.
-
-**secret** - Wmfd2893gb7
 
 ## Response
 
@@ -124,7 +125,7 @@ data = {
     "secret": "Wmfd2893gb7",
     "type": 4,
     "diff": -2,
-	"epic": 1,
+    "epic": 1,
     "demonFilter": 3
 }
 
