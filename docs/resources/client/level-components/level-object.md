@@ -162,7 +162,7 @@ The following key ranges are potentially discarded features, whose appearance in
     <th>Key End</th>
   </tr>
   <tr>
-    <td align="center">18</td>
+    <td align="center" colspan="2">18</td>
   </tr>
   <tr>
     <td align="center">26</td>
