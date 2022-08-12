@@ -78,7 +78,7 @@ Here are all of the different color id's:
 `LIGHTER`: A lighter version of the primary color in objects. Used in the white small blocks found in `build tab 2 on page 6`.
 
 ### 1.9 color channel ID's
-GD's 1.9 version used a different ID scheme to identify color channels. In 2.1, these IDs are still present, but only used in the `1.9 Color Channel ID` property of 1.9 objects. They are as follows:
+GD's 1.9 version used a different ID scheme to identify color channels. In 2.1, these IDs are still present, but only used in the legacy `1.9 Color Channel ID` property of 1.9 objects. They are as follows:
 | 1.9 Channel ID | Name | Corresponding 2.1 ID |
 |:----|:---------|:-----------------------------|
 | `1` | **P1**    | `1005`
