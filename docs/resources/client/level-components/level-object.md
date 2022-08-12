@@ -63,6 +63,7 @@ Property keys reflect the keys found in the following table, whereas property va
 | 15  | Player Color 1                       | **bool**                                        | the Player Color 1 property of any Color trigger                                   |
 | 16  | Player Color 2                       | **bool**                                        | the Player Color 2 property of any Color trigger                                   |
 | 17  | Blending                             | **bool**                                        | the Blending property of any Color trigger                                         |
+| 19  | 1.9 Color Channel ID                 | **integer**                                     | the legacy Color Channel ID property used in 1.9 levels. If set to a valid value, both the Main and Secondary Color Channel ID properties will be ignored. |
 | 20  | Editor Layer 1                       | **integer**                                     | the Editor Layer 1 property of the object                                          |
 | 21  | Main Color Channel ID                | **integer**                                     | the Main Color Channel ID property of the object                                   |
 | 22  | Secondary Color Channel ID           | **integer**                                     | the Secondary Color Channel ID property of the object                              |
@@ -162,7 +163,6 @@ The following key ranges are potentially discarded features, whose appearance in
   </tr>
   <tr>
     <td align="center">18</td>
-    <td align="center">19</td>
   </tr>
   <tr>
     <td align="center">26</td>
