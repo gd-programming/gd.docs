@@ -11,43 +11,46 @@ watch:
   - docs
 
 nav:
-  - "Index": "index.md"
-  - "Credits": "credits.md"
+  - Index: "index.md"
+  - Credits: "credits.md"
 
-  - "Endpoints":
-    - "Comments":
-      - "Delete Account Comment": "endpoints/comments/delete_account_comment.md"
-      - "Delete Level Comment": "endpoints/comments/delete_level_comment.md"
-    - "Friend Requests":
-      - "Accept Friend Request": "endpoints/friend_requests/accept_friend_request.md"
-      - "Delete Friend Request": "endpoints/friend_requests/delete_friend_request.md"
-    - "Levels":
-      - "Delete Level": "endpoints/levels/delete_level.md"
-      - "Download Level": "endpoints/levels/download_level.md"
-    - "Messages":
-      - "Delete Message": "endpoints/messages/delete_message.md"
-      - "Read Message": "endpoints/messages/read_message.md"
-    - "Users":
-      - "Block User": "endpoints/users/block_user.md"
+  - Server:
+    - Endpoints:
+      - Comments:
+        - Delete Level Comment: "server/endpoints/comments/delete_level_comment.md"
+        - Delete User Comment: "server/endpoints/comments/delete_user_comment.md"
+      - Friend Requests:
+        - Accept Friend Request: "server/endpoints/friend_requests/accept_friend_request.md"
+        - Delete Friend Request: "server/endpoints/friend_requests/delete_friend_request.md"
+      - Levels:
+        - Get Level: "server/endpoints/levels/get_level.md"
+        - Delete Level: "server/endpoints/levels/delete_level.md"
+      - Messages:
+        - Delete Message: "server/endpoints/messages/delete_message.md"
+        - Get Message: "server/endpoints/messages/get_message.md"
+      - Users:
+        - Block User: "server/endpoints/users/block_user.md"
 
-  - "Resources":
-    - "Server":
-      - "Secrets": "resources/server/secrets.md"
-      - "Versions": "resources/server/versions.md"
+    - Topics:
+      - Error Codes: "server/topics/error_codes.md"
+      - Secrets: "server/topics/secrets.md"
+      - Versions: "server/topics/versions.md"
 
-  - "Topics":
-    - "Encoding":
-      - "AES": "topics/encoding/aes.md"
-      - "Base64": "topics/encoding/base64.md"
-      - "Checks": "topics/encoding/checks.md"
-      - "Random String, UUID and UDID": "topics/encoding/ids.md"
-      - "RobTop Encoding": "topics/encoding/robtop.md"
-      - "Seeds": "topics/encoding/seeds.md"
-      - "XOR": "topics/encoding/xor.md"
-      - "ZIP": "topics/encoding/zip.md"
+  - Client:
+    - Topics:
+      - Vault Codes: "client/topics/vault_codes.md"
 
-    - "Error Codes": "topics/error_codes.md"
-    - "Vault Codes": "topics/vault_codes.md"
+  - Encoding:
+    - AES: "encoding/aes.md"
+    - Base64: "encoding/base64.md"
+    - Checks: "encoding/checks.md"
+    - Random String, UUID and UDID: "encoding/ids.md"
+    - RobTop Encoding: "encoding/robtop.md"
+    - Seeds: "encoding/seeds.md"
+    - XOR: "encoding/xor.md"
+    - ZIP: "encoding/zip.md"
+
+  - Code of Conduct: "code_of_conduct.md"
 
 theme:
   name: material

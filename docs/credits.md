@@ -5,7 +5,6 @@ making this project a reality. Without you, this project wouldn't have even been
 
 ## Staff Team
 
-- [SMJS][SMJS]
 - [nekit][nekit]
 - [zmx][zmx]
 - [Wylie][Wylie]
@@ -17,7 +16,6 @@ making this project a reality. Without you, this project wouldn't have even been
 - [Cvolton][Cvolton]
 - [Colon][Colon]
 
-[SMJS]: https://github.com/SMJSGaming
 [nekit]: https://github.com/nekitdev
 [zmx]: https://github.com/qimiko
 [Wylie]: https://github.com/Wyliemaster

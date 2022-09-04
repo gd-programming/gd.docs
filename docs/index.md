@@ -34,7 +34,7 @@ their way here, as a listing of resources people can use for their own projects.
 These are projects that generally interface over the *Geometry Dash* servers and client,
 and overall have built up their own recognition and traction along the community and developers alike.
 
-#### Node JS
+#### Node
 
 - [GDBrowser][GDBrowser] by [Colon][Colon]
 
@@ -51,7 +51,6 @@ Make sure to hit us up on our discord, and show us of such!
 [gd.docs]: https://docs.gd-programming.org/
 
 [Discord]: https://gd-programming.org/discord
-[GDDocs]: https://docs.gd-programming.org/
 [GitHub]: https://github.com/gd-programming/gd.docs
 
 [gd.py]: https://github.com/nekitdev/gd.py

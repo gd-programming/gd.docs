@@ -65,4 +65,4 @@ Ideas on what to add or improve can be found in the [issues][Issues] section of 
 [Discord]: https://gd-programming.org/discord
 [Issues]: https://github.com/gd-programming/gd.docs/issues
 [Badge]: https://github.com/gd-programming/gd.docs/workflows/docs/badge.svg
-[Icon]: https://github.com/gd-programming/gd.docs/blob/main/assets/icons/gd.docs.png?raw=true
+[Icon]: https://github.com/gd-programming/gd.docs/blob/docs/assets/icons/gd.docs.png?raw=true
