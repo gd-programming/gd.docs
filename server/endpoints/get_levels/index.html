@@ -1040,8 +1040,7 @@
 <p><strong>accountID</strong> - The account ID of the user who is searching the levels. Only sent when <strong>type</strong> is set to 8, 13 or when <strong>type</strong> is set to 5 and you are loading your own levels.</p>
 <p><strong>gjp</strong> - The <a href="/topics/encryption/gjp.md">GJP</a> of the user who is searching the levels. Only sent when <strong>type</strong> is set to 5, 8 or 13.</p>
 <p><strong>gauntlet</strong> - The ID of the gauntlet that's currently being loaded.</p>
-<p><strong>type</strong> - Controls the fetch priority. <br />
-and if this is left out it's most liked</p>
+<p><strong>type</strong> - Controls the fetch priority. By default it's most liked.</p>
 <table>
 <thead>
 <tr>
@@ -1128,8 +1127,8 @@ and if this is left out it's most liked</p>
 </tr>
 </tbody>
 </table>
-<p><strong>str</strong> - Search string, required when <code>type</code> is 5 or 10</p>
-<p><strong>diff</strong> - Difficulty filter. A list of integers denoting the different difficulties. </p>
+<p><strong>str</strong> - Search string, required when <code>type</code> is 5 or 10.</p>
+<p><strong>diff</strong> - Difficulty filter. A list of integers denoting the different difficulties. Negative difficulties are ignored when any positive one is specified.</p>
 <table>
 <thead>
 <tr>
@@ -1140,11 +1139,15 @@ and if this is left out it's most liked</p>
 <tbody>
 <tr>
 <td>-1</td>
-<td>N/A (doesn't work)</td>
+<td>N/A (doesn't work, always returns no results)</td>
 </tr>
 <tr>
 <td>-2</td>
-<td>Demons (use the <strong>demonFilter</strong> parameter to denote which demon type to search)</td>
+<td>Demons (use the <code>demonFilter</code> parameter to denote which demon type to search) (exclusive from -3)</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>Auto (exclusive from -2)</td>
 </tr>
 <tr>
 <td>1</td>
@@ -1165,6 +1168,10 @@ and if this is left out it's most liked</p>
 <tr>
 <td>5</td>
 <td>Insane</td>
+</tr>
+<tr>
+<td>6–10</td>
+<td>Easy to Extreme Demon, respectively</td>
 </tr>
 </tbody>
 </table>
@@ -1199,8 +1206,9 @@ and if this is left out it's most liked</p>
 </tr>
 </tbody>
 </table>
-<p><strong>page</strong> - Which page of levels you want to see</p>
-<p><strong>total</strong> - Current use is unknown, defaults to the amount of levels available, up to 9999, but leaving it out or as 0 works.</p>
+<p><strong>page</strong> - Which page of levels you want to see.</p>
+<p><strong>total</strong> - Current use is unknown, defaults to the amount of levels available, up to 9999. Most likely it's a caching system for avoiding excessive execution of expensive COUNT database queries.</p>
+<p><strong>count</strong> - Size of a single page of levels. Capped at 10.</p>
 <p><strong>uncompleted</strong> - Uncompleted filter. 0 for off, 1 for on.</p>
 <p><strong>onlyCompleted</strong> - Completed filter. 0 for off, 1 for on.</p>
 <p><strong>featured</strong> - Featured filter. 0 for off, 1 for on.</p>
@@ -1211,11 +1219,10 @@ and if this is left out it's most liked</p>
 <p><strong>noStar</strong> - Unrated filter. Not sent when off, 1 for on.</p>
 <p><strong>star</strong> - Rated filter. Not sent when off, 1 for on.</p>
 <p><strong>song</strong> - Official song filter. Not sent when off.</p>
-<p><strong>customSong</strong> Enable newgrounds song filter, <strong>song</strong> parameter will be songID, Not sent when off</p>
+<p><strong>customSong</strong> - Enable newgrounds song filter, <strong>song</strong> parameter will be songID. Not sent when off.</p>
 <p><strong>completedLevels</strong> - A comma separated list of completed levels enclosed in brackets. Only sent if the uncompleted or completed filter is enabled.</p>
 <p><strong>followed</strong> - Required if <code>type</code> is 12. A comma separated list of player IDs, <strong>not account IDs</strong> of the people you follow.</p>
 <p><strong>demonFilter</strong> - Denotes which difficulty of demon to search for if <code>diff</code> is -2. If left out it will search for all demons, otherwise it's 1-5 for Easy to Extreme, respectively.</p>
-<p><strong>secret</strong> - Wmfd2893gb7</p>
 <h2 id="response">Response</h2>
 <p>Returns a list of <a href="/resources/server/level">level objects</a> separated by pipes <code>|</code> and sorted by the parameters, a list of objects denoting the authors sorted by increasing player ID (format is <code>PLAYERID:USERNAME:ACCOUNTID</code>) which are also separated by pipes <code>|</code>, and a list of <a href="/resources/server/song">song objects</a> sorted by increasing song ID and separated by <code>~:~</code>. The indexers for each are <code>:</code>, <code>:</code> and <code>~|~</code> respectively.</p>
 <h2 id="example">Example</h2>
