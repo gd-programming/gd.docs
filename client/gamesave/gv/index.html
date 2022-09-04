@@ -1,0 +1,1688 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Geometry Dash.">
+      
+      
+        <meta name="author" content="nekitdev">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Game Variables - gd.docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#game-variables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="gd.docs" class="md-header__button md-logo" aria-label="gd.docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            gd.docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Game Variables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gd-programming/gd.docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gd-programming/gd.docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="gd.docs" class="md-nav__button md-logo" aria-label="gd.docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    gd.docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gd-programming/gd.docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    gd-programming/gd.docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Server
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Server" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Server
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Endpoints
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Endpoints" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Endpoints
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1">
+          Comments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Comments" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Comments
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/comments/delete_level_comment/" class="md-nav__link">
+        Delete Level Comment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/comments/delete_user_comment/" class="md-nav__link">
+        Delete User Comment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_2" type="checkbox" id="__nav_3_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_2">
+          Friend Requests
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Friend Requests" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Friend Requests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/friend_requests/accept_friend_request/" class="md-nav__link">
+        Accept Friend Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/friend_requests/delete_friend_request/" class="md-nav__link">
+        Delete Friend Request
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_3" type="checkbox" id="__nav_3_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_3">
+          Levels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Levels" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Levels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/levels/get_level/" class="md-nav__link">
+        Get Level
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/levels/delete_level/" class="md-nav__link">
+        Delete Level
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_4" type="checkbox" id="__nav_3_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_4">
+          Messages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Messages" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Messages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/messages/delete_message/" class="md-nav__link">
+        Delete Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/messages/get_message/" class="md-nav__link">
+        Get Message
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_5" type="checkbox" id="__nav_3_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_5">
+          Users
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Users" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          Users
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/endpoints/users/block_user/" class="md-nav__link">
+        Block User
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Topics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/topics/error_codes/" class="md-nav__link">
+        Error Codes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/topics/secrets/" class="md-nav__link">
+        Secrets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../server/topics/versions/" class="md-nav__link">
+        Versions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Client
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Client" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Topics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/vault_codes/" class="md-nav__link">
+        Vault Codes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Encoding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Encoding" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Encoding
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../encoding/aes/" class="md-nav__link">
+        AES
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../encoding/base64/" class="md-nav__link">
+        Base64
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../encoding/checks/" class="md-nav__link">
+        Checks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../encoding/ids/" class="md-nav__link">
+        Random String, UUID and UDID
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../encoding/robtop/" class="md-nav__link">
+        RobTop Encoding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../encoding/seeds/" class="md-nav__link">
+        Seeds
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../encoding/xor/" class="md-nav__link">
+        XOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../encoding/zip/" class="md-nav__link">
+        ZIP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../code_of_conduct/" class="md-nav__link">
+        Code of Conduct
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gv-structure" class="md-nav__link">
+    GV Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="GV Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2019-leak-gvs" class="md-nav__link">
+    2019 Leak GV's
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/gd-programming/gd.docs/edit/master/docs/client/gamesave/gv.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="game-variables">Game Variables</h1>
+<p>Game Variables (gvs) are found inside of the <a href="/resources/client/gamesave/valueKeeper.md">ValueKeeper</a> Dictionary and each gv value corresponds with a specific ingame setting</p>
+<h2 id="gv-structure">GV Structure</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">gv_0001</td>
+<td align="left">Follow PLayer (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0002</td>
+<td align="left">play Music (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0003</td>
+<td align="left">Swipe (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0004</td>
+<td align="left">Free Move (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0005</td>
+<td align="left">Delete filter (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0006</td>
+<td align="left">Delete custom objectID (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0007</td>
+<td align="left">Toggle rotate (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0008</td>
+<td align="left">Toggle snap (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0009</td>
+<td align="left">Ignore Damage (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0010</td>
+<td align="left">flip2PlayerControls</td>
+</tr>
+<tr>
+<td align="left">gv_0011</td>
+<td align="left">alwaysLimitControls</td>
+</tr>
+<tr>
+<td align="left">gv_0012</td>
+<td align="left">showedCommentingRules</td>
+</tr>
+<tr>
+<td align="left">gv_0013</td>
+<td align="left">increaseMaxUndoRedo</td>
+</tr>
+<tr>
+<td align="left">gv_0014</td>
+<td align="left">disableExplosionShake</td>
+</tr>
+<tr>
+<td align="left">gv_0015</td>
+<td align="left">flipPauseButton</td>
+</tr>
+<tr>
+<td align="left">gv_0016</td>
+<td align="left">showedSongTOS</td>
+</tr>
+<tr>
+<td align="left">gv_0018</td>
+<td align="left">noSongLimit</td>
+</tr>
+<tr>
+<td align="left">gv_0019</td>
+<td align="left">songsInMemory</td>
+</tr>
+<tr>
+<td align="left">gv_0022</td>
+<td align="left">higherAudioQuality</td>
+</tr>
+<tr>
+<td align="left">gv_0023</td>
+<td align="left">smoothFix</td>
+</tr>
+<tr>
+<td align="left">gv_0024</td>
+<td align="left">showCursor In-Game</td>
+</tr>
+<tr>
+<td align="left">gv_0025</td>
+<td align="left">Windowed Mode</td>
+</tr>
+<tr>
+<td align="left">gv_0026</td>
+<td align="left">autoRetry</td>
+</tr>
+<tr>
+<td align="left">gv_0027</td>
+<td align="left">autoCheckpoints</td>
+</tr>
+<tr>
+<td align="left">gv_0028</td>
+<td align="left">disableThumbstick</td>
+</tr>
+<tr>
+<td align="left">gv_0029</td>
+<td align="left">showedOptionsText</td>
+</tr>
+<tr>
+<td align="left">gv_0030</td>
+<td align="left">vsyncEnabled</td>
+</tr>
+<tr>
+<td align="left">gv_0031</td>
+<td align="left">callGLFinish -&gt; seems to be unused</td>
+</tr>
+<tr>
+<td align="left">gv_0032</td>
+<td align="left">forceTimerEnabled -&gt; seems to be unused</td>
+</tr>
+<tr>
+<td align="left">gv_0033</td>
+<td align="left">ChangeSongPath</td>
+</tr>
+<tr>
+<td align="left">gv_0034</td>
+<td align="left">GameCenterEnabled</td>
+</tr>
+<tr>
+<td align="left">gv_0036</td>
+<td align="left">PreviewMode (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0037</td>
+<td align="left">showGround (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0038</td>
+<td align="left">showGrid (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0039</td>
+<td align="left">gridOnTop (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0040</td>
+<td align="left">showPercentage</td>
+</tr>
+<tr>
+<td align="left">gv_0041</td>
+<td align="left">showObjectInfo (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0042</td>
+<td align="left">increaseMaxLevels</td>
+</tr>
+<tr>
+<td align="left">gv_0043</td>
+<td align="left">effectLinesEnabled (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0044</td>
+<td align="left">drawTriggerBoxes (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0045</td>
+<td align="left">debugDraw (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0046</td>
+<td align="left">hideUIOnTest (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0047</td>
+<td align="left">showedProfileText</td>
+</tr>
+<tr>
+<td align="left">gv_0048</td>
+<td align="left">viewedOwnProfile</td>
+</tr>
+<tr>
+<td align="left">gv_0049</td>
+<td align="left">buttonsPerRow (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0050</td>
+<td align="left">buttonRows (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0051</td>
+<td align="left">showedNGMessage (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0052</td>
+<td align="left">fastPracticeReset</td>
+</tr>
+<tr>
+<td align="left">gv_0053</td>
+<td align="left">Free Games Popup</td>
+</tr>
+<tr>
+<td align="left">gv_0055</td>
+<td align="left">checkIfServerOnline.php</td>
+</tr>
+<tr>
+<td align="left">gv_0056</td>
+<td align="left">disableObjectAlert</td>
+</tr>
+<tr>
+<td align="left">gv_0057</td>
+<td align="left">editorHoldToSwipe</td>
+</tr>
+<tr>
+<td align="left">gv_0058</td>
+<td align="left">durationLines (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0059</td>
+<td align="left">swipeCycleMode</td>
+</tr>
+<tr>
+<td align="left">gv_0060</td>
+<td align="left">defaultMiniIcon</td>
+</tr>
+<tr>
+<td align="left">gv_0061</td>
+<td align="left">switchSpiderTeleportColor</td>
+</tr>
+<tr>
+<td align="left">gv_0062</td>
+<td align="left">switchDashFireColor</td>
+</tr>
+<tr>
+<td align="left">gv_0063</td>
+<td align="left">showedUnverifiedCoinsMessage</td>
+</tr>
+<tr>
+<td align="left">gv_0064</td>
+<td align="left">selectFilter (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0065</td>
+<td align="left">enableMoveOptimization</td>
+</tr>
+<tr>
+<td align="left">gv_0066</td>
+<td align="left">highCapacityMode</td>
+</tr>
+<tr>
+<td align="left">gv_0067</td>
+<td align="left">highStartPosAccuracy</td>
+</tr>
+<tr>
+<td align="left">gv_0068</td>
+<td align="left">quickCheckpointMode</td>
+</tr>
+<tr>
+<td align="left">gv_0069</td>
+<td align="left">commentMode</td>
+</tr>
+<tr>
+<td align="left">gv_0070</td>
+<td align="left">showedUnlistedLevelMessage</td>
+</tr>
+<tr>
+<td align="left">gv_0072</td>
+<td align="left">disableGravityEffect</td>
+</tr>
+<tr>
+<td align="left">gv_0073</td>
+<td align="left">newCompletedFilter</td>
+</tr>
+<tr>
+<td align="left">gv_0074</td>
+<td align="left">showRestartButton</td>
+</tr>
+<tr>
+<td align="left">gv_0075</td>
+<td align="left">disableComments</td>
+</tr>
+<tr>
+<td align="left">gv_0076</td>
+<td align="left">disableAccountComments</td>
+</tr>
+<tr>
+<td align="left">gv_0077</td>
+<td align="left">featuredLevelsOnly</td>
+</tr>
+<tr>
+<td align="left">gv_0078</td>
+<td align="left">hideBackground (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0079</td>
+<td align="left">hideGridOnPlay (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0081</td>
+<td align="left">disableShakeEffects</td>
+</tr>
+<tr>
+<td align="left">gv_0082</td>
+<td align="left">disableHighObjectAlert</td>
+</tr>
+<tr>
+<td align="left">gv_0083</td>
+<td align="left">disableSongAlert</td>
+</tr>
+<tr>
+<td align="left">gv_0084</td>
+<td align="left">manualOrder</td>
+</tr>
+<tr>
+<td align="left">gv_0088</td>
+<td align="left">smallCommentsMode</td>
+</tr>
+<tr>
+<td align="left">gv_0089</td>
+<td align="left">extendedInfoMode</td>
+</tr>
+<tr>
+<td align="left">gv_0090</td>
+<td align="left">autoloadComments</td>
+</tr>
+<tr>
+<td align="left">gv_0091</td>
+<td align="left">myLevels folder number</td>
+</tr>
+<tr>
+<td align="left">gv_0092</td>
+<td align="left">onlineLevels folder number</td>
+</tr>
+<tr>
+<td align="left">gv_0093</td>
+<td align="left">increaseLocalLevelsPerPage</td>
+</tr>
+<tr>
+<td align="left">gv_0094</td>
+<td align="left">moreCommentsMode</td>
+</tr>
+<tr>
+<td align="left">gv_0095</td>
+<td align="left">flippyUselessMode (Just Dont)</td>
+</tr>
+<tr>
+<td align="left">gv_0096</td>
+<td align="left">switchWaveTrailColor</td>
+</tr>
+<tr>
+<td align="left">gv_0097</td>
+<td align="left">enableLinkControls (editor)</td>
+</tr>
+<tr>
+<td align="left">gv_0098</td>
+<td align="left">levelLeaderboardType</td>
+</tr>
+<tr>
+<td align="left">gv_0099</td>
+<td align="left">showLeaderboardPercent</td>
+</tr>
+<tr>
+<td align="left">gv_0100</td>
+<td align="left">practiceDeathEffect</td>
+</tr>
+<tr>
+<td align="left">gv_0101</td>
+<td align="left">forceSmoothFix</td>
+</tr>
+<tr>
+<td align="left">gv_0102</td>
+<td align="left">smoothFixInEditor</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2019-leak-gvs">2019 Leak GV's</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">gv_0103</td>
+<td align="left">Layer Locking</td>
+</tr>
+<tr>
+<td align="left">gv_0104</td>
+<td align="left">Record Order</td>
+</tr>
+<tr>
+<td align="left">gv_0105</td>
+<td align="left">StartPos Playback</td>
+</tr>
+<tr>
+<td align="left">gv_0106</td>
+<td align="left">Show Meltdown Promo</td>
+</tr>
+<tr>
+<td align="left">gv_0108</td>
+<td align="left">Auto Low Detail</td>
+</tr>
+<tr>
+<td align="left">gv_0109</td>
+<td align="left">Level Info Label</td>
+</tr>
+<tr>
+<td align="left">gv_0110</td>
+<td align="left">Fast Editor Preview</td>
+</tr>
+<tr>
+<td align="left">gv_0113</td>
+<td align="left">Flip Platformer Controls</td>
+</tr>
+<tr>
+<td align="left">gv_0115</td>
+<td align="left">Show FPS</td>
+</tr>
+<tr>
+<td align="left">gv_0116</td>
+<td align="left">Use Custom FPS</td>
+</tr>
+<tr>
+<td align="left">gv_0117</td>
+<td align="left">Preview Particle</td>
+</tr>
+<tr>
+<td align="left">gv_0118</td>
+<td align="left">Preview Animation</td>
+</tr>
+<tr>
+<td align="left">gv_0119</td>
+<td align="left">Dont Save Level Data</td>
+</tr>
+</tbody>
+</table>
+<h1 id="unlocked-game-variables">Unlocked Game Variables</h1>
+<p>Unlocked Game Variables (ugv) are used to check if ingame events have been completed</p>
+<h2 id="ugv-structure">UGV Structure</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ugv_1</td>
+<td align="left">Unlocked the challenge</td>
+</tr>
+<tr>
+<td align="left">ugv_2</td>
+<td align="left">Gubflub hint</td>
+</tr>
+<tr>
+<td align="left">ugv_3</td>
+<td align="left">Gubflub hint 2</td>
+</tr>
+<tr>
+<td align="left">ugv_4</td>
+<td align="left">The Challenge completed</td>
+</tr>
+<tr>
+<td align="left">ugv_5</td>
+<td align="left">Treasure Room unlocked</td>
+</tr>
+<tr>
+<td align="left">ugv_6</td>
+<td align="left">Chamber of Time unlocked</td>
+</tr>
+<tr>
+<td align="left">ugv_7</td>
+<td align="left">Chamber of Time Discovered</td>
+</tr>
+<tr>
+<td align="left">ugv_8</td>
+<td align="left">shown Master Emblem</td>
+</tr>
+<tr>
+<td align="left">ugv_9</td>
+<td align="left">GateKeeper Dialog</td>
+</tr>
+<tr>
+<td align="left">ugv_10</td>
+<td align="left">Scratch Dialog</td>
+</tr>
+<tr>
+<td align="left">ugv_11</td>
+<td align="left">Secret Shop unlocked</td>
+</tr>
+<tr>
+<td align="left">ugv_12</td>
+<td align="left">Spoken to Demon Guardian</td>
+</tr>
+<tr>
+<td align="left">ugv_13</td>
+<td align="left">Demon Freed</td>
+</tr>
+<tr>
+<td align="left">ugv_14</td>
+<td align="left">Has Demon Key 1</td>
+</tr>
+<tr>
+<td align="left">ugv_15</td>
+<td align="left">Has Demon Key 2</td>
+</tr>
+<tr>
+<td align="left">ugv_16</td>
+<td align="left">Has Demon Key 3</td>
+</tr>
+<tr>
+<td align="left">ugv_17</td>
+<td align="left">Shop Keeper first dialog (500 orbs)</td>
+</tr>
+<tr>
+<td align="left">ugv_18</td>
+<td align="left">online levels unlocked in GDW</td>
+</tr>
+<tr>
+<td align="left">ugv_19</td>
+<td align="left">Demon Discovered in Demon Room</td>
+</tr>
+<tr>
+<td align="left">ugv_20</td>
+<td align="left">Community shop unlocked</td>
+</tr>
+<tr>
+<td align="left">ugv_21</td>
+<td align="left">PotBor dialog</td>
+</tr>
+<tr>
+<td align="left">ugv_22</td>
+<td align="left">YouTube Chest unlocked</td>
+</tr>
+<tr>
+<td align="left">ugv_23</td>
+<td align="left">FaceBook Chest unlocked</td>
+</tr>
+<tr>
+<td align="left">ugv_24</td>
+<td align="left">Twitter Chest unlocked</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2019-leak-ugvs">2019 Leak UGV's</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Key</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">ugv_25</td>
+<td align="left">FireBird GateKeeper</td>
+</tr>
+<tr>
+<td align="left">ugv_26</td>
+<td align="left">Twitch Chest Unlocked</td>
+</tr>
+<tr>
+<td align="left">ugv_27</td>
+<td align="left">Discord Chest Unlocked</td>
+</tr>
+</tbody>
+</table>
+<h3 id="undiscoveredunknown-gvs">Undiscovered/unknown GV's</h3>
+<table>
+<thead>
+<tr>
+<th align="left">GV_ID</th>
+<th align="left">Existance Proven</th>
+<th align="left">notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0017</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0020</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0021</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0035</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0054</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0071</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0080</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0085</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0086</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0087</td>
+<td align="left"><strong>False</strong></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0112</td>
+<td align="left"><strong>True</strong></td>
+<td align="left">Used in <code>EditorUI</code> (<strong>2019 Leak</strong>)</td>
+</tr>
+<tr>
+<td align="left">0114</td>
+<td align="left"><strong>True</strong></td>
+<td align="left">Used in <code>PlayerObject</code> (<strong>2019 Leak</strong>)</td>
+</tr>
+<tr>
+<td align="left">0120</td>
+<td align="left"><strong>True</strong></td>
+<td align="left">Shown in RobTop's 2020 Twitch Streams</td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>
