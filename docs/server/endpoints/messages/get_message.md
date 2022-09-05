@@ -51,8 +51,8 @@ print(response.text)
 6:DevExit:3:3935672:2:173831:1:54109536:4:WW91J3JlIGR1bWIgbG9s:8:1:9:0:5:TWhtIHllcCB5b3UncmUgcCBkdW1iIGxtYW8=:7:19 minutes
 ```
 
-[secrets]: /resources/server/secrets
-[versions]: /resources/server/versions
-[passwords]: /resources/server/passwords
+[secrets]: /server/topics/secrets
+[versions]: /server/topics/versions
+[passwords]: /server/topics/passwords
 
-[messages]: /resources/server/models/messages
+[messages]: /server/models/messages
