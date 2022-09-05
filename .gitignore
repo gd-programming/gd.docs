@@ -1,5 +1,22 @@
-node_modules
+# editors
+
 .idea/
 .vs/
 
-package-lock.json
+# virtual environments
+
+.env
+env/
+env.bak/
+
+.venv
+venv/
+venv.bak/
+
+# documentation
+
+site/
+
+# remove if lock file should be included
+
+poetry.lock

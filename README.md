@@ -1,33 +1,68 @@
-<div align="center">
-    <img src="https://github.com/gd-programming/gddocs/blob/master/assets/gddocs-icon.png?raw=true" height="128" width="128" alt="book">
-</div>
+![gd.docs][Icon]
 
-# GDDocs
+# `gd.docs`
 
-**Some documentation for Geometry Dash's servers, and the game itself.**
+[![gd.docs][Badge]][gd.docs]
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9badf0ef98b242a7883c6dbd4e6c9443)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gd-programming/gddocs&amp;utm_campaign=Badge_Grade)
+**Documentation for Geometry Dash.**
 
-----
+`gd.docs` is a project built to openly give advanced information for aspiring developers looking to interface
+with *Geometry Dash*. We primarily aim to create this as a website for people to learn more about the inner
+workings of *Geometry Dash* along with its data.
 
-**GDDocs** is a project built to openly give advanced information and readable information for aspiring developers looking to interface with Geometry Dash. Primarily, we aim to create this as a website for people to learn more about the inner workings of geometry dash, along with it's data.
+You can find the website over [here][gd.docs].
 
-The GDDocs website can be found [here](https://docs.gdprogra.me/#/)
+## Installing
 
-## Running/Building
-**You will require Node.js `>=12` to debug and run this project.**
+**Python 3.7 is required to build the documentation.**
 
-GDDocs is built off of the `docsify` engine, outputted to a generator file to be able to work well on server environments, rather than GitHub pages. This is primarily to allow for easy domain usage and development in a place where it can always update, and be hosted upon locally rather than over GitHub's servers.
+Firstly, you need to clone the `gd.docs` repository:
 
-As such, rather than having to install using the package.json; (which we would recommended doing anyways using `npm install`,) the installation and such has been included in `generator.js`.
-
-```plain
-node generator.js
+```console
+$ git clone https://github.com/gd-programming/gd.docs
+$ cd gd.docs
 ```
 
-To debug it, you will need to properly clone or pull this repository.
+Then you can install the dependencies via:
+
+```console
+$ python -m pip install .
+```
+
+Alternatively, if you are using poetry:
+
+```console
+$ poetry install
+```
+
+## Building
+
+`gd.docs` is built using `mkdocs` library. Building the documentation is as simple as:
+
+```console
+$ mkdocs build
+```
+
+The result will be placed in the `site` directory.
+
+## Serving
+
+In order to make the documentation easier to work on, one can use the following command:
+
+```console
+$ mkdocs serve
+```
+
+It will run a local server, updating all changes to documentation on-the-fly.
 
 ## Contributing
 
-Contributions are preferably made to the documentation, rather than the simple `generator.js` file; unless need be. Contributions to all aspects of this project are preferred to be made over pull requests and issues. Ideas on what to contribute or read over can be read in the [issues](https://github.com/gd-programming/gddocs/issues) section of this repository.
+Contributions to all aspects of this project are preferred to be made over pull requests and issues.
+Ideas on what to add or improve can be found in the [issues][Issues] section of this repository.
 
+[gd.docs]: https://docs.gd-programming.org/
+
+[Discord]: https://gd-programming.org/discord
+[Issues]: https://github.com/gd-programming/gd.docs/issues
+[Badge]: https://github.com/gd-programming/gd.docs/workflows/docs/badge.svg
+[Icon]: https://github.com/gd-programming/gd.docs/blob/docs/assets/icons/gd.docs.png?raw=true
