@@ -281,6 +281,9 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.v3.secret03 | Type 'river' into the Chamber of Time |
 | geometry.ach.v3.secret04 | Type 'hunger' into the Chamber of Time |
 | geometry.ach.v3.secret05 | Type 'volcano' into the Chamber of Time |
+| geometry.ach.demoncoin01 | Collect all 3 coins on Clubstep |
+| geometry.ach.demoncoin02 | Collect all 3 coins on Theory of Everything 2 |
+| geometry.ach.demoncoin03 | Collect all 3 coins on Deadlocked |
 
 ## GD Meltdown Achievements
 | Internal name | How it's acquired |
