@@ -62,16 +62,16 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.demoncoin01 | Beat Clubstep in with all coins|
 | geometry.ach.demoncoin02 | Beat Theory Of Everything 2 in with all coins|
 | geometry.ach.demoncoin03 | Beat Deadlocked in with all coins|
-| geometry.ach.mappacks01 | Complete 1 Map Pack|
-| geometry.ach.mappacks02 | Complete 5 Map Pack|
-| geometry.ach.mappacks03 | Complete 10 Map Pack|
-| geometry.ach.mappacks04 | Complete 15 Map Pack|
-| geometry.ach.mappacks05 | Complete 20 Map Pack|
-| geometry.ach.mappacks06 | Complete 25 Map Pack|
-| geometry.ach.mappacks07 | Complete 30 Map Pack|
-| geometry.ach.mappacks08 | Complete 35 Map Pack|
-| geometry.ach.mappacks09 | Complete 40 Map Pack|
-| geometry.ach.mappacks10 | Complete 45 Map Pack|
+| geometry.ach.mappacks01 | Complete 1 Map Pack |
+| geometry.ach.mappacks02 | Complete 5 Map Packs |
+| geometry.ach.mappacks03 | Complete 10 Map Packs |
+| geometry.ach.mappacks04 | Complete 15 Map Packs |
+| geometry.ach.mappacks05 | Complete 20 Map Packs |
+| geometry.ach.mappacks06 | Complete 25 Map Packs |
+| geometry.ach.mappacks07 | Complete 30 Map Packs |
+| geometry.ach.mappacks08 | Complete 35 Map Packs |
+| geometry.ach.mappacks09 | Complete 40 Map Packs |
+| geometry.ach.mappacks10 | Complete 45 Map Packs |
 | geometry.ach.custom01 | Complete 1 User Created Level in Normal Mode|   
 | geometry.ach.custom02 | Complete 10 User Created Level in Normal Mode|
 | geometry.ach.custom03 | Complete 50 User Created Level in Normal Mode|
@@ -246,6 +246,52 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.like04 | Like or dislike 2,000 online levels |
 | geometry.ach.moreGames | Click the "More Games" button |
 | geometry.ach.special01 | Die at over 95% on a main level |
+| geometry.ach.creator01 | Get 100 likes on your level |
+| geometry.ach.creator02 | Get a star rate on your level |
+| geometry.ach.creator03 | Get 50 likes on your level |
+| geometry.ach.secret01 | Destroy an icon on the main menu |
+| geometry.ach.secret02 | Destroy 50 icons on the main menu |
+| geometry.ach.secret02b | Destroy 100 icons on the main menu |
+| geometry.ach.secret03 | Destroy 200 icons on the main menu |
+| geometry.ach.secret03b | Destroy 500 icons on the main menu |
+| geometry.ach.secret04 | Found the hidden gold coin by scrolling through the level page 3 times |
+| geometry.ach.secret05 | Type 'lenny' into the 2.0 Vault |
+| geometry.ach.secret06 | Type 'sparky' into the 2.0 Vault |
+| geometry.ach.secret07 | Type 'spooky' into the 2.0 Vault |
+| geometry.ach.secret08 | Type 'blockbite' into the 2.0 Vault |
+| geometry.ach.secret09 | Type 'robotop' into the 2.0 Vault |
+| geometry.ach.secret10 | Type 'ahead' into the 2.0 Vault |
+| geometry.ach.secret11 | Destroy the 55th cube on the main menu |
+| geometry.ach.secret12 | Destroy the 50th cube on the main menu |
+| geometry.ach.secret13 | Type 'mule' into the 2.0 Vault |
+| geometry.ach.secret14 | Type 'neverending' into the 2.0 Vault |
+| geometry.ach.secret15 | Type 'gandalfpotter' into the 2.0 Vault |
+| geometry.ach.secret16 | Consecutively type '8', '16', '30', '32', '46' and '84' into the 2.0 Vault |
+| geometry.ach.secret17 | Type your username into the 2.0 Vault |
+| geometry.ach.v2.secret01 | Type 'brainpower' into the Vault of Secrets |
+| geometry.ach.v2.secret02 | Type 'cod3breaker' and the solution to the puzzle into the Vault of Secrets |
+| geometry.ach.v2.secret03 | Solve the 'glubfub' puzzle |
+| geometry.ach.v2.secret04 | Type 'octocube' into the Vault of Secrets |
+| geometry.ach.v2.secret05 | Type your star count into the Vault of Secrets |
+| geometry.ach.v2.secret06 | Type 'seven' into the Vault of Secrets |
+| geometry.ach.v2.secret07 | Type 'gimmiethecolor' into the Vault of Secrets |
+| geometry.ach.v2.secret08 | Type 'thechickenisonfire' into the Vault of Secrets |
+| geometry.ach.v3.secret01 | Type 'darkness' into the Chamber of Time |
+| geometry.ach.v3.secret02 | Type 'silence' into the Chamber of Time |
+| geometry.ach.v3.secret03 | Type 'river' into the Chamber of Time |
+| geometry.ach.v3.secret04 | Type 'hunger' into the Chamber of Time |
+| geometry.ach.v3.secret05 | Type 'volcano' into the Chamber of Time |
+
+## GD Meltdown Achievements
+| Internal name | How it's acquired |
+| :-------------| :-------------- |
+| geometry.ach.mdlevel01b | Beat The Seven Seas in normal mode |
+| geometry.ach.mdlevel02b | Beat Viking Arena in normal mode |
+| geometry.ach.mdlevel03b | Beat Airborne Robots in normal mode |
+| geometry.ach.mdcoin01 | Collect all 3 coins on The Seven Seas |
+| geometry.ach.mdcoin02 | Collect all 3 coins on Viking Arena |
+| geometry.ach.mdcoin03 | Collect all 3 coins on Airborne Robots |
+| geometry.ach.mdrate | Click the icon with ID 71 when it's locked (positioned as 11th) |
 
 ## GD World Achievements
 | Internal name | How it's acquired |
@@ -260,3 +306,13 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.world.level008b | Beat Embers in normal mode |
 | geometry.ach.world.level009b | Beat Round 1 in normal mode |
 | geometry.ach.world.level010b | Beat Monster Dance Off in normal mode |
+
+## GD Subzero Achievements
+| Internal name | How it's acquired |
+| :-------------| :-------------- |
+| geometry.ach.subzero.level001 | Beat Press Start in normal mode |
+| geometry.ach.subzero.level002 | Beat Nock Em in normal mode |
+| geometry.ach.subzero.level003 | Beat Power Trip in normal mode |
+| geometry.ach.subzero.coins001 | Collect all 3 coins on Press Start|
+| geometry.ach.subzero.coins002 | Collect all 3 coins on Nock Em |
+| geometry.ach.subzero.coins003 | Collect all 3 coins on Power Trip |
