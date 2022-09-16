@@ -217,11 +217,11 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.shardBonus05 | collect 100 of each Shard|
 | geometry.ach.followCreator | follow 1 Creator|
 | geometry.ach.followCreator2 | follow 10 Creators|
-| geometry.ach.friends01 | befriend 1 user|
-| geometry.ach.friends02 | befriend 10 users|
-| geometry.ach.youtube | subscribe to [robtop](https://www.youtube.com/user/RobTopGames) on YouTube|
-| geometry.ach.youtube | Follow  [robtop](https://twitter.com/robtopgames) on Twitter|
-| geometry.ach.youtube | Like [robtop](https://www.facebook.com/geometrydash) on Facebook|
+| geometry.ach.friends01 | Befriend 1 user|
+| geometry.ach.friends02 | Befriend 10 users|
+| geometry.ach.youtube | subscribe to [RobTop](https://www.youtube.com/user/RobTopGames) on YouTube|
+| geometry.ach.youtube | Follow  [RobTop](https://twitter.com/robtopgames) on Twitter|
+| geometry.ach.youtube | Like [RobTop](https://www.facebook.com/geometrydash) on Facebook|
 | geometry.ach.attempt01 | Do 100 Attempts |
 | geometry.ach.attempt02 | Do 500 Attempts |
 | geometry.ach.attempt03 | Do 2,000 Attempts |
@@ -232,3 +232,15 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.jump03 | Jump 20,000 Times |
 | geometry.ach.jump04 | Jump 50,000 Times |
 | geometry.ach.jump05 | Jump 100,000 Times |
+| geometry.ach.submit | Submit an online level |
+| geometry.ach.rate | Click the supporter icon when it's locked |
+| geometry.ach.rateDiff | Rate the stars of an online level |
+| geometry.ach.rateDiff02 | Rate the stars of 100 online levels |
+| geometry.ach.rateDiff03 | Rate the stars of 500 online levels |
+| geometry.ach.rateDiff04 | Rate the stars of 1,000 online levels |
+| geometry.ach.rateDiff05 | Rate the stars of 2,000 online levels |
+| geometry.ach.like | Like or dislike an online level |
+| geometry.ach.like02 | Like or dislike 100 online levels |
+| geometry.ach.like03 | Like or dislike 500 online levels |
+| geometry.ach.like04 | Like or dislike 1,000 online levels |
+| geometry.ach.like05 | Like or dislike 2,000 online levels |
