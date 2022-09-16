@@ -219,9 +219,9 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.followCreator2 | follow 10 Creators|
 | geometry.ach.friends01 | Befriend 1 user|
 | geometry.ach.friends02 | Befriend 10 users|
-| geometry.ach.youtube | subscribe to [RobTop](https://www.youtube.com/user/RobTopGames) on YouTube|
-| geometry.ach.youtube | Follow  [RobTop](https://twitter.com/robtopgames) on Twitter|
-| geometry.ach.youtube | Like [RobTop](https://www.facebook.com/geometrydash) on Facebook|
+| geometry.ach.youtube | Subscribe to [RobTop](https://www.youtube.com/user/RobTopGames) on YouTube|
+| geometry.ach.twitter | Follow [RobTop](https://twitter.com/robtopgames) on Twitter|
+| geometry.ach.facebook | Like [RobTop](https://www.facebook.com/geometrydash) on Facebook|
 | geometry.ach.attempt01 | Do 100 Attempts |
 | geometry.ach.attempt02 | Do 500 Attempts |
 | geometry.ach.attempt03 | Do 2,000 Attempts |
