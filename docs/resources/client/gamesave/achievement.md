@@ -245,3 +245,4 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.like04 | Like or dislike 1,000 online levels |
 | geometry.ach.like05 | Like or dislike 2,000 online levels |
 | geometry.ach.moreGames | Click the "More Games" button |
+| geometry.ach.special01 | Die at over 95% on a main level |
