@@ -13,7 +13,7 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 
 ## Internal Names
 
-| Internal name | how its aquired |
+| Internal name | How it's acquired |
 | :-------------| :-------------- |
 | geometry.ach.level01b | Beat Stereo Madness in normal Mode |
 | geometry.ach.level01a | Beat Stereo Madness in practice Mode |
@@ -236,13 +236,27 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.rate | Click the supporter icon when it's locked |
 | geometry.ach.rateDiff | Rate the stars of an online level |
 | geometry.ach.rateDiff02 | Rate the stars of 100 online levels |
-| geometry.ach.rateDiff03 | Rate the stars of 500 online levels |
-| geometry.ach.rateDiff04 | Rate the stars of 1,000 online levels |
-| geometry.ach.rateDiff05 | Rate the stars of 2,000 online levels |
+| geometry.ach.rateDiff02b | Rate the stars of 500 online levels |
+| geometry.ach.rateDiff03 | Rate the stars of 1,000 online levels |
+| geometry.ach.rateDiff04 | Rate the stars of 2,000 online levels |
 | geometry.ach.like | Like or dislike an online level |
 | geometry.ach.like02 | Like or dislike 100 online levels |
-| geometry.ach.like03 | Like or dislike 500 online levels |
-| geometry.ach.like04 | Like or dislike 1,000 online levels |
-| geometry.ach.like05 | Like or dislike 2,000 online levels |
+| geometry.ach.like02b | Like or dislike 500 online levels |
+| geometry.ach.like03 | Like or dislike 1,000 online levels |
+| geometry.ach.like04 | Like or dislike 2,000 online levels |
 | geometry.ach.moreGames | Click the "More Games" button |
 | geometry.ach.special01 | Die at over 95% on a main level |
+
+## GD World Achievements
+| Internal name | How it's acquired |
+| :-------------| :-------------- |
+| geometry.ach.world.level001b | Beat Payload in normal mode |
+| geometry.ach.world.level002b | Beat Beast Mode in normal mode |
+| geometry.ach.world.level003b | Beat Machina in normal mode |
+| geometry.ach.world.level004b | Beat Years in normal mode |
+| geometry.ach.world.level005b | Beat Frontlines in normal mode |
+| geometry.ach.world.level006b | Beat Space Pirates in normal mode |
+| geometry.ach.world.level007b | Beat Striker in normal mode |
+| geometry.ach.world.level008b | Beat Embers in normal mode |
+| geometry.ach.world.level009b | Beat Round 1 in normal mode |
+| geometry.ach.world.level010b | Beat Monster Dance Off in normal mode |
