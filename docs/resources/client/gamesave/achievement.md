@@ -118,103 +118,103 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.demon10 | Beat 40 Demons|
 | geometry.ach.demon11 | Beat 50 Demons|
 | geometry.ach.demon12 | Beat 60 Demons|
-| geometry.ach.coins01 | collect 5 Secret Coins|
-| geometry.ach.coins02 | collect 10 Secret Coins|
-| geometry.ach.coins03 | collect 15 Secret Coins|
-| geometry.ach.coins04 | collect 20 Secret Coins|
-| geometry.ach.coins05 | collect 25 Secret Coins|
-| geometry.ach.coins06 | collect 30 Secret Coins|
-| geometry.ach.coins07 | collect 35 Secret Coins|
-| geometry.ach.coins08 | collect 40 Secret Coins|
-| geometry.ach.coins09 | collect 45 Secret Coins|
-| geometry.ach.coins10 | collect 50 Secret Coins|
-| geometry.ach.coins11 | collect 55 Secret Coins|
-| geometry.ach.coins12 | collect 60 Secret Coins|
-| geometry.ach.coins13 | collect 65 Secret Coins|
-| geometry.ach.coins14 | collect 70 Secret Coins|
-| geometry.ach.coins15 | collect 75 Secret Coins|
-| geometry.ach.coins16 | collect 80 Secret Coins|
-| geometry.ach.coins17 | collect 85 Secret Coins|
-| geometry.ach.coins18 | collect 90 Secret Coins|
-| geometry.ach.coins19 | collect 95 Secret Coins|
-| geometry.ach.coins20 | collect 100 Secret Coins|
-| geometry.ach.coins21 | collect 105 Secret Coins|
-| geometry.ach.coins22 | collect 110 Secret Coins|
-| geometry.ach.coins23 | collect 115 Secret Coins|
-| geometry.ach.coins24 | collect 120 Secret Coins|
-| geometry.ach.coins25 | collect 130 Secret Coins|
-| geometry.ach.usercoins01 | collect 1 user Coin|
-| geometry.ach.usercoins02 | collect 10 user Coins|
-| geometry.ach.usercoins03 | collect 20 user Coins|
-| geometry.ach.usercoins04 | collect 30 user Coins|
-| geometry.ach.usercoins05 | collect 40 user Coins|
-| geometry.ach.usercoins06 | collect 50 user Coins|
-| geometry.ach.usercoins07 | collect 60 user Coins|
-| geometry.ach.usercoins08 | collect 70 user Coins|
-| geometry.ach.usercoins09 | collect 80 user Coins|
-| geometry.ach.usercoins10 | collect 90 user Coins|
-| geometry.ach.usercoins11 | collect 100 user Coins|
-| geometry.ach.usercoins12 | collect 110 user Coins|
-| geometry.ach.usercoins13 | collect 120 user Coins|
-| geometry.ach.usercoins14 | collect 130 user Coins|
-| geometry.ach.usercoins15 | collect 140 user Coins|
-| geometry.ach.usercoins16 | collect 150 user Coins|
-| geometry.ach.usercoins17 | collect 160 user Coins|
-| geometry.ach.usercoins18 | collect 170 user Coins|
-| geometry.ach.usercoins19 | collect 180 user Coins|
-| geometry.ach.usercoins20 | collect 190 user Coins|
-| geometry.ach.usercoins21 | collect 200 user Coins|
-| geometry.ach.usercoins22 | collect 225 user Coins|
-| geometry.ach.usercoins23 | collect 250 user Coins|
-| geometry.ach.usercoins24 | collect 300 user Coins|
-| geometry.ach.usercoins25 | collect 350 user Coins|
-| geometry.ach.usercoins26 | collect 425 user Coins|
-| geometry.ach.usercoins27 | collect 500 user Coins|
-| geometry.ach.usercoins28 | collect 600 user Coins|
-| geometry.ach.usercoins29 | collect 700 user Coins|
-| geometry.ach.usercoins30 | collect 800 user Coins|
-| geometry.ach.usercoins31 | collect 900 user Coins|
-| geometry.ach.usercoins32 | collect 1,000 user Coins|
-| geometry.ach.diamonds01 | collect 100 Diamonds|
-| geometry.ach.diamonds02 | collect 250 Diamonds|
-| geometry.ach.diamonds03 | collect 500 Diamonds|
-| geometry.ach.diamonds04 | collect 1,000 Diamonds|
-| geometry.ach.diamonds05 | collect 1,500 Diamonds|
-| geometry.ach.diamonds06 | collect 2,000 Diamonds|
-| geometry.ach.diamonds07 | collect 2,500 Diamonds|
-| geometry.ach.diamonds08 | collect 3,000 Diamonds|
-| geometry.ach.diamonds09 | collect 4,000 Diamonds|
-| geometry.ach.diamonds10 | collect 5,000 Diamonds|
-| geometry.ach.shardFire01 | collect 5 Fire Shards|
-| geometry.ach.shardFire02 | collect 15 Fire Shards|
-| geometry.ach.shardFire03 | collect 35 Fire Shards|
-| geometry.ach.shardFire04 | collect 65 Fire Shards|
-| geometry.ach.shardFire05 | collect 100 Fire Shards|
-| geometry.ach.shardIce01 | collect 5 Ice Shards|
-| geometry.ach.shardIce02 | collect 15 Ice Shards|
-| geometry.ach.shardIce03 | collect 35 Ice Shards|
-| geometry.ach.shardIce04 | collect 65 Ice Shards|
-| geometry.ach.shardIce05 | collect 100 Ice Shards|
-| geometry.ach.shardPoison01 | collect 5 Poison Shards|
-| geometry.ach.shardPoison02 | collect 15 Poison Shards|
-| geometry.ach.shardPoison03 | collect 35 Poison Shards|
-| geometry.ach.shardPoison04 | collect 65 Poison Shards|
-| geometry.ach.shardPoison05 | collect 100 Poison Shards|
-| geometry.ach.shardShadow01 | collect 5 Shadow Shards|
-| geometry.ach.shardShadow02 | collect 15 Shadow Shards|
-| geometry.ach.shardShadow03 | collect 35 Shadow Shards|
-| geometry.ach.shardShadow04 | collect 65 Shadow Shards|
-| geometry.ach.shardShadow05 | collect 100 Shadow Shards|
-| geometry.ach.shardLava01 | collect 5 Lava Shards|
-| geometry.ach.shardLava02 | collect 15 Lava Shards|
-| geometry.ach.shardLava03 | collect 35 Lava Shards|
-| geometry.ach.shardLava04 | collect 65 Lava Shards|
-| geometry.ach.shardLava05 | collect 100 Lava Shards|
-| geometry.ach.shardBonus01 | collect 5 of each Shard|
-| geometry.ach.shardBonus02 | collect 15 of each Shard|
-| geometry.ach.shardBonusa03 | collect 35 of each Shard|
-| geometry.ach.shardBonus04 | collect 65 of each Shard|
-| geometry.ach.shardBonus05 | collect 100 of each Shard|
+| geometry.ach.coins01 | Collect 5 Secret Coins|
+| geometry.ach.coins02 | Collect 10 Secret Coins|
+| geometry.ach.coins03 | Collect 15 Secret Coins|
+| geometry.ach.coins04 | Collect 20 Secret Coins|
+| geometry.ach.coins05 | Collect 25 Secret Coins|
+| geometry.ach.coins06 | Collect 30 Secret Coins|
+| geometry.ach.coins07 | Collect 35 Secret Coins|
+| geometry.ach.coins08 | Collect 40 Secret Coins|
+| geometry.ach.coins09 | Collect 45 Secret Coins|
+| geometry.ach.coins10 | Collect 50 Secret Coins|
+| geometry.ach.coins11 | Collect 55 Secret Coins|
+| geometry.ach.coins12 | Collect 60 Secret Coins|
+| geometry.ach.coins13 | Collect 65 Secret Coins|
+| geometry.ach.coins14 | Collect 70 Secret Coins|
+| geometry.ach.coins15 | Collect 75 Secret Coins|
+| geometry.ach.coins16 | Collect 80 Secret Coins|
+| geometry.ach.coins17 | Collect 85 Secret Coins|
+| geometry.ach.coins18 | Collect 90 Secret Coins|
+| geometry.ach.coins19 | Collect 95 Secret Coins|
+| geometry.ach.coins20 | Collect 100 Secret Coins|
+| geometry.ach.coins21 | Collect 105 Secret Coins|
+| geometry.ach.coins22 | Collect 110 Secret Coins|
+| geometry.ach.coins23 | Collect 115 Secret Coins|
+| geometry.ach.coins24 | Collect 120 Secret Coins|
+| geometry.ach.coins25 | Collect 130 Secret Coins|
+| geometry.ach.usercoins01 | Collect 1 user Coin|
+| geometry.ach.usercoins02 | Collect 10 user Coins|
+| geometry.ach.usercoins03 | Collect 20 user Coins|
+| geometry.ach.usercoins04 | Collect 30 user Coins|
+| geometry.ach.usercoins05 | Collect 40 user Coins|
+| geometry.ach.usercoins06 | Collect 50 user Coins|
+| geometry.ach.usercoins07 | Collect 60 user Coins|
+| geometry.ach.usercoins08 | Collect 70 user Coins|
+| geometry.ach.usercoins09 | Collect 80 user Coins|
+| geometry.ach.usercoins10 | Collect 90 user Coins|
+| geometry.ach.usercoins11 | Collect 100 user Coins|
+| geometry.ach.usercoins12 | Collect 110 user Coins|
+| geometry.ach.usercoins13 | Collect 120 user Coins|
+| geometry.ach.usercoins14 | Collect 130 user Coins|
+| geometry.ach.usercoins15 | Collect 140 user Coins|
+| geometry.ach.usercoins16 | Collect 150 user Coins|
+| geometry.ach.usercoins17 | Collect 160 user Coins|
+| geometry.ach.usercoins18 | Collect 170 user Coins|
+| geometry.ach.usercoins19 | Collect 180 user Coins|
+| geometry.ach.usercoins20 | Collect 190 user Coins|
+| geometry.ach.usercoins21 | Collect 200 user Coins|
+| geometry.ach.usercoins22 | Collect 225 user Coins|
+| geometry.ach.usercoins23 | Collect 250 user Coins|
+| geometry.ach.usercoins24 | Collect 300 user Coins|
+| geometry.ach.usercoins25 | Collect 350 user Coins|
+| geometry.ach.usercoins26 | Collect 425 user Coins|
+| geometry.ach.usercoins27 | Collect 500 user Coins|
+| geometry.ach.usercoins28 | Collect 600 user Coins|
+| geometry.ach.usercoins29 | Collect 700 user Coins|
+| geometry.ach.usercoins30 | Collect 800 user Coins|
+| geometry.ach.usercoins31 | Collect 900 user Coins|
+| geometry.ach.usercoins32 | Collect 1,000 user Coins|
+| geometry.ach.diamonds01 | Collect 100 Diamonds|
+| geometry.ach.diamonds02 | Collect 250 Diamonds|
+| geometry.ach.diamonds03 | Collect 500 Diamonds|
+| geometry.ach.diamonds04 | Collect 1,000 Diamonds|
+| geometry.ach.diamonds05 | Collect 1,500 Diamonds|
+| geometry.ach.diamonds06 | Collect 2,000 Diamonds|
+| geometry.ach.diamonds07 | Collect 2,500 Diamonds|
+| geometry.ach.diamonds08 | Collect 3,000 Diamonds|
+| geometry.ach.diamonds09 | Collect 4,000 Diamonds|
+| geometry.ach.diamonds10 | Collect 5,000 Diamonds|
+| geometry.ach.shardFire01 | Collect 5 Fire Shards|
+| geometry.ach.shardFire02 | Collect 15 Fire Shards|
+| geometry.ach.shardFire03 | Collect 35 Fire Shards|
+| geometry.ach.shardFire04 | Collect 65 Fire Shards|
+| geometry.ach.shardFire05 | Collect 100 Fire Shards|
+| geometry.ach.shardIce01 | Collect 5 Ice Shards|
+| geometry.ach.shardIce02 | Collect 15 Ice Shards|
+| geometry.ach.shardIce03 | Collect 35 Ice Shards|
+| geometry.ach.shardIce04 | Collect 65 Ice Shards|
+| geometry.ach.shardIce05 | Collect 100 Ice Shards|
+| geometry.ach.shardPoison01 | Collect 5 Poison Shards|
+| geometry.ach.shardPoison02 | Collect 15 Poison Shards|
+| geometry.ach.shardPoison03 | Collect 35 Poison Shards|
+| geometry.ach.shardPoison04 | Collect 65 Poison Shards|
+| geometry.ach.shardPoison05 | Collect 100 Poison Shards|
+| geometry.ach.shardShadow01 | Collect 5 Shadow Shards|
+| geometry.ach.shardShadow02 | Collect 15 Shadow Shards|
+| geometry.ach.shardShadow03 | Collect 35 Shadow Shards|
+| geometry.ach.shardShadow04 | Collect 65 Shadow Shards|
+| geometry.ach.shardShadow05 | Collect 100 Shadow Shards|
+| geometry.ach.shardLava01 | Collect 5 Lava Shards|
+| geometry.ach.shardLava02 | Collect 15 Lava Shards|
+| geometry.ach.shardLava03 | Collect 35 Lava Shards|
+| geometry.ach.shardLava04 | Collect 65 Lava Shards|
+| geometry.ach.shardLava05 | Collect 100 Lava Shards|
+| geometry.ach.shardBonus01 | Collect 5 of each Shard|
+| geometry.ach.shardBonus02 | Collect 15 of each Shard|
+| geometry.ach.shardBonusa03 | Collect 35 of each Shard|
+| geometry.ach.shardBonus04 | Collect 65 of each Shard|
+| geometry.ach.shardBonus05 | Collect 100 of each Shard|
 | geometry.ach.followCreator | follow 1 Creator|
 | geometry.ach.followCreator2 | follow 10 Creators|
 | geometry.ach.friends01 | Befriend 1 user|
@@ -244,3 +244,4 @@ Inside CCGameManager.dat, every achievement you have progress on can be found in
 | geometry.ach.like03 | Like or dislike 500 online levels |
 | geometry.ach.like04 | Like or dislike 1,000 online levels |
 | geometry.ach.like05 | Like or dislike 2,000 online levels |
+| geometry.ach.moreGames | Click the "More Games" button |
