@@ -1,12 +1,10 @@
 <div align="center">
-    <img src="https://github.com/gd-programming/gddocs/blob/master/assets/gddocs-icon.png?raw=true" height="128" width="128" alt="book">
+    <img src="https://github.com/gd-programming/gddocs/blob/main/assets/gddocs-icon.png?raw=true" height="128" width="128" alt="book">
 </div>
 
 # GDDocs
 
 **Some documentation for Geometry Dash's servers, and the game itself.**
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9badf0ef98b242a7883c6dbd4e6c9443)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gd-programming/gddocs&amp;utm_campaign=Badge_Grade)
 
 ----
 
