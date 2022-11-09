@@ -3,7 +3,7 @@
 | Key | Name/Value                     | description |
 | :-- | :----------------------------- | :-----------|
 | 4   | [GJGameLevel](resources/client/level.md) | Contains Keys for levels you played in the past |
-| 6   | [SongInfoObject](resources/client/gamesave/song.md) | Contains Keys for songs downloaded |
+| 6   | [SongInfoObject](resources/server/song?id=song-structure) | Contains Keys for songs downloaded |
 | 7   | [GJChallengeItem](resources/client/gamesave/quests.md) | Contains Keys that the game uses to show quests when offline |
 | 8   | [GJRewardItem](resources/client/gamesave/kCEK.md) | object that holds `GJRewardObject` |
 | 9   | [GJRewardObject](resources/client/gamesave/kCEK.md) | contains data for Rewards |
