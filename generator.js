@@ -5,12 +5,8 @@ const os = require("os");
 
 require("./scripts/installPackages.js"); // install packages
 
-const wrapQuotes = s => `"${s}"`;
-
-const DOCSIFY_PATH = "./node_modules/docsify-cli/bin/docsify";
-
 // serve data
-const command = `node ${os.platform() === "win32" ? wrapQuotes(DOCSIFY_PATH) : DOCSIFY_PATH} serve ./docs --port 9505`;
+const command = "node ./node_modules/docsify-cli/bin/docsify serve ./docs --port 9505";
 
 console.log(`${chalk.hex("#66d9ff")("Running Command: ")} ${command}\n`);
 
