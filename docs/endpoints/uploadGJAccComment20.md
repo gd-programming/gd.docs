@@ -28,7 +28,7 @@ Posts an account comment
 
 ## Response
 
-Returns 1 if the comment was successfully posted, but a 500 error code if the comment is either left out or could not be posted
+Returns account comment ID if the comment was successfully posted, but a 500 error code if the comment is either left out or could not be posted
 
 ## Example
 
