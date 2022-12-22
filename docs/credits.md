@@ -1,6 +1,6 @@
 # Credits
 
-Thanks to the **Geometry Dash Programming** experts, and the **GDDocs** contributors for
+Thanks to the **Geometry Dash Programming** experts, and the `gd.docs` contributors for
 making this project a reality. Without you, this project wouldn't have even been possible.
 
 ## Staff Team
@@ -20,7 +20,7 @@ making this project a reality. Without you, this project wouldn't have even been
 [zmx]: https://github.com/qimiko
 [Wylie]: https://github.com/Wyliemaster
 
-[Rekkon]: https://github.com/AlFasGD
+[Rekkon]: https://github.com/Rekkonnect
 [Andre]: https://github.com/AndreNIH
 [Cvolton]: https://github.com/Cvolton
 [Colon]: https://github.com/GDColon

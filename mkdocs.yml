@@ -1,5 +1,5 @@
 site_name: gd.docs
-site_author: nekitdev
+site_author: GD Programming
 site_description: Documentation for Geometry Dash.
 
 repo_name: gd-programming/gd.docs
@@ -34,6 +34,7 @@ nav:
     - Topics:
       - Error Codes: "server/topics/error_codes.md"
       - Secrets: "server/topics/secrets.md"
+      - Songs: "server/topics/songs.md"
       - Versions: "server/topics/versions.md"
 
   - Client:

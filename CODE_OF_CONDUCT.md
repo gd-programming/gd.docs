@@ -60,7 +60,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement to
-[][Email].
+[conduct@gd-programming.org][Email].
 
 All complaints will be reviewed and investigated promptly and fairly.
 
@@ -125,6 +125,8 @@ Community Impact Guidelines were inspired by
 For answers to common questions about this code of conduct, see the FAQ at
 [https://contributor-covenant.org/faq][FAQ]. Translations are available at
 [https://contributor-covenant.org/translations][Translations].
+
+[Email]: mailto:conduct@gd-programming.org
 
 [Home]: https://contributor-covenant.org/
 [v2.1]: https://contributor-covenant.org/version/2/1/code_of_conduct
