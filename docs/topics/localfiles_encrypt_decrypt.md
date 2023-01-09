@@ -63,10 +63,7 @@ On MacOS, decryption is quite simpler. Saves are encrypted with
 ### **Python**
 
 ```py
-KEY = (  # python will automatically concatenate two parts
-    b"\x69\x70\x75\x39\x54\x55\x76\x35\x34\x79\x76\x5d\x69\x73\x46\x4d"
-    b"\x68\x35\x40\x3b\x74\x2e\x35\x77\x33\x34\x45\x32\x52\x79\x40\x7b"
-)
+KEY = b'ipu9TUv54yv]isFMh5@;t.5w34E2Ry@{'
 ```
 
 <!-- tabs:end -->
@@ -78,19 +75,24 @@ Here is how actual decryption would be implemented:
 ### **Python**
 
 ```py
-from Crypto.Cipher import AES
+# using https://pypi.org/project/cryptography/
+from cryptography.hazmat.primitives import ciphers, padding
 
-
-def remove_pad(data: bytes) -> bytes:
-    last = data[-1]
-    if last < 16:
-        data = data[:-last]
-    return data
+mac_cipher = ciphers.Cipher(
+    ciphers.algorithms.AES256(b'ipu9TUv54yv]isFMh5@;t.5w34E2Ry@{'),
+    ciphers.modes.ECB()
+)
+mac_padding = padding.PKCS7(128)
 
 
 def mac_decrypt(data: bytes) -> str:
-    cipher = AES.new(KEY, AES.MODE_ECB)
-    return remove_pad(cipher.decrypt(data)).decode()
+    decryptor = mac_cipher.decryptor()
+    unpadder = mac_padding.unpadder()
+    return (b'%s%s%s' % (
+        unpadder.update(decryptor.update(data)),
+        unpadder.update(decryptor.finalize()),
+        unpadder.finalize()
+    )).decode()
 ```
 
 <!-- tabs:end -->
@@ -123,20 +125,24 @@ Like on Windows, encryption and decrypion are almost the same:
 ### **Python**
 
 ```py
-from Crypto.Cipher import AES
+# using https://pypi.org/project/cryptography/
+from cryptography.hazmat.primitives import ciphers, padding
+
+mac_cipher = ciphers.Cipher(
+    ciphers.algorithms.AES256(b'ipu9TUv54yv]isFMh5@;t.5w34E2Ry@{'),
+    ciphers.modes.ECB()
+)
+mac_padding = padding.PKCS7(128)
 
 
-def add_pad(data: bytes) -> bytes:
-    len_r = len(data) % 16
-    if len_r:
-        to_add = 16 - len_r
-        data += to_add.to_bytes(1, "little") * to_add
-    return data
-
-
-def mac_encrypt(data: str) -> bytes:
-    cipher = AES.new(KEY, AES.MODE_ECB)
-    return cipher.encrypt(add_pad(data.encode()))
+def mac_encrypt(xmlstring: str) -> bytes:
+    encryptor = mac_cipher.encryptor()
+    padder = mac_padding.padder()
+    return b'%s%s%s' % (
+        encryptor.update(padder.update(xmlstring.encode())),
+        encryptor.update(padder.finalize()),
+        encryptor.finalize()
+    )
 ```
 
 <!-- tabs:end -->
