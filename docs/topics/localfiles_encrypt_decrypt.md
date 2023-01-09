@@ -117,7 +117,7 @@ def mac_decrypt(data: bytes) -> str:
 
 ### Windows and Android
 
-Encryption is done pretty much the same way but with opposite operations and order. So the sequence for encrypting can be defined as: [gzip](https://zlib.net) compress/deflate &rarr; [Base64](topics/encryption/base64) encode &rarr; XOR using `0xb` (`11`) as a key.
+Encryption is done pretty much the same way but with opposite operations and order. So the sequence for encrypting can be defined as: [gzip](https://en.wikipedia.org/wiki/Gzip) compress/deflate &rarr; [Base64](topics/encryption/base64) encode &rarr; XOR using `0xb` (`11`) as a key.
 
 <!-- tabs:start -->
 
