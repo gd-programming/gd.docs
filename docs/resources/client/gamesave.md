@@ -2,7 +2,7 @@
 
 ## CCGameManager.dat
 
-Your CCGameManager.dat File contains a lot of information regarding your account. it is encrypted using [Xor](/topics/encryption/xor.md) with a key of 11 / 0xB, [url-Safe Base64](/topics/encryption/base64.md) and [Gzip](/topics/encryption/zip.md) and is in the [XML](https://en.wikipedia.org/wiki/XML) format
+Your CCGameManager.dat File contains a lot of information regarding your account. See [Game Files - Encryption and Decryption](/topics/localfiles_encrypt_decrypt.md) page about decrypting and encrypting.
 
 ## Gamesave Key structure
 
