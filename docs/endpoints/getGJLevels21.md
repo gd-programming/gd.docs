@@ -26,9 +26,9 @@ Gets a list of levels.
 
 | type | desc |
 | ---- | ---- |
-| 0 | most liked |
+| 0 | level search (uses the `str` parameter for the search query) |
 | 1 | most downloaded |
-| 2 | default for the search button (also most liked) |
+| 2 | most liked |
 | 3 | trending |
 | 4 | recent |
 | 5 | user's levels (uses the player ID, **not the account ID,** in the `str` parameter to get which user) |
