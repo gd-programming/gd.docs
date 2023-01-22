@@ -22,7 +22,7 @@ Requests moderator access
 
 ## Response
 
-1 if granted, -1 if not
+1 if user is normal moderator, 2 if user is elder moderator, -1 if not
 
 ## Example
 
