@@ -12,15 +12,15 @@ Saves account data
 
 **password** - The password of the account to be added
 
+**gameVersion** - 21
+
+**binaryVersion** - 35
+
 **saveData** - The save data for CCGameManager.dat compressed with gzip, then a semicolon `;` and the save data for CCLocalLevels.dat compressed with gzip.
 
 **secret** - Wmfv3899gc9
 
 ### Optional Parameters
-
-**gameVersion** - 21
-
-**binaryVersion** - 35
 
 **gdw** - 0
 
