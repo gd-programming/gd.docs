@@ -26,9 +26,7 @@ Loads account data
 
 A list of values, separated by semicolons `;`:
 
-- CCGameManager.dat compressed with gzip
-
-- CCLocalLevels.dat compressed with gzip
+- saveData sent when saving (note that this value contains a `;`, so it's effectively 2 values)
 
 - gameVersion sent when saving
 
