@@ -8,8 +8,8 @@ CHK is generated like so:
 1. Take arbitrary amount of values.
 2. Combine them and add *salt* if there is one.
 3. Apply [SHA-1](https://en.wikipedia.org/wiki/SHA-1) hashing to combined values and get its hexdigest.
-4. Apply [XOR-Cipher](topics/encryption/xor.md) to the hexdigest with desired key.
-5. [Base64](topics/encryption/base64.md) encode the result.
+4. Apply [XOR-Cipher](./xor.md) to the hexdigest with desired key.
+5. [Base64](./base64.md) encode the result.
 
 CHK generator can be implemented like this:
 
@@ -36,7 +36,7 @@ def generate_chk(values: [int, str] = [], key: str = "", salt: str = "") -> str:
 
 <!-- tabs:end -->
 
-XOR keys can be found [here](topics/encryption/xor.md?id=xor-keys).
+XOR keys can be found [here](./xor.md?id=xor-keys).
 
 Here is a list of CHK values and explanations on their generation:
 
@@ -44,10 +44,10 @@ Here is a list of CHK values and explanations on their generation:
 
 - LevelID
 - Inc
-- [RS](topics/encryption/id.md?id=rs)
+- [RS](./id.md?id=rs)
 - AccountID
-- [UDID](topics/encryption/id.md?id=udid)
-- [UUID](topics/encryption/id.md?id=uuid)
+- [UDID](./id.md?id=udid)
+- [UUID](./id.md?id=uuid)
 
 ## Upload level
 
@@ -110,10 +110,10 @@ Random number consisting of *5* digits.
 - ItemID
 - Like (0 = dislike, 1 = like)
 - Type (1 = Level, 2 = Level Comment, 3 = Other Comment)
-- [RS](topics/encryption/id.md?id=rs)
+- [RS](./id.md?id=rs)
 - AccountID
-- [UDID](topics/encryption/id.md?id=udid)
-- [UUID](topics/encryption/id.md?id=uuid)
+- [UDID](./id.md?id=udid)
+- [UUID](./id.md?id=uuid)
 
 ## User Profile
 
@@ -172,7 +172,7 @@ For example, `0%` - `13%` - `100%` -> `(13 - 0), (100 - 13)` -> `13,87`
 
 - Coins
 - TimelyID
-- [RS](topics/encryption/id.md?id=rs)
+- [RS](./id.md?id=rs)
 
 ## Salts
 
