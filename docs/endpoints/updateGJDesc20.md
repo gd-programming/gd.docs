@@ -35,44 +35,23 @@ Updates the description of a level
 ### **Python**
 
 ```py
-import requests, base64, random
+import requests
 
 data = {
-    "accountID": 5317656, # PasswordFinders' account ID
-    "gjp": "********", # This would be PasswordFinders' password encoded with GJP encryption
-    "userName": "PasswordFinders",
-    "stars": 6969,
-    "demons": 69,
-    "diamonds": 5000,
-    "icon": 0,
-    "color1": 21,
-    "color2": 42,
-    "iconType": 0,
-    "coins": 150,
-    "userCoins": 400,
-    "special": 2,
-    "accIcon": 0,
-    "accShip": 0,
-    "accBall": 0,
-    "accBird": 0,
-    "accDart": 0,
-    "accRobot": 0,
-    "accGlow": 0,
-    "accSpider": 0,
-    "accExplosion": 1,
+    "accountID": 18178627, # shikoshib's account ID
+    "gjp": "********", # This would be shikoshib's password encoded with GJP encryption
+    "levelID": 85555028,
+    "levelDesc": "V2l0aCBsb3ZlIGZyb20gR0QgRG9jcyE=", # With love from GD Docs!
     "secret": "Wmfd2893gb7",
-    "seed": ''.join(random.sample("1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM", 10))
 }
-items = [add(data, "accountID"), add(data, 'userCoins'), add(data, 'demons'), add(data, 'stars'), add(data, 'coins'), add(data, 'iconType'), add(data, 'icon'), add(data, 'diamonds'), add(data, 'accIcon'), add(data, 'accShip'), add(data, 'accBall'), add(data, 'accBird'), add(data, 'accDart'), add(data, 'accRobot'), add(data, 'accGlow'), add(data, 'accSpider'), add(data, 'accExplosion')]
-data['seed2'] = generate_chk(items, "85271", "xI35fsAapCRg")
 
-r = requests.post('http://boomlings.com/database/updateGJUserScore22.php', data=data)
+r = requests.post('http://boomlings.com/database/updateGJDesc20.php', data=data)
 print(req.text)
 ```
 
 **Response**
 ```py
-17787971
+1
 ```
 
 <!-- tabs:end -->
