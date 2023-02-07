@@ -103,8 +103,14 @@
 
 - [Request](/endpoints/request.md)
 
+**Account Server Endpoints**
+
+- [Backup](/endpoints/accounts/backupGJAccountNew.md)
+- [Sync](/endpoints/accounts/syncGJAccountNew.md)
+
 **Topics**
 
+- [GJP](/topics/gjp.md)
 - [Level Passwords](/topics/level_passwords.md)
 - [Level Encoding/Decoding](/topics/levelstring_encoding_decoding.md)
 - [Game Save Files Encryption/Decryption](/topics/localfiles_encrypt_decrypt.md)
