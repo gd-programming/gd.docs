@@ -6,7 +6,7 @@ The property is also used to determine whether a level is set for free copy, or 
 
 ## Decoding
 
-The passwords used to copy levels that have such set aren't plain string, and are encoded in a method commonly seen for values like these. Like most of the base64, it's done in [URL Encoded Base64](/topics/encryption/base64.md) The method of decryption is as follows:
+The passwords used to copy levels that have such set aren't plain string, and are encoded in a method commonly seen for values like these. Like most of the base64, it's done in [URL Encoded Base64](./encryption/base64.md) The method of decryption is as follows:
 
 `Decode Base64` -> `Xor Cipher (key "26364")` -> `Level Password`
 
