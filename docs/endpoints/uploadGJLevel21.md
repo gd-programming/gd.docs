@@ -10,7 +10,7 @@ Uploads a created level to the servers.
 
 **accountID** - The uploader's account ID
 
-**gjp** - The uploader's [GJP](./topics/encryption/gjp.md)
+**gjp** - The uploader's [GJP](/docs/topics/gjp.md)
 
 **userName** - The uploader's username
 
@@ -18,13 +18,13 @@ Uploads a created level to the servers.
 
 **levelName** - The name of the level, in plain text
 
-**levelDesc** - The description of the level, in [URL-safe base64](./topics/encryption/base64.md)
+**levelDesc** - The description of the level, in [URL-safe base64](/docs/topics/encryption/base64.md)
 
 **levelVersion** - The version number of the level
 
 **levelLength** - The length of the level as a number, where 0 is tiny and 4 is XL
 
-**audioTrack** - The [official song number](./reference.md) used in the level. Set to 0 if a newgrounds song is used
+**audioTrack** - The [official song number](../reference.md) used in the level. Set to 0 if a newgrounds song is used
 
 **auto** - Unknown (0)
 
@@ -46,9 +46,9 @@ Uploads a created level to the servers.
 
 **ldm** - Set to 1 if the level should have a low detail checkbox
 
-**levelString** - The actual level data. Must be gzip compressed and then converted to [URL-safe base64](./topics/encryption/base64.md)
+**levelString** - The actual level data. Must be gzip compressed and then converted to [URL-safe base64](/docs/topics/encryption/base64.md)
 
-**seed2** - A mandatory [chk value](./topics/encryption/chk.md) generated from the first 50 characters of the **_compressed_** level data
+**seed2** - A mandatory [chk value](/docs/topics/encryption/chk.md) generated from the first 50 characters of the **_compressed_** level data
 
 **secret** - Wmfd2893gb7
 
