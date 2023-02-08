@@ -24,7 +24,7 @@ Gets a user's account comments.
 
 ## Response
 
-Returns a list of [comment objects](/resources/server/comment.md) separated by a pipe `|`.
+Returns a list of [comment objects](/docs/resources/server/comment.md) separated by a pipe `|`.
 
 ## Example
 
