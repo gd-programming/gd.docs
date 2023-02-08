@@ -8,7 +8,7 @@ Gets either your friend list or your blocked list
 
 **accountID** - The account ID of the user you want to get the friends/blocklist of
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user you want to get the friends/blocklist of
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user you want to get the friends/blocklist of
 
 **secret** - Wmfd2893gb7
 
@@ -24,7 +24,7 @@ Gets either your friend list or your blocked list
 
 ## Response
 
-A list of [user objects](/resources/server/user.md) based on which list you choose, separated by pipes `|`.
+A list of [user objects](/docs/resources/server/user.md) based on which list you choose, separated by pipes `|`.
 
 ## Example
 
