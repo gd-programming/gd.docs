@@ -8,7 +8,7 @@ Marks a friend request as "read"
 
 **accountID** - The accountID of the user reading the friend request
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user reading the friend request
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user reading the friend request
 
 **requestID** - The ID of the friend request
 
