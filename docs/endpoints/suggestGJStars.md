@@ -8,7 +8,7 @@ Endpoint used by moderators to send levels to RobTop
 
 **accountID** - accountID of the user
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user
 
 **levelID** - the ID of the level
 
@@ -38,7 +38,7 @@ import requests
 
 data = {
         "gameVersion": 21,
-        "binaryVersion":35
+        "binaryVersion":35,
         "accountID": 71, # a moderators accountID
         "gjp": "********", # This would be the mods password encoded with GJP encryption
         "levelID": 128,
