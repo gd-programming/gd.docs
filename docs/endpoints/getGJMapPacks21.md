@@ -20,7 +20,7 @@ Gets the map packs.
 
 ## Response
 
-A list of [map pack](/resources/server/mappack.md) objects, separated by a pipe `|`.
+A list of [map pack](/docs/resources/server/mappack.md) objects, separated by a pipe `|`.
 
 ## Example
 
