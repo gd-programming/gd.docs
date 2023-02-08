@@ -110,7 +110,6 @@
 
 **Topics**
 
-- [GJP](/topics/gjp.md)
 - [Level Passwords](/topics/level_passwords.md)
 - [Level Encoding/Decoding](/topics/levelstring_encoding_decoding.md)
 - [Game Save Files Encryption/Decryption](/topics/localfiles_encrypt_decrypt.md)
@@ -121,6 +120,7 @@
 - **Encryption**
   - [Base64 Encoding](topics/encryption/base64.md)
   - [CHK Generation](topics/encryption/chk.md)
+  - [GJP](/topics/encryption/gjp.md)
   - [RS, UDID and UUID](topics/encryption/id.md)
   - [XOR Cipher](topics/encryption/xor.md)
   - [Data Zipping](topics/encryption/zip.md)
