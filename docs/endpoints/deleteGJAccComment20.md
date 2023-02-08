@@ -8,9 +8,9 @@
 
 **accountID** - Account ID of the user deleting the comment
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user deleting the comment
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user deleting the comment
 
-**commentID** - The ID of the comment being deleted (Returned by [uploadGJAccComment20](/endpoints/uploadGJAccComment20.md))
+**commentID** - The ID of the comment being deleted (Returned by [uploadGJAccComment20](/docs/endpoints/uploadGJAccComment20.md))
 
 **secret** - Wmfd2893gb7
 
