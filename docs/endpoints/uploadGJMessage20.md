@@ -8,13 +8,13 @@ Sends a message to a user
 
 **accountID** - Account ID of the user sending the message
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user sending the message
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user sending the message
 
 **toAccountID** - Account ID of the user retrieving the message
 
-**subject** - The subject of the message, converted to [URL-safe base64](/topics/encryption/base64)
+**subject** - The subject of the message, converted to [URL-safe base64](/docs/topics/encryption/base64.md)
 
-**body** - The body of the message, converted to [URL-safe base64](/topics/encryption/base64)
+**body** - The body of the message, [XOR](/docs/topics/encryption/xor.md)'d with a key of `14251`
 
 **secret** - Wmfd2893gb7
 
