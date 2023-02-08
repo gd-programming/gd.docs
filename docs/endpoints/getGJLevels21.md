@@ -18,7 +18,7 @@ Gets a list of levels.
 
 **accountID** - The account ID of the user who is searching the levels. Only sent when **type** is set to 8, 13 or when **type** is set to 5 and you are loading your own levels.
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user who is searching the levels. Only sent when **type** is set to 5, 8 or 13.
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user who is searching the levels. Only sent when **type** is set to 5, 8 or 13.
 
 **gauntlet** - The ID of the gauntlet that's currently being loaded.
 
@@ -108,7 +108,7 @@ Gets a list of levels.
 
 ## Response
 
-Returns a list of [level objects](/resources/server/level) separated by pipes `|` and sorted by the parameters, a list of objects denoting the authors sorted by increasing player ID (format is `PLAYERID:USERNAME:ACCOUNTID`) which are also separated by pipes `|`, and a list of [song objects](/resources/server/song) sorted by increasing song ID and separated by `~:~`. The indexers for each are `:`, `:` and `~|~` respectively.
+Returns a list of [level objects](/docs/resources/server/level.md) separated by pipes `|` and sorted by the parameters, a list of objects denoting the authors sorted by increasing player ID (format is `PLAYERID:USERNAME:ACCOUNTID`) which are also separated by pipes `|`, and a list of [song objects](/docs/resources/server/song.md) sorted by increasing song ID and separated by `~:~`. The indexers for each are `:`, `:` and `~|~` respectively.
 
 ## Example
 
