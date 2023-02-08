@@ -8,7 +8,7 @@ Deletes a level from the server.
 
 **accountID** - The level author's account ID
 
-**gjp** - The level author's [GJP](/topics/encryption/gjp.md)
+**gjp** - The level author's [GJP](/docs/topics/gjp.md)
 
 **levelID** - The ID of the level being deleted
 
