@@ -41,7 +41,7 @@ A list of all known keys can be found in the table below
 | Key | Name/Value                | Type                                         | Description                                                              
 |-----|---------------------------|----------------------------------------------|--------------------------------------------------------------------------
 | 1   | levelID                   | **Integer**                                  | The levelID linked to the comment
-| 2	  | comment					  | **String**									 | The comment left by the user, encoded in [base64](/topics/encryption/base64.md)
+| 2	  | comment					  | **String**									 | The comment left by the user, encoded in [base64](/docs/topics/encryption/base64.md)
 | 3   | authorPlayerID					  | **Integer**									 | The player ID of the comment author |
 | 4   | likes					  | **Integer**									 | The amount of likes the comment has
 | 5   | dislikes                  | **Integer**                                  | The amount of dislikes the comment has -> unused
@@ -84,7 +84,7 @@ If a user violates [the commenting rules](https://imgur.com/a/US0Biaj), they can
 
 ### Trivia
 
-- The `User String` uses the same response parser that [player profiles](/resources/server/user) use
+- The `User String` uses the same response parser that [player profiles](/docs/resources/server/user.md) use
 
 - The only example of `Account Comments` where it was able to display a colour is with [RobTop's](https://gdbrowser.com/u/71) profile, this is because RobTop hardcoded the account colour into the accountID of `71`
  
