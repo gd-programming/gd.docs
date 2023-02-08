@@ -41,6 +41,13 @@ Property keys reflect the keys found in the following table, whereas property va
 | **[HSV]()**         | `{h}a{s}a{v}a{s_checked}a{v_checked}`, where each name reflects the respective HSV property |
 | **string**          | raw string without quotation marks (e.g. `ExampleString`)                                   |
 
+### Object Positioning
+All objects are positioned by their centers. Positive Y is upwards and blocks are 30 units wide.
+
+Visualisation:
+
+![Positioning Visualisation](/../../../assets/object-positioning.png)
+
 ### Level Object Data
 **Level Object Structure**
 
