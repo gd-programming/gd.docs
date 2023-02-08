@@ -8,7 +8,7 @@ Download a message.
 
 **accountID** - The person's account ID
 
-**gjp** - The blocking person's [GJP](/docs/topics/gjp.md)
+**gjp** - The person's [GJP](/docs/topics/gjp.md)
 
 **messageID** - The ID of the message to read
 
