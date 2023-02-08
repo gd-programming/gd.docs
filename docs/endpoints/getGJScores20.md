@@ -18,7 +18,7 @@ Gets the leaderboard scores.
 
 **accountID** - The account ID of the user viewing the leaderboards
 
-**gjp** - The user's [GJP](/topics/encryption/gjp.md)
+**gjp** - The user's [GJP](/docs/topics/gjp.md)
 
 **type** - Can be `top`, `relative`, `friends`, or `creators`. If left out it defaults to `top`
 
@@ -26,7 +26,7 @@ Gets the leaderboard scores.
 
 ## Response
 
-Returns a list of [user objects](/resources/server/user.md) in order based on which leaderboard you're viewing, separated by pipe `|` characters.
+Returns a list of [user objects](/docs/resources/server/user.md) in order based on which leaderboard you're viewing, separated by pipe `|` characters.
 
 ## Example
 
