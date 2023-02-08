@@ -8,9 +8,9 @@ Posts an account comment
 
 **accountID** - Account ID of the user posting the comment
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user posting the comment
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user posting the comment
 
-**comment** - The comment's text, converted to [URL-safe base64](/topics/encryption/base64).
+**comment** - The comment's text, converted to [URL-safe base64](/docs/topics/encryption/base64.md).
 
 **secret** - Wmfd2893gb7
 
@@ -24,7 +24,7 @@ Posts an account comment
 
 **cType** - The comment type, 0 for level, 1 for user
 
-[**chk**](/topics/encryption/chk?id=comment) - Unsure
+[**chk**](/docs/topics/encryption/chk.md?id=comment) - Unsure
 
 ## Response
 
