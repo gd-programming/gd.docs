@@ -8,7 +8,7 @@ Download a message.
 
 **accountID** - The person's account ID
 
-**gjp** - The blocking person's [GJP](/topics/encryption/gjp.md)
+**gjp** - The blocking person's [GJP](/docs/topics/gjp.md)
 
 **messageID** - The ID of the message to read
 
@@ -24,7 +24,7 @@ Download a message.
 
 ## Response
 
-Returns a [message object](/resources/server/message.md) separated by colons `:`
+Returns a [message object](/docs/resources/server/message.md), separated by colons `:`.
 
 ## Example
 
