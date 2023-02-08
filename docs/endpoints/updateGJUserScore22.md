@@ -8,7 +8,7 @@ Updates a user's data
 
 **accountID** - Account ID of the user updating their profile
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user updating their profile
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user updating their profile
 
 **stars** - The amount of stars the user has
 
@@ -42,7 +42,7 @@ Updates a user's data
 
 **accExplosion** - The ID of the user's selected icon.
 
-**seed2** - [See here](/topics/encryption/chk?id=user-profile)
+**seed2** - [See here](/docs/topics/encryption/chk.md?id=user-profile)
 
 **secret** - Wmfd2893gb7
 
