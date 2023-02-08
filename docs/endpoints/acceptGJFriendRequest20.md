@@ -8,11 +8,11 @@ Accepts an incoming friend request
 
 **accountID** - Account ID of the user accepting the friend request
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user accepting the friend request
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user accepting the friend request
 
 **targetAccountID** - Account ID of the user who sent the friend request
 
-**requestID** - ID of the friend request (Returned by [uploadFriendRequest20](/endpoints/uploadFriendRequest20.md))
+**requestID** - ID of the friend request (Returned by [uploadFriendRequest20](/docs/endpoints/uploadFriendRequest20.md))
 
 **secret** - Wmfd2893gb7
 
