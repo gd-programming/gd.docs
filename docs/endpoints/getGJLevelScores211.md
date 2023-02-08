@@ -8,7 +8,7 @@ Fetches the leaderboard for a level and submits your level stats to the server
 
 **accountID** - The user's account ID
 
-**gjp** - The user's [GJP](/topics/encryption/gjp.md)
+**gjp** - The user's [GJP](/docs/topics/gjp.md)
 
 **levelID** - The ID of the level
 
@@ -59,11 +59,11 @@ def generate_leaderboard_seed(
 
 **s10** - Timely ID -> for dailies and weeklies
 
-**chk** - [See here](/topics/encryption/chk?id=level-leaderboard)
+**chk** - [See here](/docs/topics/encryption/chk.md?id=level-leaderboard)
 
 ## Response
 
-Returns a list of [Leaderboard Score](/resources/server/leaderboardscore.md) objects separated by a pipe `|`.
+Returns a list of [Leaderboard Score](/docs/resources/server/leaderboardscore.md) objects separated by a pipe `|`.
 
 ## Example
 
