@@ -22,7 +22,7 @@ Gets RobTop's handpicked top artists.
 
 ## Response
 
-A list of [song objects](/resources/server/song.md) with only the required information, the username and the youtube link if available, delimited by a pipe `|`.
+A list of [song objects](/docs/resources/server/song.md) with only the required information, the username and the youtube link if available, delimited by a pipe `|`.
 
 ## Example
 
