@@ -2,7 +2,7 @@
 
 ## Level
 
-A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a [level string](/topics/levelstring_encoding_decoding).
+A level is a playable object in Geometry Dash, namely coming with data that explains on what it is, and the string that the client interprets, known as a [level string](/docs/topics/levelstring_encoding_decoding.md).
 
 
 A typical level server response is structured with a `key:value:key:value` pairing and is then split with a `|`
@@ -29,8 +29,8 @@ Keys indicated with an asterisk (\*) are only returned from the downloadGJLevel2
 |-----|---------------------------|----------------------------------------------|--------------------------------------------------------------------------
 | 1   | levelID                  | **Integer**                                   | The id of the level                                                      
 | 2   | levelName                | **String**                                    | The name of the level                                                    
-| 3   | description              | **String**                                    | The level description, encoded in [base64](/topics/encryption/base64.md) 
-| 4*  | levelString              | **[Level String](/topics/levelstring_encoding_decoding)**| All the data for the level                               
+| 3   | description              | **String**                                    | The level description, encoded in [base64](/docs/topics/encryption/base64.md) 
+| 4*  | levelString              | **[Level String](/docs/topics/levelstring_encoding_decoding.md)**| All the data for the level                               
 | 5   | version                  | **Integer**                                   | The version of the level published                                       
 | 6   | playerID                 | **Integer**                                   | The player ID of the level author
 | 8   | difficultyDenominator    | **Integer**                                   | Returns 0 if the level is N/A, returns 10 if a difficulty is assigned. Historically used to be the amount of people who have voted on the difficulty.
