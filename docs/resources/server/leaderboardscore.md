@@ -54,4 +54,4 @@ A list of all known keys can be found in the table below
 
 ### Trivia
 
-- The key structure that leaderboards follow are exactly the same as the structure used for [Player Profiles](/resources/server/user.md)  
+- The key structure that leaderboards follow are exactly the same as the structure used for [Player Profiles](/docs/resources/server/user.md)  
