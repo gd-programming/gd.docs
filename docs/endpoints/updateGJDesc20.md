@@ -8,11 +8,11 @@ Updates the description of a level
 
 **accountID** - The account ID of the level's author
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the level's author
+**gjp** - The [GJP](/docs/topics/gjp.md) of the level's author
 
 **levelID** - The ID of the level
 
-**levelDesc** - The new description of the level, converted to [URL-safe base64](/topics/encryption/base64)
+**levelDesc** - The new description of the level, converted to [URL-safe base64](/docs/topics/encryption/base64.md)
 
 **secret** - Wmfd2893gb7
 
