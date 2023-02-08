@@ -8,7 +8,7 @@ Sends a friend request to a user
 
 **accountID** - Account ID of the user sending the friend request
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user sending the friend request
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user sending the friend request
 
 **toAccountID** - Account ID of the user receiving the friend request
 
@@ -22,7 +22,7 @@ Sends a friend request to a user
 
 **gdw** - 0
 
-**comment** - The comment sent with the friend request encoded with [Base 64](/topics/encryption/base64), defaults to nothing if left out
+**comment** - The comment sent with the friend request encoded with [Base64](/docs/topics/encryption/base64.md), defaults to nothing if left out
 
 ## Response
 
