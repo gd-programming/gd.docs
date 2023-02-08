@@ -24,7 +24,7 @@ Searches for a user and returns their info
 
 ## Response
 
-A [user object](/resources/server/user.md) of the person you're searching for.
+A [user object](/docs/resources/server/user.md) of the person you're searching for.
 
 ## Example
 
