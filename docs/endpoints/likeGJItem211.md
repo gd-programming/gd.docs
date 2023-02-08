@@ -22,11 +22,11 @@ Likes a level, comment, etc.
 
 **accountID** - The liking/disliking person's account ID
 
-**gjp** - The liking/disliking person's [GJP](/topics/encryption/gjp.md)
+**gjp** - The liking/disliking person's [GJP](/docs/topics/gjp.md)
 
-**udid** - The liking/disliking person's [udid](/topics/encryption/id?id=udid)
+**udid** - The liking/disliking person's [udid](/docs/topics/encryption/id.md?id=udid)
 
-**uuid** - The liking/disliking person's [uuid](/topics/encryption/id?id=uuid)
+**uuid** - The liking/disliking person's [uuid](/docs/topics/encryption/id.md?id=uuid)
 
 **like** - 0 is dislike, 1 is like. Not sure what it defaults to if left out, but it can be left out.
 
