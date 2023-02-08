@@ -8,7 +8,7 @@ Gets a user's friend requests.
 
 **accountID** - The account ID of the person whose friend requests you're trying to get
 
-**gjp** - The user's [GJP](/topics/encryption/gjp.md)
+**gjp** - The user's [GJP](/docs/topics/gjp.md)
 
 **getSent** - 0 for friend requests the user retrieved, and 1 for friend requests the user has sent
 
@@ -28,7 +28,7 @@ Gets a user's friend requests.
 
 ## Response
 
-A list of [friend request objects](/resources/server/friendrequest.md) separated by a pipe `|`.
+A list of [friend request objects](/docs/resources/server/friendrequest.md) separated by a pipe `|`.
 
 ## Example
 
