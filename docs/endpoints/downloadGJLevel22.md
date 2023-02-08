@@ -20,23 +20,23 @@ Downloads a user level and info so it can be played.
 
 **accountID** - The account ID of the user who is downloading the level
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user who is downloading the level
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user who is downloading the level
 
-**udid** - The [udid](/topics/encryption/id?id=udid) of the user who is downloading the level
+**udid** - The [udid](/docs/topics/encryption/id.md?id=udid) of the user who is downloading the level
 
-**uuid** - The [uuid](/topics/encryption/id?id=uuid) of the user who is downloading the level
+**uuid** - The [uuid](/docs/topics/encryption/id.md?id=uuid) of the user who is downloading the level
 
 **inc** - Unknown function. Set to 1
 
 **extras** - Unknown function. Set to 0
 
-**rs** - [See here](topics/encryption/id?id=rs)
+**rs** - [See here](/docs/topics/encryption/id.md?id=rs)
 
-**chk** - [See here](/topics/encryption/chk?id=download-level)
+**chk** - [See here](/docs/topics/encryption/chk.md?id=download-level)
 
 ## Response
 
-Returns a [level object](/resources/server/level.md).
+Returns a [level object](/docs/resources/server/level.md).
 
 ## Example
 
