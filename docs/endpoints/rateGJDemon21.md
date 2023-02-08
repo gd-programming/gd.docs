@@ -14,7 +14,7 @@ Rates the demon difficulty of a demon level - only works for Geometry Dash moder
 
 **accountID** - The accountID of the user who's rating the demon's difficulty
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user who's rating the demon's difficulty
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user who's rating the demon's difficulty
 
 **levelID** - The ID of the demon being rated
 
@@ -71,7 +71,7 @@ headers = {
 
 data = {
     "gameVersion": 21,
-    "binaryVersion": 35
+    "binaryVersion": 35,
     "accountID": 71,
     "gjp": *********, #the GJP of the moderator
     "secret": "Wmfp3897gc3",
