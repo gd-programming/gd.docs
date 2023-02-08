@@ -20,8 +20,8 @@ Simple XOR function differs can be written like this:
 ### **Python**
 
 ```py
-def xor(string: str, key: int) -> str:
-	return ("").join(chr(ord(char) ^ key) for char in string)
+def xor(data: bytes, key: int) -> bytes:
+	return bytes(byte ^ key for byte in data)
 ```
 
 <!-- tabs:end -->
@@ -33,14 +33,18 @@ Programmatically decryption can be implemented like so:
 ### **Python**
 
 ```py
-import base64
-import gzip
+from gzip import decompress
+from base64 import urlsafe_b64decode
 
 
-def decrypt_data(data: str) -> str:
-	base64_decoded = base64.urlsafe_b64decode(xor(data, key=11).encode())
-	decompressed = gzip.decompress(base64_decoded)
-	return decompressed.decode()
+def decrypt_data(data: bytes) -> str:
+    size_mod_4 = len(data) % 4
+    if size_mod_4 > 0:
+        # size not divisible by 4
+        data = data[:-size_mod_4]
+    xored = bytes(byte ^ 11 for byte in data)
+    base64_decoded = urlsafe_b64decode(xored)
+    return decompress(base64_decoded).decode()
 ```
 
 <!-- tabs:end -->
@@ -106,10 +110,14 @@ Encryption is done pretty much the same way but with opposite operations and ord
 ### **Python**
 
 ```py
-def encrypt_data(data: str) -> str:
-	gzipped = gzip.compress(data.encode())
-	base64_encoded = base64.urlsafe_b64encode(gzipped)
-	return xor(base64_encoded.decode(), key=11)
+from gzip import compress
+from base64 import urlsafe_b64encode
+
+
+def encrypt_data(xmlstring: str) -> bytes:
+	gzipped = compress(xmlstring.encode())
+	base64_encoded = urlsafe_b64encode(gzipped)
+	return bytes(byte ^ 11 for byte in base64_encoded)
 ```
 
 <!-- tabs:end -->
