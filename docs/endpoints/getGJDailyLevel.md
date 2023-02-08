@@ -18,7 +18,7 @@ Gets which daily level we're on and gets how much time is left.
 
 **accountID** - The user's account ID
 
-**gjp** - The user's [GJP](/topics/encryption/gjp.md)
+**gjp** - The user's [GJP](/docs/topics/gjp.md)
 
 **weekly** - 0 for daily, 1 for weekly. Defaults to 0 if not sent
 
