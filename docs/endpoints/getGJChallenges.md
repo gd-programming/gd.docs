@@ -10,7 +10,7 @@ Gets a user's quests.
 
 **secret** - Wmfd2893gb7
 
-**chk** - 5 random chars appended to the beginning of a random number [XOR](/topics/encryption/xor.md)'d and [base64](/topics/encryption/base64.md) encoded
+**chk** - 5 random chars appended to the beginning of a random number [XOR](/docs/topics/encryption/xor.md)'d and [base64](/docs/topics/encryption/base64.md) encoded
 
 ### Optional Parameters
 
@@ -22,7 +22,7 @@ Gets a user's quests.
 
 **accountID** - Account ID of the user
 
-**gjp** - The user's [GJP](/topics/encryption/gjp.md)
+**gjp** - The user's [GJP](/docs/topics/gjp.md)
 
 **uuid** - Seemingly a random number also used for identifying someone
 
@@ -46,7 +46,7 @@ A list of attributes of the quests, separated by colons `:` as follows:
 - Second quest's attributes in a comma separated list
 - Third quest's attributes in a comma separated list
 
-This list is then [XOR](/topics/encryption/xor.md)'d and [URL-Safe Base64](/topics/encryption/base64.md) encoded. Then it is separated with its hash by a pipe `|`. It also has a random string of 5 characters appended to the front.
+This list is then [XOR](/docs/topics/encryption/xor.md)'d and [URL-Safe Base64](/docs/topics/encryption/base64.md) encoded. Then it is separated with its hash by a pipe `|`. It also has a random string of 5 characters appended to the front.
 
 ## Example
 
