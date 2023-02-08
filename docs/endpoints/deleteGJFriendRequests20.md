@@ -8,7 +8,7 @@ Deletes a friend request
 
 **accountID** - The account ID of the user who is deleting the friend request
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user who is deleting the friend request
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user who is deleting the friend request
 
 **targetAccountID** - ID of the person whose friend request is being deleted
 
