@@ -20,11 +20,11 @@ Gets info about a user
 
 **accountID** - Your accountID
 
-**gjp** - Your [GJP](/topics/encryption/gjp.md)
+**gjp** - Your [GJP](/docs/topics/gjp.md)
 
 ## Response
 
-Returns a [user object](/resources/server/user.md) for the player you want
+Returns a [user object](/docs/resources/server/user.md) for the player you want
 
 ## Example
 
