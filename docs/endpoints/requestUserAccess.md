@@ -8,7 +8,7 @@ Requests moderator access
 
 **accountID** - The accountID of the user requesting mod access
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user requesting mod access
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user requesting mod access
 
 **secret** - Wmfd2893gb7
 
@@ -34,7 +34,6 @@ Requests moderator access
 import requests
 
 data = {
-	data = {
     'accountID': 173831, # DevExit's account ID
     'gjp': "********", # This would be DevExit's password encoded with GJP encryption
     "secret": "Wmfd2893gb7"
