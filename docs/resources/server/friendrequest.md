@@ -4,7 +4,7 @@
 
 One of the features in Geometry Dash is the friend system which allows players to add each other as a friend. It is part of a poorly developed social System in which players can send messages to each other.
 
-The server response returns a [User String](/resources/server/user) in a response which is structured with a `key:value:key:value` pairing. Each friend request string is then split with a `|`
+The server response returns a [User String](/docs/resources/server/user.md) in a response which is structured with a `key:value:key:value` pairing. Each friend request string is then split with a `|`
 
 <!-- tabs:start -->
 
@@ -32,7 +32,7 @@ A list of all known keys can be found in the table below
 | 15  | glow			  | **Integer**					 | Either 0 or 2, might be related to glow
 | 16  | accountID		  | **Integer**					 | The other user's account ID. **This is different than the player ID**
 | 32  | friendRequestID		  | **Integer**					 | An ID unique to each friend request. (I'm not 100% certain on this)
-| 35  | message			  | **String**					 | The friend requests's message, encoded in [base64](/topics/encryption/base64.md)
+| 35  | message			  | **String**					 | The friend requests's message, encoded in [base64](/docs/topics/encryption/base64.md)
 | 37  | age			  | **String** 					 | How long ago the friend request was sent (e.g. "2 months")
 | 41  | NewFriendRequest		  | **Bool**					 | if the friend request is new
 
