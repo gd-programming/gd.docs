@@ -16,7 +16,7 @@ N/A
 
 ## Response
 
-A [song object](/resources/server/song.md) with `~|~` as the delimiter
+A [song object](/docs/resources/server/song.md) with `~|~` as the delimiter
 
 ## Example
 
