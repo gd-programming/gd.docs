@@ -8,7 +8,7 @@ Removes someone from a user's friend list
 
 **accountID** - The accountID of the user removing the friend
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user removing the friend
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user removing the friend
 
 **targetAccountID** - The accountID of the user being removed
 
