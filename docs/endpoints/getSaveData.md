@@ -18,7 +18,7 @@ Unknown
 
 ## Response
 
-Returns seemingly random [urlsafe base64](/topics/encryption/base64.md) encoded text
+Returns seemingly random [urlsafe base64](/docs/topics/encryption/base64.md) encoded text
 
 ## Example
 
