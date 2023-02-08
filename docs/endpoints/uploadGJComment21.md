@@ -8,11 +8,11 @@ Uploads a comment to a user level.
 
 **accountID** - The commenter's account ID
 
-**gjp** - The commenter's [GJP](/topics/encryption/gjp.md)
+**gjp** - The commenter's [GJP](/docs/topics/gjp.md)
 
 **userName** - The commenter's username
 
-**comment** - The comment, converted to [URL-safe base64](/topics/encryption/base64)
+**comment** - The comment, converted to [URL-safe base64](/docs/topics/encryption/base64.md)
 
 **secret** - Wmfd2893gb7
 
@@ -20,7 +20,7 @@ Uploads a comment to a user level.
 
 **percent** - The level percentage shown on the comment
 
-[**chk**](/topics/encryption/chk) - `userName` + `comment` + `levelID` + `percent`
+[**chk**](/docs/topics/encryption/chk.md) - `userName` + `comment` + `levelID` + `percent`
 
 ### Optional Parameters
 
