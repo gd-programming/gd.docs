@@ -8,7 +8,7 @@ Deletes a level comment.
 
 **accountID** - The account ID of the user who is deleting the comment
 
-**gjp** - The [GJP](/topics/encryption/gjp.md) of the user who is deleting the comment
+**gjp** - The [GJP](/docs/topics/gjp.md) of the user who is deleting the comment
 
 **commentID** - ID of the comment
 
