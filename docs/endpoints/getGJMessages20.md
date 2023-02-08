@@ -8,7 +8,7 @@ Gets a user's DMs.
 
 **accountID** - The user's account ID
 
-**gjp** - The user's [GJP](/topics/encryption/gjp.md)
+**gjp** - The user's [GJP](/docs/topics/gjp.md)
 
 **secret** - Wmfd2893gb7
 
@@ -28,7 +28,7 @@ Gets a user's DMs.
 
 ## Response
 
-A list of [message](/resources/server/message.md) objects separated by a pipe `|`.
+A list of [message](/docs/resources/server/message.md) objects separated by a pipe `|`.
 
 ## Example
 
