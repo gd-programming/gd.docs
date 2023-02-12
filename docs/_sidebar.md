@@ -74,6 +74,7 @@
   - [likeGJItem211](/endpoints/likeGJItem211.md)
   - [requestUserAccess](/endpoints/requestUserAccess.md)
   - [restoreGJItems](/endpoints/restoreGJItems.md)
+  - [submitGJUserInfo](/endpoints/submitGJUserInfo.md)
 - Relationships
   - [acceptGJFriendRequest20](/endpoints/acceptGJFriendRequest20.md)
   - [blockGJUser20](/endpoints/blockGJUser20.md)
