@@ -1,6 +1,6 @@
 # submitGJUserInfo.php
 
-Submits level completion data for use in restoreGJItems.php
+Submits level completion data, probably for use in restoreGJItems.php. The game sends to this endpoint if updateGJUserScore22.php returns `-9`.
 
 ## Parameters
 
