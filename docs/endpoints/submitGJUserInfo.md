@@ -33,7 +33,7 @@ Submits level completion data for use in restoreGJItems.php. The game sends to t
 import requests
 
 data = {
-	"udid": "605BE9FD-300E-49EA-A45C-B272EE64D3E0",
+  "udid": "605BE9FD-300E-49EA-A45C-B272EE64D3E0",
   "accountID": 23590959,
   "levelsInfo": "1,132,2,3,3,29,4,1704;1,128,2,1,3,25,4,1004",
   "secret": "Wmfd2893gb7"
