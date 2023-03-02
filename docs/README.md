@@ -39,4 +39,4 @@ These are generally projects that interface over the Geometry Dash servers and h
 
 ## Outside Remarks
 
-With this documentation, the Geometry Dash Programming staff team would love to see your interesting ideas with this project, and the kinds of things you create with the information provided. Make sure to hit us up on our discord and show us of anything you make!
+With this documentation, the Geometry Dash Programming staff team would love to see your interesting ideas with this project, and the kinds of things you create with the information provided. Make sure to hit us up on our discord and show us anything you make!
