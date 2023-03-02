@@ -8,7 +8,7 @@ The provided documentation is available on it's repository, over [here](https://
 
 ### Geometry Dash Wrappers
 
-A few people, or teams have gone out of their way to create proper wrappers and API's around the **Geometry Dash** servers and it's client. All of the known and endorsed projects will find their way here, as a listing of resources people can use for their own projects.
+A few people, or teams, have gone out of their way to create proper wrappers and APIs around the **Geometry Dash** servers and its client. All of the known and endorsed projects will find their way here, as a listing of resources people can use for their own projects.
 
 #### Python
 
@@ -21,7 +21,7 @@ A few people, or teams have gone out of their way to create proper wrappers and 
 
 ### Geometry Dash Projects
 
-These are generally projects that generally interface over the Geometry Dash servers, and overall have built up their own recognition and traction along the community, and developers alike.
+These are generally projects that interface over the Geometry Dash servers and have gained recognition and traction among the community and developers.
 
 #### Node.js
 
@@ -39,4 +39,4 @@ These are generally projects that generally interface over the Geometry Dash ser
 
 ## Outside Remarks
 
-With this documentation, the Geometry Dash Programming staff team would love to see your interesting ideas with this project, and the kinds of things you create with the information provided. Make sure to hit us up on our discord, and show us of such!
+With this documentation, the Geometry Dash Programming staff team would love to see your interesting ideas with this project, and the kinds of things you create with the information provided. Make sure to hit us up on our discord and show us anything you make!
