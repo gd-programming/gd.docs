@@ -1021,7 +1021,14 @@
         
           <li class="md-nav__item">
   <a href="#undiscovered-color-channel-ids" class="md-nav__link">
-    Undiscovered color channel id's
+    Undiscovered color channel IDs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-color-channel-ids" class="md-nav__link">
+    1.9 color channel ID's
   </a>
   
 </li>
@@ -1169,15 +1176,15 @@
 </table>
 <h3 id="determining-which-class-is-used">Determining which class is used</h3>
 <p>Here is a simple JavaScript function that determines what color class the color object has:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">getColorClass</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">copy_channel_id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">COPY_COLOR</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">getColorClass</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">copy_channel_id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">COPY_COLOR</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">player_color</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">PLAYER_COLOR_NONE</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">PLAYER_COLOR</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">color</span><span class="p">.</span><span class="nx">player_color</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">PLAYER_COLOR_NONE</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">PLAYER_COLOR</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">BASE_COLOR</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">BASE_COLOR</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="color-channel-ids">Color Channel ID's</h2>
 <p>Here are all of the different color id's:</p>
@@ -1247,18 +1254,30 @@
 </tr>
 </tbody>
 </table>
-<h3 id="undiscovered-color-channel-ids">Undiscovered color channel id's</h3>
+<h3 id="undiscovered-color-channel-ids">Undiscovered color channel IDs</h3>
 <p><code>WHITE</code>: Static color that is always <code>r: 255, g: 255, b: 255</code><br />
 <code>LIGHTER</code>: A lighter version of the primary color in objects. Used in the white small blocks found in <code>build tab 2 on page 6</code>.</p>
+<h3 id="19-color-channel-ids">1.9 color channel ID's</h3>
+<p>GD's 1.9 version used a different ID scheme to identify color channels. In 2.0+, these IDs are still present, but only used in the legacy <code>1.9 Color Channel ID</code> property of 1.9 objects. They are as follows:
+| 1.9 Channel ID | Name | Corresponding 2.0+ ID |
+|:----|:---------|:-----------------------------|
+| <code>1</code> | <strong>P1</strong>    | <code>1005</code>
+| <code>2</code> | <strong>P2</strong>    | <code>1006</code>
+| <code>3</code> | <strong>COL 1</strong> | <code>1</code>
+| <code>4</code> | <strong>COL 2</strong> | <code>2</code>
+| <code>5</code> | <strong>LBG</strong>   | <code>1007</code>
+| <code>6</code> | <strong>COL 3</strong> | <code>3</code>
+| <code>7</code> | <strong>COL 4</strong> | <code>4</code>
+| <code>8</code> | <strong>3DL</strong>   | <code>1003</code></p>
 <h3 id="light-background-lbg-calculation">Light Background (LBG) calculation</h3>
 <p>The LBG takes the HSV of background. Subtracts <code>20</code> from its saturation, then interpolates from <code>P1</code> to the last HSV by a factor of the last HSV's value devided by <code>100</code>.</p>
 <p>Here is a JavaScript example:
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">lightBG</span><span class="p">(</span><span class="nx">bg</span><span class="p">,</span><span class="w"> </span><span class="nx">p1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">hsv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">RGBtoHSV</span><span class="p">(</span><span class="nx">bg</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">hsv</span><span class="p">.</span><span class="nx">s</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">lightBG</span><span class="p">(</span><span class="nx">bg</span><span class="p">,</span><span class="w"> </span><span class="nx">p1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">hsv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">RGBtoHSV</span><span class="p">(</span><span class="nx">bg</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">hsv</span><span class="p">.</span><span class="nx">s</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">blendColor</span><span class="p">(</span><span class="w"> </span><span class="nx">p1</span><span class="p">,</span><span class="w"> </span><span class="nx">HSVtoRGB</span><span class="p">(</span><span class="nx">hsv</span><span class="p">),</span><span class="w"> </span><span class="nx">hsv</span><span class="p">.</span><span class="nx">v</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">blendColor</span><span class="p">(</span><span class="w"> </span><span class="nx">p1</span><span class="p">,</span><span class="w"> </span><span class="nx">HSVtoRGB</span><span class="p">(</span><span class="nx">hsv</span><span class="p">),</span><span class="w"> </span><span class="nx">hsv</span><span class="p">.</span><span class="nx">v</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div></p>
 
               

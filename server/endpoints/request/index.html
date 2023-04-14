@@ -1112,7 +1112,7 @@
 
 <span class="c1">// outputs the site responce</span>
 <span class="k">echo</span> <span class="nv">$result</span><span class="p">;</span>
-<span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">?&gt;</span>
 </code></pre></div>
 <h3 id="python"><strong>Python</strong></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
@@ -1135,107 +1135,107 @@
 <div class="highlight"><pre><span></span><code><span class="cm">/*</span>
 <span class="cm"> * Using Reactor Netty HTTP client</span>
 <span class="cm"> * https://github.com/reactor/reactor-netty</span>
-<span class="cm"> */</span><span class="w"></span>
+<span class="cm"> */</span>
 
-<span class="kn">import static</span><span class="w"> </span><span class="nn">io.netty.buffer.Unpooled.wrappedBuffer</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import static</span><span class="w"> </span><span class="nn">java.nio.charset.StandardCharsets.UTF_8</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import static</span><span class="w"> </span><span class="nn">io.netty.buffer.Unpooled.wrappedBuffer</span><span class="p">;</span>
+<span class="kn">import static</span><span class="w"> </span><span class="nn">java.nio.charset.StandardCharsets.UTF_8</span><span class="p">;</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">io.netty.buffer.ByteBuf</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">io.netty.handler.codec.http.HttpResponseStatus</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">reactor.core.publisher.Mono</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">reactor.netty.http.client.HttpClient</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.netty.buffer.ByteBuf</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">io.netty.handler.codec.http.HttpResponseStatus</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">reactor.core.publisher.Mono</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">reactor.netty.http.client.HttpClient</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Creates data to send</span><span class="w"></span>
-<span class="w">        </span><span class="n">ByteBuf</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wrappedBuffer</span><span class="p">(</span><span class="n">UTF_8</span><span class="p">.</span><span class="na">encode</span><span class="p">(</span><span class="s">&quot;something=value&amp;somethingElse=otherValue&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Creates data to send</span>
+<span class="w">        </span><span class="n">ByteBuf</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wrappedBuffer</span><span class="p">(</span><span class="n">UTF_8</span><span class="p">.</span><span class="na">encode</span><span class="p">(</span><span class="s">&quot;something=value&amp;somethingElse=otherValue&quot;</span><span class="p">));</span>
 
-<span class="w">        </span><span class="c1">// Creates HTTP client</span><span class="w"></span>
-<span class="w">        </span><span class="n">HttpClient</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HttpClient</span><span class="p">.</span><span class="na">create</span><span class="p">()</span><span class="w"></span>
-<span class="w">                </span><span class="p">.</span><span class="na">baseUrl</span><span class="p">(</span><span class="s">&quot;www.boomlings.com/database&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="p">.</span><span class="na">headers</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                    </span><span class="n">h</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">                    </span><span class="n">h</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Content-Length&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="na">readableBytes</span><span class="p">());</span><span class="w"></span>
-<span class="w">                </span><span class="p">});</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Creates HTTP client</span>
+<span class="w">        </span><span class="n">HttpClient</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HttpClient</span><span class="p">.</span><span class="na">create</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">baseUrl</span><span class="p">(</span><span class="s">&quot;www.boomlings.com/database&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">headers</span><span class="p">(</span><span class="n">h</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">h</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">);</span>
+<span class="w">                    </span><span class="n">h</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Content-Length&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="na">readableBytes</span><span class="p">());</span>
+<span class="w">                </span><span class="p">});</span>
 
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">post</span><span class="p">()</span><span class="w">       </span><span class="c1">// Creates the POST request</span><span class="w"></span>
-<span class="w">                </span><span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="s">&quot;/[insert target file]&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Sets the target URL</span><span class="w"></span>
-<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">(</span><span class="n">Mono</span><span class="p">.</span><span class="na">just</span><span class="p">(</span><span class="n">data</span><span class="p">))</span><span class="w">        </span><span class="c1">// Sends the data</span><span class="w"></span>
-<span class="w">                </span><span class="p">.</span><span class="na">responseSingle</span><span class="p">((</span><span class="n">responseHeader</span><span class="p">,</span><span class="w"> </span><span class="n">responseBody</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">responseHeader</span><span class="p">.</span><span class="na">status</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">HttpResponseStatus</span><span class="p">.</span><span class="na">OK</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                        </span><span class="c1">// If 200 OK returns response body as string</span><span class="w"></span>
-<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">responseBody</span><span class="p">.</span><span class="na">asString</span><span class="p">().</span><span class="na">defaultIfEmpty</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                        </span><span class="c1">// If not 200 OK throws an exception</span><span class="w"></span>
-<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">Mono</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">responseHeader</span><span class="p">.</span><span class="na">status</span><span class="p">().</span><span class="na">toString</span><span class="p">()));</span><span class="w"></span>
-<span class="w">                    </span><span class="p">}</span><span class="w"></span>
-<span class="w">                </span><span class="p">})</span><span class="w"></span>
-<span class="w">                </span><span class="p">.</span><span class="na">block</span><span class="p">();</span><span class="w"> </span><span class="c1">// awaits response</span><span class="w"></span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="na">post</span><span class="p">()</span><span class="w">       </span><span class="c1">// Creates the POST request</span>
+<span class="w">                </span><span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="s">&quot;/[insert target file]&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Sets the target URL</span>
+<span class="w">                </span><span class="p">.</span><span class="na">send</span><span class="p">(</span><span class="n">Mono</span><span class="p">.</span><span class="na">just</span><span class="p">(</span><span class="n">data</span><span class="p">))</span><span class="w">        </span><span class="c1">// Sends the data</span>
+<span class="w">                </span><span class="p">.</span><span class="na">responseSingle</span><span class="p">((</span><span class="n">responseHeader</span><span class="p">,</span><span class="w"> </span><span class="n">responseBody</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">responseHeader</span><span class="p">.</span><span class="na">status</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">HttpResponseStatus</span><span class="p">.</span><span class="na">OK</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// If 200 OK returns response body as string</span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">responseBody</span><span class="p">.</span><span class="na">asString</span><span class="p">().</span><span class="na">defaultIfEmpty</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="c1">// If not 200 OK throws an exception</span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">Mono</span><span class="p">.</span><span class="na">error</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">responseHeader</span><span class="p">.</span><span class="na">status</span><span class="p">().</span><span class="na">toString</span><span class="p">()));</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">})</span>
+<span class="w">                </span><span class="p">.</span><span class="na">block</span><span class="p">();</span><span class="w"> </span><span class="c1">// awaits response</span>
 
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">);</span><span class="w"> </span><span class="c1">// prints response body</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">response</span><span class="p">);</span><span class="w"> </span><span class="c1">// prints response body</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </code></pre></div>
 <h3 id="node-js"><strong>Node JS</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">queryString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;query-string&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">queryString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;query-string&quot;</span><span class="p">);</span>
 
-<span class="c1">// sets the target url</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/database/[insert target file]&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// sets the target url</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/database/[insert target file]&quot;</span><span class="p">;</span>
 
-<span class="c1">// creates data to send</span><span class="w"></span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">queryString</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="w"></span>
-<span class="w">    </span><span class="nx">something</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">somethingElse</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;otherValue&quot;</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<span class="c1">// creates data to send</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">queryString</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">something</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">somethingElse</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;otherValue&quot;</span>
+<span class="p">});</span>
 
-<span class="c1">// sends a request</span><span class="w"></span>
-<span class="nx">http</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span><span class="w"></span>
-<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;boomlings.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">target</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;Content-Length&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">Buffer</span><span class="p">.</span><span class="nx">byteLength</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">},</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// sends a request</span>
+<span class="nx">http</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">host</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;boomlings.com&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="nx">target</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">port</span><span class="o">:</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Content-Length&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">Buffer</span><span class="p">.</span><span class="nx">byteLength</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">},</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span>
 
-<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">chunk</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">chunk</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">chunk</span><span class="p">);</span>
 
-<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;end&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">output</span><span class="p">));</span><span class="w"></span>
-<span class="p">}).</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;end&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">output</span><span class="p">));</span>
+<span class="p">}).</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="rust"><strong>Rust</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">reqwest</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">reqwest</span><span class="p">;</span>
 
 <span class="c1">// use the tokio runtime</span>
-<span class="cp">#[tokio::main]</span><span class="w"></span>
-<span class="k">async</span><span class="w"> </span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">reqwest</span>::<span class="nb">Result</span><span class="o">&lt;</span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="cp">#[tokio::main]</span>
+<span class="k">async</span><span class="w"> </span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">reqwest</span>::<span class="nb">Result</span><span class="o">&lt;</span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// set the url</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://www.boomlings.com/database/[insert target file]&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://www.boomlings.com/database/[insert target file]&quot;</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// create post values</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="p">(</span><span class="s">&quot;something&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;value&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">        </span><span class="p">(</span><span class="s">&quot;somethingElse&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;otherValue&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">(</span><span class="s">&quot;something&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;value&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="p">(</span><span class="s">&quot;somethingElse&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;otherValue&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">];</span>
 
 <span class="w">    </span><span class="c1">// send the request</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reqwest</span>::<span class="n">Client</span>::<span class="n">new</span><span class="p">()</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">form</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="n">send</span><span class="p">()</span><span class="w"></span>
-<span class="w">        </span><span class="p">.</span><span class="k">await</span><span class="o">?</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">req</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reqwest</span>::<span class="n">Client</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">form</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">send</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="k">await</span><span class="o">?</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// read the response</span>
-<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">text</span><span class="p">().</span><span class="k">await</span><span class="o">?</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">req</span><span class="p">.</span><span class="n">text</span><span class="p">().</span><span class="k">await</span><span class="o">?</span><span class="p">);</span>
 
-<span class="w">    </span><span class="nb">Ok</span><span class="p">(())</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nb">Ok</span><span class="p">(())</span>
+<span class="p">}</span>
 </code></pre></div>
 <!-- tabs:end -->
 
