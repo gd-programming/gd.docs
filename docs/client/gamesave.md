@@ -44,6 +44,7 @@ Your CCGameManager.dat File contains a lot of information regarding your account
 | binaryVersion| integer | The Games Binary Version |
 | resolution| integer | The games resolution?  |
 | texQuality| integer | how high the text quality is  |
+| timeOffset| integer | music offset in milliseconds  |
 
 ### GLM 
 

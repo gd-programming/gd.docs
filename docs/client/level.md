@@ -13,7 +13,7 @@ A level is a playable object in Geometry Dash, namely coming with data that expl
 | k1  | Level ID                       | **integer**                                                      | the id of the level                                                              |
 | k2  | Level Name                     | **string**                                                       | the name of the level                                                            |
 | k3  | Description                    | **string**                                                       | the level description, encoded in [base64](https://en.wikipedia.org/wiki/Base64) |
-| k4  | Inner Level String             | **[inner level string](level-components/inner-level-string.md)** | the inner level string, or the playable level                                    |
+| k4  | Inner Level String             | **[inner level string](/resources/client/level-components/inner-level-string.md)** | the inner level string, or the playable level                                    |
 | k5  | Creator                        | **[user](./user.md)Name**                                        | the name of the level creator                                                    |
 | k6  | UserID                         | **integer**                                                      | The UserID of the level Creator                                                  |
 | k7  | level difficulty               | **integer**                                                      | the difficulty the level has                                                     |
@@ -100,7 +100,7 @@ The last editor state key/value pairs contain a few values that indicate the las
 | kI4 | Build Tab Page           | **integer**    | the displayed page within the build tab  |
 | kI5 | Build Tab                | **integer**    | the selected build tab                   |
 | kI6 | Build Tab Pages          | **dictionary** | the last browsed pages of each build tab |
-| kI7 | Editor Layer             | **float**      | the zoom level of the editor camera      |
+| kI7 | Editor Layer             | **float**      | the last selected index of a layer      |
 
 Note that the build tab pages do not depend on the user's button row/column settings. That means, if the settings are changed, the build tab pages will not reflect the correct changes. For example:
 

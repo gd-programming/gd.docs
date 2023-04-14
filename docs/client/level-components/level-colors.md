@@ -73,9 +73,22 @@ Here are all of the different color id's:
 | `1009`    | **G2**            | This is the secondary color of the ground |
 | `1010`    | **BLACK**         | This is the static color channel which is always `r: 0, g: 0, b: 0`. Used in saws that are black by default |
 
-### Undiscovered color channel id's
+### Undiscovered color channel IDs
 `WHITE`: Static color that is always `r: 255, g: 255, b: 255`  
 `LIGHTER`: A lighter version of the primary color in objects. Used in the white small blocks found in `build tab 2 on page 6`.
+
+### 1.9 color channel ID's
+GD's 1.9 version used a different ID scheme to identify color channels. In 2.0+, these IDs are still present, but only used in the legacy `1.9 Color Channel ID` property of 1.9 objects. They are as follows:
+| 1.9 Channel ID | Name | Corresponding 2.0+ ID |
+|:----|:---------|:-----------------------------|
+| `1` | **P1**    | `1005`
+| `2` | **P2**    | `1006`
+| `3` | **COL 1** | `1`
+| `4` | **COL 2** | `2`
+| `5` | **LBG**   | `1007`
+| `6` | **COL 3** | `3`
+| `7` | **COL 4** | `4`
+| `8` | **3DL**   | `1003`
 
 ### Light Background (LBG) calculation
 The LBG takes the HSV of background. Subtracts `20` from its saturation, then interpolates from `P1` to the last HSV by a factor of the last HSV's value devided by `100`.

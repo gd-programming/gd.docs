@@ -141,7 +141,7 @@ GLM_12 contains likes given to a level
 
 | key | Description |
 |:----|:------------|
-| `like_{LikeType}_{unknown}_{like/dislike}_{ID}` | needs investigating more |
+| `like_{LikeType}_{LevelID}_{like/dislike}_{ID}` | needs investigating more |
 
 ## GLM_13
 

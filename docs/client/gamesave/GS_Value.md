@@ -17,7 +17,7 @@ GS values contain Information regarding certain aspects of the game
 | 9 | Destroyed Players on the menu |
 | 10 | Total Liked/Disliked levels |
 | 11 | Total Rated Levels |
-| 12 | Secret Coins collected |
+| 12 | User coins collected |
 | 13 | Total Diamonds |
 | 14 | current orbs |
 | 15 | Completed Daily Levels |
@@ -28,7 +28,7 @@ GS values contain Information regarding certain aspects of the game
 | 20 | Lava Shards |
 | 21 | Bonus Shards |
 | 22 | Total Orbs Collected |
-| Unique_{LevelID}_{Coins Collected} | The Coins Collected on the Official Levels
+| unique_{LevelID}_{Coins Collected} | The Coins Collected on the Official Levels
 
 ## GS_completed
 
