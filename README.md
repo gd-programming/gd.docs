@@ -1,24 +1,14 @@
-<<<<<<< HEAD
 ![gd.docs][Icon]
-=======
-<div align="center">
-    <img src="https://github.com/gd-programming/gddocs/blob/main/assets/gddocs-icon.png?raw=true" height="128" width="128" alt="book">
-</div>
->>>>>>> a965748092df0275e6a9426e96907d02881dad35
 
 # `gd.docs`
 
 [![gd.docs][Badge]][gd.docs]
 
-<<<<<<< HEAD
 **Documentation for Geometry Dash.**
 
 `gd.docs` is a project built to openly give advanced information for aspiring developers looking to interface
 with *Geometry Dash*. We primarily aim to create this as a website for people to learn more about the inner
 workings of *Geometry Dash* along with its data.
-=======
-----
->>>>>>> a965748092df0275e6a9426e96907d02881dad35
 
 You can find the website over [here][gd.docs].
 
