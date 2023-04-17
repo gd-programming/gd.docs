@@ -1,5 +1,3 @@
-![gd.docs][Icon]
-
 # `gd.docs`
 
 [![gd.docs][Badge]][gd.docs]
@@ -62,7 +60,5 @@ Ideas on what to add or improve can be found in the [issues][Issues] section of 
 
 [gd.docs]: https://docs.gd-programming.org/
 
-[Discord]: https://gd-programming.org/discord
 [Issues]: https://github.com/gd-programming/gd.docs/issues
 [Badge]: https://github.com/gd-programming/gd.docs/workflows/docs/badge.svg
-[Icon]: https://github.com/gd-programming/gd.docs/blob/docs/assets/icons/gd.docs.png?raw=true
