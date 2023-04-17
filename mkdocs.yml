@@ -12,7 +12,6 @@ watch:
 
 nav:
   - Index: "index.md"
-  - Credits: "credits.md"
 
   - Server:
     - Endpoints:
