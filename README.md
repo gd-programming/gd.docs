@@ -17,15 +17,13 @@ The GDDocs website can be found [here](https://docs.gdprogra.me/#/)
 
 GDDocs is built off of the `docsify` engine, outputted to a generator file to be able to work well on server environments, rather than GitHub pages. This is primarily to allow for easy domain usage and development in a place where it can always update, and be hosted upon locally rather than over GitHub's servers.
 
-As such, rather than having to install using the package.json; (which we would recommended doing anyways using `npm install`,) the installation and such has been included in `generator.js`.
-
-```plain
-node generator.js
+```sh
+npm install
+npm run run
 ```
 
 To debug it, you will need to properly clone or pull this repository.
 
 ## Contributing
 
-Contributions are preferably made to the documentation, rather than the simple `generator.js` file; unless need be. Contributions to all aspects of this project are preferred to be made over pull requests and issues. Ideas on what to contribute or read over can be read in the [issues](https://github.com/gd-programming/gddocs/issues) section of this repository.
-
+Contributions to all aspects of this project are preferred to be made over pull requests and issues. Ideas on what to contribute or read over can be read in the [issues](https://github.com/gd-programming/gddocs/issues) section of this repository.
