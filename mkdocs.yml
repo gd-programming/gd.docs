@@ -68,8 +68,8 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
 
-      primary: deep orange
-      accent: light blue
+      primary: light blue
+      accent: deep purple
 
       toggle:
         icon: material/toggle-switch
