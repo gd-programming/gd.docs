@@ -72,6 +72,8 @@ Here are all of the different color id's:
 | `1007`    | **LBG**           | This is the static color channel that is a lighter version of `BG` |
 | `1009`    | **G2**            | This is the secondary color of the ground |
 | `1010`    | **BLACK**         | This is the static color channel which is always `r: 0, g: 0, b: 0`. Used in saws that are black by default |
+| `1011`    | **WHITE**         | This is the static color channel which is always `r: 255, g: 255, b: 255` |
+| `1012`    | **LIGHTER**       | No info |
 
 ### Undiscovered color channel IDs
 `WHITE`: Static color that is always `r: 255, g: 255, b: 255`  
