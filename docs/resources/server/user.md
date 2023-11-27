@@ -60,6 +60,7 @@ A list of all known keys can be found in the table below
 | 48 | accExplosion | **Integer** | The explosion number of the player use |
 | 49 | modlevel | **Integer** | 0: None, 1: Normal Mod(yellow), 2: Elder Mod(orange) |
 | 50 | commentHistoryState | **Integer** | 0: All, 1: Only friends, 2: None |
+| 52 | moons | **Integer** | (2.2) The amount of moons the player has |
 
 ### Trivia
 
